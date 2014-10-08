@@ -1,0 +1,41 @@
+---
+metadata:
+    display_name: Text Input with Hints and Feedback
+    tab: hint
+    markdown: |
+        A text input problem accepts a line of text from the student, and evaluates the
+        input for correctness based on an expected answer.
+    
+        The answer is correct if it matches every character of the expected answer.
+        This can be a problem with international spelling, dates, or anything where the
+        format of the answer is not clear.
+    
+        Alternate answers can be defined using "or=", and feedback can be provided for expected answers.
+
+        >>In which country would you find the city of Paris?<<
+
+        =France {{Good job!!::The answer is France}}
+        or=USA {{Yes, there is a Paris, Texas in the USA}}
+
+data: |
+    <problem>
+    <p>
+
+    A text input problem accepts a line of text from the
+    student, and evaluates the input for correctness based on an expected
+    answer.
+    </p>
+    <p>
+    The answer is correct if it matches every character of the expected answer. This can be a problem with international spelling, dates, or anything where the format of the answer is not clear. 
+    </p>
+    <p>Alternate answers can be defined using "or=", and feedback can be provided for expected answers.</p>
+
+     <p>In which country would you find the city of Paris?</p>
+
+     <stringresponse answer="France" type="ci" >
+       <correcthint label="Good job!!">The answer is France</correcthint>
+       <additional_answer answer="USA"><correcthint>Yes, there is a Paris, Texas in the USA</correcthint></additional_answer>
+       <textline label="In which country would you find the city of Paris?" size="20"/>
+     </stringresponse>
+
+    </problem>

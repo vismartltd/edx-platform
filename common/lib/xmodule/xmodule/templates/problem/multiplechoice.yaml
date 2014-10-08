@@ -10,7 +10,7 @@ metadata:
        _____________________________________________________________________________
 
        >>Which of the following countries has the largest population?<<
-       ( ) Brazil
+       ( ) Brazil {{ item-specific feedback -- explain why an "almost" answer is not correct }}
        ( ) Germany
        (x) Indonesia
        ( ) Russia
@@ -34,7 +34,9 @@ data: |
       <legend>Which of the following countries has the largest population?</legend>
       <multiplechoiceresponse>
        <choicegroup type="MultipleChoice">
-          <choice correct="false" name="brazil">Brazil</choice>
+          <choice correct="false" name="brazil">Brazil
+            <choicehint>item-specific feedback -- explain why an "almost" answer is not correct</choicehint>
+          </choice>
           <choice correct="false" name="germany">Germany</choice>
           <choice correct="true" name="indonesia">Indonesia</choice>
           <choice correct="false" name="russia">Russia</choice>
