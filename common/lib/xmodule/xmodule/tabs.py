@@ -246,7 +246,11 @@ def is_user_staff(course, user):
     """
     Returns true if the user is staff in the specified course, or globally.
     """
+<<<<<<< HEAD
     from courseware.access import has_access
+=======
+    from courseware.access import has_access  # pylint: disable=import-error
+>>>>>>> Add extensible course view types for edX platform
     return has_access(user, 'staff', course, course.id)
 
 
@@ -255,7 +259,11 @@ def is_user_enrolled_or_staff(course, user):
     Returns true if the user is enrolled in the specified course,
     or if the user is staff.
     """
+<<<<<<< HEAD
     from student.models import CourseEnrollment
+=======
+    from student.models import CourseEnrollment  # pylint: disable=import-error
+>>>>>>> Add extensible course view types for edX platform
     return is_user_staff(course, user) or CourseEnrollment.is_enrolled(user, course.id)
 
 
