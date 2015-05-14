@@ -63,7 +63,19 @@ dir_rtl = 'rtl' if get_language_bidi() else 'ltr'
   <link rel="icon" type="image/x-icon" href="${static.url(microsite.get_value('favicon_path', settings.FAVICON_PATH))}" />
 
   <%static:css group='style-vendor'/>
-  <%static:css group='style-main'/>
+  ## route around the overwhelmingly complicated static:css nonsense
+  <%
+  if settings.FEATURES.get(USE_CUSTOM_THEME, False):
+    application_css_path = "sass/themes/{theme}/lms-main{rtl}.css".format(
+      theme=settings.FEATURES["THEME_NAME"],
+      rtl="-rtl" if get_language_bidi() else "",
+    )
+  else:
+    application_css_path = "sass/lms-main{rtl}.css".format(
+      rtl="-rtl" if get_language_bidi() else "",
+    )
+  %>
+  <link rel="stylesheet" href="${static.url(application_css_path)}" type="text/css" media="all" />
 
   % if disable_courseware_js:
     <%static:js group='base_vendor'/>
