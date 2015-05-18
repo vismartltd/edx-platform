@@ -231,8 +231,12 @@ class VideoStudentViewHandlers(object):
                 response.content_type = Transcript.mime_types['sjson']
 
         elif dispatch == 'download':
+            lang = request.GET.get('lang', None)
             try:
-                transcript_content, transcript_filename, transcript_mime_type = self.get_transcript(self.transcript_download_format)
+                transcript_content, transcript_filename, transcript_mime_type = self.get_transcript(
+                    transcript_format=self.transcript_download_format,
+                    lang=lang,
+                )
             except (NotFoundError, ValueError, KeyError, UnicodeDecodeError):
                 log.debug("Video@download exception")
                 return Response(status=404)
