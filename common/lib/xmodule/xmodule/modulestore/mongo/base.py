@@ -901,6 +901,9 @@ class MongoModuleStore(ModuleStoreDraftAndPublished, ModuleStoreWriteBase, Mongo
             if self.user_service:
                 services["user"] = self.user_service
 
+            if self.request_cache:
+                services["request_cache"] = self.request_cache
+
             system = CachingDescriptorSystem(
                 modulestore=self,
                 course_key=course_key,
