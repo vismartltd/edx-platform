@@ -58,15 +58,15 @@ var edx = edx || {},
                         menu = focused.closest('.dropdown-menu');
 
                         switch (keyCode) {
-                            case 38:
+                            case 38: // // UP
                                 _dropdown.previousMenuItemLink(focused, menu);
                                 break;
 
-                            case 40:
+                            case 40: // DOWN
                                 _dropdown.nextMenuItemLink(focused, menu);
                                 break;
 
-                            case 27:
+                            case 27: // ESC
                                 _dropdown.closeDropdownMenus();
                                 break;
                         }
@@ -74,15 +74,15 @@ var edx = edx || {},
                     } else if (focused.is('.has-dropdown')) {
                         // Key handlers for when the button that opens the menu has focus
                         switch(keyCode) {
-                            case 40:
+                            case 40: // DOWN
                                 _dropdown.openDropdownMenu(focused);
                                 break;
 
-                            case 13:
+                            case 13: // ENTER
                                 _dropdown.openDropdownMenu(focused);
                                 break;
 
-                            case 27:
+                            case 27: // ESC
                                 _dropdown.closeDropdownMenus();
                                 break;
                         }
@@ -91,22 +91,16 @@ var edx = edx || {},
                         menu = focused.closest('.dropdown-menu');
 
                         switch(keyCode) {
-                            case 40:
+                            case 40: // DOWN
                                 _dropdown.focusFirstItem(menu);
                                 break;
 
-                            case 27:
+                            case 27: // ESC
                                 _dropdown.closeDropdownMenus();
                                 break;
                         }
                     } else {
-
-                        switch(keyCode) {
-                            case 13:
-                            case 38:
-                            case 40:
-                            case 27:
-                        }
+                        return true;
                     }
                 });
             },
