@@ -22,7 +22,9 @@ from xmodule.modulestore.django import modulestore, clear_existing_modulestores
 from xmodule.modulestore.tests.mongo_connection import MONGO_PORT_NUM, MONGO_HOST
 from xmodule.modulestore.tests.sample_courses import default_block_info_tree, TOY_BLOCK_INFO_TREE
 from xmodule.modulestore.tests.factories import XMODULE_FACTORY_LOCK
-from xmodule.tabs import CoursewareTab, CourseInfoTab, StaticTab, DiscussionTab, ProgressTab, WikiTab
+from openedx.core.djangoapps.content.course_views.tabs import (
+    CoursewareTab, CourseInfoTab, StaticTab, DiscussionTab, ProgressTab, WikiTab
+)
 
 
 class StoreConstructors(object):

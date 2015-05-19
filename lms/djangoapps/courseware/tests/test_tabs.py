@@ -12,11 +12,12 @@ from opaque_keys.edx.locations import SlashSeparatedCourseKey
 from courseware.courses import get_course_by_id
 from courseware.tests.helpers import get_request_for_user, LoginEnrollmentTestCase
 from courseware.tests.factories import InstructorFactory, StaffFactory
-from xmodule import tabs
+from xmodule import tabs as xmodule_tabs
 from xmodule.modulestore.tests.django_utils import (
     TEST_DATA_MIXED_TOY_MODULESTORE, TEST_DATA_MIXED_CLOSED_MODULESTORE
 )
 
+import openedx.core.djangoapps.content.course_views.tabs as tabs
 from courseware.tabs import get_course_tab_list
 from courseware.views import get_static_tab_contents, static_tab
 from student.tests.factories import UserFactory
@@ -63,7 +64,7 @@ class StaticTabDateTestCase(LoginEnrollmentTestCase, ModuleStoreTestCase):
         self.setup_user()
         course = get_course_by_id(self.toy_course_key)
         request = get_request_for_user(self.user)
-        tab = tabs.CourseTabList.get_tab_by_slug(course.tabs, 'resources')
+        tab = xmodule_tabs.CourseTabList.get_tab_by_slug(course.tabs, 'resources')
 
         # Test render works okay
         tab_content = get_static_tab_contents(request, course, tab)

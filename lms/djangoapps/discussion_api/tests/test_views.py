@@ -16,7 +16,7 @@ from util.testing import UrlResetMixin
 from xmodule.modulestore.django import modulestore
 from xmodule.modulestore.tests.django_utils import ModuleStoreTestCase
 from xmodule.modulestore.tests.factories import CourseFactory
-from xmodule.tabs import DiscussionTab
+from openedx.core.djangoapps.content.course_views.tabs import DiscussionTab
 
 
 class DiscussionAPIViewTestMixin(CommentsServiceMockMixin, UrlResetMixin):

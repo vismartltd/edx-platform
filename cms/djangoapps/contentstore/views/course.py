@@ -23,7 +23,8 @@ from xmodule.course_module import DEFAULT_START_DATE
 from xmodule.error_module import ErrorDescriptor
 from xmodule.modulestore.django import modulestore
 from xmodule.contentstore.content import StaticContent
-from xmodule.tabs import PDFTextbookTabs, CourseTab, CourseTabManager
+from xmodule.tabs import CourseTab, CourseTabManager
+from openedx.core.djangoapps.content.course_views.tabs import PDFTextbookTabs
 from xmodule.modulestore import EdxJSONEncoder
 from xmodule.modulestore.exceptions import ItemNotFoundError, DuplicateCourseError
 from opaque_keys import InvalidKeyError
