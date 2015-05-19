@@ -48,24 +48,18 @@ var edx = edx || {},
                     _dropdown.nextMenuItemLink(focused, menu);
                 } else if (key === 27) { // ESC
                     _dropdown.closeDropdownMenus();
-                } else {
-                    return true;
                 }
             },
 
             handlerIsButton: function(key, el) {
                 if (key === 40 || key === 13) { // DOWN or ENTER
                     _dropdown.openDropdownMenu(el);
-                } else {
-                    return true;
                 }
             },
 
             handlerIsMenu: function(key, menu) {
                 if (key === 40) { // DOWN
                     _dropdown.focusFirstItem(menu);
-                } else {
-                    return true;
                 }
             },
 
@@ -94,9 +88,6 @@ var edx = edx || {},
                         // Key handlers for when the menu itself has focus, before an item within it receives focus
                         menu = focused.closest('.dropdown-menu');
                         _dropdown.handlerIsMenu(keyCode, menu);
-
-                    } else {
-                        return true;
                     }
                 });
             },
