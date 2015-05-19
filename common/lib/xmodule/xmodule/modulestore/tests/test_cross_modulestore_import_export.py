@@ -352,6 +352,31 @@ COURSE_DATA_NAMES = (
 EXPORTED_COURSE_DIR_NAME = 'exported_source_course'
 
 
+def is_mixed_split_modulestore(modulestore_builder):
+    return (
+        isinstance(modulestore_builder, MixedModulestoreBuilder) and
+        modulestore_builder.store_builders[0][0] == 'split'
+    )
+
+def is_mixed_old_mongo_modulestore(modulestore_builder):
+    return (
+        isinstance(modulestore_builder, MixedModulestoreBuilder) and
+        modulestore_builder.store_builders[0][0] == 'draft'
+    )
+
+def is_straight_old_mongo_modulestore(modulestore_builder):
+    return isinstance(modulestore_builder, MongoModulestoreBuilder)
+
+def is_split_modulestore(modulestore_builder):
+    return is_mixed_split_modulestore(modulestore_builder)
+
+def is_old_mongo_modulestore(modulestore_builder):
+    return (
+        is_mixed_old_mongo_modulestore(modulestore_builder) or
+        is_straight_old_mongo_modulestore(modulestore_builder)
+    )
+
+
 @ddt.ddt
 @attr('mongo')
 class CrossStoreXMLRoundtrip(CourseComparisonTest, PartitionTestCase):

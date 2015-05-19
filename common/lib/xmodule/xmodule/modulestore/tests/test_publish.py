@@ -21,8 +21,9 @@ from xmodule.modulestore.xml_exporter import export_course_to_xml
 from xmodule.modulestore.tests.test_split_w_old_mongo import SplitWMongoCourseBootstrapper
 from xmodule.modulestore.tests.factories import check_mongo_calls, mongo_uses_error_check
 from xmodule.modulestore.tests.test_cross_modulestore_import_export import (
-    MongoContentstoreBuilder, MODULESTORE_SETUPS,
-    DRAFT_MODULESTORE_SETUP, SPLIT_MODULESTORE_SETUP, MongoModulestoreBuilder
+    MongoContentstoreBuilder, MODULESTORE_SETUPS, MixedModulestoreBuilder,
+    DRAFT_MODULESTORE_SETUP, SPLIT_MODULESTORE_SETUP, MongoModulestoreBuilder,
+    is_split_modulestore, is_old_mongo_modulestore
 )
 
 
@@ -627,39 +628,42 @@ class UniversalTestProcedure(OLXFormatChecker, UniversalTestSetup):
         """
         return self.EXPORTED_COURSE_AFTER_DIR_NAME.format(unicode(uuid.uuid4())[:8])
 
-    def publish(self, block_type, block_id):
+    def publish(self, block_list):
         """
-        Get an item, publish it, and shift to a new course export dir.
+        Get each item, publish it, and shift to a new course export dir.
         """
-        # Get the specified test item from the draft branch.
-        with self.store.branch_setting(ModuleStoreEnum.Branch.draft_preferred):
-            test_item = self.store.get_item(self.course_key.make_usage_key(block_type=block_type, block_id=block_id))
-        # Publish the draft item to the published branch.
-        self.store.publish(test_item.location, self.user_id)
+        for (block_type, block_id) in block_list:
+            # Get the specified test item from the draft branch.
+            with self.store.branch_setting(ModuleStoreEnum.Branch.draft_preferred):
+                test_item = self.store.get_item(self.course_key.make_usage_key(block_type=block_type, block_id=block_id))
+            # Publish the draft item to the published branch.
+            self.store.publish(test_item.location, self.user_id)
         # Since the elemental operation is now complete, shift to the post-operation export directory name.
         self.export_dir = self._make_new_export_dir_name()
 
-    def unpublish(self, block_type, block_id):
+    def unpublish(self, block_list):
         """
-        Get an item, unpublish it, and shift to a new course export dir.
+        Get each item, unpublish it, and shift to a new course export dir.
         """
-        # Get the specified test item from the published branch.
-        with self.store.branch_setting(ModuleStoreEnum.Branch.published_only):
-            test_item = self.store.get_item(self.course_key.make_usage_key(block_type=block_type, block_id=block_id))
-        # Unpublish the draft item from the published branch.
-        self.store.unpublish(test_item.location, self.user_id)
+        for (block_type, block_id) in block_list:
+            # Get the specified test item from the published branch.
+            with self.store.branch_setting(ModuleStoreEnum.Branch.published_only):
+                test_item = self.store.get_item(self.course_key.make_usage_key(block_type=block_type, block_id=block_id))
+            # Unpublish the draft item from the published branch.
+            self.store.unpublish(test_item.location, self.user_id)
         # Since the elemental operation is now complete, shift to the post-operation export directory name.
         self.export_dir = self._make_new_export_dir_name()
 
-    def delete_item(self, block_type, block_id, revision):
+    def delete_item(self, block_list, revision):
         """
-        Get an item, delete it, and shift to a new course export dir.
+        Get each item, delete it, and shift to a new course export dir.
         """
-        # Get the specified test item from the published branch.
-        with self.store.branch_setting(ModuleStoreEnum.Branch.draft_preferred):
-            test_item = self.store.get_item(self.course_key.make_usage_key(block_type=block_type, block_id=block_id))
-        # Unpublish the draft item from the published branch.
-        self.store.delete_item(test_item.location, self.user_id, revision=revision)
+        for (block_type, block_id) in block_list:
+            # Get the specified test item from the draft branch.
+            with self.store.branch_setting(ModuleStoreEnum.Branch.draft_preferred):
+                test_item = self.store.get_item(self.course_key.make_usage_key(block_type=block_type, block_id=block_id))
+            # Delete the item from the specified branch.
+            self.store.delete_item(test_item.location, self.user_id, revision=revision)
         # Since the elemental operation is now complete, shift to the post-operation export directory name.
         self.export_dir = self._make_new_export_dir_name()
 
@@ -695,7 +699,7 @@ class ElementalPublishingTests(UniversalTestProcedure):
             # MODULESTORE_DIFFERENCE:
             # In old Mongo, you can successfully publish an item whose parent
             # isn't published.
-            self.publish('html', 'unit00')
+            self.publish((('html', 'unit00'),))
 
     @ddt.data(SPLIT_MODULESTORE_SETUP)
     def test_publish_split_unit(self, modulestore_builder):
@@ -706,15 +710,17 @@ class ElementalPublishingTests(UniversalTestProcedure):
             # Split will raise an exception when the item's parent(s) aren't found
             # in the published branch.
             with self.assertRaises(ItemNotFoundError):
-                self.publish('html', 'unit00')
+                self.publish((('html', 'unit00'),))
 
     @ddt.data(*MODULESTORE_SETUPS)
     def test_publish_multiple_verticals(self, modulestore_builder):
         with self._setup_test(modulestore_builder, self.course_key):
 
-            block_list_publish = (
+            block_list_parents_to_publish = (
                 ('vertical', 'vertical03'),
                 ('vertical', 'vertical04'),
+            )
+            block_list_publish = block_list_parents_to_publish + (
                 ('html', 'unit06'),
                 ('html', 'unit07'),
                 ('html', 'unit08'),
@@ -746,8 +752,7 @@ class ElementalPublishingTests(UniversalTestProcedure):
             self.assertOLXIsDraftOnly(block_list_untouched)
 
             # Publish both vertical03 and vertical 04.
-            self.publish('vertical', 'vertical03')
-            self.publish('vertical', 'vertical04')
+            self.publish(block_list_parents_to_publish)
 
             # Ensure that the published verticals and children are indeed published in the exported OLX.
             self.assertOLXIsPublishedOnly(block_list_publish)
@@ -778,7 +783,7 @@ class ElementalPublishingTests(UniversalTestProcedure):
             # Ensure that the verticals and their children are drafts in the exported OLX.
             self.assertOLXIsDraftOnly(block_list)
             # Publish the sequential block.
-            self.publish('sequential', 'sequential00')
+            self.publish(block_list_autopublished)
             # Ensure that the sequential is still published in the exported OLX.
             self.assertOLXIsPublishedOnly(block_list_autopublished)
             # Ensure that the verticals and their children are published in the exported OLX.
@@ -828,7 +833,7 @@ class ElementalPublishingTests(UniversalTestProcedure):
             self.assertOLXIsDraftOnly(block_list_published)
             self.assertOLXIsDraftOnly(block_list_untouched)
             # Publish the chapter block.
-            self.publish('chapter', 'chapter00')
+            self.publish(block_list_autopublished)
             # Ensure that the chapter is still published in the exported OLX.
             self.assertOLXIsPublishedOnly(block_list_autopublished)
             # Ensure that the vertical and its children are published in the exported OLX.
@@ -853,10 +858,10 @@ class ElementalUnpublishingTests(UniversalTestProcedure):
             self.assertOLXIsDraftOnly(block_list_to_unpublish)
             # Since there's no published version, attempting an unpublish throws an exception.
             with self.assertRaises(ItemNotFoundError):
-                self.unpublish('html', 'unit08')
+                self.unpublish(block_list_to_unpublish)
 
-    @ddt.data(DRAFT_MODULESTORE_SETUP, MongoModulestoreBuilder())
-    def test_unpublish_old_mongo_published_units(self, modulestore_builder):
+    @ddt.data(*MODULESTORE_SETUPS)
+    def test_unpublish_published_units(self, modulestore_builder):
         with self._setup_test(modulestore_builder, self.course_key):
 
             block_list_to_unpublish = (
@@ -870,46 +875,25 @@ class ElementalUnpublishingTests(UniversalTestProcedure):
             self.assertOLXIsDraftOnly(block_list_to_unpublish)
             self.assertOLXIsDraftOnly(block_list_parent)
             # Publish the *parent* of the units, which also publishes the units.
-            self.publish('vertical', 'vertical04')
+            self.publish(block_list_parent)
             # The units are now published.
             self.assertOLXIsPublishedOnly(block_list_parent)
             self.assertOLXIsPublishedOnly(block_list_to_unpublish)
             # Unpublish the child units.
-            self.unpublish('html', 'unit08')
-            self.unpublish('html', 'unit09')
+            self.unpublish(block_list_to_unpublish)
             # The units are now drafts again.
             self.assertOLXIsDraftOnly(block_list_to_unpublish)
             # MODULESTORE_DIFFERENCE:
-            # The parent remains published only.
-            self.assertOLXIsPublishedOnly(block_list_parent)
-
-    @ddt.data(SPLIT_MODULESTORE_SETUP)
-    def test_unpublish_split_published_units(self, modulestore_builder):
-        with self._setup_test(modulestore_builder, self.course_key):
-
-            block_list_to_unpublish = (
-                ('html', 'unit08'),
-                ('html', 'unit09'),
-            )
-            block_list_parent = (
-                ('vertical', 'vertical04'),
-            )
-            # The units are drafts.
-            self.assertOLXIsDraftOnly(block_list_to_unpublish)
-            self.assertOLXIsDraftOnly(block_list_parent)
-            # Publish the *parent* of the units, which also publishes the units.
-            self.publish('vertical', 'vertical04')
-            # The units are now published.
-            self.assertOLXIsPublishedOnly(block_list_parent)
-            self.assertOLXIsPublishedOnly(block_list_to_unpublish)
-            # Unpublish the child units.
-            self.unpublish('html', 'unit08')
-            self.unpublish('html', 'unit09')
-            # The units are now drafts again.
-            self.assertOLXIsDraftOnly(block_list_to_unpublish)
-            # MODULESTORE_DIFFERENCE:
-            # The parent now has a draft *and* published item.
-            self.assertOLXIsDraftAndPublished(block_list_parent)
+            if is_split_modulestore(modulestore_builder):
+                # Split:
+                # The parent now has a draft *and* published item.
+                self.assertOLXIsDraftAndPublished(block_list_parent)
+            elif is_old_mongo_modulestore(modulestore_builder):
+                # Old Mongo:
+                # The parent remains published only.
+                self.assertOLXIsPublishedOnly(block_list_parent)
+            else:
+                self.assertTrue(False, msg="Must test either Old Mongo or Split modulestore!")
 
     @ddt.data(*MODULESTORE_SETUPS)
     def test_unpublish_draft_vertical(self, modulestore_builder):
@@ -922,7 +906,7 @@ class ElementalUnpublishingTests(UniversalTestProcedure):
             self.assertOLXIsDraftOnly(block_list_to_unpublish)
             # Since there's no published version, attempting an unpublish throws an exception.
             with self.assertRaises(ItemNotFoundError):
-                self.unpublish('vertical', 'vertical02')
+                self.unpublish(block_list_to_unpublish)
 
     @ddt.data(*MODULESTORE_SETUPS)
     def test_unpublish_published_vertical(self, modulestore_builder):
@@ -954,13 +938,13 @@ class ElementalUnpublishingTests(UniversalTestProcedure):
             self.assertOLXIsDraftOnly(block_list_unpublished_children)
             self.assertOLXIsDraftOnly(block_list_untouched)
             # Then publish a vertical.
-            self.publish('vertical', 'vertical02')
+            self.publish(block_list_to_unpublish)
             # The published vertical and its children will be published.
             self.assertOLXIsPublishedOnly(block_list_to_unpublish)
             self.assertOLXIsPublishedOnly(block_list_unpublished_children)
             self.assertOLXIsDraftOnly(block_list_untouched)
             # Now, unpublish the same vertical.
-            self.unpublish('vertical', 'vertical02')
+            self.unpublish(block_list_to_unpublish)
             # The unpublished vertical and its children will now be a draft.
             self.assertOLXIsDraftOnly(block_list_to_unpublish)
             self.assertOLXIsDraftOnly(block_list_unpublished_children)
@@ -973,8 +957,11 @@ class ElementalUnpublishingTests(UniversalTestProcedure):
             # MODULESTORE_DIFFERENCE:
             # In old Mongo, you cannot successfully unpublish an autopublished sequential.
             # An exception is thrown.
+            block_list_to_unpublish = (
+                ('sequential', 'sequential03'),
+            )
             with self.assertRaises(InvalidVersionError):
-                self.unpublish('sequential', 'sequential03')
+                self.unpublish(block_list_to_unpublish)
 
     @ddt.data(SPLIT_MODULESTORE_SETUP)
     def test_unpublish_split_draft_sequential(self, modulestore_builder):
@@ -999,12 +986,13 @@ class ElementalUnpublishingTests(UniversalTestProcedure):
             self.assertOLXIsPublishedOnly(block_list_to_unpublish)
             self.assertOLXIsDraftOnly(block_list_unpublished_children)
             # Unpublish the sequential.
-            self.unpublish('sequential', 'sequential03')
+            self.unpublish(block_list_to_unpublish)
             # Since the sequential was autopublished, a draft version of the sequential never existed.
             # So unpublishing the sequential doesn't make it a draft - it deletes it!
             self.assertOLXIsDeleted(block_list_to_unpublish)
             # Its children are orphaned and remain as drafts.
             self.assertOLXIsDraftOnly(block_list_unpublished_children)
+
 
 @ddt.ddt
 class ElementalDeleteItemTests(UniversalTestProcedure):
@@ -1012,23 +1000,22 @@ class ElementalDeleteItemTests(UniversalTestProcedure):
     Tests for the delete_item() operation.
     """
     def _check_for_item_deletion(self, block_list, expected_result):
-        if expected_result == 'draft_only':
-            self.assertOLXIsDraftOnly(block_list)
-        elif expected_result == 'published_only':
-            self.assertOLXIsPublishedOnly(block_list)
-        elif expected_result == 'both_deleted':
-            self.assertOLXIsDeleted(block_list)
+        """
+        Based on the expected result, verify that OLX for the listed blocks is correct.
+        """
+        assert_method = getattr(self, expected_result)
+        assert_method(block_list)
 
     @ddt.data(*itertools.product(
-        (DRAFT_MODULESTORE_SETUP, MongoModulestoreBuilder()),
+        MODULESTORE_SETUPS,
         (
-            (ModuleStoreEnum.RevisionOption.published_only, 'draft_only'),
-            (ModuleStoreEnum.RevisionOption.all, 'both_deleted'),
-            (None, 'both_deleted'),
+            (ModuleStoreEnum.RevisionOption.published_only, 'assertOLXIsDraftOnly'),
+            (ModuleStoreEnum.RevisionOption.all, 'assertOLXIsDeleted'),
+            (None, 'assertOLXIsDeleted'),
         )
     ))
     @ddt.unpack
-    def test_old_mongo_delete_draft_unit(self, modulestore_builder, revision_and_result):
+    def test_delete_draft_unit(self, modulestore_builder, revision_and_result):
         with self._setup_test(modulestore_builder, self.course_key):
 
             block_list_to_delete = (
@@ -1038,47 +1025,29 @@ class ElementalDeleteItemTests(UniversalTestProcedure):
             # The unit is a draft.
             self.assertOLXIsDraftOnly(block_list_to_delete)
             # MODULESTORE_DIFFERENCE:
-            # Old Mongo throws no exception when trying to delete an item from the published branch
-            # that isn't yet published.
-            self.delete_item('html', 'unit08', revision=revision)
-            self._check_for_item_deletion(block_list_to_delete, result)
-
-    @ddt.data(*itertools.product(
-        (SPLIT_MODULESTORE_SETUP,),
-        (
-            (ModuleStoreEnum.RevisionOption.published_only, 'draft_only'),
-            (ModuleStoreEnum.RevisionOption.all, 'both_deleted'),
-            (None, 'both_deleted'),
-        )
-    ))
-    @ddt.unpack
-    def test_split_delete_draft_unit(self, modulestore_builder, revision_and_result):
-        with self._setup_test(modulestore_builder, self.course_key):
-
-            block_list_to_delete = (
-                ('html', 'unit08'),
-            )
-            (revision, result) = revision_and_result
-            # The unit is a draft.
-            self.assertOLXIsDraftOnly(block_list_to_delete)
-            if revision in (ModuleStoreEnum.RevisionOption.published_only, ModuleStoreEnum.RevisionOption.all):
-                # MODULESTORE_DIFFERENCE:
-                # Split throws an exception when trying to delete an item from the published branch
+            if is_old_mongo_modulestore(modulestore_builder):
+                # Old Mongo throws no exception when trying to delete an item from the published branch
                 # that isn't yet published.
-                with self.assertRaises(ValueError):
-                    self.delete_item('html', 'unit08', revision=revision)
-            else:
-                self.delete_item('html', 'unit08', revision=revision)
+                self.delete_item(block_list_to_delete, revision=revision)
                 self._check_for_item_deletion(block_list_to_delete, result)
+            elif is_split_modulestore(modulestore_builder):
+                if revision in (ModuleStoreEnum.RevisionOption.published_only, ModuleStoreEnum.RevisionOption.all):
+                    # Split throws an exception when trying to delete an item from the published branch
+                    # that isn't yet published.
+                    with self.assertRaises(ValueError):
+                        self.delete_item(block_list_to_delete, revision=revision)
+                else:
+                    self.delete_item(block_list_to_delete, revision=revision)
+                    self._check_for_item_deletion(block_list_to_delete, result)
 
     @ddt.data(*itertools.product(
         (DRAFT_MODULESTORE_SETUP, MongoModulestoreBuilder()),
         (
             # MODULESTORE_DIFFERENCE: This first line is different between old Mongo and Split for verticals.
             # Old Mongo deletes the draft vertical even when published_only is specified.
-            (ModuleStoreEnum.RevisionOption.published_only, 'both_deleted'),
-            (ModuleStoreEnum.RevisionOption.all, 'both_deleted'),
-            (None, 'both_deleted'),
+            (ModuleStoreEnum.RevisionOption.published_only, 'assertOLXIsDeleted'),
+            (ModuleStoreEnum.RevisionOption.all, 'assertOLXIsDeleted'),
+            (None, 'assertOLXIsDeleted'),
         )
     ))
     @ddt.unpack
@@ -1098,12 +1067,13 @@ class ElementalDeleteItemTests(UniversalTestProcedure):
             # MODULESTORE_DIFFERENCE:
             # Old Mongo throws no exception when trying to delete an item from the published branch
             # that isn't yet published.
-            self.delete_item('vertical', 'vertical03', revision=revision)
+            self.delete_item(block_list_to_delete, revision=revision)
             self._check_for_item_deletion(block_list_to_delete, result)
             # MODULESTORE_DIFFERENCE:
             # Weirdly, this is a difference between old Mongo -and- old Mongo wrapped with a mixed modulestore.
             # When the code attempts and fails to delete the draft vertical using the published_only revision,
-            # the draft children are still around in one case and not in the other.
+            # the draft children are still around in one case and not in the other? Needs investigation.
+            # pylint: disable=bad-continuation
             if (
                 isinstance(modulestore_builder, MongoModulestoreBuilder) and
                 revision == ModuleStoreEnum.RevisionOption.published_only
@@ -1117,9 +1087,9 @@ class ElementalDeleteItemTests(UniversalTestProcedure):
         (
             # MODULESTORE_DIFFERENCE: This first line is different between old Mongo and Split for verticals.
             # Split does not delete the draft vertical when a published_only revision is specified.
-            (ModuleStoreEnum.RevisionOption.published_only, 'draft_only'),
-            (ModuleStoreEnum.RevisionOption.all, 'both_deleted'),
-            (None, 'both_deleted'),
+            (ModuleStoreEnum.RevisionOption.published_only, 'assertOLXIsDraftOnly'),
+            (ModuleStoreEnum.RevisionOption.all, 'assertOLXIsDeleted'),
+            (None, 'assertOLXIsDeleted'),
         )
     ))
     @ddt.unpack
@@ -1141,8 +1111,49 @@ class ElementalDeleteItemTests(UniversalTestProcedure):
                 # Split throws an exception when trying to delete an item from the published branch
                 # that isn't yet published.
                 with self.assertRaises(ValueError):
-                    self.delete_item('vertical', 'vertical03', revision=revision)
+                    self.delete_item(block_list_to_delete, revision=revision)
             else:
-                self.delete_item('vertical', 'vertical03', revision=revision)
+                self.delete_item(block_list_to_delete, revision=revision)
                 self._check_for_item_deletion(block_list_to_delete, result)
+                self.assertOLXIsDeleted(block_list_children)
+
+    @ddt.data(*itertools.product(
+        MODULESTORE_SETUPS,
+        (
+            (ModuleStoreEnum.RevisionOption.published_only, 'assertOLXIsDeleted'),
+            (ModuleStoreEnum.RevisionOption.all, 'assertOLXIsDeleted'),
+            (None, 'assertOLXIsDeleted'),
+        )
+    ))
+    @ddt.unpack
+    def test_delete_sequential(self, modulestore_builder, revision_and_result):
+        with self._setup_test(modulestore_builder, self.course_key):
+
+            block_list_to_delete = (
+                ('sequential', 'sequential03'),
+            )
+            block_list_children = (
+                ('vertical', 'vertical06'),
+                ('vertical', 'vertical07'),
+                ('html', 'unit12'),
+                ('html', 'unit13'),
+                ('html', 'unit14'),
+                ('html', 'unit15'),
+            )
+            (revision, result) = revision_and_result
+            # Sequentials are auto-published.
+            self.assertOLXIsPublishedOnly(block_list_to_delete)
+            self.delete_item(block_list_to_delete, revision=revision)
+            self._check_for_item_deletion(block_list_to_delete, result)
+            # MODULESTORE_DIFFERENCE
+            if is_split_modulestore(modulestore_builder):
+                # Split:
+                if revision == ModuleStoreEnum.RevisionOption.published_only:
+                    # If deleting published_only items, the children that are drafts remain.
+                    self.assertOLXIsDraftOnly(block_list_children)
+                else:
+                    self.assertOLXIsDeleted(block_list_children)
+            elif is_old_mongo_modulestore(modulestore_builder):
+                # Old Mongo:
+                # If deleting draft_only or both items, the drafts will be deleted.
                 self.assertOLXIsDeleted(block_list_children)
