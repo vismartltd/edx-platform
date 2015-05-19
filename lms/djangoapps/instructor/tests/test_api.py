@@ -57,6 +57,7 @@ from courseware.models import StudentFieldOverride
 
 import instructor_task.api
 import instructor.views.api
+from instructor.views.api import require_finance_admin
 from instructor.tests.utils import FakeContentTask, FakeEmail, FakeEmailInfo
 from instructor.views.api import generate_unique_password
 from instructor.views.api import _split_input_list, common_exceptions_400
@@ -2047,26 +2048,49 @@ class TestInstructorAPILevelsDataDump(ModuleStoreTestCase, LoginEnrollmentTestCa
 
         self.assertEqual('cohort' in res_json['feature_names'], is_cohorted)
 
-    def test_assert_require_course_finance_admin(self):
+    def test_access_course_finance_admin_with_invalid_course_key(self):
         """
         Test assert require_course fiance_admin before generating
         a detailed enrollment report
         """
-        self.client.login(username=self.instructor.username, password='test')
-        course_with_invalid_ee = CourseFactory.create(entrance_exam_id='invalid_exam')
-        CourseFinanceAdminRole(self.course.id).add_users(self.instructor)
-        # url with invalid course id
-        url = reverse('get_enrollment_report', kwargs={'course_id': 'invalid/course/key'})
-        response = self.client.get(url, {})
-        # invalid course url return 404
+        func = Mock()
+        decorated_func = require_finance_admin(func)
+        request = self.mock_request()
+        response = decorated_func(request, 'invalid_course_key')
         self.assertEqual(response.status_code, 404)
-        CourseFinanceAdminRole(self.course.id).remove_users(self.instructor)
+        assert not func.called
 
-        # create a new finance_admin role for user role with invalid course
-        CourseFinanceAdminRole(course_with_invalid_ee.id).add_users(self.instructor)
-        url = reverse('get_enrollment_report', kwargs={'course_id': self.course.id})
-        response = self.client.get(url, {})
+    def mock_request(self):
+        """
+        mock request
+        """
+        request = Mock()
+        request.user = self.instructor
+        return request
+
+    def test_access_course_finance_admin_with_valid_course_key(self):
+        """
+        Test to check the course_finance_admin role with valid key
+        but doesn't have access to the function
+        """
+        func = Mock()
+        decorated_func = require_finance_admin(func)
+        request = self.mock_request()
+        response = decorated_func(request, 'valid/course/key')
         self.assertEqual(response.status_code, 403)
+        assert not func.called
+
+    def test_add_user_to_fiance_admin_role_with_valid_course(self):
+        """
+        test to check that a function is called using a fiance_admin
+        rights.
+        """
+        func = Mock()
+        decorated_func = require_finance_admin(func)
+        request = self.mock_request()
+        CourseFinanceAdminRole(self.course.id).add_users(self.instructor)
+        decorated_func(request, self.course.id.to_deprecated_string())
+        assert func.called
 
     def test_enrollment_report_features_csv(self):
         """
