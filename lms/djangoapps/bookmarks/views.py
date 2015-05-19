@@ -142,11 +142,12 @@ class BookmarksView(ListCreateAPIView):
             # usage_key's course_key may have an empty run property
             usage_key = usage_key.replace(course_key=modulestore().fill_in_run(usage_key.course_key))
             course_key = usage_key.course_key
-        except InvalidKeyError as exception:
+        except InvalidKeyError:
+            message = _(u"Invalid usage id")
             return Response(
                 {
-                    "developer_message": exception.message,
-                    "user_message": _(u"Invalid usage id")
+                    "developer_message": message,
+                    "user_message": message
                 },
                 status=status.HTTP_400_BAD_REQUEST
             )
@@ -154,15 +155,15 @@ class BookmarksView(ListCreateAPIView):
         bookmarks_data = {
             "usage_key": usage_key,
             "course_key": course_key,
-            "user": request.user,
+            "user": request.user
         }
 
         try:
             bookmark = Bookmark.create(bookmarks_data)
-        except ItemNotFoundError as exception:
+        except ItemNotFoundError:
             return Response(
                 {
-                    "developer_message": exception.message,
+                    "developer_message": u"Item with usage id not found",
                     "user_message": _(u"Invalid usage id")
                 },
                 status=status.HTTP_400_BAD_REQUEST
