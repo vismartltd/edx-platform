@@ -8,22 +8,16 @@ from django.db import models
 class Migration(SchemaMigration):
 
     def forwards(self, orm):
-        # Adding model 'CourseTeam'
-        db.create_table('course_groups_courseteam', (
-            ('id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
-            ('course_user_group', self.gf('django.db.models.fields.related.OneToOneField')(related_name='team', unique=True, to=orm['course_groups.CourseUserGroup'])),
-            ('description', self.gf('django.db.models.fields.CharField')(max_length=1000)),
-            ('country', self.gf('django.db.models.fields.CharField')(max_length=50, blank=True)),
-            ('language', self.gf('django.db.models.fields.CharField')(max_length=20, blank=True)),
-            ('topic_id', self.gf('django.db.models.fields.CharField')(max_length=20, db_index=True)),
-        ))
-        db.send_create_signal('course_groups', ['CourseTeam'])
-
+        # Adding column date_joined for many to many relationship
+        db.add_column(
+            'course_groups_courseusergroup_users',
+            'date_joined',
+            models.DateTimeField(auto_now_add=True)
+        )
 
     def backwards(self, orm):
-        # Deleting model 'CourseTeam'
-        db.delete_table('course_groups_courseteam')
-
+        # Deleting column date_joined for many to many relationship
+        db.delete_column('course_groups_courseusergroup_users', 'date_joined')
 
     models = {
         'auth.group': {
@@ -75,15 +69,6 @@ class Migration(SchemaMigration):
             'course_id': ('xmodule_django.models.CourseKeyField', [], {'unique': 'True', 'max_length': '255', 'db_index': 'True'}),
             'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
             'is_cohorted': ('django.db.models.fields.BooleanField', [], {'default': 'False'})
-        },
-        'course_groups.courseteam': {
-            'Meta': {'object_name': 'CourseTeam'},
-            'country': ('django.db.models.fields.CharField', [], {'max_length': '50', 'blank': 'True'}),
-            'course_user_group': ('django.db.models.fields.related.OneToOneField', [], {'related_name': "'team'", 'unique': 'True', 'to': "orm['course_groups.CourseUserGroup']"}),
-            'description': ('django.db.models.fields.CharField', [], {'max_length': '1000'}),
-            'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
-            'language': ('django.db.models.fields.CharField', [], {'max_length': '20', 'blank': 'True'}),
-            'topic_id': ('django.db.models.fields.CharField', [], {'max_length': '20', 'db_index': 'True'})
         },
         'course_groups.courseusergroup': {
             'Meta': {'unique_together': "(('name', 'course_id'),)", 'object_name': 'CourseUserGroup'},

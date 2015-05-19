@@ -62,6 +62,28 @@ class CourseUserGroup(models.Model):
         )
 
 
+models.DateTimeField(auto_now_add=True).contribute_to_class(CourseUserGroup.users.through, 'date_joined')
+
+
+    # def add_user(self, user):
+    #     """
+    #     Adds the given user to the group's users, creating a CourseUserGroupMembership if necessary.
+    #     """
+    #     CourseUserGroupMembership.objects.get_or_create(
+    #         user=user,
+    #         group=self
+    #     )
+
+
+# class CourseUserGroupMembership(models.Model):
+#     """
+#     This model represents the membership of a single user in a single course group.
+#     """
+#
+#     user = models.ForeignKey(User)
+#     group = models.ForeignKey(CourseUserGroup)
+
+
 class CourseUserGroupPartitionGroup(models.Model):
     """
     Create User Partition Info.
@@ -137,44 +159,3 @@ class CourseCohort(models.Model):
         )
 
         return course_cohort
-
-
-class CourseTeam(models.Model):
-    """
-    This model represents team related info.
-    """
-    course_user_group = models.OneToOneField(CourseUserGroup, unique=True, related_name='team')
-
-    description = models.CharField(max_length=1000)
-    country = models.CharField(max_length=50, blank=True)
-    language = models.CharField(max_length=20, blank=True)
-    topic_id = models.CharField(max_length=100, db_index=True)
-
-    @classmethod
-    def create(cls, team_name, course_id, description, topic_id, course_user_group=None, country=None, language=None):
-        """
-        Create a complete (CourseUserGroup + CourseTeam) object.
-
-        Args:
-            team_name: Name of the team to be created
-            course_id: Course id
-            description: Description of the team
-            topic_id: Identifier for the topic the team formed around
-            course_user_group: CourseUserGroup
-            country: Country where the team is based
-            language: Language the team uses
-        """
-        if course_user_group is None:
-            course_user_group, __ = CourseUserGroup.create(team_name, course_id, group_type=CourseUserGroup.TEAM)
-
-        course_team, __ = cls.objects.get_or_create(
-            course_user_group=course_user_group,
-            defaults={
-                'description': description,
-                'topic_id': topic_id,
-                'country': country,
-                'language': language
-            }
-        )
-
-        return course_team
