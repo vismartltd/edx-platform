@@ -688,6 +688,21 @@ class UniversalTestProcedure(OLXFormatChecker, UniversalTestSetup):
         # Since the elemental operation is now complete, shift to the post-operation export directory name.
         self.export_dir = self._make_new_export_dir_name()
 
+    def revert_to_published(self, block_list):
+        """
+        Get each item, revert it to published, and shift to a new course export dir.
+        """
+        for (block_type, block_id) in block_list:
+            # Get the specified test item from the draft branch.
+            with self.store.branch_setting(ModuleStoreEnum.Branch.draft_preferred):
+                test_item = self.store.get_item(
+                    self.course_key.make_usage_key(block_type=block_type, block_id=block_id)
+                )
+            # Revert the item from the specified branch from draft to published.
+            self.store.revert_to_published(test_item.location, self.user_id)
+        # Since the elemental operation is now complete, shift to the post-operation export directory name.
+        self.export_dir = self._make_new_export_dir_name()
+
 
 @ddt.ddt
 class ElementalPublishingTests(UniversalTestProcedure):
@@ -1199,7 +1214,7 @@ class ElementalDeleteItemTests(UniversalTestProcedure):
             block_list_to_delete = (
                 ('chapter', 'chapter01'),
             )
-            block_list_autopublished_children = (
+            autopublished_children = (
                 ('sequential', 'sequential02'),
                 ('sequential', 'sequential03'),
             )
@@ -1222,7 +1237,7 @@ class ElementalDeleteItemTests(UniversalTestProcedure):
             self.assertOLXIsPublishedOnly(block_list_to_delete)
             self.delete_item(block_list_to_delete, revision=revision)
             self._check_for_item_deletion(block_list_to_delete, result)
-            self.assertOLXIsDeleted(block_list_autopublished_children)
+            self.assertOLXIsDeleted(autopublished_children)
             # MODULESTORE_DIFFERENCE
             if is_split_modulestore(modulestore_builder):
                 # Split:
@@ -1237,6 +1252,7 @@ class ElementalDeleteItemTests(UniversalTestProcedure):
                 self.assertOLXIsDeleted(block_list_draft_children)
             else:
                 raise Exception("Must test either Old Mongo or Split modulestore!")
+
 
 @ddt.ddt
 class ElementalConvertToDraftTests(UniversalTestProcedure):
@@ -1293,3 +1309,72 @@ class ElementalConvertToDraftTests(UniversalTestProcedure):
                     self.convert_to_draft(block_list_to_convert)
             else:
                 raise Exception("Must test either Old Mongo or Split modulestore!")
+
+
+@ddt.ddt
+class ElementalRevertToPublishedTests(UniversalTestProcedure):
+    """
+    Tests for the revert_to_published() operation.
+    """
+    @ddt.data(*MODULESTORE_SETUPS)
+    def test_revert_to_published_unpublished_vertical(self, modulestore_builder):
+        with self._setup_test(modulestore_builder, self.course_key):
+
+            block_list_to_revert = (
+                ('vertical', 'vertical02'),
+            )
+            # At first, no vertical is published.
+            self.assertOLXIsDraftOnly(block_list_to_revert)
+            # Now, without publishing anything first, revert the same vertical to published.
+            # Since no published version exists, an exception is raised.
+            with self.assertRaises(InvalidVersionError):
+                self.revert_to_published(block_list_to_revert)
+
+    @ddt.data(*MODULESTORE_SETUPS)
+    def test_revert_to_published_published_vertical(self, modulestore_builder):
+        with self._setup_test(modulestore_builder, self.course_key):
+
+            block_list_to_revert = (
+                ('vertical', 'vertical02'),
+            )
+            # At first, no vertical is published.
+            self.assertOLXIsDraftOnly(block_list_to_revert)
+            # Then publish a vertical.
+            self.publish(block_list_to_revert)
+            # The vertical will be published.
+            self.assertOLXIsPublishedOnly(block_list_to_revert)
+            # Now, revert the same vertical to published.
+            self.revert_to_published(block_list_to_revert)
+            # Basically a no-op - there was no draft version to revert.
+            self.assertOLXIsPublishedOnly(block_list_to_revert)
+
+    @ddt.data(*MODULESTORE_SETUPS)
+    def test_revert_to_published_vertical(self, modulestore_builder):
+        with self._setup_test(modulestore_builder, self.course_key):
+
+            block_list_to_revert = (
+                ('vertical', 'vertical02'),
+            )
+            # At first, no vertical is published.
+            self.assertOLXIsDraftOnly(block_list_to_revert)
+            # Then publish a vertical.
+            self.publish(block_list_to_revert)
+            # The vertical will be published.
+            self.assertOLXIsPublishedOnly(block_list_to_revert)
+
+            # Change something in the draft item and update it.
+            with self.store.branch_setting(ModuleStoreEnum.Branch.draft_preferred):
+                item = self.store.get_item(
+                    self.course_key.make_usage_key(block_type='vertical', block_id='vertical02')
+                )
+                item.display_name = 'SNAFU'
+                self.store.update_item(item, self.user_id)
+            self.export_dir = self._make_new_export_dir_name()
+
+            # The vertical now has a draft -and- published version.
+            self.assertOLXIsDraftAndPublished(block_list_to_revert)
+            # Now, revert the same vertical to published.
+            self.revert_to_published(block_list_to_revert)
+            # The draft version is now gone.
+            self.assertOLXIsPublishedOnly(block_list_to_revert)
+
