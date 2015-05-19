@@ -338,8 +338,10 @@ class CourseBlocksAndNavigation(ListAPIView):
 
         * root: The ID of the root node of the course blocks.
 
-        * blocks: A dictionary that maps block IDs to a collection of information about each block.
+        * blocks: A dictionary that maps block usage IDs to a collection of information about each block.
           Each block contains the following fields.
+
+          * id: (string) The usage ID of the block.
 
           * type: (string) The type of block. Possible values include course, chapter, sequential, vertical, html, problem,
             video, and discussion. The type can also be the name of a custom type of block used for the course.
@@ -442,6 +444,7 @@ class CourseBlocksAndNavigation(ListAPIView):
 
             # set basic field values for the block
             block_value = {
+                "id": unicode(block.location),
                 "type": block_type,
                 "display_name": block.display_name,
                 "web_url": reverse(
