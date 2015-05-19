@@ -1,6 +1,6 @@
 var edx = edx || {};
 
-(function(Backbone, $, _) {
+(function(Backbone, $, _, gettext) {
     'use strict';
 
     edx.instructor_dashboard = edx.instructor_dashboard || {};
@@ -46,7 +46,7 @@ var edx = edx || {};
                 });
                },
              error: function(std_ajax_err) {
-                request_response_error.text("${_('Error generating grades. Please try again.')}");
+                request_response_error.text(gettext('Error generating grades. Please try again.'));
                 return $(".reports .msg-error").css({
                   "display": "block"
                 });
@@ -54,4 +54,4 @@ var edx = edx || {};
            });
         });
     });
-}).call(this, Backbone, $, _);
+}).call(this, Backbone, $, _, gettext);

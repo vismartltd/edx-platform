@@ -2058,7 +2058,7 @@ class TestInstructorAPILevelsDataDump(ModuleStoreTestCase, LoginEnrollmentTestCa
         request = self.mock_request()
         response = decorated_func(request, 'invalid_course_key')
         self.assertEqual(response.status_code, 404)
-        assert not func.called
+        self.assertFalse(func.called)
 
     def mock_request(self):
         """
@@ -2078,7 +2078,7 @@ class TestInstructorAPILevelsDataDump(ModuleStoreTestCase, LoginEnrollmentTestCa
         request = self.mock_request()
         response = decorated_func(request, 'valid/course/key')
         self.assertEqual(response.status_code, 403)
-        assert not func.called
+        self.assertFalse(func.called)
 
     def test_add_user_to_fiance_admin_role_with_valid_course(self):
         """
@@ -2090,7 +2090,7 @@ class TestInstructorAPILevelsDataDump(ModuleStoreTestCase, LoginEnrollmentTestCa
         request = self.mock_request()
         CourseFinanceAdminRole(self.course.id).add_users(self.instructor)
         decorated_func(request, self.course.id.to_deprecated_string())
-        assert func.called
+        self.assertTrue(func.called)
 
     def test_enrollment_report_features_csv(self):
         """
