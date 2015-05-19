@@ -353,27 +353,46 @@ EXPORTED_COURSE_DIR_NAME = 'exported_source_course'
 
 
 def is_mixed_split_modulestore(modulestore_builder):
+    """
+    Is this a modulestore builder a mixed modulestore backed by a Split modulestore?
+    """
     return (
         isinstance(modulestore_builder, MixedModulestoreBuilder) and
         modulestore_builder.store_builders[0][0] == 'split'
     )
 
+
 def is_mixed_old_mongo_modulestore(modulestore_builder):
+    """
+    Is this a modulestore builder a mixed modulestore backed by an Old Mongo modulestore?
+    """
     return (
         isinstance(modulestore_builder, MixedModulestoreBuilder) and
         modulestore_builder.store_builders[0][0] == 'draft'
     )
 
-def is_straight_old_mongo_modulestore(modulestore_builder):
+
+def is_plain_old_mongo_modulestore(modulestore_builder):
+    """
+    Is this a modulestore builder an Old Mongo modulestore?
+    """
     return isinstance(modulestore_builder, MongoModulestoreBuilder)
 
+
 def is_split_modulestore(modulestore_builder):
+    """
+    Is this a modulestore builder a Split-backed modulestore?
+    """
     return is_mixed_split_modulestore(modulestore_builder)
 
+
 def is_old_mongo_modulestore(modulestore_builder):
+    """
+    Is this a modulestore builder an Old Mongo modulestore?
+    """
     return (
         is_mixed_old_mongo_modulestore(modulestore_builder) or
-        is_straight_old_mongo_modulestore(modulestore_builder)
+        is_plain_old_mongo_modulestore(modulestore_builder)
     )
 
 
