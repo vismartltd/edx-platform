@@ -133,16 +133,17 @@ FEATURES['CERTIFICATES_HTML_VIEW'] = True
 
 
 from django.utils.translation import ugettext as _
-LANGUAGE_MAP = {lang: display for lang, display in ALL_LANGUAGES}
-LANGUAGE_MAP['_language'] = _('Language')
+LANGUAGE_MAP = {'terms': {lang: display for lang, display in ALL_LANGUAGES}, 'name' : _('Language')}
 COURSE_DISCOVERY_MEANININGS = {
     'org': {
-        '_org': _('Organization'),
+        'name': _('Organization'),
     },
     'modes': {
-        '_modes': _('Course Type'),
-        'honor': _('Honor'),
-        'verified': _('Verified'),
+        'name': _('Course Type'),
+        'terms': {
+            'honor': _('Honor'),
+            'verified': _('Verified'),
+        },
     },
     'language': LANGUAGE_MAP,
 }

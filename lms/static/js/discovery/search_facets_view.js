@@ -75,12 +75,20 @@ define([
         },
 
         displayName: function(name, term){
-            if(this.facetsTypes.hasOwnProperty(name)){
-                if(term){
-                    return this.facetsTypes[name].hasOwnProperty(term) ? this.facetsTypes[name][term] : term;
+            if(this.facetsTypes.hasOwnProperty(name)) {
+                if(term) {
+                    if (typeof this.facetsTypes[name].terms !== 'undefined') {
+                        return this.facetsTypes[name].terms.hasOwnProperty(term) ? this.facetsTypes[name].terms[term] : term;
+                    }
+                    else {
+                        return term;
+                    }
                 }
-                else{
-                    return this.facetsTypes[name]['_' + name];
+                else if(this.facetsTypes[name].hasOwnProperty('name')) {
+                    return this.facetsTypes[name]['name'];
+                }
+                else {
+                    return name;
                 }
             }
             else{
