@@ -21,7 +21,7 @@ import json
 from xblock.fields import Scope, List, String, Dict, Boolean, Integer, Float
 from .fields import Date
 from django.utils.timezone import UTC
-from django.conf import settings
+
 
 log = logging.getLogger(__name__)
 
