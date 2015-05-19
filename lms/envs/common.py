@@ -198,7 +198,7 @@ FEATURES = {
     # Enable URL that shows information about the status of variuous services
     'ENABLE_SERVICE_STATUS': False,
 
-    # Toggle to indicate use of a custom theme
+    # Toggle to indicate use of the Stanford theming system
     'USE_CUSTOM_THEME': False,
 
     # Don't autoplay videos for students
@@ -397,6 +397,8 @@ FEATURES = {
     'ENABLE_TEAMS': False,
 }
 
+THEME_DIR = ENV_ROOT / "themes" / "red-theme"
+
 # Ignore static asset files on import which match this pattern
 ASSET_IGNORE_REGEX = r"(^\._.*$)|(^\.DS_Store$)|(^.*~$)"
 
@@ -486,6 +488,10 @@ TEMPLATE_DIRS = [
     COMMON_ROOT / 'lib' / 'capa' / 'capa' / 'templates',
     COMMON_ROOT / 'djangoapps' / 'pipeline_mako' / 'templates',
 ]
+# if FEATURES.get("USE_CUSTOM_THEME", False):
+#     theme_template_dir = PROJECT_ROOT / "themes" / THEME_NAME / "lms" / "templates"
+#     TEMPLATE_DIRS.insert(0, theme_template_dir)
+#     edxmako.paths.add_lookup('main', theme_template_dir, prepend=True)
 
 TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.request',
