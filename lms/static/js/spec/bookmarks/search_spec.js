@@ -5,6 +5,7 @@ define([
     'backbone',
     'logger',
     'js/common_helpers/template_helpers',
+    'js/common_helpers/ajax_helpers',
     'js/search/base/models/search_result',
     'js/search/base/collections/search_collection',
     'js/search/base/routers/search_router',
@@ -16,7 +17,6 @@ define([
     'js/search/dashboard/views/search_results_view',
     'js/search/course/search_app',
     'js/search/dashboard/search_app',
-    'js/bookmarks/views/bookmarks_button'
 ], function(
     $,
     _,
@@ -24,6 +24,7 @@ define([
     Backbone,
     Logger,
     TemplateHelpers,
+    AjaxHelpers,
     SearchResult,
     SearchCollection,
     SearchRouter,
@@ -35,7 +36,6 @@ define([
     DashSearchResultsView,
     CourseSearchApp,
     DashSearchApp,
-    BookmarksButtonView
 ) {
     'use strict';
 
