@@ -581,6 +581,7 @@
     // TODO: why do these need 'lms/include' at the front but the CMS equivalent logic doesn't?
     define([
         // Run the LMS tests
+        'lms/include/js/spec/bookmarks/bookmarks_spec.js',
         'lms/include/js/spec/photocapture_spec.js',
         'lms/include/js/spec/staff_debug_actions_spec.js',
         'lms/include/js/spec/views/notification_spec.js',
@@ -633,8 +634,7 @@
         'lms/include/js/spec/edxnotes/plugins/scroller_spec.js',
         'lms/include/js/spec/edxnotes/plugins/caret_navigation_spec.js',
         'lms/include/js/spec/edxnotes/collections/notes_spec.js',
-        'lms/include/js/spec/search/search_spec.js',
-        'lms/include/js/spec/bookmarks/bookmarks_spec.js'
+        'lms/include/js/spec/search/search_spec.js'
     ]);
 
 }).call(this, requirejs, define);
