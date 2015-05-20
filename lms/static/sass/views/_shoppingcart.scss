@@ -10,14 +10,6 @@ $input-border: 2px solid $dark-gray2;
 $discount-border: 2px solid $light-gray1;
 $steps-border: 3px solid $light-gray1;
 $light-border: 1px solid $gray-l5;
-$expiry-border-color: #F0F0F0;
-$submit-hover-background-color: #1F8FC2;
-$contact-support-background-color: #9B9B9B;
-$card-errors-background-color: #FFEEF5;
-$course-title-color: #4A4A46;
-$shopping-cart-input-color: #666;
-$enrollment-text-color: #9B9B93;
-$empty-cart-text-color: #9D9D9D;
 
 .pull-right {
   @include float(right);
@@ -45,31 +37,28 @@ $empty-cart-text-color: #9D9D9D;
 
 .cart-errors {
   @include text-align(center);
-  @include font-size(15);
+  @extend %t-copy-base;
   display: none;
   margin-bottom: $baseline;
   border-bottom: 1px solid $pink;
   padding: ($baseline/2) 0;
-  background: $card-errors-background-color;
+  background: $pink-l5;
   color: $pink;
-  font-family: $sans-serif;
 }
 
 #expiry-msg {
-  @extend %t-icon6;
+  @extend %t-copy-sub1;
   margin-top: ($baseline*0.15);
-  border-top: 1px solid $expiry-border-color;
+  border-top: $light-border;
   background-color: $gray-l5;
   padding: ($baseline*0.75);
   text-shadow: 0px 1px 1px $white;
-  font-family: $sans-serif;
 }
 
 .confirm-enrollment {
   .title {
     @include text-align(left);
-    @include line-height(47.3);
-    @extend %t-icon3;
+    @extend %t-title4;
     border-bottom: $light-border;
   }
 
@@ -86,41 +75,41 @@ $empty-cart-text-color: #9D9D9D;
     width: calc(100% - #{$enrollment-details-width-difference});
 
     .sub-title {
-      @extend %t-icon4;
+      @extend %t-title5;
       text-transform: uppercase;
-      color: $enrollment-text-color;
+      color: $gray-l1;
     }
 
     .course-date-label {
       @include float(right);
-      color: $enrollment-text-color;
+      color: $gray-l1;
     }
 
     .course-dates {
       @include float(right);
-      @extend %t-icon4;
+      @extend %t-copy-lead1;
     }
 
     .course-title h1 {
       @include text-align(left);
-      @include font-size(26);
+      @extend %t-title4;
       @extend %t-strong;
-      color: $course-title-color;
+      color: $black-t3;
     }
 
     .enrollment-text {
+      @extend %t-copy-base;
       line-height: normal;
-      color: $enrollment-text-color;
-      font-family: $sans-serif;
+      color: $gray-l1;
     }
   }
 
   a.contact-support-bg-color {
-    box-shadow: 0 1px 0 0 $contact-support-background-color inset;
-    border: 16px solid $contact-support-background-color;
-    background-color: $contact-support-background-color;
-    background-image: linear-gradient($contact-support-background-color, $contact-support-background-color);
-    text-shadow: 0 1px 0 $contact-support-background-color;
+    box-shadow: 0 1px 0 0 $gray-l1 inset;
+    border: 16px solid $gray-l1;
+    background-color: $gray-l1;
+    background-image: linear-gradient($gray-l1, $gray-l1);
+    text-shadow: 0 1px 0 $gray-l1;
   }
 
   a.course-link-bg-color {
@@ -132,10 +121,10 @@ $empty-cart-text-color: #9D9D9D;
 
   a.link-button {
     @include float(right);
+    @include border-radius(3px);
     @include text-align(center);
-    @extend %t-icon3;
+    @extend %t-copy-lead2;
     display: inline-block;
-    border-radius: 3px;
     background-clip: padding-box;
     padding: ($baseline*0.3) ($baseline*0.9);
     width: ($baseline*12.5);
@@ -145,16 +134,16 @@ $empty-cart-text-color: #9D9D9D;
 
     // STATE: hover
     &:hover {
-      box-shadow: 0 1px 0 0 $m-blue-d2 inset;
-      border: 16px solid $m-blue-d2;
-      background: $m-blue-d2;
+      box-shadow: 0 1px 0 0 $blue inset;
+      border: 16px solid $blue;
+      background: $blue;
     }
   }
 
   button[type="submit"] {
     @include float(right);
     @include border-radius(3px);
-    @extend %t-icon3;
+    @extend %t-copy-lead2;
     display: inline-block;
     box-shadow: 0 1px 0 0 $blue2 inset;
     border: 1px solid $blue2;
@@ -172,7 +161,7 @@ $empty-cart-text-color: #9D9D9D;
     // STATE: hover
     &:hover {
       box-shadow: none;
-      background: $m-blue-d2;
+      background: $blue;
     }
   }
 }
@@ -180,7 +169,7 @@ $empty-cart-text-color: #9D9D9D;
 .shopping-cart {
   a.blue {
     @include border-radius(3px);
-    @extend %t-icon3;
+    @extend %t-copy-lead2;
     @extend %t-regular;
     display: inline-block;
     margin: ($baseline/2) 0 $baseline 0;
@@ -199,13 +188,12 @@ $empty-cart-text-color: #9D9D9D;
   }
 
   input[type="text"], input[type="email"], select {
-    @extend %t-icon5;
+    @extend %t-action2;
     @extend %t-strong;
     border: $input-border;
     padding: ($baseline*0.4) ($baseline*0.6);
     width: ($baseline*13);
     height: auto;
-    font-family: $sans-serif;
     font-style: normal;
 
     // STATE: focus
@@ -230,7 +218,7 @@ $empty-cart-text-color: #9D9D9D;
 
   h1 {
     @include text-align(left);
-    @extend %t-icon3;
+    @extend %t-title4;
     margin: ($baseline/2) 0 0 0;
     padding: ($baseline*1.5) 0;
     letter-spacing: 0;
@@ -309,29 +297,27 @@ $empty-cart-text-color: #9D9D9D;
       width: calc(100% - #{$data-input-width-difference});
 
       h3, h3 span {
-        @include line-height(13.51);
-        @extend %t-icon5;
+        @extend %t-title6;
         padding: 0;
         text-transform: uppercase;
         color: $light-gray2;
-        font-family: $sans-serif;
       }
 
       h1 {
         @include float(left);
-        @extend %t-icon3;
+        @extend %t-title4;
         padding: 0 0 ($baseline/2) 0;
         width: ($baseline*35);
         text-transform: capitalize;
         color: $dark-gray1;
 
-        // Adding this content to insure proper display of closing parentheses
+        // Adding this content to ensure proper display of closing parentheses
         &:after {
           content: "\200E‎";
         }
 
         span {
-          @extend %t-icon5;
+          @extend %t-copy-base;
         }
       }
 
@@ -349,7 +335,7 @@ $empty-cart-text-color: #9D9D9D;
       .three-col {
         .col-1 {
           @include float(left);
-          @extend %t-icon5;
+          @extend %t-copy-base;
           @extend %t-regular;
           padding-top: ($baseline*0.55);
           width: ($baseline*22.5);
@@ -359,7 +345,7 @@ $empty-cart-text-color: #9D9D9D;
           .price {
             span {
               @include padding-left($baseline);
-              @extend %t-icon3;
+              @extend %t-copy-lead2;
               color: $dark-gray1;
             }
 
@@ -386,12 +372,12 @@ $empty-cart-text-color: #9D9D9D;
             position: relative;
 
             label {
-              @extend %t-icon5;
+              @extend %t-copy-base;
               @extend %t-strong;
+              cursor: text;
               text-transform: uppercase;
               color: $light-gray2;
               font-style: normal;
-              font-family: $sans-serif;
             }
 
             .counter {
@@ -403,15 +389,14 @@ $empty-cart-text-color: #9D9D9D;
 
               input[type="text"] {
                 @include text-align(center);
-                @include font-size(25);
+                @extend %t-copy-lead2;
                 @extend %t-strong;
                 box-shadow: none;
                 border: none;
                 padding: ($baseline*0.4) 0;
                 width: ($baseline*3.75);
                 height: auto;
-                color: $shopping-cart-input-color;
-                font-family: $sans-serif;
+                color: $black-t2;
                 font-style: normal;
 
                 //STATE: focus
@@ -479,7 +464,7 @@ $empty-cart-text-color: #9D9D9D;
             .updateBtn {
               @include float(right);
               @include padding($baseline*1.25, $baseline*1.75, $baseline*1.25, 0);
-              @include font-size(15);
+              @extend %t-action2;
               display: inline-block;
 
               // STATE: focus
@@ -540,7 +525,7 @@ $empty-cart-text-color: #9D9D9D;
 
     .code-text {
       a {
-        @extend %t-icon4;
+        @extend %t-copy-lead1;
         @extend %t-strong;
         display: inline-block;
         cursor: pointer;
@@ -556,7 +541,7 @@ $empty-cart-text-color: #9D9D9D;
 
         b {
           @include padding-left($baseline);
-          @extend %t-icon3;
+          @extend %t-copy-lead2;
           @extend %t-strong;
           letter-spacing: 0;
         }
@@ -568,12 +553,12 @@ $empty-cart-text-color: #9D9D9D;
       display: inline-block;
 
       input[type="text"] {
+        @extend %t-copy-base;
         @extend %t-strong;
         border: $input-border;
         padding: ($baseline*0.4) ($baseline*0.6);
         width: ($baseline*13);
         height: auto;
-        font-family: $sans-serif;
         font-style: normal;
 
         // STATE: focus
@@ -589,7 +574,7 @@ $empty-cart-text-color: #9D9D9D;
       }
 
       .error-text {
-        @extend %t-icon7;
+        @extend %t-copy-sub2;
         display: block;
         padding-bottom: 0;
         color: $red1;
@@ -629,7 +614,7 @@ $empty-cart-text-color: #9D9D9D;
     }
 
     button[type="submit"] {
-      @extend %t-icon5;
+      @extend %t-action2;
       @extend %t-strong;
       float: none;
       padding: ($baseline*0.35) $baseline;
@@ -641,7 +626,7 @@ $empty-cart-text-color: #9D9D9D;
       &:hover {
         box-shadow: none;
         border: 1px solid transparent;
-        background: $submit-hover-background-color;
+        background: $blue;
       }
     }
   }
@@ -658,20 +643,18 @@ $empty-cart-text-color: #9D9D9D;
 
       b {
         @include margin-right($baseline);
-        @extend %t-icon6;
+        @extend %t-copy-sub1;
         display: inline-block;
         width: ($baseline*9.5);
         vertical-align: top;
-        font-family: $sans-serif;
       }
 
       label {
-        @extend %t-icon6;
+        @extend %t-copy-sub1;
         display: inline-block;
         margin: 0;
         width: ($baseline*60);
         word-wrap: break-word;
-        font-family: $sans-serif;
         font-style: normal;
       }
     }
@@ -702,12 +685,11 @@ $empty-cart-text-color: #9D9D9D;
 
         label {
           @include padding($baseline*0.4, $baseline*0.75, $baseline*0.4, $baseline*0.3);
-          @extend %t-icon5;
+          @extend %t-copy-base;
           @extend %t-regular;
           display: inline-block;
           margin-bottom: 0;
           color: $dark-gray2;
-          font-family: $sans-serif;
           font-style: normal;
         }
       }
@@ -724,8 +706,8 @@ $empty-cart-text-color: #9D9D9D;
       button[type="submit"] {
         @include float(right);
         @include margin-left($baseline*0.75);
-        @include padding($baseline*0.9, $baseline*3, $baseline*1.1, $baseline*1.5);
-        @extend %t-icon3;
+        @include padding($baseline*0.75, $baseline*3, $baseline*1.1, $baseline*1.5);
+        @extend %t-copy-lead2;
         @extend %t-strong;
         width: auto;
         height: ($baseline*3.35);
@@ -739,14 +721,14 @@ $empty-cart-text-color: #9D9D9D;
         // STATE: hover
         &:hover {
           box-shadow: none;
-          background: $m-blue-d2;
+          background: $blue;
         }
       }
 
       p {
         @include text-align(right);
+        @extend %t-copy-base;
         padding: ($baseline*0.65) 0;
-        font-family: $sans-serif;
       }
 
       form {
@@ -760,17 +742,6 @@ $empty-cart-text-color: #9D9D9D;
         top: ($baseline*1.1);
         color: $white;
       }
-
-      label.pull-right {
-        @include float(right);
-        @include text-align(right);
-        @include line-height(13.51);
-        display: inline-block;
-        padding: ($baseline/2) ($baseline*1.25);
-        color: $dark-gray1;
-        font-family: $sans-serif;
-        font-style: normal;
-      }
     }
   }
 
@@ -782,11 +753,10 @@ $empty-cart-text-color: #9D9D9D;
   }
 
   h3 {
-    @extend %t-icon5;
+    @extend %t-title6;
     @extend %t-regular;
     padding: ($baseline*1.5) $baseline;
     color: $dark-gray1;
-    font-family: $sans-serif;
   }
 
   .billing-data {
@@ -794,7 +764,7 @@ $empty-cart-text-color: #9D9D9D;
     width: 100%;
 
     h3 {
-      @include font-size(17);
+      @extend %t-title5;
       margin-bottom: ($baseline/4);
       padding: ($baseline*0.6) 0;
       color: $dark-gray1;
@@ -815,22 +785,22 @@ $empty-cart-text-color: #9D9D9D;
 
       // CASE: index of child is even
       &:nth-child(even) {
-        @include margin-right($baseline*1.5);
+        @include margin-left($baseline*1.5);
       }
 
       .data-group {
         margin-bottom: ($baseline*0.75);
 
         label {
-          @extend %t-icon5;
+          @extend %t-copy-base;
           @extend %t-regular;
           display: block;
           color: $dark-gray2;
-          font-family: $sans-serif;
           font-style: normal;
         }
 
         input {
+          @extend %t-copy-base;
           margin-bottom: ($baseline/4);
           width: 100%;
         }
@@ -844,7 +814,7 @@ $empty-cart-text-color: #9D9D9D;
   }
 
   .error-text{
-    @extend %t-icon7;
+    @extend %t-copy-sub2;
     display: block;
     padding-bottom: 0;
     color: $red1;
@@ -889,18 +859,17 @@ $empty-cart-text-color: #9D9D9D;
     padding: $baseline;
 
     h2 {
-      @include font-size(17);
+      @xtend %t-title5;
       @extend %t-strong;
       margin-bottom: 0;
       color: $dark-gray1;
-      font-family: $sans-serif;
 
       span {
         @include padding-left($baseline*3);
         text-transform: capitalize;
 
         .blue-link {
-          @extend %t-icon6;
+          @extend %t-copy-sub1;
           color: $blue2;
 
           // STATE: hover
@@ -981,7 +950,7 @@ $empty-cart-text-color: #9D9D9D;
 
         // CASE: has first child
         &:first-child {
-          @extend %t-icon4;
+          @extend %t-copy-lead1;
           @include text-align(left);
           text-transform: capitalize;
         }
@@ -993,7 +962,7 @@ $empty-cart-text-color: #9D9D9D;
           span {
             @include border-radius(3px);
             @include text-align(center);
-            @include font-size(13);
+            @extend %t-copy-sub1;
             display: inline-block;
             padding: ($baseline/10) ($baseline/2);
             min-width: ($baseline*2.75);
@@ -1016,38 +985,36 @@ $empty-cart-text-color: #9D9D9D;
 }
 
 .empty-cart {
+  @include border-radius(3px);
   @include text-align(center);
   margin: $baseline 0;
-  border-radius: 3px;
   background: $light-gray1;
   padding: $baseline 0;
 
   h2 {
     @include text-align(center);
-    @extend %t-icon3;
+    @extend %t-title4;
     @extend %t-strong;
     margin-top: $baseline;
     margin-bottom: ($baseline/4);
     text-transform: initial;
     letter-spacing: 0;
-    color: $contact-support-background-color;
-    font-family: $sans-serif;
+    color: $gray-l1;
   }
 
   p {
     @include text-align(center);
-    @extend %t-icon6;
+    @extend %t-copy-sub1;
     text-shadow: 0 1px 1px $white;
-    color: $empty-cart-text-color;
-    font-family: $sans-serif;
+    color: $gray-l1;
   }
 
   a.blue {
-    @extend %t-icon3;
+    @include border-radius(3px);
+    @extend %t-copy-lead2;
     @extend %t-regular;
     display: inline-block;
     margin: ($baseline/2) 0 $baseline 0;
-    border-radius: 3px;
     background: $blue2;
     padding: $baseline ($baseline*2);
     color: white;
@@ -1100,7 +1067,7 @@ $empty-cart-text-color: #9D9D9D;
     }
 
     table.course-receipt {
-      tr td a {
+      .redemption-url {
         &:before {
           display: inline-block;
           content:" " attr(data-base-url) " ";

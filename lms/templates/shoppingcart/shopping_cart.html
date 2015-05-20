@@ -6,11 +6,24 @@ from courseware.courses import course_image_url, get_course_about_section
 from django.core.urlresolvers import reverse
 from edxmako.shortcuts import marketing_link
 from django.utils.translation import ugettext as _
+from django.utils.translation import ungettext
 
 %>
 
 <section class="wrapper confirm-enrollment shopping-cart cart-view">
   <%block name="custom_content">
+
+  % if is_course_enrollment_closed:
+    <%
+      expiry_message = ungettext(
+          "{course_names} has been removed because the enrollment period has closed.",
+          "{course_names} have been removed because the enrollment period has closed.",
+          len(expired_course_names)
+      ).format(
+          course_names=", ".join(expired_course_names),
+      )
+    %>
+  % endif
 
   <div class="container">
     % if shoppingcart_items:
@@ -23,7 +36,7 @@ from django.utils.translation import ugettext as _
       </%block>
 
       % if is_course_enrollment_closed:
-        <p id="expiry-msg">${_('{course_names} has been removed because the enrollment period has closed.').format(course_names=appended_expired_course_names)}</p>
+        <p id="expiry-msg">${expiry_message}</p>
       % endif
    <%
       discount_applied = False
@@ -47,7 +60,10 @@ from django.utils.translation import ugettext as _
 
         </div>
         <div class="data-input">
-          <h3>${_('Registration for:')} <span class="pull-right">${_('Course Dates:')}</span></h3>
+          ## Translators: "Registration for:" is followed by a course name
+          <h3>${_('Registration for:')}
+            <span class="pull-right">${_('Course Dates:')}</span>
+          </h3>
           <h1>${ course.display_name }</h1><span class="pull-right">${course.start_datetime_text()} -  ${course.end_datetime_text()}</span>
           <hr>
           <div class="three-col">
@@ -64,7 +80,7 @@ from django.utils.translation import ugettext as _
                 <div class="numbers-row">
                   <label for="students">${_('Students:')}</label>
                   <div class="counter">
-                      <input maxlength="3" title="${_('Input qty and press enter.')}" max="999" type="text" name="students" value="${item.qty}" id="${item.id}" data-unit-cost="${item.unit_cost}" data-qty="${item.qty}">
+                      <input maxlength="3" title="${_('Input quantity and press enter.')}" max="999" type="text" name="students" value="${item.qty}" id="${item.id}" data-unit-cost="${item.unit_cost}" data-qty="${item.qty}">
                   </div>
                   <button class="inc button"><i class="icon fa fa-caret-up" aria-hidden="true"><span>+</span></i></button><button class="dec button"><i class="icon fa fa-caret-down"></i></button>
                       <!--<a name="updateBtn" class="updateBtn hidden" id="updateBtn-${item.id}" href="#">update</a>-->
@@ -138,7 +154,7 @@ from django.utils.translation import ugettext as _
           <div class="empty-cart" >
             <h2>${_('Your Shopping cart is currently empty.')}</h2>
             % if is_course_enrollment_closed:
-              <p>${_('{course_names} has been removed because the enrollment period has closed.').format(course_names=appended_expired_course_names)}</p>
+              <p>${expiry_message}</p>
             % endif
             <a href="${marketing_link('COURSES')}" class="blue">${_('View Courses')}</a>
           </div>
@@ -225,7 +241,7 @@ from django.utils.translation import ugettext as _
                })
    });
 
-   $("input[name='billing-details']").click(function(event){
+   $("button[name='billing-details']").click(function(event){
        // check if there is code exists in the inout_code field
        // before going to billing details page
        // if exists then trigger click event of the apply code button
