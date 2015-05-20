@@ -107,7 +107,7 @@ class BookmarksView(ListCreateAPIView):
             log.error("Invalid course id '{course_id}'")
             return []
 
-        results_queryset = Bookmark.objects.filter(course_key=course_key, user=self.request.user).order_by('-created')
+        results_queryset = Bookmark.objects.filter(course_key=course_key, user=self.request.user).select_related('block_cache').order_by('-created')
 
         return results_queryset
 
