@@ -15,7 +15,9 @@ define([
     'js/search/course/views/search_results_view',
     'js/search/dashboard/views/search_results_view',
     'js/search/course/search_app',
-    'js/search/dashboard/search_app'
+    'js/search/dashboard/search_app',
+    'js/common_helpers/ajax_helpers',
+    'js/common_helpers/template_helpers'
 ], function(
     $,
     _,
@@ -33,7 +35,9 @@ define([
     CourseSearchResultsView,
     DashSearchResultsView,
     CourseSearchApp,
-    DashSearchApp
+    DashSearchApp,
+    AjaxHelpers,
+    TemplateHelpers
 ) {
     'use strict';
 
