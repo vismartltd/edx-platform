@@ -3,8 +3,12 @@ Signal handling functions for use with external commerce service.
 """
 import logging
 
+from django.conf import settings
+from django.core.mail import EmailMultiAlternatives
 from django.dispatch import receiver
+from django.utils.translation import ugettext as _
 from ecommerce_api_client.exceptions import HttpClientError
+from microsite_configuration import microsite
 from request_cache.middleware import RequestCache
 from student.models import UNENROLL_DONE
 
@@ -100,8 +104,43 @@ def refund_seat(course_enrollment, request_user):
             course_key_str,
             refund_ids,
         )
+        try:
+            send_refund_notification(course_enrollment, refund_ids)
+        except:  # pylint: disable=bare-except
+            # don't break, just log a warning
+            log.warning("Could not send email notification for refund.", exc_info=True)
     else:
         # no refundable orders were found.
         log.debug("No refund opened for user [%s], course [%s]", unenrolled_user.id, course_key_str)
 
     return refund_ids
+
+
+def send_refund_notification(course_enrollment, refund_ids):
+    """
+    Issue an email notification to the configured email recipient about a
+    newly-initiated refund request.
+
+    This function does not do any exception handling; callers are responsible
+    for capturing and recovering from any errors.
+    """
+    if microsite.is_request_in_microsite():
+        # this is not presently supported with the external service.
+        raise NotImplementedError("Unable to send refund processing emails to microsite teams.")
+
+    for_user = course_enrollment.user
+    subject = _("[Refund] User-Requested Refund")
+    message = _("A refund request has been initiated for {0} ({1}). "
+                "To process this request, please visit the link(s) below.").format(for_user, for_user.email)
+
+    refund_urls = ["{}/dashboard/refunds/{}/".format(settings.ECOMMERCE_API_URL, refund_id) for refund_id in refund_ids]
+    text_body = '\r\n'.join([message] + refund_urls + [''])
+    refund_links = ['<a href="{0}">{0}</a>'.format(url) for url in refund_urls]
+    html_body = '<p>{0}</p>'.format('<br>'.join([message] + refund_links))
+
+    to_email = settings.PAYMENT_SUPPORT_EMAIL
+    from_email = settings.PAYMENT_SUPPORT_EMAIL
+
+    email_message = EmailMultiAlternatives(subject, text_body, from_email, [to_email])
+    email_message.attach_alternative(html_body, "text/html")
+    email_message.send()

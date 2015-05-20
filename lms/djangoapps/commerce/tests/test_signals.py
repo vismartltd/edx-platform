@@ -9,7 +9,7 @@ from opaque_keys.edx.keys import CourseKey
 from student.models import UNENROLL_DONE
 from student.tests.factories import UserFactory, CourseEnrollmentFactory
 
-from commerce.signals import refund_seat
+from commerce.signals import refund_seat, send_refund_notification
 from commerce.tests import TEST_API_URL, TEST_API_SIGNING_KEY
 from commerce.tests.mocks import mock_create_refund
 
@@ -115,3 +115,77 @@ class TestRefundSignal(TestCase):
         with mock_create_refund(status=500):
             self.send_signal()
             self.assertTrue(mock_log_exception.called)
+
+    @mock.patch('commerce.signals.send_refund_notification')
+    def test_notification(self, mock_send_notificaton):
+        """
+        Ensure the notification function is triggered when refunds are
+        initiated
+        """
+        with mock_create_refund(status=200, response=[1, 2, 3]):
+            self.send_signal()
+            self.assertTrue(mock_send_notificaton.called)
+
+    @mock.patch('commerce.signals.send_refund_notification')
+    def test_notification_no_refund(self, mock_send_notification):
+        """
+        Ensure the notification function is NOT triggered when no refunds are
+        initiated
+        """
+        with mock_create_refund(status=200, response=[]):
+            self.send_signal()
+            self.assertFalse(mock_send_notification.called)
+
+    @mock.patch('commerce.signals.send_refund_notification', side_effect=Exception("Splat!"))
+    @mock.patch('commerce.signals.log.warning')
+    def test_notification_error(self, mock_log_warning, mock_send_notification):
+        """
+        Ensure an error occuring during notification does not break program
+        flow, but a warning is logged.
+        """
+        with mock_create_refund(status=200, response=[1, 2, 3]):
+            self.send_signal()
+            self.assertTrue(mock_send_notification.called)
+            self.assertTrue(mock_log_warning.called)
+
+    @mock.patch('commerce.signals.microsite.is_request_in_microsite', return_value=True)
+    def test_notification_microsite(self, mock_is_request_in_microsite):  # pylint: disable=unused-argument
+        """
+        Ensure the notification function raises an Exception if used in the
+        context of microsites.
+        """
+        with self.assertRaises(NotImplementedError):
+            send_refund_notification(self.course_enrollment, [1, 2, 3])
+
+    @override_settings(PAYMENT_SUPPORT_EMAIL='payment@example.com')
+    @mock.patch('commerce.signals.EmailMultiAlternatives')
+    def test_notification_content(self, mock_email_class):
+        """
+        Ensure the email sender, recipient, subject, content type, and content
+        are all correct.
+        """
+        # mock_email_class is the email message class/constructor.
+        # mock_message is the instance returned by the constructor.
+        # we need to make assertions regarding both.
+        mock_message = mock.MagicMock()
+        mock_email_class.return_value = mock_message
+
+        refund_ids = [1, 2, 3]
+        send_refund_notification(self.course_enrollment, [1, 2, 3])
+
+        # check headers and text content
+        self.assertEqual(
+            mock_email_class.call_args[0],
+            ("[Refund] User-Requested Refund", mock.ANY, 'payment@example.com', ['payment@example.com']),
+        )
+        text_body = mock_email_class.call_args[0][1]
+        # check for a URL for each refund
+        for exp in [r'{0}/dashboard/refunds/{1}/'.format(TEST_API_URL, refund_id) for refund_id in refund_ids]:
+            self.assertRegexpMatches(text_body, exp)
+
+        # check HTML content
+        self.assertEqual(mock_message.attach_alternative.call_args[0], (mock.ANY, "text/html"))
+        html_body = mock_message.attach_alternative.call_args[0][0]
+        # check for a link to each refund
+        for exp in [r'a href="{0}/dashboard/refunds/{1}/"'.format(TEST_API_URL, refund_id) for refund_id in refund_ids]:
+            self.assertRegexpMatches(html_body, exp)
