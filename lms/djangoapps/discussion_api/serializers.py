@@ -64,6 +64,10 @@ class _ContentSerializer(serializers.Serializer):
         self.fields["id"] = self.fields.pop("id_")
 
     def _is_user_privileged(self, user_id):
+        """
+        Returns a boolean indicating whether the given user_id identifies a
+        privileged user.
+        """
         return user_id in self.context["staff_user_ids"] or user_id in self.context["ta_user_ids"]
 
     def _is_anonymous(self, obj):
@@ -173,6 +177,10 @@ class CommentSerializer(_ContentSerializer):
         return self.context.get("parent_id")
 
     def get_endorsed_by(self, obj):
+        """
+        Returns the username of the endorsing user, if the information is
+        available and would not identify the author of an anonymous thread.
+        """
         endorsement = obj.get("endorsement")
         if endorsement:
             endorser_id = int(endorsement["user_id"])
@@ -186,6 +194,10 @@ class CommentSerializer(_ContentSerializer):
         return None
 
     def get_endorsed_by_label(self, obj):
+        """
+        Returns the role label (i.e. "staff" or "community_ta") for the
+        endorsing user
+        """
         endorsement = obj.get("endorsement")
         if endorsement:
             return self._get_user_label(int(endorsement["user_id"]))
@@ -193,6 +205,7 @@ class CommentSerializer(_ContentSerializer):
             return None
 
     def get_endorsed_at(self, obj):
+        """Returns the timestamp for the endorsement, if available."""
         endorsement = obj.get("endorsement")
         return endorsement["time"] if endorsement else None
 
