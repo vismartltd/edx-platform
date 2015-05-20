@@ -15,10 +15,10 @@ def create_tracking_context(user):
 
 def is_commerce_service_configured():
     """
-    Return a boolean indicating whether or not configuration is present to use
+    Return a Boolean indicating whether or not configuration is present to use
     the external commerce service.
     """
-    return settings.ECOMMERCE_API_URL and settings.ECOMMERCE_API_SIGNING_KEY
+    return bool(settings.ECOMMERCE_API_URL and settings.ECOMMERCE_API_SIGNING_KEY)
 
 
 def ecommerce_api_client(user):

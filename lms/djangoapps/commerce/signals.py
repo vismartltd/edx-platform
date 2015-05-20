@@ -85,7 +85,7 @@ def refund_seat(course_enrollment, request_user):
             # this is a known limitation; commerce service does not presently
             # support the case of a non-superusers initiating a refund on
             # behalf of another user.
-            log.warning("user [%s] was not authorized to initiate a refund for user [%s] "
+            log.warning("User [%s] was not authorized to initiate a refund for user [%s] "
                         "upon unenrollment from course [%s]", request_user, unenrolled_user, course_key_str)
             return []
         else:
@@ -95,13 +95,13 @@ def refund_seat(course_enrollment, request_user):
     if refund_ids:
         # at least one refundable order was found.
         log.info(
-            "refund successfully opened for user [%s], course [%s]: %r",
+            "Refund successfully opened for user [%s], course [%s]: %r",
             unenrolled_user.id,
             course_key_str,
             refund_ids,
         )
     else:
         # no refundable orders were found.
-        log.debug("no refund opened for user [%s], course [%s]", unenrolled_user.id, course_key_str)
+        log.debug("No refund opened for user [%s], course [%s]", unenrolled_user.id, course_key_str)
 
     return refund_ids
