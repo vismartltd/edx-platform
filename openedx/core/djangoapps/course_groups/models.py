@@ -38,11 +38,7 @@ class CourseUserGroup(models.Model):
     # For now, only have group type 'cohort', but adding a type field to support
     # things like 'question_discussion', 'friends', 'off-line-class', etc
     COHORT = 'cohort'
-    TEAM = 'team'
-    GROUP_TYPE_CHOICES = (
-        (COHORT, 'Cohort'),
-        (TEAM, 'Team'),
-    )
+    GROUP_TYPE_CHOICES = ((COHORT, 'Cohort'),)
     group_type = models.CharField(max_length=20, choices=GROUP_TYPE_CHOICES)
 
     @classmethod
@@ -60,28 +56,6 @@ class CourseUserGroup(models.Model):
             group_type=group_type,
             name=name
         )
-
-
-models.DateTimeField(auto_now_add=True).contribute_to_class(CourseUserGroup.users.through, 'date_joined')
-
-
-    # def add_user(self, user):
-    #     """
-    #     Adds the given user to the group's users, creating a CourseUserGroupMembership if necessary.
-    #     """
-    #     CourseUserGroupMembership.objects.get_or_create(
-    #         user=user,
-    #         group=self
-    #     )
-
-
-# class CourseUserGroupMembership(models.Model):
-#     """
-#     This model represents the membership of a single user in a single course group.
-#     """
-#
-#     user = models.ForeignKey(User)
-#     group = models.ForeignKey(CourseUserGroup)
 
 
 class CourseUserGroupPartitionGroup(models.Model):
