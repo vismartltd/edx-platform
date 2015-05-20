@@ -13,7 +13,7 @@ import dogstats_wrapper as dog_stats_api
 from opaque_keys.edx.locations import Location
 from opaque_keys.edx.keys import UsageKey
 from xblock.core import XBlock
-from openedx.core.djangoapps.content.course_views.tabs import StaticTab
+from openedx.core.djangoapps.course_views.tabs import StaticTab
 from xmodule.modulestore import prefer_xmodules, ModuleStoreEnum
 from xmodule.modulestore.django import modulestore
 from xmodule.x_module import DEPRECATION_VSCOMPAT_EVENT

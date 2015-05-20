@@ -4,7 +4,8 @@ Tests for the plugin API
 
 from django.test import TestCase
 
-from ..api import CourseViewTypeManager, PluginError
+from openedx.core.lib.plugins.api import PluginError
+from openedx.core.djangoapps.course_views.tabs import CourseViewTypeManager
 
 
 class TestPluginApi(TestCase):

@@ -4,7 +4,7 @@ from mock import MagicMock, patch
 import unittest
 
 import xmodule.tabs as xmodule_tabs
-import openedx.core.djangoapps.content.course_views.tabs as tabs
+import openedx.core.djangoapps.course_views.tabs as tabs
 from opaque_keys.edx.locations import SlashSeparatedCourseKey
 
 
@@ -32,8 +32,8 @@ class TabTestCase(unittest.TestCase):
         user.is_authenticated = lambda: is_authenticated
         return user
 
-    @patch('openedx.core.djangoapps.content.course_views.tabs.is_user_enrolled_or_staff')
-    @patch('openedx.core.djangoapps.content.course_views.tabs.is_user_staff')
+    @patch('openedx.core.djangoapps.course_views.tabs.is_user_enrolled_or_staff')
+    @patch('openedx.core.djangoapps.course_views.tabs.is_user_staff')
     def is_tab_enabled(self, tab, course, settings, user, is_staff_mock=None, is_enrolled_or_staff_mock=None):
         """
         Returns true if the specified tab is enabled.
@@ -377,7 +377,7 @@ class TextbooksTestCase(TabTestCase):
         self.num_textbook_tabs = sum(1 for tab in self.course.tabs if isinstance(tab, tabs.TextbookTabsBase))
         self.num_textbooks = self.num_textbook_tabs * len(self.books)
 
-    @patch('openedx.core.djangoapps.content.course_views.tabs.is_user_enrolled_or_staff')
+    @patch('openedx.core.djangoapps.course_views.tabs.is_user_enrolled_or_staff')
     def test_textbooks_enabled(self, is_enrolled_or_staff_mock):
         is_enrolled_or_staff_mock.return_value = True
 
@@ -558,8 +558,8 @@ class CourseTabListTestCase(TabListTestCase):
         self.assertTrue(tabs.ExternalDiscussionTab() not in self.course.tabs)
         self.assertTrue(tabs.DiscussionTab() in self.course.tabs)
 
-    @patch('openedx.core.djangoapps.content.course_views.tabs.is_user_staff')
-    @patch('openedx.core.djangoapps.content.course_views.tabs.is_user_enrolled_or_staff')
+    @patch('openedx.core.djangoapps.course_views.tabs.is_user_staff')
+    @patch('openedx.core.djangoapps.course_views.tabs.is_user_enrolled_or_staff')
     def test_iterate_displayable(self, is_staff_mock, is_enrolled_or_staff_mock):
         is_staff_mock.return_value = True
         is_enrolled_or_staff_mock.return_value = True
@@ -762,8 +762,8 @@ class CourseTabListTestCase(TabListTestCase):
         self.assertTrue(tabs.ExternalDiscussionTab() not in self.course.tabs)
         self.assertTrue(tabs.DiscussionTab() in self.course.tabs)
 
-    @patch('openedx.core.djangoapps.content.course_views.tabs.is_user_staff')
-    @patch('openedx.core.djangoapps.content.course_views.tabs.is_user_enrolled_or_staff')
+    @patch('openedx.core.djangoapps.course_views.tabs.is_user_staff')
+    @patch('openedx.core.djangoapps.course_views.tabs.is_user_enrolled_or_staff')
     def test_iterate_displayable(self, is_staff_mock, is_enrolled_or_staff_mock):
         is_staff_mock.return_value = True
         is_enrolled_or_staff_mock.return_value = True

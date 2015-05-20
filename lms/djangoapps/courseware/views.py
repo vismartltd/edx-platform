@@ -59,7 +59,7 @@ from xblock.fragment import Fragment
 from xmodule.modulestore.django import modulestore
 from xmodule.modulestore.exceptions import ItemNotFoundError, NoPathToItem
 from xmodule.tabs import CourseTabList
-from openedx.core.djangoapps.content.course_views.tabs import StaffGradingTab, PeerGradingTab, OpenEndedGradingTab
+from openedx.core.djangoapps.course_views.tabs import StaffGradingTab, PeerGradingTab, OpenEndedGradingTab
 from xmodule.x_module import STUDENT_VIEW
 import shoppingcart
 from shoppingcart.models import CourseRegistrationCode

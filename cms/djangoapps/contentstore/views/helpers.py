@@ -17,7 +17,7 @@ from opaque_keys.edx.keys import UsageKey
 from xblock.core import XBlock
 import dogstats_wrapper as dog_stats_api
 from xmodule.modulestore.django import modulestore
-from openedx.core.djangoapps.content.course_views.tabs import StaticTab
+from openedx.core.djangoapps.course_views.tabs import StaticTab
 from xmodule.x_module import DEPRECATION_VSCOMPAT_EVENT
 
 from contentstore.utils import reverse_course_url, reverse_library_url, reverse_usage_url

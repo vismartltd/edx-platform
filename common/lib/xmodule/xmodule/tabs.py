@@ -4,7 +4,6 @@ Implement CourseTab
 
 from abc import ABCMeta
 
-from openedx.core.lib.plugins.api import CourseViewType
 from xblock.fields import List
 
 # We should only scrape strings for i18n in this file, since the target language is known only when
@@ -184,8 +183,7 @@ class CourseTab(object):
         tab_type = available_tab_types[tab_dict['type']]
         tab_type.validate(tab_dict)
         # TODO: don't import openedx capabilities from common
-        from openedx.core.lib.plugins.api import CourseViewType
-        from openedx.core.djangoapps.content.course_views.tabs import CourseViewTab
+        from openedx.core.djangoapps.course_views.tabs import CourseViewType
         if issubclass(tab_type, CourseViewType):
             return CourseViewTab(tab_type, tab_dict=tab_dict)
         else:
@@ -207,12 +205,32 @@ class CourseTabManager(object):
 
             # Add any registered course views
             # TODO: don't import openedx capabilities from common
-            from openedx.core.lib.plugins.api import CourseViewTypeManager
+            from openedx.core.djangoapps.course_views.tabs import CourseViewTypeManager
             for course_view_type in CourseViewTypeManager.get_available_plugins().values():
                 tab_types[course_view_type.name] = course_view_type
 
             cls._tab_types = tab_types
         return cls._tab_types
+
+
+class CourseViewTab(CourseTab):
+    """
+    A tab that renders a course view.
+    """
+
+    def __init__(self, course_view_type, tab_dict=None):
+        super(CourseViewTab, self).__init__(
+            name=tab_dict['name'] if tab_dict else course_view_type.title,
+            tab_id=course_view_type.name,
+            link_func=link_reverse_func(course_view_type.view_name),
+        )
+        self.type = course_view_type.name
+        self.course_view_type = course_view_type
+
+    def is_enabled(self, course, settings, user=None):
+        if not super(CourseViewTab, self).is_enabled(course, settings, user=user):
+            return False
+        return self.course_view_type.is_enabled(course, settings, user=user)
 
 
 class CourseTabList(List):
@@ -340,14 +358,7 @@ class CourseTabList(List):
                 "Expected second tab to have type 'course_info'.  tabs: '{0}'".format(tabs))
 
         # the following tabs should appear only once
-        for tab_type in [
-            'courseware',
-            'course_info',
-            'notes',
-            'textbooks',
-            'pdf_textbooks',
-            'html_textbooks',
-        ]:
+        for tab_type in ['courseware', 'course_info', 'notes', 'textbooks', 'pdf_textbooks', 'html_textbooks']:
             cls._validate_num_tabs_of_type(tabs, tab_type, 1)
 
     @staticmethod
@@ -418,6 +429,22 @@ def need_name(dictionary, raise_error=True):
     Returns whether the 'name' key exists in the given dictionary.
     """
     return key_checker(['name'])(dictionary, raise_error)
+
+
+# Link Functions
+def link_reverse_func(reverse_name):
+    """
+    Returns a function that takes in a course and reverse_url_func,
+    and calls the reverse_url_func with the given reverse_name and course' ID.
+    """
+    return lambda course, reverse_url_func: reverse_url_func(reverse_name, args=[course.id.to_deprecated_string()])
+
+
+def link_value_func(value):
+    """
+    Returns a function takes in a course and reverse_url_func, and returns the given value.
+    """
+    return lambda course, reverse_url_func: value
 
 
 class InvalidTabsException(Exception):

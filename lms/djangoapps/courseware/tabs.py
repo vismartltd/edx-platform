@@ -6,8 +6,7 @@ from django.conf import settings
 from django.utils.translation import ugettext as _
 
 from courseware.entrance_exams import user_must_complete_entrance_exam
-from xmodule.tabs import CourseTabList, CourseTabManager
-from openedx.core.djangoapps.content.course_views.tabs import CourseViewTab
+from xmodule.tabs import CourseTabList, CourseTabManager, CourseViewTab
 
 
 def get_course_tab_list(request, course):

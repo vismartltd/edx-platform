@@ -9,7 +9,7 @@ from xmodule.x_module import STUDENT_VIEW
 from xmodule.modulestore.tests.factories import CourseFactory, ItemFactory
 from xmodule.modulestore.tests.django_utils import ModuleStoreTestCase
 from xmodule.tabs import CourseTabList
-from openedx.core.djangoapps.content.course_views.tabs import WikiTab
+from openedx.core.djangoapps.course_views.tabs import WikiTab
 from xmodule.modulestore.django import modulestore
 
 

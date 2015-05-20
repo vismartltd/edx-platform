@@ -16,7 +16,7 @@ from courseware.courses import get_course_with_access
 from discussion_api.api import get_course_topics, get_thread_list
 from discussion_api.forms import ThreadListGetForm
 from openedx.core.lib.api.view_utils import DeveloperErrorViewMixin
-from openedx.core.djangoapps.content.course_views.tabs import DiscussionTab
+from openedx.core.djangoapps.course_views.tabs import DiscussionTab
 
 
 class _ViewMixin(object):

@@ -3,13 +3,59 @@ Tabs for courseware.
 """
 from abc import abstractmethod
 
-from xmodule.tabs import CourseTab, key_checker, need_name
-from openedx.core.lib.plugins.api import CourseViewType
+from openedx.core.lib.plugins.api import PluginManager
+from xmodule.tabs import CourseTab, key_checker, need_name, link_value_func, link_reverse_func
 from courseware.access import has_access
 from student.models import CourseEnrollment
 from ccx.overrides import get_current_ccx
 
 _ = lambda text: text
+
+
+# Stevedore extension point namespaces
+COURSE_VIEW_TYPE_NAMESPACE = 'openedx.course_view_type'
+
+
+class CourseViewType(object):
+    """
+    Base class of all course view type plugins.
+    """
+    name = None
+    title = None
+    view_name = None
+    is_persistent = False
+
+    # The course field that indicates that this feature is enabled
+    feature_flag_field_name = None
+
+    @classmethod
+    def is_enabled(cls, course, settings, user=None):  # pylint: disable=unused-argument
+        """Returns true if this course view is enabled in the course.
+
+        Args:
+            course (CourseDescriptor): the course using the feature
+            settings (dict): a dict of configuration settings
+
+            user (User): the user interacting with the course
+        """
+        raise NotImplementedError()
+
+    @classmethod
+    def validate(cls, tab_dict, raise_error=True):  # pylint: disable=unused-argument
+        """
+        Validates the given dict-type `tab_dict` object to ensure it contains the expected keys.
+        This method should be overridden by subclasses that require certain keys to be persisted in the tab.
+        """
+        return True
+
+
+class CourseViewTypeManager(PluginManager):
+    """
+    Manager for all of the course view types that have been made available.
+
+    All course view types should implement `CourseViewType`.
+    """
+    NAMESPACE = COURSE_VIEW_TYPE_NAMESPACE
 
 
 def is_user_staff(course, user):
@@ -296,14 +342,19 @@ class StaticTab(CourseTab):
 
     @classmethod
     def validate(cls, tab_dict, raise_error=True):
-        return super(StaticTab, cls).validate(tab_dict, raise_error) and key_checker(['name', 'url_slug'])(tab_dict, raise_error)
+        return (super(StaticTab, cls).validate(tab_dict, raise_error)
+                and key_checker(['name', 'url_slug'])(tab_dict, raise_error))
 
     def __init__(self, tab_dict=None, name=None, url_slug=None):
+        def link_func(course, reverse_func):
+            """ Returns a url for a given course and reverse function. """
+            return reverse_func(self.type, args=[course.id.to_deprecated_string(), self.url_slug])
+
         self.url_slug = tab_dict['url_slug'] if tab_dict else url_slug
         super(StaticTab, self).__init__(
             name=tab_dict['name'] if tab_dict else name,
             tab_id='static_tab_{0}'.format(self.url_slug),
-            link_func=lambda course, reverse_func: reverse_func(self.type, args=[course.id.to_deprecated_string(), self.url_slug]),
+            link_func=link_func,
         )
 
     def __getitem__(self, key):
@@ -535,39 +586,3 @@ class NotesTab(AuthenticatedCourseTab):
     @classmethod
     def validate(cls, tab_dict, raise_error=True):
         return super(NotesTab, cls).validate(tab_dict, raise_error) and need_name(tab_dict, raise_error)
-
-
-class CourseViewTab(AuthenticatedCourseTab):
-    """
-    A tab that renders a course view.
-    """
-
-    def __init__(self, course_view_type, tab_dict=None):
-        super(CourseViewTab, self).__init__(
-            name=tab_dict['name'] if tab_dict else course_view_type.title,
-            tab_id=course_view_type.name,
-            link_func=link_reverse_func(course_view_type.view_name),
-        )
-        self.type = course_view_type.name
-        self.course_view_type = course_view_type
-
-    def is_enabled(self, course, settings, user=None):
-        if not super(CourseViewTab, self).is_enabled(course, settings, user=user):
-            return False
-        return self.course_view_type.is_enabled(course, settings, user=user)
-
-
-# Link Functions
-def link_reverse_func(reverse_name):
-    """
-    Returns a function that takes in a course and reverse_url_func,
-    and calls the reverse_url_func with the given reverse_name and course' ID.
-    """
-    return lambda course, reverse_url_func: reverse_url_func(reverse_name, args=[course.id.to_deprecated_string()])
-
-
-def link_value_func(value):
-    """
-    Returns a function takes in a course and reverse_url_func, and returns the given value.
-    """
-    return lambda course, reverse_url_func: value

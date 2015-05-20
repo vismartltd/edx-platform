@@ -17,7 +17,7 @@ from xmodule.modulestore.tests.django_utils import (
     TEST_DATA_MIXED_TOY_MODULESTORE, TEST_DATA_MIXED_CLOSED_MODULESTORE
 )
 
-import openedx.core.djangoapps.content.course_views.tabs as tabs
+import openedx.core.djangoapps.course_views.tabs as tabs
 from courseware.tabs import get_course_tab_list
 from courseware.views import get_static_tab_contents, static_tab
 from student.tests.factories import UserFactory
