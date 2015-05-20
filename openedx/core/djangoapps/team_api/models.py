@@ -77,5 +77,5 @@ class CourseTeamMembership(models.Model):
         unique_together = (('user', 'team'),)
 
     user = models.ForeignKey(User)
-    team = models.ForeignKey(CourseTeam)
+    team = models.ForeignKey(CourseTeam, related_name='membership')
     date_joined = models.DateTimeField(auto_now_add=True)
