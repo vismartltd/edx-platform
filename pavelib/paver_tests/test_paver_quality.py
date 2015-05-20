@@ -52,7 +52,7 @@ class TestPaverQualityViolations(unittest.TestCase):
     def test_pep8_parser(self):
         with open(self.f.name, 'w') as f:
             f.write("hello\nhithere")
-        num, _violations = pavelib.quality._pep8_violations(f.name)  # pylint: disable=protected-access
+        num, _violations = pavelib.quality._style_violations(f.name, collect_list=True)  # pylint: disable=protected-access
         self.assertEqual(num, 2)
 
 

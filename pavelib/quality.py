@@ -173,22 +173,26 @@ def _get_pep8_violations():
 
     sh('pep8 . | tee {report_dir}/pep8.report -a'.format(report_dir=report_dir))
 
-    count, violations_list = _pep8_violations(
-        "{report_dir}/pep8.report".format(report_dir=report_dir)
+    count, violations_list = _style_violations(
+        "{report_dir}/pep8.report".format(report_dir=report_dir),
+        collect_list=True
     )
 
     return (count, violations_list)
 
 
-def _pep8_violations(report_file):
+def _style_violations(report_file, collect_list=False):
     """
     Returns a tuple of (num_violations, violations_list) for all
     pep8 violations in the given report_file.
+    :param collect_list:
     """
     with open(report_file) as f:
         violations_list = f.readlines()
     num_lines = len(violations_list)
-    return num_lines, violations_list
+    if collect_list:
+        return num_lines, violations_list
+    return num_lines
 
 
 @task
@@ -238,6 +242,41 @@ def run_complexity():
         )
     except BuildFailure:
         print "ERROR: Unable to calculate python-only code-complexity."
+
+
+@task
+@needs('pavelib.prereqs.install_node_prereqs')
+@cmdopts([
+    ("limit=", "l", "limit for number of acceptable violations"),
+])
+def run_jshint(options):
+    """
+    Runs jshint on static asset directories
+    """
+    violations_limit = int(getattr(options, 'limit', -1))
+
+    jshint_report_dir = (Env.REPORT_DIR / "jshint")
+    jshint_report_dir.rmtree_p()
+    jshint_report_dir.mkdir_p()
+    jshint_report = jshint_report_dir / "jshint_report.log"
+    jshint_directories = ["common/static/js", "cms/static/js", "lms/static/js"]
+
+    for i in jshint_directories:
+        sh(
+            "jshint {i} --config .jshintrc >> {jshint_report}".format(
+                i=i, jshint_report=jshint_report
+            ),
+            ignore_error=True
+        )
+    num_violations = _style_violations(jshint_report)
+
+    # Fail number of violations is greater than the limit
+    if num_violations > violations_limit > -1:
+        raise Exception(
+            "JSHint Failed. Too many violations ({count}).\nThe limit is {violations_limit}.".format(
+                count=num_violations, violations_limit=violations_limit
+            )
+        )
 
 
 @task
