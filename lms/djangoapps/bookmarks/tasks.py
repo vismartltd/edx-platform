@@ -4,6 +4,7 @@ from celery.task import task
 from opaque_keys.edx.keys import CourseKey
 from xmodule.modulestore.django import modulestore
 
+from .models import XBlockCache
 
 log = logging.getLogger('edx.celery.task')
 
@@ -59,9 +60,6 @@ def update_xblocks_cache(course_id):
     """
     Updates the XBlocks cache for a course.
     """
-    # Import here to avoid circular import.
-    from .models import XBlockCache
-
     # Ideally we'd like to accept a CourseLocator; however, CourseLocator is not JSON-serializable (by default) so
     # Celery's delayed tasks fail to start. For this reason, callers should pass the course key as a Unicode string.
     if not isinstance(course_id, basestring):

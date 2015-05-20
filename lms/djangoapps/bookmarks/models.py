@@ -28,7 +28,8 @@ class Bookmark(models.Model):
 
     block_cache = models.ForeignKey(XBlockCache, null=True, blank=True)
 
-    @property(self):
+    @property
+    def display_name(self):
         return self.block_cache.display_name
 
     @property
@@ -38,7 +39,7 @@ class Bookmark(models.Model):
         """
         if self.updated < self.block_cache.updated:
             block = modulestore().get_item(self.usage_key)
-            self.path = cls.get_path(block)
+            self.path = Bookmark.get_path(block)
 
         return json.loads(self._path)
 
@@ -59,12 +60,11 @@ class Bookmark(models.Model):
 
         bookmarks_data['display_name'] = block.display_name
         bookmarks_data['_path'] = json.dumps(cls.get_path(block))
+        bookmarks_data['block_cache'], __ = XBlockCache.objects.get_or_create(
+            course_key=bookmark_data['course_key'], usage_key=bookmark_data['usage_key'],
+        )
 
         bookmark, __ = cls.objects.get_or_create(**bookmarks_data)
-        bookmark.block_cache = XBlockCache.objects.get_or_create(
-            course_key=bookmark.course_key, usage_key=usage_key,
-        )
-        bookmark.save()
         return bookmark
 
     @staticmethod
