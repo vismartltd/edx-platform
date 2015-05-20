@@ -1,7 +1,6 @@
-define(['backbone', 'jquery', 'underscore', 'js/common_helpers/ajax_helpers', 'js/common_helpers/template_helpers',
-        'js/bookmarks/views/bookmarks_button'
+define(['backbone', 'jquery', 'underscore'
        ],
-    function (Backbone, $, _, AjaxHelpers, TemplateHelpers, BookmarksButtonView) {
+    function (Backbone, $, _) {
         'use strict';
 
     });
