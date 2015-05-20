@@ -21,10 +21,10 @@ def handle_unenroll_done(sender, course_enrollment=None, skip_refund=False, **kw
 
     N.B. this signal is also consumed by lms.djangoapps.shoppingcart.
     """
-    if not is_commerce_service_configured():
+    if not is_commerce_service_configured() or skip_refund:
         return
 
-    if course_enrollment and course_enrollment.refundable() and not skip_refund:
+    if course_enrollment and course_enrollment.refundable():
         try:
             request_user = get_request_user() or course_enrollment.user
             refund_seat(course_enrollment, request_user)

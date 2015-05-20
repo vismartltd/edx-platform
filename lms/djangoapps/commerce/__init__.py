@@ -18,7 +18,7 @@ def is_commerce_service_configured():
     Return a boolean indicating whether or not configuration is present to use
     the external commerce service.
     """
-    return settings.ECOMMERCE_API_URL is not None and settings.ECOMMERCE_API_SIGNING_KEY is not None
+    return settings.ECOMMERCE_API_URL and settings.ECOMMERCE_API_SIGNING_KEY
 
 
 def ecommerce_api_client(user):
