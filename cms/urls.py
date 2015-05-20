@@ -115,6 +115,7 @@ urlpatterns += patterns(
         settings.COURSE_KEY_PATTERN), 'group_configurations_detail_handler'),
 
     url(r'^api/val/v0/', include('edxval.urls')),
+    url(r'^view_credit_eligibility/{}$'.format(COURSELIKE_KEY_PATTERN), 'credit_eligibility_handler'),
 )
 
 JS_INFO_DICT = {
