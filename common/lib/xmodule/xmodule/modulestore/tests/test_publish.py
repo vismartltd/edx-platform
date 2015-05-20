@@ -1078,7 +1078,6 @@ class ElementalDeleteItemTests(UniversalTestProcedure):
             else:
                 raise Exception("Must test either Old Mongo or Split modulestore!")
 
-
     @ddt.data(*itertools.product(
         (DRAFT_MODULESTORE_SETUP, MongoModulestoreBuilder()),
         (
@@ -1377,4 +1376,3 @@ class ElementalRevertToPublishedTests(UniversalTestProcedure):
             self.revert_to_published(block_list_to_revert)
             # The draft version is now gone.
             self.assertOLXIsPublishedOnly(block_list_to_revert)
-
