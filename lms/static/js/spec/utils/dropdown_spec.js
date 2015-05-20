@@ -85,6 +85,23 @@ define([
                 expect(menu.focus).toHaveBeenCalled();
             });
 
+            it('opens the menu on SPACE kepress', function() {
+                button.trigger(keyPressEvent(KEY.SPACE));
+                expect(button).toHaveClass('is-active');
+                expect(button).toHaveAttr({
+                    'aria-expanded': 'true'
+                });
+                expect(menu).toHaveClass('is-visible');
+                expect(menu.focus).toHaveBeenCalled();
+            });
+
+            it('focuses on the first item after menu is opened', function() {
+                button.trigger(keyPressEvent(KEY.DOWN));
+                expect(menu.focus.toHaveBeenCalled();
+                menu.trigger(keyPressEvent(KEY.DOWN));
+                expect(menu_item.eq:first().focus).toHaveBeenCalled();
+            });
+
             it('moves between menu items on UP or DOWN', function() {
                 var last_item = menu_item.length - 1, i;
                 container.trigger(keyPressEvent(KEY.ENTER));
@@ -98,16 +115,6 @@ define([
                     menu_item.eq(i).trigger(keyPressEvent(KEY.DOWN));
                     expect(menu_item.eq(i).focus).toHaveBeenCalled();
                 }
-            });
-
-            it('opens the menu on SPACE kepress', function() {
-                button.trigger(keyPressEvent(KEY.SPACE));
-                expect(button).toHaveClass('is-active');
-                expect(button).toHaveAttr({
-                    'aria-expanded': 'true'
-                });
-                expect(menu).toHaveClass('is-visible');
-                expect(menu.focus).toHaveBeenCalled();
             });
 
             it('closes the menu on ESC keypress', function() {
