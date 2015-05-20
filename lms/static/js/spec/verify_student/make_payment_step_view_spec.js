@@ -105,7 +105,7 @@ define([
                     var buttonEl = $( '#' + expectedId );
                     expect( buttonEl.length ).toEqual( 1 );
                     expect( buttonEl[0] ).toHaveClass( 'payment-button' );
-                    expect( buttonEl[0].text ).toEqual( expectedText );
+                    expect( buttonEl[0] ).toHaveText( expectedText );
                     buttonEl[0].click();
                     expect(requests[requests.length - 1].requestBody.split('&')).toContain('processor=' + expectedId);
                 });
