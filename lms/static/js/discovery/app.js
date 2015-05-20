@@ -1,11 +1,11 @@
 ;(function (define) {
 
-define(['backbone'], function(Backbone) {
+define(['backbone', 'js-settings'], function(Backbone, jssettings) {
     'use strict';
 
     return function (Collection, Form, ResultListView, FilterBarView, FacetsBarView, searchQuery) {
         //facet types configuration - set default display names
-        var facetsTypes = COURSE_DISCOVERY_MEANININGS;
+        var facetsTypes = jssettings.COURSE_DISCOVERY_MEANININGS;
 
         var collection = new Collection([]);
         var results = new ResultListView({ collection: collection });

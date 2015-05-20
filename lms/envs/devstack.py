@@ -131,6 +131,9 @@ FEATURES['ENABLE_DASHBOARD_SEARCH'] = True
 ########################## Certificates Web/HTML View #######################
 FEATURES['CERTIFICATES_HTML_VIEW'] = True
 
+########################## JS Settings #######################
+FEATURES['ENABLE_JS_SETTINGS'] = True
+
 
 from django.utils.translation import ugettext as _
 LANGUAGE_MAP = {'terms': {lang: display for lang, display in ALL_LANGUAGES}, 'name' : _('Language')}
@@ -174,3 +177,10 @@ VERIFY_STUDENT["SOFTWARE_SECURE"] = {
     "API_ACCESS_KEY": "BBBBBBBBBBBBBBBBBBBB",
     "API_SECRET_KEY": "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC",
 }
+
+# Settings that will be forwarded to RequireJS module
+JS_SETTINGS = {
+    'COURSE_DISCOVERY_MEANININGS' : COURSE_DISCOVERY_MEANININGS
+}
+# Filepath to store JS settings
+JS_SETTINGS_FILE_PATH = PROJECT_ROOT + "/static/js/js_settings.js"

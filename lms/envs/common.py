@@ -395,6 +395,9 @@ FEATURES = {
 
     # Teams feature
     'ENABLE_TEAMS': False,
+
+    # JS settings RequireJS module flag
+    'ENABLE_JS_SETTINGS': True,
 }
 
 # Ignore static asset files on import which match this pattern
@@ -2362,3 +2365,7 @@ PREVIEW_DOMAIN = 'preview'
 # Sets the maximum number of courses listed on the homepage
 # If set to None, all courses will be listed on the homepage
 HOMEPAGE_COURSE_MAX = None
+
+# Set JS settings object to be sent to RequireJS module
+# Default value is empty object
+JS_SETTINGS = {}

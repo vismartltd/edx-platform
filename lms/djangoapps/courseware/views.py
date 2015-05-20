@@ -120,7 +120,6 @@ def courses(request):
     Render "find courses" page.  The course selection work is done in courseware.courses.
     """
     courses_list = []
-    course_discovery_meanings = getattr(settings, 'COURSE_DISCOVERY_MEANININGS', {})
     if not settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
         courses_list = get_courses(request.user, request.META.get('HTTP_HOST'))
 
@@ -132,7 +131,7 @@ def courses(request):
 
     return render_to_response(
         "courseware/courses.html",
-        {'courses': courses_list, 'course_discovery_meanings': json.dumps(course_discovery_meanings)}
+        {'courses': courses_list}
     )
 
 

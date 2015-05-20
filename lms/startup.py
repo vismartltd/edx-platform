@@ -4,6 +4,7 @@ Module for code that should run during LMS startup
 
 # pylint: disable=unused-argument
 
+import json
 from django.conf import settings
 
 # Force settings to run so that the python path is modified
@@ -37,6 +38,9 @@ def run():
 
     if settings.FEATURES.get('ENABLE_THIRD_PARTY_AUTH', False):
         enable_third_party_auth()
+
+    if settings.FEATURES.get('ENABLE_JS_SETTINGS', False):
+        generate_js_settings()
 
     # Initialize Segment.io analytics module. Flushes first time a message is received and
     # every 50 messages thereafter, or if 10 seconds have passed since last flush
@@ -142,3 +146,14 @@ def enable_third_party_auth():
 
     from third_party_auth import settings as auth_settings
     auth_settings.apply_settings(settings.THIRD_PARTY_AUTH, settings)
+
+def generate_js_settings():
+    """
+    Generate JS settings file with values defined in settings.py
+    """
+    if settings.JS_SETTINGS and settings.JS_SETTINGS_FILE_PATH:
+        js_settings_json = json.dumps(settings.JS_SETTINGS)
+        js_settings = (';(function() {{ \'use strict\'; var settings = {js_settings}; this.settings = settings; }}).call(this);').format(js_settings=js_settings_json)
+        js_settings_path = settings.JS_SETTINGS_FILE_PATH
+        with open(js_settings_path, 'w+') as js_settings_file:
+            js_settings_file.write(js_settings)
