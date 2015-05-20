@@ -1,6 +1,6 @@
-define(['backbone', 'jquery', 'underscore', 'js/common_helpers/template_helpers',
+define(['backbone', 'jquery', 'underscore', 'js/common_helpers/template_helpers', 'js/bookmarks/views/bookmarks_button'
        ],
-    function (Backbone, $, _, TemplateHelpers) {
+    function (Backbone, $, _, TemplateHelpers, BookmarksButtonView) {
         'use strict';
 
         describe("lms.courseware.bookmarks", function () {
