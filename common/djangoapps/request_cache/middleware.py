@@ -10,6 +10,14 @@ class RequestCache(object):
     def get_request_cache(cls):
         return _request_cache_threadlocal
 
+    @classmethod
+    def get_current_request(cls):
+        """
+        Get a reference to the HttpRequest object, if we are presently
+        servicing one.
+        """
+        return _request_cache_threadlocal.request
+
     def clear_request_cache(self):
         _request_cache_threadlocal.data = {}
         _request_cache_threadlocal.request = None

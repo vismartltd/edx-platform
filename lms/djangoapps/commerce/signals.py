@@ -47,7 +47,7 @@ def get_request_user():
     If the requester of an unenrollment is not the same person as the student
     being unenrolled, we authenticate to the commerce service as the requester.
     """
-    request = getattr(RequestCache.get_request_cache(), 'request')
+    request = RequestCache.get_current_request()
     return getattr(request, 'user', None)
 
 
