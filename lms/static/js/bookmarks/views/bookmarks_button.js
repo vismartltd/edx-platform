@@ -1,8 +1,7 @@
 ;(function (define, undefined) {
     'use strict';
-    define(['gettext', 'jquery', 'underscore', 'backbone', 'js/bookmarks/views/bookmarks_list',
-            'js/bookmarks/collections/bookmarks', 'js/views/message'],
-        function (gettext, $, _, Backbone, BookmarksListView, BookmarksCollection, MessageView) {
+    define(['gettext', 'jquery', 'underscore', 'backbone'],
+        function (gettext, $, _, Backbone) {
 
         return Backbone.View.extend({
 
