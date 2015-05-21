@@ -258,16 +258,15 @@ def run_jshint(options):
     jshint_report_dir = (Env.REPORT_DIR / "jshint")
     jshint_report_dir.rmtree_p()
     jshint_report_dir.mkdir_p()
-    jshint_report = jshint_report_dir / "jshint_report.log"
+    jshint_report = jshint_report_dir / "jshint.report"
     jshint_directories = ["common/static/js", "cms/static/js", "lms/static/js"]
 
-    for i in jshint_directories:
-        sh(
-            "jshint {i} --config .jshintrc >> {jshint_report}".format(
-                i=i, jshint_report=jshint_report
-            ),
-            ignore_error=True
-        )
+    sh(
+        "jshint {list} --config .jshintrc >> {jshint_report}".format(
+            list=(" ".join(jshint_directories)), jshint_report=jshint_report
+        ),
+        ignore_error=True
+    )
     num_violations = _style_violations(jshint_report)
 
     # Fail number of violations is greater than the limit
