@@ -5,6 +5,8 @@ invoke the Django armature.
 """
 
 from social.backends import google, linkedin, facebook
+from social.backends.oauth import BaseOAuth2
+import base64
 
 _DEFAULT_ICON_CLASS = 'fa-signin'
 
@@ -168,6 +170,52 @@ class FacebookOauth2(BaseProvider):
     @classmethod
     def get_name(cls, provider_details):
         return provider_details.get('fullname')
+
+class CustomOAuth2(BaseOAuth2):
+    name = 'custom'
+    AUTHORIZATION_URL = 'http://192.168.33.1:9999/uaa/oauth/authorize'
+    ACCESS_TOKEN_URL = 'http://192.168.33.1:9999/uaa/oauth/token'
+    ACCESS_TOKEN_METHOD = 'POST'
+    SCOPE_SEPARATOR = ','
+
+    def auth_headers(self):
+        headers = super(CustomOAuth2, self).auth_headers()
+        key, secret = self.get_key_and_secret()
+        headers['Authorization'] = 'Basic ' + base64.standard_b64encode(key + ':' + secret)
+        return headers
+
+    def get_user_details(self, response):
+        """Return user details from account"""
+        return {'username': response.get('name'),
+                'email': response.get('name') + '@example.com',
+                'first_name': response.get('name')}
+
+    def user_data(self, access_token, *args, **kwargs):
+        """Loads user data from service"""
+        url = 'http://192.168.33.1:9999/uaa/user'
+        return self.get_json(url, headers = {
+            'Authorization': 'Bearer ' + access_token
+        })
+
+
+class CustomOauth2Provider(BaseProvider):
+    """Provider for Google's Oauth2 auth system."""
+
+    BACKEND_CLASS = CustomOAuth2
+    ICON_CLASS = 'fa-key'
+    NAME = 'Custom'
+    SETTINGS = {
+        'SOCIAL_AUTH_CUSTOM_KEY': None,
+        'SOCIAL_AUTH_CUSTOM_SECRET': None,
+    }
+
+    @classmethod
+    def get_email(cls, provider_details):
+        return provider_details.get('email')
+
+    @classmethod
+    def get_name(cls, provider_details):
+        return provider_details.get('username')
 
 
 class Registry(object):
