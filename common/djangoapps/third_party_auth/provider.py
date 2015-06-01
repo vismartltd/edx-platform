@@ -6,6 +6,7 @@ invoke the Django armature.
 
 from social.backends import google, linkedin, facebook
 from social.backends.oauth import BaseOAuth2
+import simplejson
 import base64
 
 _DEFAULT_ICON_CLASS = 'fa-signin'
@@ -173,10 +174,11 @@ class FacebookOauth2(BaseProvider):
 
 class CustomOAuth2(BaseOAuth2):
     name = 'custom'
-    AUTHORIZATION_URL = 'http://192.168.33.1:9999/uaa/oauth/authorize'
-    ACCESS_TOKEN_URL = 'http://192.168.33.1:9999/uaa/oauth/token'
+    AUTHORIZATION_URL = 'http://security-demo.epicm.org/oauth/authorize'
+    ACCESS_TOKEN_URL = 'http://security-demo.epicm.org/oauth/token'
     ACCESS_TOKEN_METHOD = 'POST'
     SCOPE_SEPARATOR = ','
+    REDIRECT_STATE = False
 
     def auth_headers(self):
         headers = super(CustomOAuth2, self).auth_headers()
@@ -186,17 +188,17 @@ class CustomOAuth2(BaseOAuth2):
 
     def get_user_details(self, response):
         """Return user details from account"""
-        return {'username': response.get('name'),
-                'email': response.get('name') + '@example.com',
-                'first_name': response.get('name')}
+        full_name = response.get('FirstName') + response.get('LastName');
+        return {'username': response.get('UserName'),
+                'email': full_name + '@example.com',
+                'first_name': response.get('FirstName')}
 
     def user_data(self, access_token, *args, **kwargs):
         """Loads user data from service"""
-        url = 'http://192.168.33.1:9999/uaa/user'
+        url = 'http://security-demo.epicm.org/Api/Id'
         return self.get_json(url, headers = {
             'Authorization': 'Bearer ' + access_token
         })
-
 
 class CustomOauth2Provider(BaseProvider):
     """Provider for Google's Oauth2 auth system."""
