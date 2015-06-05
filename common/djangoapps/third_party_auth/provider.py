@@ -174,11 +174,20 @@ class FacebookOauth2(BaseProvider):
 
 class CustomOAuth2(BaseOAuth2):
     name = 'custom'
-    AUTHORIZATION_URL = 'http://security-demo.epicm.org/oauth/authorize'
-    ACCESS_TOKEN_URL = 'http://security-demo.epicm.org/oauth/token'
     ACCESS_TOKEN_METHOD = 'POST'
     SCOPE_SEPARATOR = ','
     REDIRECT_STATE = False
+
+    def _get_host_url(self):
+        return self.setting('HOST_URL')
+
+    @property
+    def AUTHORIZATION_URL(self):
+        return self._get_host_url() + 'oauth/authorize'
+
+    @property
+    def ACCESS_TOKEN_URL(self):
+        return self._get_host_url() + 'oauth/token'
 
     def auth_headers(self):
         headers = super(CustomOAuth2, self).auth_headers()
@@ -195,7 +204,7 @@ class CustomOAuth2(BaseOAuth2):
 
     def user_data(self, access_token, *args, **kwargs):
         """Loads user data from service"""
-        url = 'http://security-demo.epicm.org/Api/Id'
+        url = self._get_host_url() + 'Api/Id'
         return self.get_json(url, headers = {
             'Authorization': 'Bearer ' + access_token
         })
@@ -209,6 +218,8 @@ class CustomOauth2Provider(BaseProvider):
     SETTINGS = {
         'SOCIAL_AUTH_CUSTOM_KEY': None,
         'SOCIAL_AUTH_CUSTOM_SECRET': None,
+        # 'http://example.com/' for example
+        'SOCIAL_AUTH_CUSTOM_HOST_URL': None,
     }
 
     @classmethod
