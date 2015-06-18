@@ -79,6 +79,8 @@ urlpatterns = ('',  # nopep8
     # CourseInfo API RESTful endpoints
     url(r'^api/course/details/v0/', include('course_about.urls')),
 
+    # Custom API
+    url(r'^api/custom/v0/', include('custom_api.urls'))
 )
 
 if settings.FEATURES["ENABLE_MOBILE_REST_API"]:
