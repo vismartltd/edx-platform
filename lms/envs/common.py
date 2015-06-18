@@ -2010,3 +2010,6 @@ PDF_RECEIPT_LOGO_HEIGHT_MM = 12
 PDF_RECEIPT_COBRAND_LOGO_PATH = PROJECT_ROOT + '/static/images/default-theme/logo.png'
 # Height of the Co-brand Logo in mm
 PDF_RECEIPT_COBRAND_LOGO_HEIGHT_MM = 12
+
+# token for access custom user grades API
+CUSTOM_API_TOKEN = "QL9i7V5UCU7KXEU1HHqWz1G0K2iRy782"
