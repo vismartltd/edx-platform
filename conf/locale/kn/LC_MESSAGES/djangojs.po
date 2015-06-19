@@ -2038,7 +2038,7 @@ msgstr ""
 
 #: common/static/coffee/src/discussion/views/response_comment_show_view.js
 msgid "anonymous"
-msgstr ""
+msgstr "ಅನಾಮಿಕ"
 
 #: common/static/coffee/src/discussion/views/response_comment_view.js
 msgid "Are you sure you want to delete this comment?"
@@ -3771,7 +3771,7 @@ msgstr ""
 #: lms/static/js/views/fields.js
 #: cms/templates/js/video/metadata-translations-item.underscore
 msgid "Remove"
-msgstr ""
+msgstr "ತೆಗೆದುಹಾಕುವುದು"
 
 #: lms/static/js/views/fields.js
 msgid "Removing"

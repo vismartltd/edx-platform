@@ -407,21 +407,21 @@ msgstr ""
 
 #: common/djangoapps/student/models.py
 msgid "Male"
-msgstr ""
+msgstr "Эркак"
 
 #: common/djangoapps/student/models.py
 msgid "Female"
-msgstr ""
+msgstr "Аёл"
 
 #. Translators: 'Other' refers to the student's gender
 #. Translators: 'Other' refers to the student's level of education
 #: common/djangoapps/student/models.py common/djangoapps/student/models.py
 msgid "Other"
-msgstr ""
+msgstr "Бошқа"
 
 #: common/djangoapps/student/models.py
 msgid "Doctorate"
-msgstr ""
+msgstr "Фон номзоди/доктори"
 
 #: common/djangoapps/student/models.py
 msgid "Master's or professional degree"
@@ -452,7 +452,7 @@ msgstr ""
 #: common/djangoapps/student/models.py
 #: common/lib/xmodule/xmodule/course_module.py cms/templates/settings.html
 msgid "None"
-msgstr ""
+msgstr "Ҳеч бири"
 
 #: common/djangoapps/student/models.py
 msgid "{platform_name} Honor Code Certificate for {course_name}"
@@ -5925,8 +5925,15 @@ msgstr ""
 #: lms/templates/discussion/_underscore_templates.html
 #: lms/templates/discussion/_underscore_templates.html wiki/forms.py
 #: wiki/forms.py wiki/forms.py
+#, fuzzy
 msgid "Title"
 msgstr ""
+"#-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#\n"
+"Сарлавҳа\n"
+"#-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#\n"
+"Sarlavha\n"
+"#-#-#-#-#  wiki.po (edx-platform)  #-#-#-#-#\n"
+"Sarlavha"
 
 #: lms/djangoapps/instructor_task/tasks_helper.py lms/templates/register.html
 #: lms/templates/instructor/instructor_dashboard_2/instructor_analytics.html
@@ -7687,7 +7694,7 @@ msgstr ""
 #: cms/templates/login.html lms/templates/login-sidebar.html
 #: lms/templates/register-sidebar.html
 msgid "Need Help?"
-msgstr ""
+msgstr "Ёрдам керакми?"
 
 #: lms/templates/registration/password_reset_confirm.html
 msgid ""
@@ -8684,7 +8691,7 @@ msgstr ""
 #. Translators: This is the status for a video that is in an unknown state
 #: cms/djangoapps/contentstore/views/videos.py
 msgid "Unknown"
-msgstr ""
+msgstr "Номаълум"
 
 #. Translators: This is the header for a CSV file column
 #. containing URLs for video encodings for the named profile
@@ -11471,7 +11478,7 @@ msgstr ""
 #: lms/templates/shoppingcart/receipt.html
 #: lms/templates/shoppingcart/receipt.html
 msgid "Students"
-msgstr ""
+msgstr "Талабалар"
 
 #: lms/templates/courseware/legacy_instructor_dashboard.html
 msgid "Score distribution for problems"
@@ -12139,7 +12146,7 @@ msgstr ""
 
 #: lms/templates/discussion/_similar_posts.html
 msgid "Hide"
-msgstr ""
+msgstr "Яшириш"
 
 #: lms/templates/discussion/_thread_list_template.html
 #: lms/templates/discussion/_underscore_templates.html

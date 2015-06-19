@@ -12505,7 +12505,7 @@ msgstr ""
 #: lms/templates/discussion/_underscore_templates.html
 #: lms/templates/discussion/mustache/_profile_thread.mustache
 msgid "anonymous"
-msgstr ""
+msgstr "ಅನಾಮಿಕ"
 
 #: lms/templates/discussion/_user_profile.html
 msgid ", "

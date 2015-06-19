@@ -10624,7 +10624,7 @@ msgstr ""
 #: lms/templates/ccx/coach_dashboard.html
 #: lms/templates/courseware/legacy_instructor_dashboard.html
 msgid "Enrollment"
-msgstr ""
+msgstr "Tilmelding"
 
 #: lms/templates/ccx/coach_dashboard.html
 msgid "Schedule"

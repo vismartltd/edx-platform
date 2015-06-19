@@ -408,21 +408,21 @@ msgstr ""
 
 #: common/djangoapps/student/models.py
 msgid "Male"
-msgstr ""
+msgstr "مرد"
 
 #: common/djangoapps/student/models.py
 msgid "Female"
-msgstr ""
+msgstr "عورت"
 
 #. Translators: 'Other' refers to the student's gender
 #. Translators: 'Other' refers to the student's level of education
 #: common/djangoapps/student/models.py common/djangoapps/student/models.py
 msgid "Other"
-msgstr ""
+msgstr "دوسرے"
 
 #: common/djangoapps/student/models.py
 msgid "Doctorate"
-msgstr ""
+msgstr "ڈاکٹریٹ"
 
 #: common/djangoapps/student/models.py
 msgid "Master's or professional degree"
@@ -453,7 +453,7 @@ msgstr ""
 #: common/djangoapps/student/models.py
 #: common/lib/xmodule/xmodule/course_module.py cms/templates/settings.html
 msgid "None"
-msgstr ""
+msgstr "کوئی بھی نہیں"
 
 #: common/djangoapps/student/models.py
 msgid "{platform_name} Honor Code Certificate for {course_name}"
@@ -2999,7 +2999,7 @@ msgstr ""
 
 #: common/lib/xmodule/xmodule/library_content_module.py
 msgid "Count"
-msgstr ""
+msgstr "gintii"
 
 #: common/lib/xmodule/xmodule/library_content_module.py
 msgid "Enter the number of components to display to each student."
@@ -3848,6 +3848,8 @@ msgstr ""
 msgid ""
 "Your response has been submitted. Please check back later for your grade."
 msgstr ""
+"Aapka jawab paish kardya giya hei.  Number dekhne ki lye dobara check karna"
+"  "
 
 #. Translators: "Not started" communicates to a student that their response
 #. has not yet been graded
@@ -5963,7 +5965,7 @@ msgstr ""
 #: lms/templates/instructor/instructor_dashboard_2/generate_registarion_codes_modal.html
 #: lms/templates/shoppingcart/receipt.html
 msgid "Country"
-msgstr ""
+msgstr "mulk"
 
 #: lms/djangoapps/instructor_task/tasks_helper.py
 msgid "Enrollment Date"
@@ -8696,7 +8698,7 @@ msgstr ""
 #. Translators: This is the status for a video that is in an unknown state
 #: cms/djangoapps/contentstore/views/videos.py
 msgid "Unknown"
-msgstr ""
+msgstr "نامعلوم"
 
 #. Translators: This is the header for a CSV file column
 #. containing URLs for video encodings for the named profile
@@ -8769,11 +8771,11 @@ msgstr ""
 #: cms/templates/404.html cms/templates/error.html
 #: lms/templates/static_templates/404.html
 msgid "Page Not Found"
-msgstr ""
+msgstr "صفحہ نھیں ملا"
 
 #: cms/templates/404.html lms/templates/static_templates/404.html
 msgid "Page not found"
-msgstr ""
+msgstr "صفحہ نھیں ملا"
 
 #: cms/templates/asset_index.html cms/templates/certificates.html
 #: cms/templates/container.html cms/templates/course_outline.html
@@ -8813,7 +8815,7 @@ msgstr ""
 #: lms/templates/modal/accessible_confirm.html
 #: lms/templates/verify_student/face_upload.html
 msgid "Cancel"
-msgstr ""
+msgstr "نھیں"
 
 #: cms/templates/course-create-rerun.html cms/templates/index.html
 #: cms/templates/settings.html lms/templates/courseware/course_about.html
@@ -8841,7 +8843,7 @@ msgstr ""
 #: lms/templates/sysadmin_dashboard_gitlogs.html
 #: lms/templates/courseware/courses.html
 msgid "Courses"
-msgstr ""
+msgstr "کورسز/نصاب"
 
 #: cms/templates/login.html cms/templates/register.html
 #: lms/templates/help_modal.html lms/templates/login.html
@@ -9374,7 +9376,7 @@ msgstr ""
 #: lms/templates/peer_grading/peer_grading_problem.html
 #: lms/templates/survey/survey.html
 msgid "Submit"
-msgstr ""
+msgstr "Paish karna"
 
 #: lms/templates/help_modal.html
 msgid "Thank You!"
@@ -9798,7 +9800,7 @@ msgstr ""
 #: lms/templates/combinedopenended/selfassessment/self_assessment_prompt.html
 #: lms/templates/verify_student/face_upload.html
 msgid "Save"
-msgstr ""
+msgstr "مخفوظ"
 
 #: lms/templates/problem.html
 msgid "You have used {num_used} of {num_total} submissions"
@@ -10304,7 +10306,7 @@ msgstr ""
 
 #: lms/templates/sysadmin_dashboard_gitlogs.html
 msgid "Date"
-msgstr ""
+msgstr "tareekh"
 
 #. Translators: Git is a version-control system; see http://git-scm.com/about
 #: lms/templates/sysadmin_dashboard_gitlogs.html
@@ -10626,7 +10628,7 @@ msgstr ""
 #: lms/templates/ccx/coach_dashboard.html
 #: lms/templates/courseware/legacy_instructor_dashboard.html
 msgid "Enrollment"
-msgstr ""
+msgstr "بهرتی"
 
 #: lms/templates/ccx/coach_dashboard.html
 msgid "Schedule"
@@ -11486,7 +11488,7 @@ msgstr ""
 #: lms/templates/shoppingcart/receipt.html
 #: lms/templates/shoppingcart/receipt.html
 msgid "Students"
-msgstr ""
+msgstr "shagirdd"
 
 #: lms/templates/courseware/legacy_instructor_dashboard.html
 msgid "Score distribution for problems"
@@ -12522,11 +12524,11 @@ msgstr ""
 #: lms/templates/discussion/_underscore_templates.html
 #: lms/templates/discussion/mustache/_profile_thread.mustache
 msgid "anonymous"
-msgstr ""
+msgstr "بے نام٬ گمنام٬ غیر معروف"
 
 #: lms/templates/discussion/_user_profile.html
 msgid ", "
-msgstr ""
+msgstr "،"
 
 #: lms/templates/discussion/_user_profile.html
 msgid "%s discussion started"
@@ -14749,7 +14751,7 @@ msgstr ""
 
 #: lms/templates/modal/accessible_confirm.html
 msgid "OK"
-msgstr ""
+msgstr "اوکے"
 
 #: lms/templates/modal/accessible_confirm.html
 msgid "open"
@@ -19008,7 +19010,7 @@ msgstr ""
 
 #: wiki/admin.py wiki/models/article.py
 msgid "created"
-msgstr ""
+msgstr "بنایا"
 
 #: wiki/forms.py
 msgid "Only localhost... muahahaha"

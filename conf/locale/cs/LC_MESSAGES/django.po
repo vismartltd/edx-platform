@@ -92,7 +92,7 @@ msgstr ""
 #: cms/djangoapps/contentstore/views/component.py
 #: common/lib/xmodule/xmodule/video_module/video_module.py
 msgid "Advanced"
-msgstr ""
+msgstr "Pokročilé"
 
 #: cms/djangoapps/contentstore/views/entrance_exam.py
 #: cms/djangoapps/contentstore/views/entrance_exam.py
@@ -107,7 +107,7 @@ msgstr ""
 #: lms/templates/ccx/schedule.html
 #: lms/templates/instructor/instructor_dashboard_2/metrics.html
 msgid "Section"
-msgstr ""
+msgstr "Sekce"
 
 #: cms/djangoapps/contentstore/views/helpers.py
 #: lms/djangoapps/class_dashboard/dashboard_data.py
@@ -134,7 +134,7 @@ msgstr ""
 #: lms/templates/shoppingcart/billing_details.html
 #: lms/templates/shoppingcart/receipt.html
 msgid "Name"
-msgstr ""
+msgstr "Jméno"
 
 #: cms/djangoapps/contentstore/views/videos.py
 #: common/lib/xmodule/xmodule/video_module/video_xfields.py
@@ -147,7 +147,7 @@ msgstr ""
 #: lms/templates/open_ended_problems/open_ended_problems.html
 #: lms/templates/shoppingcart/receipt.html
 msgid "Status"
-msgstr ""
+msgstr "Stav"
 
 #: common/djangoapps/config_models/admin.py
 msgid "Revert to the selected configuration"
@@ -255,7 +255,7 @@ msgstr ""
 
 #: common/djangoapps/course_modes/views.py
 msgid "Enrollment is closed"
-msgstr ""
+msgstr "Zápis je uzavřen"
 
 #: common/djangoapps/course_modes/views.py
 msgid "Enrollment mode not supported"
@@ -426,17 +426,17 @@ msgstr ""
 
 #: common/djangoapps/student/models.py
 msgid "Male"
-msgstr ""
+msgstr "Muž"
 
 #: common/djangoapps/student/models.py
 msgid "Female"
-msgstr ""
+msgstr "Žena"
 
 #. Translators: 'Other' refers to the student's gender
 #. Translators: 'Other' refers to the student's level of education
 #: common/djangoapps/student/models.py common/djangoapps/student/models.py
 msgid "Other"
-msgstr ""
+msgstr "Jiné"
 
 #: common/djangoapps/student/models.py
 msgid "Doctorate"
@@ -536,7 +536,7 @@ msgstr ""
 
 #: common/djangoapps/student/views.py
 msgid "You are not enrolled in this course"
-msgstr ""
+msgstr "Nejste zapsán do tohoto kurzu"
 
 #: common/djangoapps/student/views.py
 msgid "Enrollment action is invalid"
@@ -584,7 +584,7 @@ msgstr ""
 
 #: common/djangoapps/student/views.py lms/templates/provider_login.html
 msgid "Email or password is incorrect."
-msgstr ""
+msgstr "Email nebo heslo není správné"
 
 #: common/djangoapps/student/views.py
 msgid ""
@@ -672,11 +672,11 @@ msgstr ""
 
 #: common/djangoapps/student/views.py
 msgid "Unable to send reactivation email"
-msgstr ""
+msgstr "Nejde odeslat reaktivační e-mail"
 
 #: common/djangoapps/student/views.py
 msgid "Valid e-mail address required."
-msgstr ""
+msgstr "Je vyžadován validní e-mail."
 
 #: common/djangoapps/student/views.py
 msgid "Old email is the same as the new email."
@@ -1137,7 +1137,7 @@ msgstr ""
 
 #: common/lib/capa/capa/inputtypes.py common/lib/capa/capa/inputtypes.py
 msgid "unanswered"
-msgstr ""
+msgstr "Neodpověženo"
 
 #: common/lib/capa/capa/inputtypes.py
 msgid "processing"
@@ -1255,7 +1255,7 @@ msgstr ""
 #: cms/templates/widgets/problem-edit.html
 #: cms/templates/widgets/problem-edit.html
 msgid "Multiple Choice"
-msgstr ""
+msgstr "Výběr z více odpovědí"
 
 #. Translators: 'unmask_name' is a method name and should not be translated.
 #: common/lib/capa/capa/responsetypes.py
@@ -1357,7 +1357,7 @@ msgstr ""
 #: common/templates/course_modes/choose.html lms/templates/login.html
 #: lms/templates/register.html
 msgid "or"
-msgstr ""
+msgstr "nebo"
 
 #: common/lib/capa/capa/responsetypes.py
 msgid "Custom Evaluated Script"
@@ -1565,7 +1565,7 @@ msgstr ""
 #: common/lib/xmodule/xmodule/modulestore/inheritance.py
 #: lms/templates/problem.html
 msgid "Show Answer"
-msgstr ""
+msgstr "Zobrazit odpověď"
 
 #: common/lib/xmodule/xmodule/capa_base.py
 msgid ""
@@ -1588,7 +1588,7 @@ msgstr ""
 
 #: common/lib/xmodule/xmodule/capa_base.py
 msgid "Closed"
-msgstr ""
+msgstr "Uzavřeno"
 
 #: common/lib/xmodule/xmodule/capa_base.py
 msgid "Finished"
@@ -2751,7 +2751,7 @@ msgstr ""
 #: lms/templates/footer.html lms/templates/static_templates/about.html
 #: lms/templates/static_templates/about.html
 msgid "About"
-msgstr ""
+msgstr "O"
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Entrance Exam Enabled"
@@ -2886,7 +2886,7 @@ msgstr ""
 
 #: common/lib/xmodule/xmodule/html_module.py
 msgid "Editor"
-msgstr ""
+msgstr "Editor"
 
 #: common/lib/xmodule/xmodule/html_module.py
 msgid "Visual"
@@ -4180,7 +4180,7 @@ msgstr ""
 
 #: common/static/js/vendor/mathjax-MathJax-c9db6ac/docs/source/mjtheme/layout.html
 msgid "Navigation"
-msgstr ""
+msgstr "Navigace"
 
 #: common/static/js/vendor/mathjax-MathJax-c9db6ac/docs/source/mjtheme/layout.html
 msgid "About these documents"
@@ -4196,9 +4196,11 @@ msgstr ""
 #: lms/templates/discussion/_thread_list_template.html
 #: lms/templates/edxnotes/edxnotes.html
 msgid "Search"
-msgstr ""
+msgstr "Hledat"
 
 #: common/static/js/vendor/mathjax-MathJax-c9db6ac/docs/source/mjtheme/layout.html
+#: lms/templates/static_templates/copyright.html
+#: lms/templates/static_templates/copyright.html
 msgid "Copyright"
 msgstr "Copyright"
 
@@ -4209,22 +4211,20 @@ msgid ""
 "Inc."
 msgstr ""
 
-#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: 'Open edX' is a brand, please keep this untranslated.
 #. See http://openedx.org for more information.
-#: lms/djangoapps/branding/api.py cms/templates/widgets/footer.html
-#: cms/templates/widgets/footer.html
+#: lms/djangoapps/branding/api.py
 msgid "Powered by Open edX"
-msgstr ""
+msgstr "Powered by Open edX"
 
 #: lms/djangoapps/branding/api.py lms/templates/static_templates/blog.html
 #: lms/templates/static_templates/blog.html
 msgid "Blog"
-msgstr ""
+msgstr "Blog"
 
 #: lms/djangoapps/branding/api.py
 msgid "News"
-msgstr ""
+msgstr "Novinky"
 
 #: lms/djangoapps/branding/api.py
 msgid "FAQs"
@@ -4233,12 +4233,12 @@ msgstr ""
 #: lms/djangoapps/branding/api.py lms/templates/static_templates/contact.html
 #: lms/templates/static_templates/contact.html
 msgid "Contact"
-msgstr ""
+msgstr "Kontakt"
 
 #: lms/djangoapps/branding/api.py lms/templates/static_templates/jobs.html
 #: lms/templates/static_templates/jobs.html
 msgid "Jobs"
-msgstr ""
+msgstr "Kariéra"
 
 #: lms/djangoapps/branding/api.py lms/templates/static_templates/donate.html
 #: lms/templates/static_templates/donate.html
@@ -4247,7 +4247,7 @@ msgstr ""
 
 #: lms/djangoapps/branding/api.py
 msgid "Sitemap"
-msgstr ""
+msgstr "Mapa stránky"
 
 #: lms/djangoapps/branding/api.py
 msgid "Terms of Service & Honor Code"
@@ -4261,7 +4261,7 @@ msgstr ""
 #: lms/templates/static_templates/privacy.html
 #: lms/templates/static_templates/privacy.html
 msgid "Privacy Policy"
-msgstr ""
+msgstr "Pravidla ochrany osobních údajů"
 
 #: lms/djangoapps/branding/api.py
 msgid "Accessibility Policy"
@@ -4274,7 +4274,7 @@ msgstr ""
 #: cms/templates/widgets/footer.html lms/templates/static_templates/tos.html
 #: lms/templates/static_templates/tos.html
 msgid "Terms of Service"
-msgstr ""
+msgstr "Smluvní podmínky"
 
 #: lms/djangoapps/branding/api.py
 msgid "Download the {platform_name} mobile app from the Apple App Store"
@@ -4597,7 +4597,7 @@ msgstr ""
 #: lms/templates/instructor/instructor_dashboard_2/metrics.html
 #: lms/templates/instructor/instructor_dashboard_2/metrics.html
 msgid "Username"
-msgstr ""
+msgstr "Uživatelské jméno"
 
 #: lms/djangoapps/class_dashboard/dashboard_data.py
 #: lms/templates/instructor/instructor_dashboard_2/metrics.html
@@ -4717,11 +4717,11 @@ msgstr ""
 #: lms/djangoapps/courseware/tabs.py
 #: lms/djangoapps/instructor/views/instructor_dashboard.py
 msgid "Course Info"
-msgstr ""
+msgstr "Informace o kurzu"
 
 #: lms/djangoapps/courseware/tabs.py lms/templates/courseware/syllabus.html
 msgid "Syllabus"
-msgstr ""
+msgstr "Syllabus"
 
 #: lms/djangoapps/courseware/tabs.py
 #: lms/templates/peer_grading/peer_grading.html
@@ -5053,7 +5053,7 @@ msgstr ""
 #: cms/templates/course-create-rerun.html cms/templates/index.html
 #: lms/templates/shoppingcart/receipt.html
 msgid "Course Name"
-msgstr ""
+msgstr "Název kurzu"
 
 #: lms/djangoapps/dashboard/sysadmin.py
 msgid "Directory/ID"
@@ -5247,7 +5247,7 @@ msgstr ""
 
 #: lms/djangoapps/instructor/views/api.py
 msgid "User does not exist."
-msgstr ""
+msgstr "Užiovatel neexistuje."
 
 #: lms/djangoapps/instructor/views/api.py
 msgid "Task is already running."
@@ -5328,7 +5328,7 @@ msgstr ""
 #: lms/templates/instructor/instructor_dashboard_2/generate_registarion_codes_modal.html
 #: lms/templates/instructor/instructor_dashboard_2/generate_registarion_codes_modal.html
 msgid "Email"
-msgstr ""
+msgstr "Email"
 
 #: lms/djangoapps/instructor/views/api.py
 #: lms/djangoapps/instructor_task/tasks_helper.py lms/envs/devstack.py
@@ -5351,7 +5351,7 @@ msgstr ""
 #: openedx/core/djangoapps/user_api/views.py lms/templates/register.html
 #: lms/templates/signup_modal.html
 msgid "Gender"
-msgstr ""
+msgstr "Pohlaví"
 
 #: lms/djangoapps/instructor/views/api.py
 #: lms/djangoapps/instructor_task/tasks_helper.py
@@ -5429,7 +5429,7 @@ msgstr ""
 #: lms/templates/instructor/instructor_dashboard_2/edit_coupon_modal.html
 #: wiki/plugins/attachments/forms.py
 msgid "Description"
-msgstr ""
+msgstr "Popis"
 
 #: lms/djangoapps/instructor/views/api.py
 #: lms/templates/instructor/instructor_dashboard_2/e-commerce.html
@@ -5666,7 +5666,7 @@ msgstr ""
 
 #: lms/djangoapps/instructor/views/instructor_dashboard.py
 msgid "Membership"
-msgstr ""
+msgstr "Členství"
 
 #: lms/djangoapps/instructor/views/instructor_dashboard.py
 msgid "Cohorts"
@@ -5689,7 +5689,7 @@ msgstr ""
 #: lms/djangoapps/instructor/views/instructor_dashboard.py
 #: lms/templates/courseware/legacy_instructor_dashboard.html
 msgid "Analytics"
-msgstr ""
+msgstr "Analytika"
 
 #: lms/djangoapps/instructor/views/instructor_dashboard.py
 msgid "Demographic data is now available in {dashboard_link}."
@@ -5812,9 +5812,12 @@ msgstr ""
 msgid "ID"
 msgstr ""
 
-#: cms/templates/register.html lms/templates/register-shib.html
-#: lms/templates/register.html lms/templates/register.html
-#: lms/templates/signup_modal.html lms/templates/sysadmin_dashboard.html
+#: lms/djangoapps/instructor/views/legacy.py
+#: lms/djangoapps/instructor/views/tools.py
+#: lms/djangoapps/instructor_task/tasks_helper.py cms/templates/register.html
+#: lms/templates/register-shib.html lms/templates/register.html
+#: lms/templates/register.html lms/templates/signup_modal.html
+#: lms/templates/sysadmin_dashboard.html
 #: lms/templates/verify_student/_modal_editname.html
 #: lms/templates/verify_student/face_upload.html
 msgid "Full Name"
@@ -5897,10 +5900,11 @@ msgstr ""
 msgid "reset"
 msgstr ""
 
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: This is a past-tense verb that is inserted into task progress
 #. messages as {action}.
 #: lms/djangoapps/instructor_task/tasks.py
-#: lms/templates/wiki/plugins/attachments/index.html
+#: lms/templates/wiki/plugins/attachments/index.html wiki/models/article.py
 msgid "deleted"
 msgstr "smazáno"
 
@@ -5961,7 +5965,7 @@ msgstr ""
 #: lms/templates/discussion/_underscore_templates.html wiki/forms.py
 #: wiki/forms.py wiki/forms.py
 msgid "Title"
-msgstr ""
+msgstr "Název"
 
 #: lms/djangoapps/instructor_task/tasks_helper.py lms/templates/register.html
 #: lms/templates/instructor/instructor_dashboard_2/instructor_analytics.html
@@ -5976,7 +5980,7 @@ msgstr ""
 #: lms/templates/instructor/instructor_dashboard_2/generate_registarion_codes_modal.html
 #: lms/templates/shoppingcart/receipt.html
 msgid "City"
-msgstr ""
+msgstr "Město"
 
 #. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: This label appears above a dropdown menu on the registration
@@ -5986,7 +5990,7 @@ msgstr ""
 #: lms/templates/instructor/instructor_dashboard_2/generate_registarion_codes_modal.html
 #: lms/templates/shoppingcart/receipt.html
 msgid "Country"
-msgstr ""
+msgstr "Stát"
 
 #: lms/djangoapps/instructor_task/tasks_helper.py
 msgid "Enrollment Date"
@@ -6233,9 +6237,9 @@ msgstr ""
 msgid "This component refers to deleted or invalid content groups."
 msgstr ""
 
-#: lms/djangoapps/notes/views.py lms/templates/notes.html
+#: lms/templates/notes.html
 msgid "My Notes"
-msgstr ""
+msgstr "Moje poznámky"
 
 #: lms/djangoapps/open_ended_grading/staff_grading_service.py
 msgid ""
@@ -6574,7 +6578,7 @@ msgstr ""
 
 #: lms/djangoapps/shoppingcart/reports.py
 msgid "Comments"
-msgstr ""
+msgstr "Komentáře"
 
 #: lms/djangoapps/shoppingcart/reports.py
 #: lms/djangoapps/shoppingcart/reports.py
@@ -6586,7 +6590,7 @@ msgstr ""
 #: cms/templates/widgets/header.html cms/templates/widgets/header.html
 #: cms/templates/widgets/header.html
 msgid "Course"
-msgstr ""
+msgstr "Kurz"
 
 #: lms/djangoapps/shoppingcart/reports.py
 msgid "Course Announce Date"
@@ -6848,7 +6852,7 @@ msgstr ""
 #: lms/djangoapps/shoppingcart/processors/CyberSource.py
 #: lms/djangoapps/shoppingcart/processors/CyberSource.py
 msgid "Unknown reason"
-msgstr ""
+msgstr "Neznámý důvod"
 
 #: lms/djangoapps/shoppingcart/processors/CyberSource.py
 msgid ""
@@ -7455,7 +7459,7 @@ msgstr ""
 #. translate this the way that Facebook advertises in your language.
 #: lms/envs/common.py lms/templates/dashboard/_dashboard_course_listing.html
 msgid "Facebook"
-msgstr ""
+msgstr "Facebook"
 
 #: lms/envs/common.py
 msgid "Like {platform_name} on Facebook"
@@ -7466,7 +7470,7 @@ msgstr ""
 #. translate this the way that Twitter advertises in your language.
 #: lms/envs/common.py lms/templates/dashboard/_dashboard_course_listing.html
 msgid "Twitter"
-msgstr ""
+msgstr "Twitter"
 
 #: lms/envs/common.py
 msgid "Follow {platform_name} on Twitter"
@@ -7476,7 +7480,7 @@ msgstr ""
 #. translate this the way that LinkedIn advertises in your language.
 #: lms/envs/common.py
 msgid "LinkedIn"
-msgstr ""
+msgstr "LinkedIn"
 
 #: lms/envs/common.py
 msgid "Follow {platform_name} on LinkedIn"
@@ -7486,7 +7490,7 @@ msgstr ""
 #. translate this the way that Google+ advertises in your language.
 #: lms/envs/common.py
 msgid "Google+"
-msgstr ""
+msgstr "Google+"
 
 #: lms/envs/common.py
 msgid "Follow {platform_name} on Google+"
@@ -7608,7 +7612,7 @@ msgstr ""
 #: lms/templates/registration/password_reset_complete.html
 #: lms/templates/registration/password_reset_complete.html
 msgid "Your Password Reset is Complete"
-msgstr ""
+msgstr "Reset vašeho hesla je hotový"
 
 #: lms/templates/registration/password_reset_complete.html
 msgid ""
@@ -7652,7 +7656,7 @@ msgstr ""
 
 #: lms/templates/registration/password_reset_confirm.html
 msgid "The two password fields didn't match."
-msgstr ""
+msgstr "Zadaná hesla nesouhlasí."
 
 #: lms/templates/registration/password_reset_confirm.html
 msgid ""
@@ -7689,11 +7693,11 @@ msgstr ""
 #: lms/templates/instructor/instructor_dashboard_2/invalidate_registration_code_modal.html
 #: lms/templates/instructor/instructor_dashboard_2/set_course_mode_price_modal.html
 msgid "Required Information"
-msgstr ""
+msgstr "Povinná informace"
 
 #: lms/templates/registration/password_reset_confirm.html
 msgid "Your New Password"
-msgstr ""
+msgstr "Vaše nové heslo"
 
 #: lms/templates/registration/password_reset_confirm.html
 msgid "Your New Password Again"
@@ -7722,7 +7726,7 @@ msgstr ""
 #: cms/templates/login.html lms/templates/login-sidebar.html
 #: lms/templates/register-sidebar.html
 msgid "Need Help?"
-msgstr ""
+msgstr "Potřebujete pomoc?"
 
 #: lms/templates/registration/password_reset_confirm.html
 msgid ""
@@ -7757,7 +7761,7 @@ msgstr ""
 
 #: lms/templates/wiki/article.html
 msgid "Last modified:"
-msgstr ""
+msgstr "Naposledy změněno:"
 
 #: lms/templates/wiki/article.html
 msgid "See all children"
@@ -7765,20 +7769,20 @@ msgstr ""
 
 #: lms/templates/wiki/article.html
 msgid "This article was last modified:"
-msgstr ""
+msgstr "Tento článek byl naposledy upraven:"
 
 #: lms/templates/wiki/create.html lms/templates/wiki/create.html.py
 msgid "Add new article"
-msgstr ""
+msgstr "Přidat nový článek"
 
 #: lms/templates/wiki/create.html
 msgid "Create article"
-msgstr ""
+msgstr "Vytvořit článek"
 
 #: lms/templates/wiki/create.html lms/templates/wiki/delete.html
 #: lms/templates/wiki/delete.html.py
 msgid "Go back"
-msgstr ""
+msgstr "Jít zpět"
 
 #: lms/templates/wiki/delete.html lms/templates/wiki/delete.html.py
 #: lms/templates/wiki/edit.html
@@ -7791,7 +7795,7 @@ msgstr ""
 #: cms/templates/studio_xblock_wrapper.html
 #: lms/templates/discussion/_underscore_templates.html
 msgid "Delete"
-msgstr ""
+msgstr "Smazat"
 
 #: lms/templates/wiki/delete.html
 msgid "You cannot delete a root article."
@@ -7827,15 +7831,16 @@ msgstr ""
 #: lms/templates/instructor/instructor_dashboard_2/e-commerce.html
 #: lms/templates/wiki/includes/article_menu.html
 msgid "Edit"
-msgstr ""
+msgstr "Upravit"
 
 #: lms/templates/wiki/edit.html lms/templates/wiki/edit.html.py
+#: lms/templates/ccx/schedule.html lms/templates/ccx/schedule.html
 msgid "Save changes"
 msgstr "Uložit změny"
 
 #: lms/templates/wiki/edit.html cms/templates/container.html
 msgid "Preview"
-msgstr ""
+msgstr "Náhled"
 
 #. #-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a control to allow users to exit out of this modal
@@ -7856,7 +7861,7 @@ msgstr ""
 #: lms/templates/modal/_modal-settings-language.html
 #: lms/templates/modal/accessible_confirm.html
 msgid "Close"
-msgstr ""
+msgstr "Zavřít"
 
 #: lms/templates/wiki/edit.html
 msgid "Wiki Preview"
@@ -7874,11 +7879,11 @@ msgstr ""
 
 #: lms/templates/wiki/edit.html
 msgid "Back to editor"
-msgstr ""
+msgstr "Zpět do editoru"
 
 #: lms/templates/wiki/history.html
 msgid "History"
-msgstr ""
+msgstr "Historie"
 
 #: lms/templates/wiki/history.html
 msgid ""
@@ -7894,7 +7899,7 @@ msgstr ""
 
 #: lms/templates/wiki/history.html
 msgid "Preview this revision"
-msgstr ""
+msgstr "Náhled revize"
 
 #: lms/templates/wiki/history.html
 msgid "Auto log:"
@@ -7902,11 +7907,11 @@ msgstr ""
 
 #: lms/templates/wiki/history.html
 msgid "Change"
-msgstr ""
+msgstr "Změna"
 
 #: lms/templates/wiki/history.html lms/templates/wiki/history.html
 msgid "Merge selected with current..."
-msgstr ""
+msgstr "Sloučit vybrané s aktuálním..."
 
 #: lms/templates/wiki/history.html
 msgid "Switch to selected version"
@@ -7922,7 +7927,7 @@ msgstr ""
 
 #: lms/templates/wiki/history.html lms/templates/wiki/history.html
 msgid "Switch to this version"
-msgstr ""
+msgstr "Přepnout do této verze"
 
 #: lms/templates/wiki/history.html
 msgid "Merge Revision"
@@ -7971,7 +7976,7 @@ msgstr ""
 
 #: lms/templates/wiki/includes/anonymous_blocked.html
 msgid "You need to log in or sign up to use this function."
-msgstr ""
+msgstr "Pro použité této funkce se musíte přihlásit nebo registrovat."
 
 #: lms/templates/wiki/includes/cheatsheet.html
 msgid "Wiki Cheatsheet"
@@ -8019,7 +8024,7 @@ msgstr ""
 
 #: lms/templates/wiki/includes/cheatsheet.html
 msgid "Useful examples:"
-msgstr ""
+msgstr "Užitečné příklady:"
 
 #: lms/templates/wiki/includes/cheatsheet.html
 msgid "Wikipedia"
@@ -8079,6 +8084,7 @@ msgid ""
 msgstr ""
 
 #: lms/templates/wiki/plugins/attachments/index.html
+#: wiki/plugins/attachments/wiki_plugin.py
 msgid "Attachments"
 msgstr "Přílohy"
 
@@ -8092,7 +8098,7 @@ msgstr ""
 
 #: lms/templates/wiki/plugins/attachments/index.html
 msgid "Upload File"
-msgstr ""
+msgstr "Nahrát soubor"
 
 #: lms/templates/wiki/plugins/attachments/index.html
 msgid "Upload file"
@@ -8120,11 +8126,11 @@ msgstr ""
 
 #: lms/templates/wiki/plugins/attachments/index.html
 msgid "Uploaded by"
-msgstr ""
+msgstr "Nahráno"
 
 #: lms/templates/wiki/plugins/attachments/index.html
 msgid "Size"
-msgstr ""
+msgstr "Velikost"
 
 #: lms/templates/wiki/plugins/attachments/index.html
 msgid "File History"
@@ -8140,7 +8146,7 @@ msgstr ""
 
 #: lms/templates/wiki/plugins/attachments/index.html
 msgid "Restore"
-msgstr ""
+msgstr "Obnovit"
 
 #: lms/templates/wiki/plugins/attachments/index.html
 msgid "anonymous (IP logged)"
@@ -8152,7 +8158,7 @@ msgstr ""
 
 #: lms/templates/wiki/plugins/attachments/index.html
 msgid "revisions"
-msgstr ""
+msgstr "revize"
 
 #: lms/templates/wiki/plugins/attachments/index.html
 msgid "There are no attachments for this article."
@@ -8249,11 +8255,11 @@ msgstr ""
 #: lms/templates/register.html lms/templates/register.html
 #: lms/templates/signup_modal.html lms/templates/sysadmin_dashboard.html
 msgid "Password"
-msgstr ""
+msgstr "Heslo"
 
 #: openedx/core/djangoapps/user_api/views.py lms/templates/login.html
 msgid "Remember me"
-msgstr ""
+msgstr "Zapamatovat si mě"
 
 #: openedx/core/djangoapps/user_api/views.py
 msgid ""
@@ -8485,7 +8491,7 @@ msgstr ""
 
 #: cms/djangoapps/contentstore/views/assets.py
 msgid "Upload completed"
-msgstr ""
+msgstr "Nahrávání dokončeno"
 
 #: cms/djangoapps/contentstore/views/certificates.py
 msgid "must have name of the certificate"
@@ -8502,7 +8508,7 @@ msgstr ""
 
 #: cms/djangoapps/contentstore/views/component.py
 msgid "HTML"
-msgstr ""
+msgstr "HTML"
 
 #: cms/djangoapps/contentstore/views/component.py
 msgid "Video"
@@ -8580,11 +8586,11 @@ msgstr ""
 
 #: cms/djangoapps/contentstore/views/import_export.py
 msgid "We only support uploading a .tar.gz file."
-msgstr ""
+msgstr "Podporováno je pouze nahrávání souborů s příponou .tar.gz"
 
 #: cms/djangoapps/contentstore/views/import_export.py
 msgid "File upload corrupted. Please try again"
-msgstr ""
+msgstr "Nahrávání souboru se nezdařilo. Zkuste to, prosím, znovu."
 
 #: cms/djangoapps/contentstore/views/import_export.py
 msgid "Could not find the {0} file in the package."
@@ -8741,7 +8747,7 @@ msgstr ""
 #: cms/djangoapps/contentstore/views/videos.py cms/templates/index.html
 #: lms/templates/dashboard/_dashboard_status_verification.html
 msgid "Pending"
-msgstr ""
+msgstr "Čekání"
 
 #. Translators: This is the suggested filename when downloading the URL
 #. listing for videos uploaded through Studio
@@ -8751,7 +8757,7 @@ msgstr ""
 
 #: cms/djangoapps/course_creators/models.py
 msgid "unrequested"
-msgstr ""
+msgstr "nevyžádaný"
 
 #: cms/djangoapps/course_creators/models.py
 msgid "pending"
@@ -8763,11 +8769,11 @@ msgstr ""
 
 #: cms/djangoapps/course_creators/models.py
 msgid "denied"
-msgstr ""
+msgstr "odmítnuto"
 
 #: cms/djangoapps/course_creators/models.py
 msgid "Studio user"
-msgstr ""
+msgstr "Uživatel Studia"
 
 #: cms/djangoapps/course_creators/models.py
 msgid "The date when state was last updated"
@@ -8790,11 +8796,11 @@ msgstr ""
 #: cms/templates/404.html cms/templates/error.html
 #: lms/templates/static_templates/404.html
 msgid "Page Not Found"
-msgstr ""
+msgstr "Stránka nebyla nalezena"
 
 #: cms/templates/404.html lms/templates/static_templates/404.html
 msgid "Page not found"
-msgstr ""
+msgstr "Stránka nebyla nalezena"
 
 #: cms/templates/asset_index.html cms/templates/certificates.html
 #: cms/templates/container.html cms/templates/course_outline.html
@@ -8807,7 +8813,7 @@ msgstr ""
 #: lms/templates/instructor/instructor_dashboard_2/metrics.html
 #: lms/templates/student_profile/learner_profile.html
 msgid "Loading"
-msgstr ""
+msgstr "Nahrávání"
 
 #: cms/templates/asset_index.html lms/templates/courseware/courseware.html
 #: lms/templates/verify_student/_modal_editname.html
@@ -8821,7 +8827,7 @@ msgstr "zavřít"
 #: cms/templates/widgets/header.html
 #: lms/templates/wiki/includes/article_menu.html
 msgid "Settings"
-msgstr ""
+msgstr "Nastavení"
 
 #: cms/templates/course-create-rerun.html
 #: cms/templates/course-create-rerun.html cms/templates/index.html
@@ -8834,12 +8840,12 @@ msgstr ""
 #: lms/templates/modal/accessible_confirm.html
 #: lms/templates/verify_student/face_upload.html
 msgid "Cancel"
-msgstr ""
+msgstr "Zrušit"
 
 #: cms/templates/course-create-rerun.html cms/templates/index.html
 #: cms/templates/settings.html lms/templates/courseware/course_about.html
 msgid "Course Number"
-msgstr ""
+msgstr "Číslo kurzu"
 
 #: cms/templates/html_error.html lms/templates/module-error.html
 msgid "Error:"
@@ -8862,7 +8868,7 @@ msgstr "Číslo kurzu:"
 #: lms/templates/sysadmin_dashboard_gitlogs.html
 #: lms/templates/courseware/courses.html
 msgid "Courses"
-msgstr ""
+msgstr "Kurzy"
 
 #: cms/templates/login.html cms/templates/register.html
 #: lms/templates/help_modal.html lms/templates/login.html
@@ -8881,36 +8887,36 @@ msgstr "E-mail"
 #: lms/templates/login.html lms/templates/register-shib.html
 #: lms/templates/register.html lms/templates/register.html
 msgid "example: username@domain.com"
-msgstr ""
+msgstr "například: uzivatel@domena.com"
 
 #: cms/templates/login.html lms/templates/login.html
 msgid "Forgot password?"
-msgstr ""
+msgstr "Zapomenuté heslo?"
 
 #. Translators: This is the placeholder text for a field that requests the
 #. user's full name.
 #: cms/templates/register.html lms/templates/register.html
 #: lms/templates/verify_student/face_upload.html
 msgid "example: Jane Doe"
-msgstr ""
+msgstr "například: Jana Nováková"
 
 #: cms/templates/register.html lms/templates/register-shib.html
 #: lms/templates/register.html lms/templates/signup_modal.html
 #: lms/templates/signup_modal.html
 msgid "Public Username"
-msgstr ""
+msgstr "Veřejné uživatelské jméno"
 
 #. Translators: This is the placeholder text for a field that asks the user to
 #. pick a username
 #: cms/templates/register.html lms/templates/register-shib.html
 #: lms/templates/register.html lms/templates/register.html
 msgid "example: JaneDoe"
-msgstr ""
+msgstr "například: JanaNováková"
 
 #: cms/templates/register.html
 #: lms/templates/dashboard/_dashboard_info_language.html
 msgid "Preferred Language"
-msgstr ""
+msgstr "Preferovaný jazyk"
 
 #: cms/templates/settings.html
 #: lms/templates/instructor/instructor_dashboard_2/executive_summary.html
@@ -8919,28 +8925,28 @@ msgstr ""
 
 #: cms/templates/settings.html lms/templates/courseware/course_about.html
 msgid "Requirements"
-msgstr ""
+msgstr "Požadavky"
 
 #: cms/templates/studio_xblock_wrapper.html lms/templates/help_modal.html
 #: lms/templates/help_modal.html lms/templates/module-error.html
 msgid "Details"
-msgstr ""
+msgstr "Detaily"
 
 #. Translators: this is a verb describing the action of viewing more details
 #: cms/templates/studio_xblock_wrapper.html
 #: lms/templates/wiki/includes/article_menu.html
 msgid "View"
-msgstr ""
+msgstr "Zobrazit"
 
 #: cms/templates/registration/activation_complete.html
 #: lms/templates/registration/activation_complete.html
 msgid "Thanks for activating your account."
-msgstr ""
+msgstr "Děkujeme za aktivaci Vašeho účtu."
 
 #: cms/templates/registration/activation_complete.html
 #: lms/templates/registration/activation_complete.html
 msgid "This account has already been activated."
-msgstr ""
+msgstr "Tento účet již byl aktivován."
 
 #: cms/templates/registration/activation_complete.html
 #: lms/templates/registration/activation_complete.html
@@ -8950,18 +8956,18 @@ msgstr ""
 #: cms/templates/widgets/header.html cms/templates/widgets/header.html
 #: lms/templates/courseware/courseware.html
 msgid "Course Navigation"
-msgstr ""
+msgstr "Navigace kurzu"
 
 #: cms/templates/widgets/header.html cms/templates/widgets/header.html
 #: lms/templates/help_modal.html lms/templates/static_templates/help.html
 #: lms/templates/static_templates/help.html wiki/plugins/help/wiki_plugin.py
 msgid "Help"
-msgstr ""
+msgstr "Nápověda"
 
 #: cms/templates/widgets/header.html lms/templates/navigation-edx.html
 #: lms/templates/navigation.html
 msgid "Sign Out"
-msgstr ""
+msgstr "Odhlásit se"
 
 #: cms/templates/widgets/tabs-aggregator.html
 #: lms/templates/courseware/progress.html
@@ -8970,7 +8976,7 @@ msgstr ""
 
 #: common/templates/license.html
 msgid "All Rights Reserved"
-msgstr ""
+msgstr "Všechna práva vyhrazena"
 
 #: common/templates/license.html
 msgid "Attribution"
@@ -8978,7 +8984,7 @@ msgstr ""
 
 #: common/templates/license.html
 msgid "Noncommercial"
-msgstr ""
+msgstr "Nekomerční"
 
 #: common/templates/license.html
 msgid "No Derivatives"
@@ -8994,7 +9000,7 @@ msgstr ""
 
 #: common/templates/license.html
 msgid "Some Rights Reserved"
-msgstr ""
+msgstr "Některá práva vyhrazena"
 
 #: common/templates/course_modes/choose.html
 msgid "Upgrade Your Enrollment for {} | Choose Your Track"
@@ -9099,12 +9105,12 @@ msgstr ""
 #: lms/templates/open_ended_problems/open_ended_problems.html
 #: lms/templates/peer_grading/peer_grading.html
 msgid "Instructions"
-msgstr ""
+msgstr "Instrukce"
 
 #: lms/templates/annotatable.html lms/templates/imageannotation.html
 #: lms/templates/textannotation.html lms/templates/videoannotation.html
 msgid "Collapse Instructions"
-msgstr ""
+msgstr "Sbalit instrukce"
 
 #: lms/templates/annotatable.html
 msgid "Guided Discussion"
@@ -9112,7 +9118,7 @@ msgstr ""
 
 #: lms/templates/annotatable.html
 msgid "Hide Annotations"
-msgstr ""
+msgstr "Schovat poznámky"
 
 #: lms/templates/course.html
 msgid "LEARN MORE"
@@ -9124,11 +9130,11 @@ msgstr ""
 
 #: lms/templates/dashboard.html
 msgid "Dashboard"
-msgstr ""
+msgstr "Nástěnka"
 
 #: lms/templates/dashboard.html
 msgid "Current Courses"
-msgstr ""
+msgstr "Aktuální kurzy"
 
 #: lms/templates/dashboard.html
 msgid "Looks like you haven't enrolled in any courses yet."
@@ -9136,7 +9142,7 @@ msgstr ""
 
 #: lms/templates/dashboard.html
 msgid "Find courses now!"
-msgstr ""
+msgstr "Najít kurzy"
 
 #: lms/templates/dashboard.html
 msgid "Course-loading errors"
@@ -9144,11 +9150,11 @@ msgstr ""
 
 #: lms/templates/dashboard.html
 msgid "Search Your Courses"
-msgstr ""
+msgstr "Vyhledat vaše kurzy"
 
 #: lms/templates/dashboard.html lms/templates/courseware/courseware.html
 msgid "Clear search"
-msgstr ""
+msgstr "Vyčistit hledání"
 
 #: lms/templates/dashboard.html
 msgid "Want to change your account settings?"
@@ -9172,7 +9178,7 @@ msgstr ""
 
 #: lms/templates/dashboard.html
 msgid "Save Settings"
-msgstr ""
+msgstr "Uložit nastavení"
 
 #: lms/templates/dashboard.html lms/templates/ccx/enrollment.html
 #: lms/templates/dashboard/_dashboard_course_listing.html
@@ -9195,7 +9201,7 @@ msgstr ""
 
 #: lms/templates/email_change_failed.html lms/templates/email_exists.html
 msgid "E-mail change failed"
-msgstr ""
+msgstr "Změna e-mailu se nezdařila"
 
 #: lms/templates/email_change_failed.html
 msgid "We were unable to send a confirmation email to {email}"
@@ -9209,7 +9215,7 @@ msgstr ""
 #: lms/templates/email_change_successful.html
 #: lms/templates/emails_change_successful.html
 msgid "E-mail change successful!"
-msgstr ""
+msgstr "Změna e-mailu byla úspěšná!"
 
 #: lms/templates/email_change_successful.html
 #: lms/templates/emails_change_successful.html
@@ -9226,27 +9232,27 @@ msgstr ""
 
 #: lms/templates/enroll_students.html
 msgid "Course: "
-msgstr ""
+msgstr "Kurz:"
 
 #: lms/templates/enroll_students.html
 msgid "Add new students"
-msgstr ""
+msgstr "Přidat nového studenta"
 
 #: lms/templates/enroll_students.html
 msgid "Existing students:"
-msgstr ""
+msgstr "Existující studenti:"
 
 #: lms/templates/enroll_students.html
 msgid "New students added: "
-msgstr ""
+msgstr "Nově přidaní studenti:"
 
 #: lms/templates/enroll_students.html
 msgid "Students rejected: "
-msgstr ""
+msgstr "Zamítnutí studenti:"
 
 #: lms/templates/enroll_students.html
 msgid "Debug: "
-msgstr ""
+msgstr "Ladění:"
 
 #: lms/templates/extauth_failure.html lms/templates/extauth_failure.html
 msgid "External Authentication failed"
@@ -9259,7 +9265,7 @@ msgstr ""
 #: lms/templates/folditbasic.html
 #: lms/templates/instructor/instructor_dashboard_2/certificates.html
 msgid "Status:"
-msgstr ""
+msgstr "Status:"
 
 #: lms/templates/folditbasic.html
 msgid "You have successfully gotten to level {goal_level}."
@@ -9292,11 +9298,11 @@ msgstr "Uživatel"
 
 #: lms/templates/footer-edx-v3.html
 msgid "Page Footer"
-msgstr ""
+msgstr "Patička stránky"
 
 #: lms/templates/footer-edx-v3.html lms/templates/footer-edx-v3.html
 msgid "About edX"
-msgstr ""
+msgstr "O edX"
 
 #: lms/templates/footer-edx-v3.html lms/templates/footer.html
 msgid "Legal"
@@ -9305,7 +9311,7 @@ msgstr ""
 #: lms/templates/forgot_password_modal.html
 #: lms/templates/forgot_password_modal.html
 msgid "Password Reset"
-msgstr ""
+msgstr "Obnovení hesla"
 
 #: lms/templates/forgot_password_modal.html
 msgid ""
@@ -9315,7 +9321,7 @@ msgstr ""
 
 #: lms/templates/forgot_password_modal.html
 msgid "Your E-mail Address"
-msgstr ""
+msgstr "Vaše e-mailová adresa"
 
 #: lms/templates/forgot_password_modal.html lms/templates/login.html
 msgid "This is the e-mail address you used to register with {platform}"
@@ -9323,11 +9329,11 @@ msgstr ""
 
 #: lms/templates/forgot_password_modal.html
 msgid "Reset My Password"
-msgstr ""
+msgstr "Obnovení mého hesla"
 
 #: lms/templates/forgot_password_modal.html
 msgid "Email is incorrect."
-msgstr ""
+msgstr "Email není správný"
 
 #: lms/templates/help_modal.html lms/templates/help_modal.html
 msgid "{platform_name} Help"
@@ -9355,7 +9361,7 @@ msgstr ""
 
 #: lms/templates/help_modal.html
 msgid "Report a problem"
-msgstr ""
+msgstr "Nahlásit problém"
 
 #: lms/templates/help_modal.html
 msgid "Make a suggestion"
@@ -9395,11 +9401,11 @@ msgstr ""
 #: lms/templates/peer_grading/peer_grading_problem.html
 #: lms/templates/survey/survey.html
 msgid "Submit"
-msgstr ""
+msgstr "Zaslat"
 
 #: lms/templates/help_modal.html
 msgid "Thank You!"
-msgstr ""
+msgstr "Děkuji"
 
 #: lms/templates/help_modal.html
 msgid ""
@@ -9411,11 +9417,11 @@ msgstr ""
 
 #: lms/templates/help_modal.html
 msgid "problem"
-msgstr ""
+msgstr "problém"
 
 #: lms/templates/help_modal.html
 msgid "Report a Problem"
-msgstr ""
+msgstr "Nahlásit problém"
 
 #: lms/templates/help_modal.html
 msgid "Brief description of the problem"
@@ -9443,11 +9449,11 @@ msgstr ""
 
 #: lms/templates/help_modal.html
 msgid "question"
-msgstr ""
+msgstr "otázka"
 
 #: lms/templates/help_modal.html
 msgid "Ask a Question"
-msgstr ""
+msgstr "Položit otázku"
 
 #: lms/templates/help_modal.html
 msgid "Brief summary of your question"
@@ -9455,7 +9461,7 @@ msgstr ""
 
 #: lms/templates/help_modal.html
 msgid "An error has occurred."
-msgstr ""
+msgstr "Došlo k chybě."
 
 #: lms/templates/help_modal.html
 msgid "Please {link_start}send us e-mail{link_end}."
@@ -9463,7 +9469,7 @@ msgstr ""
 
 #: lms/templates/help_modal.html
 msgid "Please try again later."
-msgstr ""
+msgstr "Prosím zkuste to znovu později."
 
 #: lms/templates/imageannotation.html
 msgid "Note: only instructors may annotate."
@@ -9481,7 +9487,7 @@ msgstr ""
 #. http://openedx.org for more information.
 #: lms/templates/index.html
 msgid "Welcome to Open edX!"
-msgstr ""
+msgstr "Vítejte na Open edX!"
 
 #. Translators: 'Open edX' is a brand, please keep this untranslated. See
 #. http://openedx.org for more information.
@@ -9491,11 +9497,11 @@ msgstr ""
 
 #: lms/templates/index.html lms/templates/courseware/courses.html
 msgid "Search for a course"
-msgstr ""
+msgstr "Vyhledat kurz"
 
 #: lms/templates/index.html
 msgid "View all Courses"
-msgstr ""
+msgstr "Zobrazit všechny kurzy"
 
 #: lms/templates/invalid_email_key.html
 msgid "Invalid email change key"
@@ -9538,7 +9544,7 @@ msgstr ""
 
 #: lms/templates/login-sidebar.html lms/templates/login-sidebar.html
 msgid "Login via OpenID"
-msgstr ""
+msgstr "Přihlásit přes OpenID"
 
 #: lms/templates/login-sidebar.html
 msgid ""
@@ -9624,7 +9630,7 @@ msgstr ""
 #. on a platform external to the edX LMS
 #: lms/templates/lti.html
 msgid "External resource"
-msgstr ""
+msgstr "Externí zdroje"
 
 #. Translators: "points" is the student's achieved score on this LTI unit, and
 #. "total_points" is the maximum number of points achievable.
@@ -9661,39 +9667,39 @@ msgstr ""
 
 #: lms/templates/manage_user_standing.html
 msgid "Username:"
-msgstr ""
+msgstr "Uživatelské jméno:"
 
 #: lms/templates/manage_user_standing.html
 msgid "Profile:"
-msgstr ""
+msgstr "Profil:"
 
 #: lms/templates/manage_user_standing.html
 msgid "Image:"
-msgstr ""
+msgstr "Obrázek:"
 
 #: lms/templates/manage_user_standing.html
 msgid "Name:"
-msgstr ""
+msgstr "Jméno:"
 
 #: lms/templates/manage_user_standing.html
 msgid "Choose an action:"
-msgstr ""
+msgstr "Zvolit akci:"
 
 #: lms/templates/manage_user_standing.html
 msgid "View Profile"
-msgstr ""
+msgstr "Zobrazit profil"
 
 #: lms/templates/manage_user_standing.html
 msgid "Disable Account"
-msgstr ""
+msgstr "Zakázat účet"
 
 #: lms/templates/manage_user_standing.html
 msgid "Reenable Account"
-msgstr ""
+msgstr "Opětovné povolení účtu"
 
 #: lms/templates/manage_user_standing.html
 msgid "Remove Profile Image"
-msgstr ""
+msgstr "Odstranit profilový obrázek"
 
 #: lms/templates/manage_user_standing.html
 msgid "Students whose accounts have been disabled"
@@ -9731,20 +9737,20 @@ msgstr ""
 #: lms/templates/navigation-edx.html lms/templates/navigation-edx.html
 #: lms/templates/navigation.html
 msgid "How it Works"
-msgstr ""
+msgstr "Jak to funguje"
 
 #: lms/templates/navigation-edx.html lms/templates/navigation-edx.html
 #: lms/templates/navigation.html
 msgid "Find Courses"
-msgstr ""
+msgstr "Najít kurzy"
 
 #: lms/templates/navigation-edx.html lms/templates/navigation-edx.html
 msgid "Schools & Partners"
-msgstr ""
+msgstr "Školy & Partneři"
 
 #: lms/templates/navigation-edx.html lms/templates/navigation.html
 msgid "Dashboard for:"
-msgstr ""
+msgstr "Nástěnka:"
 
 #: lms/templates/navigation-edx.html lms/templates/navigation.html
 msgid "More options dropdown"
@@ -9753,26 +9759,26 @@ msgstr ""
 #: lms/templates/navigation-edx.html lms/templates/navigation.html
 #: lms/templates/student_account/account_settings.html
 msgid "Account Settings"
-msgstr ""
+msgstr "Nastavení účtu"
 
 #: lms/templates/navigation-edx.html lms/templates/navigation.html
 msgid "My Profile"
-msgstr ""
+msgstr "Můj profil"
 
 #: lms/templates/navigation-edx.html lms/templates/navigation.html
 #: lms/templates/shoppingcart/shopping_cart.html
 msgid "Shopping Cart"
-msgstr ""
+msgstr "Nákupní košík"
 
 #: lms/templates/navigation-edx.html lms/templates/navigation-edx.html
 #: lms/templates/register.html
 msgid "Register"
-msgstr ""
+msgstr "Registrovat"
 
 #: lms/templates/navigation-edx.html lms/templates/navigation-edx.html
 #: lms/templates/navigation.html lms/templates/navigation.html
 msgid "Sign in"
-msgstr ""
+msgstr "Přihlásit se"
 
 #: lms/templates/navigation-edx.html lms/templates/navigation.html
 msgid ""
@@ -9791,11 +9797,11 @@ msgstr ""
 
 #: lms/templates/navigation.html
 msgid "Schools"
-msgstr ""
+msgstr "Školy"
 
 #: lms/templates/navigation.html lms/templates/navigation.html
 msgid "Register Now"
-msgstr ""
+msgstr "Registrovat ihned"
 
 #: lms/templates/notes.html lms/templates/textannotation.html
 #: lms/templates/videoannotation.html
@@ -9820,7 +9826,7 @@ msgstr ""
 #: lms/templates/combinedopenended/selfassessment/self_assessment_prompt.html
 #: lms/templates/verify_student/face_upload.html
 msgid "Save"
-msgstr ""
+msgstr "Uložit"
 
 #: lms/templates/problem.html
 msgid "You have used {num_used} of {num_total} submissions"
@@ -9828,7 +9834,7 @@ msgstr ""
 
 #: lms/templates/provider_login.html
 msgid "Log In"
-msgstr ""
+msgstr "Přihlásit se"
 
 #: lms/templates/provider_login.html
 msgid ""
@@ -9871,7 +9877,7 @@ msgstr ""
 
 #: lms/templates/register-shib.html lms/templates/signup_modal.html
 msgid "Enter a public username:"
-msgstr ""
+msgstr "Zadejte veřejné uživatelské jméno:"
 
 #: lms/templates/register-shib.html lms/templates/register.html
 #: lms/templates/register.html
@@ -9894,7 +9900,7 @@ msgstr ""
 
 #: lms/templates/register-shib.html
 msgid "Update My Account"
-msgstr ""
+msgstr "Aktualizovat můj účet"
 
 #: lms/templates/register-sidebar.html
 msgid "Registration Help"
@@ -9906,7 +9912,7 @@ msgstr ""
 
 #: lms/templates/register-sidebar.html
 msgid "Log in"
-msgstr ""
+msgstr "Přihlásit"
 
 #: lms/templates/register-sidebar.html
 msgid "Welcome to {platform_name}"
@@ -9921,7 +9927,7 @@ msgstr ""
 
 #: lms/templates/register-sidebar.html
 msgid "Next Steps"
-msgstr ""
+msgstr "Další kroky"
 
 #: lms/templates/register-sidebar.html
 msgid ""
@@ -9963,7 +9969,7 @@ msgstr ""
 
 #: lms/templates/register.html
 msgid "Welcome!"
-msgstr ""
+msgstr "Vítejte!"
 
 #: lms/templates/register.html
 msgid "Register below to create your {platform_name} account"
@@ -10001,7 +10007,7 @@ msgstr ""
 
 #: lms/templates/register.html
 msgid "Welcome {username}"
-msgstr ""
+msgstr "Vítejte {username}"
 
 #: lms/templates/register.html
 msgid "Enter a Public Display Name:"
@@ -10200,11 +10206,11 @@ msgstr ""
 
 #: lms/templates/staticbook.html
 msgid "Previous page"
-msgstr ""
+msgstr "Předchozí stránka"
 
 #: lms/templates/staticbook.html
 msgid "Next page"
-msgstr ""
+msgstr "Další stránka"
 
 #: lms/templates/sysadmin_dashboard.html
 #: lms/templates/sysadmin_dashboard_gitlogs.html
@@ -10322,11 +10328,11 @@ msgstr ""
 #: lms/templates/sysadmin_dashboard_gitlogs.html
 #: lms/templates/ccx/schedule.html
 msgid "Error"
-msgstr ""
+msgstr "Chyba"
 
 #: lms/templates/sysadmin_dashboard_gitlogs.html
 msgid "Date"
-msgstr ""
+msgstr "Datum"
 
 #. Translators: Git is a version-control system; see http://git-scm.com/about
 #: lms/templates/sysadmin_dashboard_gitlogs.html
@@ -10879,7 +10885,7 @@ msgstr ""
 #: lms/templates/combinedopenended/combined_open_ended.html
 #: lms/templates/peer_grading/peer_grading_problem.html
 msgid "Hide Question"
-msgstr ""
+msgstr "Skrýt otázku"
 
 #: lms/templates/combinedopenended/combined_open_ended.html
 msgid "New Submission"
@@ -11351,7 +11357,7 @@ msgstr ""
 
 #: lms/templates/courseware/legacy_instructor_dashboard.html
 msgid "Admin"
-msgstr ""
+msgstr "Admin"
 
 #: lms/templates/courseware/legacy_instructor_dashboard.html
 msgid "Forum Admin"
@@ -11510,7 +11516,7 @@ msgstr ""
 #: lms/templates/shoppingcart/receipt.html
 #: lms/templates/shoppingcart/receipt.html
 msgid "Students"
-msgstr ""
+msgstr "Studenti"
 
 #: lms/templates/courseware/legacy_instructor_dashboard.html
 msgid "Score distribution for problems"
@@ -11779,7 +11785,7 @@ msgstr ""
 #: lms/templates/courseware/progress.html
 #: lms/templates/discussion/_underscore_templates.html
 msgid "More"
-msgstr ""
+msgstr "Více"
 
 #: lms/templates/courseware/progress.html
 msgid "{earned:.3n} of {total:.3n} possible points"
@@ -11916,7 +11922,7 @@ msgstr ""
 #: lms/templates/dashboard/_dashboard_course_listing.html
 #: lms/templates/shoppingcart/registration_code_receipt.html
 msgid "View Course"
-msgstr ""
+msgstr "Zobrazit kurz"
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
 #: lms/templates/dashboard/_dashboard_course_listing.html
@@ -12180,7 +12186,7 @@ msgstr ""
 
 #: lms/templates/discussion/_similar_posts.html
 msgid "Hide"
-msgstr ""
+msgstr "Skrýt"
 
 #: lms/templates/discussion/_thread_list_template.html
 #: lms/templates/discussion/_underscore_templates.html
@@ -12547,11 +12553,11 @@ msgstr ""
 #: lms/templates/discussion/_underscore_templates.html
 #: lms/templates/discussion/mustache/_profile_thread.mustache
 msgid "anonymous"
-msgstr ""
+msgstr "anonymní"
 
 #: lms/templates/discussion/_user_profile.html
 msgid ", "
-msgstr ""
+msgstr ","
 
 #: lms/templates/discussion/_user_profile.html
 msgid "%s discussion started"
@@ -14766,7 +14772,7 @@ msgstr ""
 
 #: lms/templates/modal/accessible_confirm.html
 msgid "Confirm"
-msgstr ""
+msgstr "Potvrdit"
 
 #. Translators: this text gives status on if the modal interface (a menu or
 #. piece of UI that takes the full focus of the screen) is open or not
@@ -14776,7 +14782,7 @@ msgstr ""
 
 #: lms/templates/modal/accessible_confirm.html
 msgid "OK"
-msgstr ""
+msgstr "OK"
 
 #: lms/templates/modal/accessible_confirm.html
 msgid "open"
@@ -14884,7 +14890,7 @@ msgstr ""
 
 #: lms/templates/peer_grading/peer_grading.html
 msgid "Required"
-msgstr ""
+msgstr "Požadované"
 
 #: lms/templates/peer_grading/peer_grading.html
 msgid "No due date"
@@ -15009,7 +15015,7 @@ msgstr ""
 
 #: lms/templates/registration/activation_invalid.html
 msgid "Activation Invalid"
-msgstr ""
+msgstr "Aktivace je neplatná"
 
 #: lms/templates/registration/activation_invalid.html
 msgid ""
@@ -15481,7 +15487,7 @@ msgstr ""
 #: lms/templates/static_templates/faq.html
 #: lms/templates/static_templates/faq.html
 msgid "FAQ"
-msgstr ""
+msgstr "FAQ"
 
 #: lms/templates/static_templates/media-kit.html
 #: lms/templates/static_templates/media-kit.html
@@ -16196,7 +16202,7 @@ msgstr ""
 #: cms/templates/textbooks.html cms/templates/videos_index.html
 #: cms/templates/widgets/header.html
 msgid "Content"
-msgstr ""
+msgstr "Obsah"
 
 #: cms/templates/asset_index.html cms/templates/asset_index.html
 #: cms/templates/container.html cms/templates/container.html
@@ -16218,7 +16224,7 @@ msgstr ""
 #: cms/templates/asset_index.html cms/templates/asset_index.html
 #: cms/templates/videos_index.html
 msgid "Upload New File"
-msgstr ""
+msgstr "Nahrát nový soubor"
 
 #: cms/templates/asset_index.html
 msgid "Adding Files for Your Course"
@@ -16280,7 +16286,7 @@ msgstr ""
 
 #: cms/templates/asset_index.html
 msgid "Your file has been deleted."
-msgstr ""
+msgstr "Váš soubor byl smazán."
 
 #: cms/templates/asset_index.html
 msgid "close alert"
@@ -16420,7 +16426,7 @@ msgstr ""
 #: cms/templates/component.html cms/templates/edit-tabs.html
 #: cms/templates/edit-tabs.html cms/templates/studio_xblock_wrapper.html
 msgid "Drag to reorder"
-msgstr ""
+msgstr "Tažením přesuňte"
 
 #: cms/templates/container.html
 msgid "Open the courseware in the LMS"
@@ -16638,11 +16644,11 @@ msgstr ""
 
 #: cms/templates/course_info.html cms/templates/course_info.html
 msgid "Course Updates"
-msgstr ""
+msgstr "Aktualizace kurzu"
 
 #: cms/templates/course_info.html
 msgid "New Update"
-msgstr ""
+msgstr "Nová aktualizace"
 
 #: cms/templates/course_info.html
 msgid ""
@@ -16671,7 +16677,7 @@ msgstr ""
 
 #: cms/templates/course_outline.html cms/templates/index.html
 msgid "Dismiss"
-msgstr ""
+msgstr "Zamítnout"
 
 #: cms/templates/course_outline.html
 msgid "Click to add a new section"
@@ -16691,11 +16697,11 @@ msgstr ""
 
 #: cms/templates/course_outline.html
 msgid "Collapse All Sections"
-msgstr ""
+msgstr "Sbalit všechny sekce"
 
 #: cms/templates/course_outline.html
 msgid "Expand All Sections"
-msgstr ""
+msgstr "Rozbalit všechny sekce"
 
 #: cms/templates/course_outline.html
 msgid "Click to open the courseware in the LMS in a new tab"
@@ -16776,7 +16782,7 @@ msgstr ""
 
 #: cms/templates/edit-tabs.html
 msgid "New Page"
-msgstr ""
+msgstr "Nová stránka"
 
 #: cms/templates/edit-tabs.html
 msgid ""
@@ -18907,7 +18913,7 @@ msgstr ""
 
 #: cms/templates/widgets/footer.html cms/templates/widgets/sock.html
 msgid "Contact Us"
-msgstr ""
+msgstr "Kontaktujte nás"
 
 #. Translators: 'EdX', 'edX', 'Studio', and 'Open edX' are trademarks of 'edX
 #. Inc.'. Please do not translate any of these trademarks and company names.
@@ -18972,7 +18978,7 @@ msgstr ""
 #: cms/templates/widgets/problem-edit.html
 #: cms/templates/widgets/problem-edit.html
 msgid "Heading 1"
-msgstr ""
+msgstr "Nadpis 1"
 
 #: cms/templates/widgets/problem-edit.html
 #: cms/templates/widgets/problem-edit.html
@@ -19033,23 +19039,23 @@ msgstr ""
 
 # empty
 msgid "This is a key string."
-msgstr ""
+msgstr "Toto je klíčový řetězec."
 
 #: wiki/admin.py wiki/models/article.py
 msgid "created"
-msgstr ""
+msgstr "vytvořeno"
 
 #: wiki/forms.py
 msgid "Only localhost... muahahaha"
-msgstr ""
+msgstr "Pouze localhost... muahahaha"
 
 #: wiki/forms.py
 msgid "Initial title of the article. May be overridden with revision titles."
-msgstr ""
+msgstr "Počáteční titulek článku. Může být přepsán titulkem z revize."
 
 #: wiki/forms.py
 msgid "Type in some contents"
-msgstr ""
+msgstr "Napište nějaký obsah"
 
 #: wiki/forms.py
 msgid ""
@@ -19057,19 +19063,21 @@ msgid ""
 "can use more complex features like adding plugins, meta data, related "
 "articles etc..."
 msgstr ""
+"Toto je počáteční obsah článku. Po vytvoření lze využít další vlastnosti "
+"jako třeba přidávání pluginů, metadat, souvisejících článků, atd."
 
 #: wiki/forms.py wiki/forms.py
 msgid "Contents"
-msgstr ""
+msgstr "Obsahy"
 
 #: wiki/forms.py wiki/forms.py
 msgid "Summary"
-msgstr ""
+msgstr "Shrnutí"
 
 #: wiki/forms.py
 msgid ""
 "Give a short reason for your edit, which will be stated in the revision log."
-msgstr ""
+msgstr "Zadejte stručně důvod této editace, pro zobrazení v logu revizí."
 
 #: wiki/forms.py
 msgid ""
@@ -19080,11 +19088,11 @@ msgstr ""
 
 #: wiki/forms.py
 msgid "No changes made. Nothing to save."
-msgstr ""
+msgstr "Nebyla provedená žádná změna. Není nic k uložení."
 
 #: wiki/forms.py
 msgid "Select an option"
-msgstr ""
+msgstr "Zvolte možnost"
 
 #: wiki/forms.py
 msgid "Slug"
@@ -19115,7 +19123,7 @@ msgstr ""
 
 #: wiki/forms.py
 msgid "Yes, I am sure"
-msgstr ""
+msgstr "Ano, jsem si jistý"
 
 #: wiki/forms.py
 msgid "Purge"
@@ -19147,11 +19155,11 @@ msgstr ""
 
 #: wiki/forms.py
 msgid "Permissions"
-msgstr ""
+msgstr "Povolení"
 
 #: wiki/forms.py
 msgid "Owner"
-msgstr ""
+msgstr "Vlastník"
 
 #: wiki/forms.py
 msgid "Enter the username of the owner."
@@ -19193,7 +19201,7 @@ msgstr ""
 
 #: wiki/forms.py
 msgid "Filter..."
-msgstr ""
+msgstr "Filtr..."
 
 #: wiki/core/plugins/base.py
 msgid "Settings for plugin"
@@ -19220,7 +19228,7 @@ msgstr ""
 
 #: wiki/models/article.py
 msgid "owner"
-msgstr ""
+msgstr "vlastník"
 
 #: wiki/models/article.py
 msgid ""
@@ -19230,7 +19238,7 @@ msgstr ""
 
 #: wiki/models/article.py
 msgid "group"
-msgstr ""
+msgstr "skupina"
 
 #: wiki/models/article.py
 msgid ""
@@ -19276,15 +19284,15 @@ msgstr ""
 
 #: wiki/models/article.py
 msgid "revision number"
-msgstr ""
+msgstr "číslo revize"
 
 #: wiki/models/article.py
 msgid "IP address"
-msgstr ""
+msgstr "IP adresa"
 
 #: wiki/models/article.py
 msgid "user"
-msgstr ""
+msgstr "uživatel"
 
 #: wiki/models/article.py
 msgid "locked"
@@ -19292,7 +19300,7 @@ msgstr ""
 
 #: wiki/models/article.py wiki/models/pluginbase.py
 msgid "article"
-msgstr ""
+msgstr "článek"
 
 #: wiki/models/article.py
 msgid "article contents"
@@ -19310,7 +19318,7 @@ msgstr ""
 
 #: wiki/models/pluginbase.py
 msgid "original article"
-msgstr ""
+msgstr "původní článek"
 
 #: wiki/models/pluginbase.py
 msgid "Permissions are inherited from this article"
@@ -19336,7 +19344,7 @@ msgstr ""
 
 #: wiki/models/urlpath.py
 msgid "(root)"
-msgstr ""
+msgstr "(root)"
 
 #: wiki/models/urlpath.py
 msgid "URL path"
@@ -19376,7 +19384,7 @@ msgstr ""
 
 #: wiki/plugins/attachments/forms.py
 msgid "Yes I am sure..."
-msgstr ""
+msgstr "Ano, jsem si jistý..."
 
 #: wiki/plugins/attachments/markdown_extensions.py
 msgid "Click to download file"
@@ -19394,11 +19402,11 @@ msgstr ""
 
 #: wiki/plugins/attachments/models.py
 msgid "attachment"
-msgstr ""
+msgstr "příloha"
 
 #: wiki/plugins/attachments/models.py
 msgid "attachments"
-msgstr ""
+msgstr "přílohy"
 
 #: wiki/plugins/attachments/models.py
 msgid "file"
@@ -19468,15 +19476,15 @@ msgstr ""
 
 #: wiki/plugins/images/forms.py
 msgid "Are you sure?"
-msgstr ""
+msgstr "Jste si jistý ?"
 
 #: wiki/plugins/images/models.py
 msgid "image"
-msgstr ""
+msgstr "obrázek"
 
 #: wiki/plugins/images/models.py
 msgid "images"
-msgstr ""
+msgstr "obrázky"
 
 #: wiki/plugins/images/models.py
 msgid "Image: %s"
@@ -19516,7 +19524,7 @@ msgstr ""
 
 #: wiki/plugins/images/wiki_plugin.py
 msgid "Images"
-msgstr ""
+msgstr "Obrázky"
 
 #: wiki/plugins/images/wiki_plugin.py
 msgid "An image was added: %s"
@@ -19528,7 +19536,7 @@ msgstr ""
 
 #: wiki/plugins/notifications/forms.py
 msgid "Notifications"
-msgstr ""
+msgstr "Upozornění"
 
 #: wiki/plugins/notifications/forms.py
 msgid "When this article is edited"
@@ -19568,7 +19576,7 @@ msgstr ""
 
 #: wiki/views/accounts.py
 msgid "You are no longer logged in. Bye bye!"
-msgstr ""
+msgstr "Již nejste přihlášeni. Na shledanou!"
 
 #: wiki/views/accounts.py
 msgid "You are now logged in! Have fun!"
@@ -19604,7 +19612,7 @@ msgstr ""
 
 #: wiki/views/article.py
 msgid "Your changes were saved."
-msgstr ""
+msgstr "Vaše změny byly uloženy."
 
 #: wiki/views/article.py
 msgid "A new revision of the article was succesfully added."
@@ -19624,7 +19632,7 @@ msgstr ""
 
 #: wiki/views/article.py
 msgid "New title"
-msgstr ""
+msgstr "Nový název"
 
 #: wiki/views/article.py
 msgid "Merge between Revision #%(r1)d and Revision #%(r2)d"

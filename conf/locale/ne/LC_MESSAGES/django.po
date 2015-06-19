@@ -12521,7 +12521,7 @@ msgstr ""
 #: lms/templates/discussion/_underscore_templates.html
 #: lms/templates/discussion/mustache/_profile_thread.mustache
 msgid "anonymous"
-msgstr ""
+msgstr "गुमनाम"
 
 #: lms/templates/discussion/_user_profile.html
 msgid ", "

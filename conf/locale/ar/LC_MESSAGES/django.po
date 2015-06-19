@@ -178,6 +178,7 @@ msgstr "القسم"
 
 #: cms/djangoapps/contentstore/views/helpers.py
 #: lms/djangoapps/class_dashboard/dashboard_data.py
+#: lms/templates/ccx/schedule.html
 msgid "Subsection"
 msgstr "القسم الفرعي"
 
@@ -205,7 +206,7 @@ msgstr "الاسم "
 #: cms/djangoapps/contentstore/views/videos.py
 #: common/lib/xmodule/xmodule/video_module/video_xfields.py
 msgid "Video ID"
-msgstr ""
+msgstr "الرقم التعريفي للفيديو"
 
 #: cms/djangoapps/contentstore/views/videos.py
 #: common/djangoapps/config_models/admin.py
@@ -271,24 +272,26 @@ msgstr "شهادة ميثاق الشرف الأكاديمي"
 
 #: common/djangoapps/course_modes/models.py
 msgid "Your verification is pending"
-msgstr ""
+msgstr "عملية التحقّق من هويّتك معلَّقة "
 
 #: common/djangoapps/course_modes/models.py
 msgid "Verified: Pending Verification"
-msgstr ""
+msgstr "شهادة موثَّقة: عملية التحقّق من هويّة الطالب معلَّقة "
 
 #: common/djangoapps/course_modes/models.py
 msgid "ID verification pending"
-msgstr ""
+msgstr "عملية التحقّق من هويّة الطالب معلَّقة "
 
 #: common/djangoapps/course_modes/models.py
 msgid "You're enrolled as a verified student"
-msgstr ""
+msgstr "أنت مسجَّل كطالب لشهادة موثَّقة"
 
+#: common/djangoapps/course_modes/models.py lms/envs/devstack.py
 #: lms/templates/instructor/instructor_dashboard_2/course_info.html
 msgid "Verified"
 msgstr "موثَّقة"
 
+#: common/djangoapps/course_modes/models.py
 #: lms/templates/dashboard/_dashboard_course_listing.html
 msgid "ID Verified Ribbon/Badge"
 msgstr "شارة الطالب الذي جرى التحقّق من هويّته"
@@ -296,7 +299,7 @@ msgstr "شارة الطالب الذي جرى التحقّق من هويّته"
 #: common/djangoapps/course_modes/models.py
 #: common/djangoapps/course_modes/models.py
 msgid "You're enrolled as an honor code student"
-msgstr ""
+msgstr "أنت مسجَّل كطالب لشهادة ميثاق الشرف"
 
 #: common/djangoapps/course_modes/models.py
 #: common/djangoapps/course_modes/models.py lms/djangoapps/branding/api.py
@@ -313,19 +316,19 @@ msgstr ""
 
 #: common/djangoapps/course_modes/models.py
 msgid "You're auditing this course"
-msgstr ""
+msgstr "أنت مسجَّل في هذا المساق كمستمع."
 
 #: common/djangoapps/course_modes/models.py
 msgid "Auditing"
-msgstr ""
+msgstr "الحضور بصفة مستمع"
 
 #: common/djangoapps/course_modes/models.py
 msgid "You're enrolled as a professional education student"
-msgstr ""
+msgstr "أنت مسجَّل كطالب تعليم مهني."
 
 #: common/djangoapps/course_modes/models.py
 msgid "Professional Ed"
-msgstr ""
+msgstr "التعليم المهني"
 
 #: common/djangoapps/course_modes/views.py
 msgid "Enrollment is closed"
@@ -3340,6 +3343,7 @@ msgstr "لم يُعثر على عنوان البريد الإلكتروني."
 msgid "Any Type"
 msgstr "أي نوع"
 
+#: common/lib/xmodule/xmodule/library_content_module.py
 #: cms/templates/widgets/header.html
 msgid "Library"
 msgstr "مكتبة"
@@ -3725,6 +3729,7 @@ msgstr "واجهة تقييم الزملاء"
 
 #: common/lib/xmodule/xmodule/seq_module.py
 #: common/lib/xmodule/xmodule/modulestore/inheritance.py
+#: lms/templates/ccx/schedule.html
 msgid "Due Date"
 msgstr "تاريخ الاستحقاق"
 
@@ -4707,38 +4712,36 @@ msgid ""
 "Inc."
 msgstr ""
 
-#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: 'Open edX' is a brand, please keep this untranslated.
 #. See http://openedx.org for more information.
-#: lms/djangoapps/branding/api.py cms/templates/widgets/footer.html
-#: cms/templates/widgets/footer.html
+#: lms/djangoapps/branding/api.py
 msgid "Powered by Open edX"
-msgstr ""
+msgstr "تُديره Open edX"
 
-#: lms/templates/static_templates/blog.html
+#: lms/djangoapps/branding/api.py lms/templates/static_templates/blog.html
 #: lms/templates/static_templates/blog.html
 msgid "Blog"
 msgstr "المدونة"
 
 #: lms/djangoapps/branding/api.py
 msgid "News"
-msgstr ""
+msgstr "الأخبار"
 
 #: lms/djangoapps/branding/api.py
 msgid "FAQs"
 msgstr ""
 
-#: lms/templates/static_templates/contact.html
+#: lms/djangoapps/branding/api.py lms/templates/static_templates/contact.html
 #: lms/templates/static_templates/contact.html
 msgid "Contact"
 msgstr "معلومات الاتّصال"
 
-#: lms/templates/static_templates/jobs.html
+#: lms/djangoapps/branding/api.py lms/templates/static_templates/jobs.html
 #: lms/templates/static_templates/jobs.html
 msgid "Jobs"
 msgstr "الوظائف"
 
-#: lms/templates/static_templates/donate.html
+#: lms/djangoapps/branding/api.py lms/templates/static_templates/donate.html
 #: lms/templates/static_templates/donate.html
 msgid "Donate"
 msgstr "تبرَّع"
@@ -4751,6 +4754,10 @@ msgstr ""
 msgid "Terms of Service & Honor Code"
 msgstr ""
 
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: A 'Privacy Policy' is a legal document/statement describing a
+#. website's use of personal information
+#: lms/djangoapps/branding/api.py lms/djangoapps/certificates/views.py
 #: cms/templates/widgets/footer.html
 #: lms/templates/static_templates/privacy.html
 #: lms/templates/static_templates/privacy.html
@@ -5002,7 +5009,7 @@ msgstr ""
 
 #: lms/djangoapps/certificates/views.py
 msgid "Contact {platform_name}"
-msgstr ""
+msgstr "الاتصال  {platform_name} "
 
 #. Translators:  This text appears near the top of the certficate and
 #. describes the guarantee provided by edX
@@ -5706,10 +5713,12 @@ msgstr "ملاحظات"
 msgid "{platform_name} Staff"
 msgstr ""
 
+#: lms/djangoapps/instructor/paidcourse_enrollment_report.py
 #: lms/templates/instructor/instructor_dashboard_2/membership.html
 msgid "Course Staff"
 msgstr "طاقم المساق "
 
+#: lms/djangoapps/instructor/paidcourse_enrollment_report.py
 #: lms/templates/courseware/course_navigation.html
 #: lms/templates/discussion/_underscore_templates.html
 msgid "Staff"
@@ -6201,6 +6210,7 @@ msgstr ""
 msgid "E-Commerce"
 msgstr "التجارة الإلكترونية"
 
+#: lms/djangoapps/instructor/views/instructor_dashboard.py
 #: cms/templates/certificates.html cms/templates/certificates.html
 #: cms/templates/certificates.html cms/templates/export.html
 #: cms/templates/widgets/header.html
@@ -6232,6 +6242,7 @@ msgid "Cohorts"
 msgstr ""
 
 #: lms/djangoapps/instructor/views/instructor_dashboard.py
+#: lms/templates/ccx/coach_dashboard.html
 msgid "Student Admin"
 msgstr "المشرف على الطلّاب"
 
@@ -6532,26 +6543,33 @@ msgstr "التوزيع على المجموعات"
 
 #: lms/djangoapps/instructor_task/tasks_helper.py
 msgid "First Name"
-msgstr ""
+msgstr "الاسم الأول"
 
 #: lms/djangoapps/instructor_task/tasks_helper.py
 msgid "Last Name"
-msgstr ""
+msgstr "الاسم الأخير"
 
+#: lms/djangoapps/instructor_task/tasks_helper.py
 #: lms/templates/shoppingcart/receipt.html
 msgid "Company Name"
 msgstr "اسم الشركة"
 
+#: lms/djangoapps/instructor_task/tasks_helper.py
 #: lms/templates/discussion/_underscore_templates.html
 #: lms/templates/discussion/_underscore_templates.html wiki/forms.py
 #: wiki/forms.py wiki/forms.py
 msgid "Title"
 msgstr "العنوان"
 
-#: lms/templates/register.html
+#: lms/djangoapps/instructor_task/tasks_helper.py lms/templates/register.html
 #: lms/templates/instructor/instructor_dashboard_2/instructor_analytics.html
+#, fuzzy
 msgid "Year of Birth"
-msgstr "سنة الميلاد"
+msgstr ""
+"#-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#\n"
+"سنة ميلادك\n"
+"#-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#\n"
+"سنة الميلاد"
 
 #. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: This label appears above a field on the registration form
@@ -8208,14 +8226,14 @@ msgstr ""
 
 #: lms/djangoapps/verify_student/views.py
 msgid "Could not submit photos"
-msgstr ""
+msgstr "عذرًا، لم يمكن تقديم الصور."
 
 #. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: This is the website name of www.facebook.com.  Please
 #. translate this the way that Facebook advertises in your language.
 #: lms/envs/common.py lms/templates/dashboard/_dashboard_course_listing.html
 msgid "Facebook"
-msgstr ""
+msgstr "فيسبوك"
 
 #: lms/envs/common.py
 msgid "Like {platform_name} on Facebook"
@@ -8226,7 +8244,7 @@ msgstr ""
 #. translate this the way that Twitter advertises in your language.
 #: lms/envs/common.py lms/templates/dashboard/_dashboard_course_listing.html
 msgid "Twitter"
-msgstr ""
+msgstr "تويتر"
 
 #: lms/envs/common.py
 msgid "Follow {platform_name} on Twitter"
@@ -8236,7 +8254,7 @@ msgstr ""
 #. translate this the way that LinkedIn advertises in your language.
 #: lms/envs/common.py
 msgid "LinkedIn"
-msgstr ""
+msgstr "لينكد إن"
 
 #: lms/envs/common.py
 msgid "Follow {platform_name} on LinkedIn"
@@ -8246,7 +8264,7 @@ msgstr ""
 #. translate this the way that Google+ advertises in your language.
 #: lms/envs/common.py
 msgid "Google+"
-msgstr ""
+msgstr "جوجل+"
 
 #: lms/envs/common.py
 msgid "Follow {platform_name} on Google+"
@@ -8262,7 +8280,7 @@ msgstr ""
 #. translate this the way that MeetUp advertises in your language.
 #: lms/envs/common.py
 msgid "Meetup"
-msgstr ""
+msgstr "ميت آب"
 
 #. Translators: This is the website name of www.reddit.com.  Please
 #. translate this the way that Reddit advertises in your language.
@@ -8614,10 +8632,11 @@ msgid "Edit"
 msgstr "تعديل"
 
 #: lms/templates/wiki/edit.html lms/templates/wiki/edit.html.py
+#: lms/templates/ccx/schedule.html lms/templates/ccx/schedule.html
 msgid "Save changes"
 msgstr "حفظ التغييرات"
 
-#: lms/templates/wiki/edit.html
+#: lms/templates/wiki/edit.html cms/templates/container.html
 msgid "Preview"
 msgstr "معاينة"
 
@@ -9060,7 +9079,7 @@ msgstr "عنوان البريد الإلكتروني الذي استخدمته �
 msgid "Password"
 msgstr "كلمة السر"
 
-#: lms/templates/login.html
+#: openedx/core/djangoapps/user_api/views.py lms/templates/login.html
 msgid "Remember me"
 msgstr "تذكُّر بياناتي"
 
@@ -9086,7 +9105,12 @@ msgstr ""
 msgid "Jane Doe"
 msgstr ""
 
-#: lms/templates/register.html lms/templates/register.html
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: These instructions appear on the registration form,
+#. immediately
+#. below a field meant to hold the user's full name.
+#: openedx/core/djangoapps/user_api/views.py lms/templates/register.html
+#: lms/templates/register.html
 msgid "Needed for any certificates you may earn"
 msgstr "مطلوب لأي شهادة قد تنالها "
 
@@ -9449,7 +9473,7 @@ msgstr ""
 #. a percent value out of 100, e.g. "58%" means "58/100".
 #: cms/djangoapps/contentstore/views/item.py
 msgid "%"
-msgstr ""
+msgstr "%"
 
 #: cms/djangoapps/contentstore/views/item.py
 msgid "{section_or_subsection} \"{display_name}\""
@@ -9805,7 +9829,7 @@ msgstr "المساعدة"
 #: cms/templates/widgets/header.html lms/templates/navigation-edx.html
 #: lms/templates/navigation.html
 msgid "Sign Out"
-msgstr ""
+msgstr "تسجيل الخروج"
 
 #: cms/templates/widgets/tabs-aggregator.html
 #: lms/templates/courseware/progress.html
@@ -11592,7 +11616,7 @@ msgstr "التسجيل "
 
 #: lms/templates/ccx/coach_dashboard.html
 msgid "Schedule"
-msgstr ""
+msgstr "وضع الجدول"
 
 #: lms/templates/ccx/coach_dashboard.html
 #: lms/templates/ccx/grading_policy.html
@@ -11724,7 +11748,7 @@ msgstr ""
 
 #: lms/templates/ccx/schedule.html
 msgid "Start Date"
-msgstr ""
+msgstr "تاريخ البدء"
 
 #: lms/templates/ccx/schedule.html
 msgid "(Optional)"
@@ -16513,7 +16537,7 @@ msgstr "تفاصيل متلقّي الفاتورة"
 #: lms/templates/shoppingcart/receipt.html
 #: lms/templates/shoppingcart/receipt.html
 msgid "N/A"
-msgstr ""
+msgstr "لا ينطبق"
 
 #: lms/templates/shoppingcart/receipt.html
 msgid "Purchase Order Number"
@@ -18103,7 +18127,7 @@ msgstr ""
 
 #: cms/templates/course_outline.html cms/templates/index.html
 msgid "Dismiss"
-msgstr ""
+msgstr "رفض العملية"
 
 #: cms/templates/course_outline.html
 msgid "Click to add a new section"

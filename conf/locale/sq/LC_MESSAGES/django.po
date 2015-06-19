@@ -56,23 +56,30 @@ msgstr ""
 "Language: sq\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: 'Discussion' refers to the tab in the courseware that leads to
 #. the discussion forums
+#. #-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
+#. Translators: This is a forum post type
 #: cms/djangoapps/contentstore/views/component.py
 #: lms/djangoapps/courseware/tabs.py
 #: lms/djangoapps/django_comment_client/forum/views.py
+#: lms/templates/discussion/_underscore_templates.html
 msgid "Discussion"
 msgstr "Diskutim"
 
 #: cms/djangoapps/contentstore/views/component.py
 #: lms/djangoapps/class_dashboard/dashboard_data.py
+#: lms/templates/courseware/legacy_instructor_dashboard.html
+#: lms/templates/courseware/legacy_instructor_dashboard.html
+#: lms/templates/instructor/instructor_dashboard_2/instructor_analytics.html
 msgid "Problem"
 msgstr "Problem"
 
 #: cms/djangoapps/contentstore/views/component.py
 #: common/lib/xmodule/xmodule/video_module/video_module.py
 msgid "Advanced"
-msgstr ""
+msgstr "Avancuar"
 
 #: cms/djangoapps/contentstore/views/entrance_exam.py
 #: cms/djangoapps/contentstore/views/entrance_exam.py
@@ -93,13 +100,13 @@ msgstr "Pjesë"
 #: lms/djangoapps/class_dashboard/dashboard_data.py
 #: lms/templates/ccx/schedule.html
 msgid "Subsection"
-msgstr ""
+msgstr "Nënseksion"
 
 #: cms/djangoapps/contentstore/views/helpers.py
 #: lms/djangoapps/instructor/views/tools.py lms/templates/seq_module.html
 #: lms/templates/ccx/schedule.html
 msgid "Unit"
-msgstr ""
+msgstr "Njësi"
 
 #: cms/djangoapps/contentstore/views/videos.py
 #: lms/djangoapps/class_dashboard/dashboard_data.py
@@ -119,7 +126,7 @@ msgstr "Emri"
 #: cms/djangoapps/contentstore/views/videos.py
 #: common/lib/xmodule/xmodule/video_module/video_xfields.py
 msgid "Video ID"
-msgstr ""
+msgstr "Video ID"
 
 #: cms/djangoapps/contentstore/views/videos.py
 #: common/djangoapps/config_models/admin.py
@@ -127,7 +134,7 @@ msgstr ""
 #: lms/templates/open_ended_problems/open_ended_problems.html
 #: lms/templates/shoppingcart/receipt.html
 msgid "Status"
-msgstr ""
+msgstr "Statusi"
 
 #: common/djangoapps/config_models/admin.py
 msgid "Revert to the selected configuration"
@@ -162,7 +169,7 @@ msgstr "Ndrysho datën"
 #. change:
 #: common/djangoapps/config_models/models.py
 msgid "Changed by"
-msgstr ""
+msgstr "Ndryshuar nga"
 
 #: common/djangoapps/config_models/models.py
 msgid "Enabled"
@@ -192,12 +199,12 @@ msgstr ""
 
 #: common/djangoapps/course_modes/models.py
 msgid "You're enrolled as a verified student"
-msgstr ""
+msgstr "Ju jeni i regjistruar si një student i verifikuar"
 
 #: common/djangoapps/course_modes/models.py lms/envs/devstack.py
 #: lms/templates/instructor/instructor_dashboard_2/course_info.html
 msgid "Verified"
-msgstr ""
+msgstr "Verifikuar"
 
 #: common/djangoapps/course_modes/models.py
 #: lms/templates/dashboard/_dashboard_course_listing.html
@@ -215,7 +222,7 @@ msgstr ""
 #: lms/templates/static_templates/honor.html
 #: lms/templates/static_templates/honor.html
 msgid "Honor Code"
-msgstr ""
+msgstr "Kodi i Nderit"
 
 #: common/djangoapps/course_modes/models.py
 msgid "You're auditing this course"
@@ -235,15 +242,15 @@ msgstr ""
 
 #: common/djangoapps/course_modes/views.py
 msgid "Enrollment is closed"
-msgstr ""
+msgstr "Regjistrimi është mbyllur"
 
 #: common/djangoapps/course_modes/views.py
 msgid "Enrollment mode not supported"
-msgstr ""
+msgstr "Mënyra e regjistrimit nuk mbështetet"
 
 #: common/djangoapps/course_modes/views.py
 msgid "Invalid amount selected."
-msgstr ""
+msgstr "Shumë jo valide u caktua."
 
 #: common/djangoapps/course_modes/views.py
 msgid "No selected price or selected price is too low."
@@ -258,11 +265,13 @@ msgid "Moderator"
 msgstr "Moderator"
 
 #: common/djangoapps/django_comment_common/models.py
+#: lms/templates/discussion/_underscore_templates.html
 msgid "Community TA"
 msgstr "Komuniteti TA"
 
 #: common/djangoapps/django_comment_common/models.py
 #: lms/djangoapps/instructor/paidcourse_enrollment_report.py
+#: lms/templates/courseware/course_navigation.html
 msgid "Student"
 msgstr "Student"
 
@@ -277,6 +286,7 @@ msgstr ""
 #: common/djangoapps/embargo/models.py
 msgid "The message to show when a user is blocked from enrollment."
 msgstr ""
+"Mesazhi që do të shfaqet kur një përdorues është bllokuar nga regjistrimi."
 
 #: common/djangoapps/embargo/models.py
 msgid "The message to show when a user is blocked from accessing a course."
@@ -318,7 +328,7 @@ msgstr ""
 
 #: common/djangoapps/student/forms.py
 msgid "Username must be minimum of two characters long"
-msgstr ""
+msgstr "Emri juaj i përdorimit duhet të jetë minimumi 2 karaktere i gjatë"
 
 #: common/djangoapps/student/forms.py
 msgid "A properly formatted e-mail is required"
@@ -330,7 +340,7 @@ msgstr "Fjalëkalimi valid është i detyrushëm"
 
 #: common/djangoapps/student/forms.py
 msgid "Your legal name must be a minimum of two characters long"
-msgstr ""
+msgstr "Emri juaj duhet të jetë më së paku dy karaktere i gjatë"
 
 #: common/djangoapps/student/forms.py
 msgid "Username should only consist of A-Z and 0-9, with no spaces."
@@ -350,11 +360,11 @@ msgstr "Ju duhet të i pranoni rregullat e përdorimit."
 
 #: common/djangoapps/student/forms.py
 msgid "A level of education is required"
-msgstr ""
+msgstr "Niveli i edukimit është i detyrueshëm"
 
 #: common/djangoapps/student/forms.py
 msgid "Your gender is required"
-msgstr ""
+msgstr "Gjinia juaj është e detyrushme"
 
 #: common/djangoapps/student/forms.py
 msgid "Your year of birth is required"
@@ -362,7 +372,7 @@ msgstr "Viti i lindjes është i detyruar"
 
 #: common/djangoapps/student/forms.py
 msgid "Your mailing address is required"
-msgstr ""
+msgstr "Adresa juaj është e detyrushme"
 
 #: common/djangoapps/student/forms.py
 msgid "A description of your goals is required"
@@ -370,7 +380,7 @@ msgstr "Përshkrimi i synimeve tuaja është i obligueshëm"
 
 #: common/djangoapps/student/forms.py
 msgid "A city is required"
-msgstr ""
+msgstr "Qyteti është i obligueshëm"
 
 #: common/djangoapps/student/forms.py
 msgid "A country is required"
@@ -378,15 +388,15 @@ msgstr "Shteti është i detyrushëm"
 
 #: common/djangoapps/student/forms.py
 msgid "To enroll, you must follow the honor code."
-msgstr ""
+msgstr "Që të regjistroheni, ju duhet të ndjekni kodin e nderit."
 
 #: common/djangoapps/student/forms.py
 msgid "You are missing one or more required fields"
-msgstr ""
+msgstr "Juve ju mungon një ose më shumë fusha të detyrushme"
 
 #: common/djangoapps/student/forms.py
 msgid "Username and password fields cannot match"
-msgstr ""
+msgstr "Emri i përdorimit dhe fjalëkalimi nuk përputhen"
 
 #: common/djangoapps/student/forms.py common/djangoapps/student/views.py
 msgid "Password: "
@@ -422,11 +432,11 @@ msgstr "Doktoratura"
 
 #: common/djangoapps/student/models.py
 msgid "Master's or professional degree"
-msgstr ""
+msgstr "Master ose shkallë profesionale"
 
 #: common/djangoapps/student/models.py
 msgid "Bachelor's degree"
-msgstr ""
+msgstr "Titull Bachelor"
 
 #: common/djangoapps/student/models.py
 msgid "Associate degree"
@@ -434,7 +444,7 @@ msgstr ""
 
 #: common/djangoapps/student/models.py
 msgid "Secondary/high school"
-msgstr ""
+msgstr "Dytësore/shkolla e mesme e lartë"
 
 #: common/djangoapps/student/models.py
 msgid "Junior secondary/junior high/middle school"
@@ -442,14 +452,14 @@ msgstr ""
 
 #: common/djangoapps/student/models.py
 msgid "Elementary/primary school"
-msgstr ""
+msgstr "Shkolla elementare/primare"
 
 #. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: 'None' refers to the student's level of education
 #: common/djangoapps/student/models.py
 #: common/lib/xmodule/xmodule/course_module.py cms/templates/settings.html
 msgid "None"
-msgstr ""
+msgstr "Asgjë"
 
 #: common/djangoapps/student/models.py
 msgid "{platform_name} Honor Code Certificate for {course_name}"
@@ -518,7 +528,7 @@ msgstr "Ju nuk jeni i regjistruar në këtë kurs"
 
 #: common/djangoapps/student/views.py
 msgid "Enrollment action is invalid"
-msgstr ""
+msgstr "Veprimi i regjistrimit është jo valid"
 
 #: common/djangoapps/student/views.py
 msgid ""
@@ -538,10 +548,14 @@ msgid ""
 "If you don't have an {platform_name} account yet, click <strong>Register "
 "Now</strong> at the top of the page."
 msgstr ""
+"Nëse ju nuk keni një llogari {platform_name} ende, kliko <strong>Regjistrohu"
+" tani</strong> në krye të faqes."
 
 #: common/djangoapps/student/views.py
 msgid "There was an error receiving your login information. Please email us."
 msgstr ""
+"Këtu është një problem me marrjen e informacioneve tuaja të kyçjes. Ju lutem"
+" na kontaktoni."
 
 #: common/djangoapps/student/views.py
 msgid ""
@@ -558,9 +572,9 @@ msgstr ""
 
 #: common/djangoapps/student/views.py
 msgid "Too many failed login attempts. Try again later."
-msgstr ""
+msgstr "Shumë përpjeke të dështuara për t'u kyçur.Provojeni përsëri më vonë."
 
-#: common/djangoapps/student/views.py
+#: common/djangoapps/student/views.py lms/templates/provider_login.html
 msgid "Email or password is incorrect."
 msgstr "Email adresa ose fjalëkalimi është gabim."
 
@@ -584,11 +598,11 @@ msgstr "Përdorues me pseudonimin {} nuk ekziston"
 
 #: common/djangoapps/student/views.py
 msgid "Successfully disabled {}'s account"
-msgstr ""
+msgstr "Suksesshëm llogaria {}'s u deaktivizua"
 
 #: common/djangoapps/student/views.py
 msgid "Successfully reenabled {}'s account"
-msgstr ""
+msgstr "Suksesshëm llogaria u riaktivizua {}'s"
 
 #: common/djangoapps/student/views.py
 msgid "Unexpected account status"
@@ -641,7 +655,7 @@ msgstr[1] ""
 
 #: common/djangoapps/student/views.py
 msgid "Password reset unsuccessful"
-msgstr ""
+msgstr "Pa sukseshëm fjalimi u resetua"
 
 #: common/djangoapps/student/views.py
 msgid "No inactive user with this e-mail exists"
@@ -662,7 +676,7 @@ msgstr ""
 
 #: common/djangoapps/student/views.py
 msgid "An account with this e-mail already exists."
-msgstr ""
+msgstr "Një llogari me këtë email adresë tashmë ekziston."
 
 #: common/djangoapps/student/views.py
 msgid "Unable to send email activation link. Please try again later."
@@ -670,7 +684,7 @@ msgstr "E pamundur të dërgohet linku aktivizues. Ju lutem provojeni përsëri.
 
 #: common/djangoapps/student/views.py
 msgid "Name required"
-msgstr ""
+msgstr "Emri i detyrueshëm"
 
 #: common/djangoapps/student/views.py
 msgid "Invalid ID"
@@ -688,7 +702,7 @@ msgstr ""
 #. See http://strftime.org for details.
 #: common/djangoapps/util/date_utils.py
 msgid "LONG_DATE_FORMAT"
-msgstr ""
+msgstr "LONG_DATE_FORMAT"
 
 #. Translators: the translation for "DATE_TIME_FORMAT" must be a format
 #. string for formatting dates with times.  For example, the American
@@ -696,7 +710,7 @@ msgstr ""
 #. See http://strftime.org for details.
 #: common/djangoapps/util/date_utils.py
 msgid "DATE_TIME_FORMAT"
-msgstr ""
+msgstr "DATE_TIME_FORMAT"
 
 #. Translators: the translation for "SHORT_DATE_FORMAT" must be a
 #. format string for formatting dates in a brief form.  For example,
@@ -847,7 +861,7 @@ msgstr "E diel"
 #: common/djangoapps/util/date_utils.py
 msgctxt "abbreviated month name"
 msgid "Jan"
-msgstr ""
+msgstr "Jan"
 
 #. Translators: this is an abbreviated month name that will be used when
 #. displaying dates, as in "Feb 10, 2014". It is used for the %b
@@ -855,7 +869,7 @@ msgstr ""
 #: common/djangoapps/util/date_utils.py
 msgctxt "abbreviated month name"
 msgid "Feb"
-msgstr ""
+msgstr "Shku"
 
 #. Translators: this is an abbreviated month name that will be used when
 #. displaying dates, as in "Mar 10, 2014". It is used for the %b
@@ -863,7 +877,7 @@ msgstr ""
 #: common/djangoapps/util/date_utils.py
 msgctxt "abbreviated month name"
 msgid "Mar"
-msgstr ""
+msgstr "Mar"
 
 #. Translators: this is an abbreviated month name that will be used when
 #. displaying dates, as in "Apr 10, 2014". It is used for the %b
@@ -871,7 +885,7 @@ msgstr ""
 #: common/djangoapps/util/date_utils.py
 msgctxt "abbreviated month name"
 msgid "Apr"
-msgstr ""
+msgstr "Pri"
 
 #. Translators: this is an abbreviated month name that will be used when
 #. displaying dates, as in "May 10, 2014". It is used for the %b
@@ -887,7 +901,7 @@ msgstr "Maj"
 #: common/djangoapps/util/date_utils.py
 msgctxt "abbreviated month name"
 msgid "Jun"
-msgstr ""
+msgstr "Qer"
 
 #. Translators: this is an abbreviated month name that will be used when
 #. displaying dates, as in "Jul 10, 2014". It is used for the %b
@@ -895,7 +909,7 @@ msgstr ""
 #: common/djangoapps/util/date_utils.py
 msgctxt "abbreviated month name"
 msgid "Jul"
-msgstr ""
+msgstr "Korr"
 
 #. Translators: this is an abbreviated month name that will be used when
 #. displaying dates, as in "Aug 10, 2014". It is used for the %b
@@ -903,7 +917,7 @@ msgstr ""
 #: common/djangoapps/util/date_utils.py
 msgctxt "abbreviated month name"
 msgid "Aug"
-msgstr ""
+msgstr "Gusht"
 
 #. Translators: this is an abbreviated month name that will be used when
 #. displaying dates, as in "Sep 10, 2014". It is used for the %b
@@ -1055,11 +1069,11 @@ msgstr ""
 
 #: common/djangoapps/util/password_policy_validators.py
 msgid "Invalid Length ({0})"
-msgstr ""
+msgstr "Gjatësi jo valide ({0})"
 
 #: common/djangoapps/util/password_policy_validators.py
 msgid "must be {0} characters or more"
-msgstr ""
+msgstr "mund të jetë {0} karaktere ose më shumë"
 
 #: common/djangoapps/util/password_policy_validators.py
 msgid "must be {0} characters or less"
@@ -1103,19 +1117,19 @@ msgstr ""
 
 #: common/lib/capa/capa/inputtypes.py
 msgid "correct"
-msgstr ""
+msgstr "e saktë"
 
 #: common/lib/capa/capa/inputtypes.py
 msgid "incorrect"
-msgstr ""
+msgstr "e pasaktë"
 
 #: common/lib/capa/capa/inputtypes.py
 msgid "incomplete"
-msgstr ""
+msgstr "e pakompletuar"
 
 #: common/lib/capa/capa/inputtypes.py common/lib/capa/capa/inputtypes.py
 msgid "unanswered"
-msgstr ""
+msgstr "e pa përgjigjur"
 
 #: common/lib/capa/capa/inputtypes.py
 msgid "processing"
@@ -1128,7 +1142,7 @@ msgstr ""
 
 #: common/lib/capa/capa/inputtypes.py common/lib/capa/capa/inputtypes.py
 msgid "Answer received."
-msgstr ""
+msgstr "Përgjigjja u pranua."
 
 #. Translators: '<choice>' and '<compoundhint>' are tag names and should not
 #. be translated.
@@ -1191,17 +1205,15 @@ msgstr ""
 msgid "Expected a {expected_tag} tag; got {given_tag} instead"
 msgstr ""
 
-#: common/lib/capa/capa/responsetypes.py
 #: lms/templates/combinedopenended/open_ended_result_table.html
 #: lms/templates/combinedopenended/openended/open_ended_evaluation.html
 msgid "Correct"
-msgstr ""
+msgstr "E saktë"
 
-#: common/lib/capa/capa/responsetypes.py
 #: lms/templates/combinedopenended/open_ended_result_table.html
 #: lms/templates/combinedopenended/openended/open_ended_evaluation.html
 msgid "Incorrect"
-msgstr ""
+msgstr "E pa saktë"
 
 #: common/lib/capa/capa/responsetypes.py
 msgid "Error {err} in evaluating hint function {hintfn}."
@@ -1324,9 +1336,14 @@ msgstr ""
 msgid "error"
 msgstr ""
 
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: Separator used in StringResponse to display multiple answers.
+#. Example: "Answer: Answer_1 or Answer_2 or Answer_3".
+#. #-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
 #. Translators: this is the last choice of a number of choices of how to log
 #. in
 #. to the site.
+#: common/lib/capa/capa/responsetypes.py
 #: common/templates/course_modes/choose.html lms/templates/login.html
 #: lms/templates/register.html
 msgid "or"
@@ -1478,7 +1495,7 @@ msgstr ""
 #: common/lib/xmodule/xmodule/word_cloud_module.py
 #: cms/templates/container.html cms/templates/library.html
 msgid "Display Name"
-msgstr ""
+msgstr "Emri i përdorimit"
 
 #: common/lib/xmodule/xmodule/annotatable_module.py
 #: common/lib/xmodule/xmodule/discussion_module.py
@@ -1490,11 +1507,11 @@ msgstr ""
 #: common/lib/xmodule/xmodule/videoannotation_module.py
 #: common/lib/xmodule/xmodule/word_cloud_module.py
 msgid "Display name for this module"
-msgstr ""
+msgstr "Emri që do të shfaqet për këtë modul"
 
 #: common/lib/xmodule/xmodule/annotatable_module.py
 msgid "Annotation"
-msgstr ""
+msgstr "Shënim"
 
 #: common/lib/xmodule/xmodule/capa_base.py
 #: common/lib/xmodule/xmodule/combined_open_ended_module.py
@@ -1549,7 +1566,7 @@ msgstr ""
 #: common/lib/xmodule/xmodule/capa_base.py
 #: common/lib/xmodule/xmodule/capa_base.py
 msgid "Always"
-msgstr ""
+msgstr "Gjitmonë"
 
 #: common/lib/xmodule/xmodule/capa_base.py
 msgid "Answered"
@@ -1561,11 +1578,11 @@ msgstr ""
 
 #: common/lib/xmodule/xmodule/capa_base.py
 msgid "Closed"
-msgstr ""
+msgstr "Mbyllur"
 
 #: common/lib/xmodule/xmodule/capa_base.py
 msgid "Finished"
-msgstr ""
+msgstr "Përfunduar"
 
 #: common/lib/xmodule/xmodule/capa_base.py
 msgid "Correct or Past Due"
@@ -1578,7 +1595,7 @@ msgstr ""
 #: common/lib/xmodule/xmodule/capa_base.py
 #: common/lib/xmodule/xmodule/capa_base.py
 msgid "Never"
-msgstr ""
+msgstr "Kurrë"
 
 #: common/lib/xmodule/xmodule/capa_base.py
 msgid "Whether to force the save button to appear on the page"
@@ -1612,7 +1629,7 @@ msgstr ""
 
 #: common/lib/xmodule/xmodule/capa_base.py
 msgid "Per Student"
-msgstr ""
+msgstr "Për student"
 
 #: common/lib/xmodule/xmodule/capa_base.py
 #: common/lib/xmodule/xmodule/combined_open_ended_module.py
@@ -1658,7 +1675,7 @@ msgstr ""
 #: common/lib/xmodule/xmodule/combined_open_ended_module.py
 #: common/lib/xmodule/xmodule/peer_grading_module.py
 msgid "Problem Weight"
-msgstr ""
+msgstr "Pesha e problemit"
 
 #: common/lib/xmodule/xmodule/capa_base.py
 msgid ""
@@ -1687,7 +1704,7 @@ msgstr ""
 
 #: common/lib/xmodule/xmodule/capa_base.py
 msgid "Check"
-msgstr ""
+msgstr "Kontrolloj"
 
 #: common/lib/xmodule/xmodule/capa_base.py
 msgid "Final Check"
@@ -1712,6 +1729,7 @@ msgstr ""
 #: common/lib/xmodule/xmodule/capa_base.py
 msgid "If this error persists, please contact the course staff."
 msgstr ""
+"Nëse problemi paraqitet përsëri, ju lutem kontaktojeni stafin e kursit."
 
 #: common/lib/xmodule/xmodule/capa_base.py
 msgid "Hint: "
@@ -1790,6 +1808,8 @@ msgstr "Përgjigjjet tuaja janë ruajtur."
 msgid ""
 "Your answers have been saved but not graded. Click 'Check' to grade them."
 msgstr ""
+"Përgjigjjet tuaja janë ruajtur po nuk janë vlerësuar. Kliko 'Kontrolloj' që "
+"të i vlerësosh ato."
 
 #. Translators: A student must "make an attempt" to solve the problem on the
 #. page before they can reset it.
@@ -1802,6 +1822,8 @@ msgid ""
 "We're sorry, there was an error with processing your request. Please try "
 "reloading your page and trying again."
 msgstr ""
+"Na vjen keq, është paraqitur një problem me procesimin e kërkesës tuaj. Ju "
+"lutem rifreskone faqen dhe provojeni përsëri."
 
 #: common/lib/xmodule/xmodule/capa_module.py
 msgid ""
@@ -1855,7 +1877,7 @@ msgstr ""
 
 #: common/lib/xmodule/xmodule/combined_open_ended_module.py
 msgid "Allow File Uploads"
-msgstr ""
+msgstr "Lejo ngarkimin e dokumenteve"
 
 #: common/lib/xmodule/xmodule/combined_open_ended_module.py
 msgid "Whether or not the student can submit files as a response."
@@ -1941,7 +1963,7 @@ msgstr ""
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "LTI Passports"
-msgstr ""
+msgstr "LTI Pasaportat"
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid ""
@@ -2009,13 +2031,15 @@ msgstr ""
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Show Calculator"
-msgstr ""
+msgstr "Shfaq kalkulatorin"
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid ""
 "Enter true or false. When true, students can see the calculator in the "
 "course."
 msgstr ""
+"Shtypni e vërtet ose e pa vërtet. Kur shtypni e vërtet, studentët mund të e "
+"shohin kalkulatorin në kurs."
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid ""
@@ -2118,7 +2142,7 @@ msgstr ""
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Course Is New"
-msgstr ""
+msgstr "Kurs i ri"
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid ""
@@ -2252,7 +2276,7 @@ msgstr ""
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Add Course Team Members"
-msgstr ""
+msgstr "Shto anëtar në ekipin e kurseve"
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid ""
@@ -2262,7 +2286,7 @@ msgstr ""
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Edit Course Team"
-msgstr ""
+msgstr "Rregullo Ekipin e kursit"
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Set Important Dates for Your Course"
@@ -2276,7 +2300,7 @@ msgstr ""
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Edit Course Details &amp; Schedule"
-msgstr ""
+msgstr "Rregullo detajet e kursit &amp; Orari"
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Draft Your Course's Grading Policy"
@@ -2397,7 +2421,7 @@ msgstr ""
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Visit Studio Help"
-msgstr ""
+msgstr "Vizito ndihmën për Studio"
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Enroll in edX 101"
@@ -2413,7 +2437,7 @@ msgstr "Regjistrohu për edX 101"
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Download the Studio Documentation"
-msgstr ""
+msgstr "Shkarkoni Dokumentacionin e Studios"
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Download the searchable Studio reference documentation in PDF form."
@@ -2421,7 +2445,7 @@ msgstr ""
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Download Documentation"
-msgstr ""
+msgstr "Shkarkoni Dokumentacionin"
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Draft Your Course About Page"
@@ -2437,6 +2461,9 @@ msgid ""
 " and more. Draft the text students will read before deciding to enroll in "
 "your course."
 msgstr ""
+"Kurset në edX kanë një faqe Rreth kjo përfshin një video të kursit, "
+"përshkrim, dhe më shumë. Hartoje tekstin të cilin studentët do të e lexojnë"
+"  para se të vendosin të regjistrohen në kursin tuaj."
 
 #: common/lib/xmodule/xmodule/course_module.py
 #: common/lib/xmodule/xmodule/course_module.py
@@ -2565,7 +2592,7 @@ msgstr ""
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Certificate Name (Short)"
-msgstr ""
+msgstr "Emri i Certifikatës (shkurt)"
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid ""
@@ -2656,7 +2683,7 @@ msgstr ""
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Course Maximum Student Enrollment"
-msgstr ""
+msgstr "Maksimumi i regjistrimit të studentëve në kurs"
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid ""
@@ -2717,6 +2744,7 @@ msgstr ""
 msgid "Both"
 msgstr ""
 
+#: common/lib/xmodule/xmodule/course_module.py lms/djangoapps/branding/api.py
 #: lms/templates/footer.html lms/templates/static_templates/about.html
 #: lms/templates/static_templates/about.html
 msgid "About"
@@ -2794,7 +2822,7 @@ msgstr ""
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "General"
-msgstr ""
+msgstr "Të përgjithshme"
 
 #. Translators: TBD stands for 'To Be Determined' and is used when a course
 #. does not yet have an announced start date.
@@ -2813,7 +2841,7 @@ msgstr ""
 
 #: common/lib/xmodule/xmodule/discussion_module.py
 msgid "Category"
-msgstr ""
+msgstr "Kategoria"
 
 #: common/lib/xmodule/xmodule/discussion_module.py
 msgid ""
@@ -2959,7 +2987,7 @@ msgstr ""
 #: common/lib/xmodule/xmodule/textannotation_module.py
 #: common/lib/xmodule/xmodule/videoannotation_module.py
 msgid "No email address found."
-msgstr ""
+msgstr "Asnjë postë elektronike nuk u gjet."
 
 #: common/lib/xmodule/xmodule/library_content_module.py
 msgid "Any Type"
@@ -2992,7 +3020,7 @@ msgstr ""
 
 #: common/lib/xmodule/xmodule/library_content_module.py
 msgid "Count"
-msgstr ""
+msgstr "Mbledhja"
 
 #: common/lib/xmodule/xmodule/library_content_module.py
 msgid "Enter the number of components to display to each student."
@@ -3103,7 +3131,7 @@ msgstr ""
 
 #: common/lib/xmodule/xmodule/lti_module.py
 msgid "LTI ID"
-msgstr ""
+msgstr "LTI ID"
 
 #: common/lib/xmodule/xmodule/lti_module.py
 msgid ""
@@ -3115,7 +3143,7 @@ msgstr ""
 
 #: common/lib/xmodule/xmodule/lti_module.py
 msgid "LTI URL"
-msgstr ""
+msgstr "LTI URL"
 
 #: common/lib/xmodule/xmodule/lti_module.py
 msgid ""
@@ -3139,7 +3167,7 @@ msgstr ""
 
 #: common/lib/xmodule/xmodule/lti_module.py
 msgid "Open in New Page"
-msgstr ""
+msgstr "Hape në faqe të re"
 
 #: common/lib/xmodule/xmodule/lti_module.py
 msgid ""
@@ -3325,7 +3353,7 @@ msgstr ""
 
 #: common/lib/xmodule/xmodule/split_test_module.py
 msgid "Not Selected"
-msgstr ""
+msgstr "E pa selektuar"
 
 #: common/lib/xmodule/xmodule/split_test_module.py
 msgid ""
@@ -3353,7 +3381,7 @@ msgstr ""
 
 #: common/lib/xmodule/xmodule/split_test_module.py
 msgid "Group Configuration"
-msgstr ""
+msgstr "Grup konfigurimi"
 
 #: common/lib/xmodule/xmodule/split_test_module.py
 msgid "Which child module students in a particular group_id should see"
@@ -3361,7 +3389,7 @@ msgstr ""
 
 #: common/lib/xmodule/xmodule/split_test_module.py
 msgid "{group_name} (inactive)"
-msgstr ""
+msgstr "{group_name} (jo aktiv)"
 
 #: common/lib/xmodule/xmodule/split_test_module.py
 msgid "The experiment is not associated with a group configuration."
@@ -3468,7 +3496,7 @@ msgstr ""
 
 #: common/lib/xmodule/xmodule/word_cloud_module.py
 msgid "Show Percents"
-msgstr ""
+msgstr "Shfaq përqindjet"
 
 #: common/lib/xmodule/xmodule/word_cloud_module.py
 msgid "Statistics are shown for entered words near that word."
@@ -3612,6 +3640,7 @@ msgid ""
 "moocsupport@mathworks.com"
 msgstr ""
 
+#: common/lib/xmodule/xmodule/modulestore/inheritance.py
 #: cms/templates/certificates.html cms/templates/group_configurations.html
 #: cms/templates/group_configurations.html cms/templates/settings.html
 #: cms/templates/settings_advanced.html cms/templates/settings_graders.html
@@ -3728,7 +3757,7 @@ msgstr ""
 #. openended response has been fully scored
 #: common/lib/xmodule/xmodule/open_ended_grading_classes/combined_open_ended_modulev1.py
 msgid "Complete."
-msgstr ""
+msgstr "Kompletuar."
 
 #. Translators: "Scored rubric" appears to a user as part of a longer
 #. string that looks something like: "Scored rubric from grader 1".
@@ -3852,7 +3881,7 @@ msgstr ""
 #. is currently in the grading process
 #: common/lib/xmodule/xmodule/open_ended_grading_classes/openendedchild.py
 msgid "In progress"
-msgstr ""
+msgstr "Në zhvillim"
 
 #. Translators: "Done" communicates to a student that their response
 #. has been fully graded
@@ -3907,7 +3936,7 @@ msgstr ""
 
 #: common/lib/xmodule/xmodule/video_module/video_module.py
 msgid "Basic"
-msgstr ""
+msgstr "Bazike"
 
 #: common/lib/xmodule/xmodule/video_module/video_module.py
 msgid ""
@@ -3995,7 +4024,7 @@ msgstr ""
 
 #: common/lib/xmodule/xmodule/video_module/video_xfields.py
 msgid "Download Video"
-msgstr ""
+msgstr "Shkarko video"
 
 #: common/lib/xmodule/xmodule/video_module/video_xfields.py
 msgid ""
@@ -4003,10 +4032,13 @@ msgid ""
 "they cannot use the edX video player or do not have access to YouTube. You "
 "must add at least one non-YouTube URL in the Video File URLs field."
 msgstr ""
+"Lejo studentët të shkarkojn verzionet e videos në formate të ndryshme nëse "
+"ata nuk mund të e përdorin edX video ose nuk kanë akses në YouTube. Ju duhet"
+" të shtoni një URL jo-YouTube në hapësirën Video dokument URL."
 
 #: common/lib/xmodule/xmodule/video_module/video_xfields.py
 msgid "Video Download Allowed"
-msgstr ""
+msgstr "Shkarkimi i videos i lejueshëm"
 
 #: common/lib/xmodule/xmodule/video_module/video_xfields.py
 msgid ""
@@ -4020,7 +4052,7 @@ msgstr ""
 
 #: common/lib/xmodule/xmodule/video_module/video_xfields.py
 msgid "Video File URLs"
-msgstr ""
+msgstr "Video dokument URL"
 
 #: common/lib/xmodule/xmodule/video_module/video_xfields.py
 msgid ""
@@ -4066,7 +4098,7 @@ msgstr ""
 
 #: common/lib/xmodule/xmodule/video_module/video_xfields.py
 msgid "Show Transcript"
-msgstr ""
+msgstr "Shfaq Transkriptën"
 
 #: common/lib/xmodule/xmodule/video_module/video_xfields.py
 msgid ""
@@ -4080,25 +4112,25 @@ msgstr ""
 
 #: common/lib/xmodule/xmodule/video_module/video_xfields.py
 msgid "Preferred language for transcript."
-msgstr ""
+msgstr "Preferenca e gjuhës për transkript."
 
 #: common/lib/xmodule/xmodule/video_module/video_xfields.py
 msgid "Preferred language for transcript"
-msgstr ""
+msgstr "Gjuha e preferuar për transkript"
 
 #: common/lib/xmodule/xmodule/video_module/video_xfields.py
 msgid "Transcript file format to download by user."
-msgstr ""
+msgstr "Formati i transkriptës pët t'u shkarkuar nga përforuesi."
 
 #. Translators: This is a type of file used for captioning in the video
 #. player.
 #: common/lib/xmodule/xmodule/video_module/video_xfields.py
 msgid "SubRip (.srt) file"
-msgstr ""
+msgstr "SubRip (.srt) dokument"
 
 #: common/lib/xmodule/xmodule/video_module/video_xfields.py
 msgid "Text (.txt) file"
-msgstr ""
+msgstr "Tekst (.txt) dokument"
 
 #: common/lib/xmodule/xmodule/video_module/video_xfields.py
 msgid "The last speed that the user specified for the video."
@@ -4178,22 +4210,20 @@ msgid ""
 "Inc."
 msgstr ""
 
-#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: 'Open edX' is a brand, please keep this untranslated.
 #. See http://openedx.org for more information.
-#: lms/djangoapps/branding/api.py cms/templates/widgets/footer.html
-#: cms/templates/widgets/footer.html
+#: lms/djangoapps/branding/api.py
 msgid "Powered by Open edX"
-msgstr ""
+msgstr "Mundësuar nga Open edX"
 
 #: lms/djangoapps/branding/api.py lms/templates/static_templates/blog.html
 #: lms/templates/static_templates/blog.html
 msgid "Blog"
-msgstr ""
+msgstr "Blog"
 
 #: lms/djangoapps/branding/api.py
 msgid "News"
-msgstr ""
+msgstr "Lajmet"
 
 #: lms/djangoapps/branding/api.py
 msgid "FAQs"
@@ -4202,17 +4232,17 @@ msgstr ""
 #: lms/djangoapps/branding/api.py lms/templates/static_templates/contact.html
 #: lms/templates/static_templates/contact.html
 msgid "Contact"
-msgstr ""
+msgstr "Kontakto"
 
 #: lms/djangoapps/branding/api.py lms/templates/static_templates/jobs.html
 #: lms/templates/static_templates/jobs.html
 msgid "Jobs"
-msgstr ""
+msgstr "Punë"
 
 #: lms/djangoapps/branding/api.py lms/templates/static_templates/donate.html
 #: lms/templates/static_templates/donate.html
 msgid "Donate"
-msgstr ""
+msgstr "Dhuro"
 
 #: lms/djangoapps/branding/api.py
 msgid "Sitemap"
@@ -4222,6 +4252,10 @@ msgstr ""
 msgid "Terms of Service & Honor Code"
 msgstr ""
 
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: A 'Privacy Policy' is a legal document/statement describing a
+#. website's use of personal information
+#: lms/djangoapps/branding/api.py lms/djangoapps/certificates/views.py
 #: cms/templates/widgets/footer.html
 #: lms/templates/static_templates/privacy.html
 #: lms/templates/static_templates/privacy.html
@@ -4232,6 +4266,10 @@ msgstr "Politikat e privatësisë"
 msgid "Accessibility Policy"
 msgstr ""
 
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This is a legal document users must agree to
+#. in order to register a new account.
+#: lms/djangoapps/branding/api.py openedx/core/djangoapps/user_api/views.py
 #: cms/templates/widgets/footer.html lms/templates/static_templates/tos.html
 #: lms/templates/static_templates/tos.html
 msgid "Terms of Service"
@@ -4573,7 +4611,7 @@ msgstr ""
 #: lms/djangoapps/class_dashboard/dashboard_data.py
 #: lms/templates/instructor/instructor_dashboard_2/metrics.html
 msgid "Percent"
-msgstr ""
+msgstr "Përqindja"
 
 #: lms/djangoapps/class_dashboard/dashboard_data.py
 msgid "Opened by this number of students"
@@ -4594,11 +4632,11 @@ msgstr ""
 #: lms/djangoapps/class_dashboard/dashboard_data.py
 #: lms/templates/folditchallenge.html
 msgid "Score"
-msgstr ""
+msgstr "Rezultati"
 
 #: lms/djangoapps/class_dashboard/dashboard_data.py
 msgid "problems"
-msgstr ""
+msgstr "problemet"
 
 #: lms/djangoapps/commerce/signals.py lms/djangoapps/shoppingcart/models.py
 msgid "[Refund] User-Requested Refund"
@@ -4665,7 +4703,7 @@ msgstr ""
 
 #: lms/djangoapps/course_wiki/views.py
 msgid "Course page automatically created."
-msgstr ""
+msgstr "Faqja e kursit krijohet automatikisht."
 
 #: lms/djangoapps/course_wiki/views.py
 msgid "Welcome to the {platform_name} Wiki"
@@ -4678,7 +4716,7 @@ msgstr ""
 #: lms/djangoapps/courseware/tabs.py
 #: lms/templates/courseware/courseware-error.html
 msgid "Courseware"
-msgstr ""
+msgstr "Kursi"
 
 #: lms/djangoapps/courseware/tabs.py
 #: lms/djangoapps/instructor/views/instructor_dashboard.py
@@ -4692,7 +4730,7 @@ msgstr ""
 #: lms/djangoapps/courseware/tabs.py
 #: lms/templates/peer_grading/peer_grading.html
 msgid "Progress"
-msgstr ""
+msgstr "Progresi"
 
 #. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: 'Textbooks' refers to the tab in the course that leads to the
@@ -4823,18 +4861,18 @@ msgstr ""
 #: lms/templates/shoppingcart/billing_details.html
 #: lms/templates/shoppingcart/billing_details.html
 msgid "Email Address"
-msgstr ""
+msgstr "Email adresa"
 
 #: lms/djangoapps/dashboard/support.py
 #: lms/templates/sysadmin_dashboard_gitlogs.html
 #: lms/templates/instructor/instructor_dashboard_2/add_coupon_modal.html
 #: lms/templates/instructor/instructor_dashboard_2/edit_coupon_modal.html
 msgid "Course ID"
-msgstr ""
+msgstr "ID e kursit"
 
 #: lms/djangoapps/dashboard/support.py
 msgid "User not found"
-msgstr ""
+msgstr "Përdoruesi nuk u gjet"
 
 #: lms/djangoapps/dashboard/support.py
 msgid "Course {course_id} not past the refund window."
@@ -4879,7 +4917,7 @@ msgstr ""
 #. Translators: this means everything happened successfully, yay!
 #: lms/djangoapps/dashboard/sysadmin.py
 msgid "All ok!"
-msgstr ""
+msgstr "Të gjitha në rregull!"
 
 #: lms/djangoapps/dashboard/sysadmin.py lms/djangoapps/dashboard/sysadmin.py
 msgid "Must provide username"
@@ -4897,6 +4935,7 @@ msgstr ""
 #: lms/djangoapps/dashboard/sysadmin.py
 msgid "Failed - email {email_addr} already exists as {external_id}"
 msgstr ""
+"Dështoi - posta elektronike {email_addr} tashmë ekziston si {external_id}"
 
 #: lms/djangoapps/dashboard/sysadmin.py
 msgid "Password must be supplied if not using certificates"
@@ -4904,15 +4943,15 @@ msgstr ""
 
 #: lms/djangoapps/dashboard/sysadmin.py
 msgid "email address required (not username)"
-msgstr ""
+msgstr "posta elektronike e detyrueshme (jo emërin e përdorimit)"
 
 #: lms/djangoapps/dashboard/sysadmin.py
 msgid "Oops, failed to create user {user}, {error}"
-msgstr ""
+msgstr "Oops, dështoi të krijohet përdoruesi {user}, {error}"
 
 #: lms/djangoapps/dashboard/sysadmin.py
 msgid "User {user} created successfully!"
-msgstr ""
+msgstr "Përdoruesi {user} u krijua sukseshëm!"
 
 #: lms/djangoapps/dashboard/sysadmin.py
 msgid "Cannot find user with email address {email_addr}"
@@ -4920,7 +4959,7 @@ msgstr ""
 
 #: lms/djangoapps/dashboard/sysadmin.py
 msgid "Cannot find user with username {username} - {error}"
-msgstr ""
+msgstr "Nuk u gjet përdorues më emrin e përdorimit {username} - {error}"
 
 #: lms/djangoapps/dashboard/sysadmin.py
 msgid "Deleted user {username}"
@@ -4932,7 +4971,7 @@ msgstr ""
 
 #: lms/djangoapps/dashboard/sysadmin.py
 msgid "Value"
-msgstr ""
+msgstr "Vlera"
 
 #: lms/djangoapps/dashboard/sysadmin.py
 msgid "Site statistics"
@@ -4946,17 +4985,18 @@ msgstr "Numri total i përdoruesve"
 msgid "Courses loaded in the modulestore"
 msgstr ""
 
+#: lms/djangoapps/dashboard/sysadmin.py lms/djangoapps/dashboard/sysadmin.py
 #: lms/templates/tracking_log.html
 msgid "username"
 msgstr "pseudonimi"
 
 #: lms/djangoapps/dashboard/sysadmin.py lms/djangoapps/dashboard/sysadmin.py
 msgid "email"
-msgstr ""
+msgstr "posta elektronike"
 
 #: lms/djangoapps/dashboard/sysadmin.py
 msgid "Repair Results"
-msgstr ""
+msgstr "Riparo rezultatet"
 
 #: lms/djangoapps/dashboard/sysadmin.py
 msgid "Create User Results"
@@ -4964,7 +5004,7 @@ msgstr ""
 
 #: lms/djangoapps/dashboard/sysadmin.py
 msgid "Delete User Results"
-msgstr ""
+msgstr "Fshi rezultatet e përdoruesit"
 
 #: lms/djangoapps/dashboard/sysadmin.py
 #: lms/djangoapps/dashboard/tests/test_sysadmin.py
@@ -4973,7 +5013,7 @@ msgstr ""
 
 #: lms/djangoapps/dashboard/sysadmin.py
 msgid "Added Course"
-msgstr ""
+msgstr "Kursi i shtuar"
 
 #. Translators: "GIT_IMPORT_WITH_XMLMODULESTORE" is a variable name.
 #. "XMLModuleStore" and "MongoDB" are database systems. You should not
@@ -5017,7 +5057,7 @@ msgstr ""
 #: cms/templates/course-create-rerun.html cms/templates/index.html
 #: lms/templates/shoppingcart/receipt.html
 msgid "Course Name"
-msgstr ""
+msgstr "Emri i kursit"
 
 #: lms/djangoapps/dashboard/sysadmin.py
 msgid "Directory/ID"
@@ -5031,7 +5071,7 @@ msgstr ""
 
 #: lms/djangoapps/dashboard/sysadmin.py
 msgid "Last Change"
-msgstr ""
+msgstr "Ndryshimet e fundit"
 
 #: lms/djangoapps/dashboard/sysadmin.py
 msgid "Last Editor"
@@ -5039,7 +5079,7 @@ msgstr ""
 
 #: lms/djangoapps/dashboard/sysadmin.py
 msgid "Information about all courses"
-msgstr ""
+msgstr "Informacionet rreth gjitha kurseve"
 
 #: lms/djangoapps/dashboard/sysadmin.py
 msgid "Error - cannot get course with ID {0}<br/><pre>{1}</pre>"
@@ -5051,19 +5091,19 @@ msgstr ""
 
 #: lms/djangoapps/dashboard/sysadmin.py lms/djangoapps/dashboard/sysadmin.py
 msgid "course_id"
-msgstr ""
+msgstr "kursi_id"
 
 #: lms/djangoapps/dashboard/sysadmin.py
 msgid "# enrolled"
-msgstr ""
+msgstr "# regjistruar"
 
 #: lms/djangoapps/dashboard/sysadmin.py
 msgid "# staff"
-msgstr ""
+msgstr "# stafi"
 
 #: lms/djangoapps/dashboard/sysadmin.py
 msgid "instructors"
-msgstr ""
+msgstr "instruktorët"
 
 #: lms/djangoapps/dashboard/sysadmin.py
 msgid "Enrollment information for all courses"
@@ -5075,7 +5115,7 @@ msgstr ""
 
 #: lms/djangoapps/dashboard/sysadmin.py
 msgid "full_name"
-msgstr ""
+msgstr "emri-plotë"
 
 #: lms/djangoapps/dashboard/management/commands/git_add_course.py
 msgid ""
@@ -5086,7 +5126,7 @@ msgstr ""
 #: lms/djangoapps/django_comment_client/base/views.py
 #: lms/djangoapps/django_comment_client/base/views.py
 msgid "Title can't be empty"
-msgstr ""
+msgstr "Titulli nuk mund të jetë i zbrazët"
 
 #: lms/djangoapps/django_comment_client/base/views.py
 #: lms/djangoapps/django_comment_client/base/views.py
@@ -5097,7 +5137,7 @@ msgstr ""
 
 #: lms/djangoapps/django_comment_client/base/views.py
 msgid "Topic doesn't exist"
-msgstr ""
+msgstr "Tema nuk ekziston"
 
 #: lms/djangoapps/django_comment_client/base/views.py
 #: lms/djangoapps/django_comment_client/base/views.py
@@ -5111,7 +5151,7 @@ msgstr ""
 
 #: lms/djangoapps/django_comment_client/base/views.py
 msgid "Good"
-msgstr ""
+msgstr "Mirë"
 
 #: lms/djangoapps/edxnotes/helpers.py
 msgid "EdxNotes Service is unavailable. Please try again in a few minutes."
@@ -5133,6 +5173,7 @@ msgstr ""
 msgid "{platform_name} Staff"
 msgstr ""
 
+#: lms/djangoapps/instructor/paidcourse_enrollment_report.py
 #: lms/templates/instructor/instructor_dashboard_2/membership.html
 msgid "Course Staff"
 msgstr "Stafi i kursit"
@@ -5141,7 +5182,7 @@ msgstr "Stafi i kursit"
 #: lms/templates/courseware/course_navigation.html
 #: lms/templates/discussion/_underscore_templates.html
 msgid "Staff"
-msgstr ""
+msgstr "Stafi"
 
 #: lms/djangoapps/instructor/paidcourse_enrollment_report.py
 msgid "Used Registration Code"
@@ -5168,7 +5209,7 @@ msgstr ""
 #: lms/djangoapps/instructor/tests/test_api.py
 #: lms/djangoapps/instructor/views/instructor_task_helpers.py
 msgid "Complete"
-msgstr ""
+msgstr "Kompletuar"
 
 #: lms/djangoapps/instructor/tests/test_api.py
 #: lms/djangoapps/instructor/views/api.py
@@ -5234,7 +5275,7 @@ msgstr ""
 
 #: lms/djangoapps/instructor/views/api.py
 msgid "Invalid email {email_address}."
-msgstr ""
+msgstr "Posta elektronike jo valide {email_adress}."
 
 #: lms/djangoapps/instructor/views/api.py
 msgid ""
@@ -5273,7 +5314,7 @@ msgstr ""
 #: lms/djangoapps/instructor/views/api.py
 #: lms/djangoapps/instructor_task/tasks_helper.py
 msgid "User ID"
-msgstr ""
+msgstr "ID e përdoruesit"
 
 #. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: This label appears above a field on the login form
@@ -5291,7 +5332,7 @@ msgstr ""
 #: lms/templates/instructor/instructor_dashboard_2/generate_registarion_codes_modal.html
 #: lms/templates/instructor/instructor_dashboard_2/generate_registarion_codes_modal.html
 msgid "Email"
-msgstr ""
+msgstr "Posta elektronike"
 
 #: lms/djangoapps/instructor/views/api.py
 #: lms/djangoapps/instructor_task/tasks_helper.py lms/envs/devstack.py
@@ -5300,13 +5341,19 @@ msgstr "Gjuha"
 
 #: lms/djangoapps/instructor/views/api.py
 msgid "Location"
-msgstr ""
+msgstr "Lokacioni"
 
 #: lms/djangoapps/instructor/views/api.py
 msgid "Birth Year"
 msgstr "Viti i lindjes"
 
-#: lms/templates/register.html lms/templates/signup_modal.html
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This label appears above a dropdown menu on the registration
+#. form used to select the user's gender.
+#: lms/djangoapps/instructor/views/api.py
+#: lms/djangoapps/instructor_task/tasks_helper.py
+#: openedx/core/djangoapps/user_api/views.py lms/templates/register.html
+#: lms/templates/signup_modal.html
 msgid "Gender"
 msgstr "Gjinia"
 
@@ -5314,7 +5361,7 @@ msgstr "Gjinia"
 #: lms/djangoapps/instructor_task/tasks_helper.py
 #: lms/templates/instructor/instructor_dashboard_2/instructor_analytics.html
 msgid "Level of Education"
-msgstr ""
+msgstr "Niveli i Edukimit"
 
 #: lms/djangoapps/instructor/views/api.py
 #: lms/djangoapps/instructor_task/tasks_helper.py lms/templates/register.html
@@ -5578,7 +5625,7 @@ msgstr ""
 #: lms/djangoapps/instructor/views/coupons.py
 #: lms/djangoapps/instructor/views/coupons.py
 msgid "coupon id not found"
-msgstr ""
+msgstr "id e kuponit nuk u gjet"
 
 #: lms/djangoapps/instructor/views/coupons.py
 msgid "coupon with the coupon id ({coupon_id}) updated Successfully"
@@ -5596,8 +5643,9 @@ msgstr ""
 
 #: lms/djangoapps/instructor/views/instructor_dashboard.py
 msgid "E-Commerce"
-msgstr ""
+msgstr "E-Komerc"
 
+#: lms/djangoapps/instructor/views/instructor_dashboard.py
 #: cms/templates/certificates.html cms/templates/certificates.html
 #: cms/templates/certificates.html cms/templates/export.html
 #: cms/templates/widgets/header.html
@@ -5692,7 +5740,7 @@ msgstr ""
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid "Assignment Name"
-msgstr ""
+msgstr "Emri i detyrës"
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid "Please enter an assignment name"
@@ -5745,7 +5793,7 @@ msgstr ""
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid "Error: {err}"
-msgstr ""
+msgstr "Problem:{err}"
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid "Remote gradebook response for {action}"
@@ -5756,11 +5804,11 @@ msgstr ""
 #: lms/djangoapps/instructor/views/legacy.py
 #: openedx/core/djangoapps/user_api/views.py
 msgid "Full name"
-msgstr ""
+msgstr "Emri i plotë"
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid "{title} in course {course_key}"
-msgstr ""
+msgstr "{title}në kursin {course_key}"
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid "ID"
@@ -5779,11 +5827,11 @@ msgstr "Emri i plotë"
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid "edX email"
-msgstr ""
+msgstr "edx posta elektronike"
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid "Enrollment of students"
-msgstr ""
+msgstr "Regjistrimi i studentëve"
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid "Un-enrollment of students"
@@ -5852,7 +5900,7 @@ msgstr ""
 #. messages as {action}.
 #: lms/djangoapps/instructor_task/tasks.py
 msgid "reset"
-msgstr ""
+msgstr "reseto"
 
 #. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: This is a past-tense verb that is inserted into task progress
@@ -5860,7 +5908,7 @@ msgstr ""
 #: lms/djangoapps/instructor_task/tasks.py
 #: lms/templates/wiki/plugins/attachments/index.html wiki/models/article.py
 msgid "deleted"
-msgstr ""
+msgstr "e fshirë"
 
 #. Translators: This is a past-tense verb that is inserted into task progress
 #. messages as {action}.
@@ -5909,10 +5957,12 @@ msgstr ""
 msgid "Last Name"
 msgstr ""
 
+#: lms/djangoapps/instructor_task/tasks_helper.py
 #: lms/templates/shoppingcart/receipt.html
 msgid "Company Name"
 msgstr "Emri i Kompanisë"
 
+#: lms/djangoapps/instructor_task/tasks_helper.py
 #: lms/templates/discussion/_underscore_templates.html
 #: lms/templates/discussion/_underscore_templates.html wiki/forms.py
 #: wiki/forms.py wiki/forms.py
@@ -5922,19 +5972,30 @@ msgstr "Titulli"
 #: lms/djangoapps/instructor_task/tasks_helper.py lms/templates/register.html
 #: lms/templates/instructor/instructor_dashboard_2/instructor_analytics.html
 msgid "Year of Birth"
-msgstr ""
+msgstr "Viti i lindjes"
 
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: This label appears above a field on the registration form
 #. which allows the user to input the city in which they live.
 #: lms/djangoapps/instructor_task/tasks_helper.py
-#: openedx/core/djangoapps/user_api/views.py
+#: openedx/core/djangoapps/user_api/views.py lms/templates/register.html
+#: lms/templates/instructor/instructor_dashboard_2/generate_registarion_codes_modal.html
+#: lms/templates/shoppingcart/receipt.html
+#, fuzzy
 msgid "City"
-msgstr "Qyteti"
+msgstr ""
+"#-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#\n"
+"Qyteti\n"
+"#-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#\n"
+"Qytet"
 
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: This label appears above a dropdown menu on the registration
 #. form used to select the country in which the user lives.
 #: lms/djangoapps/instructor_task/tasks_helper.py
-#: openedx/core/djangoapps/user_api/views.py
+#: openedx/core/djangoapps/user_api/views.py lms/templates/register.html
+#: lms/templates/instructor/instructor_dashboard_2/generate_registarion_codes_modal.html
+#: lms/templates/shoppingcart/receipt.html
 msgid "Country"
 msgstr "Vendi"
 
@@ -6111,7 +6172,7 @@ msgstr ""
 #. status messages.
 #: lms/djangoapps/instructor_task/views.py
 msgid " (out of {total})"
-msgstr ""
+msgstr "(nga {total})"
 
 #: lms/djangoapps/lms_xblock/mixin.py
 msgid "Whether to display this module in the table of contents"
@@ -6157,13 +6218,15 @@ msgstr ""
 
 #: lms/djangoapps/lms_xblock/mixin.py
 msgid "Course Is Public"
-msgstr ""
+msgstr "Kursi është publik"
 
 #: lms/djangoapps/lms_xblock/mixin.py
 msgid ""
 "Enter true or false. If true, the course is open to the public. If false, "
 "the course is open only to admins."
 msgstr ""
+"Shtypni e vërtetë ose gabim. Nëse e vërtetë, kursi është i hapur për "
+"publikun. Nëse gabim, kursi është i hapur vetëm për administruesit."
 
 #: lms/djangoapps/lms_xblock/mixin.py
 msgid ""
@@ -6183,9 +6246,9 @@ msgstr ""
 msgid "This component refers to deleted or invalid content groups."
 msgstr ""
 
-#: lms/djangoapps/notes/views.py lms/templates/notes.html
+#: lms/templates/notes.html
 msgid "My Notes"
-msgstr ""
+msgstr "Shënimet e mia"
 
 #: lms/djangoapps/open_ended_grading/staff_grading_service.py
 msgid ""
@@ -6234,7 +6297,7 @@ msgstr ""
 
 #: lms/djangoapps/open_ended_grading/utils.py
 msgid "for course {0} and student {1}."
-msgstr ""
+msgstr "për kursin {0} dhe studentin {1}."
 
 #: lms/djangoapps/open_ended_grading/views.py
 msgid ""
@@ -6371,7 +6434,7 @@ msgstr ""
 #. by which a user could enroll in the given course.
 #: lms/djangoapps/shoppingcart/models.py
 msgid "{mode_name} for course {course}"
-msgstr ""
+msgstr "{mode_name} për kursin {course}"
 
 #: lms/djangoapps/shoppingcart/models.py
 msgid ""
@@ -6424,13 +6487,14 @@ msgstr ""
 msgid "{id_label} # {item_id}"
 msgstr ""
 
+#: lms/djangoapps/shoppingcart/pdf.py
 #: lms/templates/emails/registration_codes_sale_invoice_attachment.txt
 msgid "Date: {date}"
 msgstr "Data: {date}"
 
 #: lms/djangoapps/shoppingcart/pdf.py lms/djangoapps/shoppingcart/reports.py
 msgid "Quantity"
-msgstr ""
+msgstr "Sasia"
 
 #: lms/djangoapps/shoppingcart/pdf.py
 msgid ""
@@ -6446,14 +6510,14 @@ msgstr ""
 
 #: lms/djangoapps/shoppingcart/pdf.py
 msgid "Amount"
-msgstr ""
+msgstr "Vlera"
 
 #: lms/djangoapps/shoppingcart/pdf.py
 #: lms/templates/instructor/instructor_dashboard_2/course_info.html
 #: lms/templates/shoppingcart/billing_details.html
 #: lms/templates/shoppingcart/receipt.html
 msgid "Total"
-msgstr ""
+msgstr "Gjithsej"
 
 #: lms/djangoapps/shoppingcart/pdf.py
 msgid "Payment Received"
@@ -6481,7 +6545,7 @@ msgstr ""
 
 #: lms/djangoapps/shoppingcart/reports.py
 msgid "Customer Name"
-msgstr ""
+msgstr "Emri i klientit"
 
 #: lms/djangoapps/shoppingcart/reports.py
 msgid "Date of Original Transaction"
@@ -6514,7 +6578,7 @@ msgstr ""
 
 #: lms/djangoapps/shoppingcart/reports.py
 msgid "Total Cost"
-msgstr ""
+msgstr "Çmimi total"
 
 #: lms/djangoapps/shoppingcart/reports.py
 #: lms/templates/instructor/instructor_dashboard_2/set_course_mode_price_modal.html
@@ -6523,15 +6587,17 @@ msgstr ""
 
 #: lms/djangoapps/shoppingcart/reports.py
 msgid "Comments"
-msgstr ""
+msgstr "Komentet"
 
 #: lms/djangoapps/shoppingcart/reports.py
 #: lms/djangoapps/shoppingcart/reports.py
 msgid "University"
-msgstr ""
+msgstr "Universiteti"
 
 #: lms/djangoapps/shoppingcart/reports.py
-#: lms/djangoapps/shoppingcart/reports.py
+#: lms/djangoapps/shoppingcart/reports.py cms/templates/widgets/header.html
+#: cms/templates/widgets/header.html cms/templates/widgets/header.html
+#: cms/templates/widgets/header.html
 msgid "Course"
 msgstr "Kursi"
 
@@ -6539,22 +6605,21 @@ msgstr "Kursi"
 msgid "Course Announce Date"
 msgstr ""
 
-#: lms/djangoapps/shoppingcart/reports.py cms/templates/settings.html
-#: lms/templates/instructor/instructor_dashboard_2/executive_summary.html
+#: lms/djangoapps/shoppingcart/reports.py
 msgid "Course Start Date"
-msgstr ""
+msgstr "Data e fillimit të kursit"
 
 #: lms/djangoapps/shoppingcart/reports.py
 msgid "Course Registration Close Date"
-msgstr ""
+msgstr "Data e përfundimit për regjistrim në kurs"
 
 #: lms/djangoapps/shoppingcart/reports.py
 msgid "Course Registration Period"
-msgstr ""
+msgstr "Periudha e regjistrimit në kurs"
 
 #: lms/djangoapps/shoppingcart/reports.py
 msgid "Total Enrolled"
-msgstr ""
+msgstr "Gjithsej të regjistruar"
 
 #: lms/djangoapps/shoppingcart/reports.py
 msgid "Audit Enrollment"
@@ -6566,7 +6631,7 @@ msgstr ""
 
 #: lms/djangoapps/shoppingcart/reports.py
 msgid "Verified Enrollment"
-msgstr ""
+msgstr "Regjistrim i verifikuar"
 
 #: lms/djangoapps/shoppingcart/reports.py
 msgid "Gross Revenue"
@@ -6590,7 +6655,7 @@ msgstr ""
 
 #: lms/djangoapps/shoppingcart/reports.py
 msgid "Number of Transactions"
-msgstr ""
+msgstr "Numri i Transanksioneve"
 
 #: lms/djangoapps/shoppingcart/reports.py
 msgid "Total Payments Collected"
@@ -6623,7 +6688,7 @@ msgstr ""
 
 #: lms/djangoapps/shoppingcart/views.py
 msgid "Course added to cart."
-msgstr ""
+msgstr "Kurset që janë shtuar në kartë."
 
 #: lms/djangoapps/shoppingcart/views.py lms/djangoapps/shoppingcart/views.py
 msgid "Discount does not exist against code '{code}'."
@@ -6658,7 +6723,7 @@ msgstr ""
 
 #: lms/djangoapps/shoppingcart/views.py
 msgid "You do not have permission to view this page."
-msgstr ""
+msgstr "Ju nuk keni leje për të e parë këtë faqe."
 
 #: lms/djangoapps/shoppingcart/processors/CyberSource.py
 msgid "The payment processor did not return a required parameter: {0}"
@@ -6719,7 +6784,7 @@ msgstr ""
 #: lms/djangoapps/shoppingcart/processors/CyberSource.py
 #: lms/djangoapps/shoppingcart/processors/CyberSource2.py
 msgid "Successful transaction."
-msgstr ""
+msgstr "Transaksion i sukseshëm."
 
 #: lms/djangoapps/shoppingcart/processors/CyberSource.py
 #: lms/djangoapps/shoppingcart/processors/CyberSource2.py
@@ -7215,6 +7280,7 @@ msgid ""
 msgstr ""
 
 #: lms/djangoapps/shoppingcart/tests/test_views.py
+#: lms/templates/shoppingcart/download_report.html
 msgid "Download CSV Reports"
 msgstr "Shkarko CSV Raportet "
 
@@ -7223,6 +7289,8 @@ msgstr "Shkarko CSV Raportet "
 msgid ""
 "There was an error in your date input.  It should be formatted as YYYY-MM-DD"
 msgstr ""
+"Këtu është një problem në shkrimin e datës. Kjo duhet të jetë në formën "
+"VVVV-MM-DD"
 
 #: lms/djangoapps/student_account/views.py
 msgid "No user with the provided email address exists."
@@ -7295,7 +7363,7 @@ msgstr ""
 
 #: lms/djangoapps/verify_student/models.py
 msgid "We couldn't read your name from your photo ID image."
-msgstr ""
+msgstr "Ne nuk po mundemi të e lexojm emrin tuaj nga ID imazhi juaj."
 
 #: lms/djangoapps/verify_student/models.py
 msgid ""
@@ -7304,7 +7372,7 @@ msgstr ""
 
 #: lms/djangoapps/verify_student/models.py
 msgid "The image of your face was not clear."
-msgstr ""
+msgstr "Imazhi i fytyrës suaj nuk është i pastërt."
 
 #: lms/djangoapps/verify_student/models.py
 msgid "Your face was not visible in your self-photo."
@@ -7312,7 +7380,7 @@ msgstr ""
 
 #: lms/djangoapps/verify_student/models.py
 msgid "There was an error verifying your ID photos."
-msgstr ""
+msgstr "Këtu ishte një problem me verifikimin e ID fotos tuaj"
 
 #: lms/djangoapps/verify_student/views.py
 msgid "Intro"
@@ -7346,7 +7414,7 @@ msgstr ""
 
 #: lms/djangoapps/verify_student/views.py
 msgid "Selected price is not valid number."
-msgstr ""
+msgstr "Çmimi i zgjedhur nuk është numër valid."
 
 #: lms/djangoapps/verify_student/views.py
 msgid "This course doesn't support paid certificates"
@@ -7355,6 +7423,7 @@ msgstr ""
 #: lms/djangoapps/verify_student/views.py
 msgid "No selected price or selected price is below minimum."
 msgstr ""
+"Nuk ka çmim të zgjedhur ose çmimi i zgjedhur është më i vogël se minimumi."
 
 #: lms/djangoapps/verify_student/views.py
 msgid "Missing required parameters: {missing}"
@@ -7401,7 +7470,7 @@ msgstr ""
 #. translate this the way that Facebook advertises in your language.
 #: lms/envs/common.py lms/templates/dashboard/_dashboard_course_listing.html
 msgid "Facebook"
-msgstr ""
+msgstr "Facebook"
 
 #: lms/envs/common.py
 msgid "Like {platform_name} on Facebook"
@@ -7412,7 +7481,7 @@ msgstr ""
 #. translate this the way that Twitter advertises in your language.
 #: lms/envs/common.py lms/templates/dashboard/_dashboard_course_listing.html
 msgid "Twitter"
-msgstr ""
+msgstr "Twitter"
 
 #: lms/envs/common.py
 msgid "Follow {platform_name} on Twitter"
@@ -7422,7 +7491,7 @@ msgstr ""
 #. translate this the way that LinkedIn advertises in your language.
 #: lms/envs/common.py
 msgid "LinkedIn"
-msgstr ""
+msgstr "LinkedIn"
 
 #: lms/envs/common.py
 msgid "Follow {platform_name} on LinkedIn"
@@ -7432,7 +7501,7 @@ msgstr ""
 #. translate this the way that Google+ advertises in your language.
 #: lms/envs/common.py
 msgid "Google+"
-msgstr ""
+msgstr "Google+"
 
 #: lms/envs/common.py
 msgid "Follow {platform_name} on Google+"
@@ -7484,13 +7553,12 @@ msgstr ""
 
 #: lms/envs/common.py
 msgid "Taiwan"
-msgstr ""
+msgstr "Tajvan"
 
-#: lms/envs/devstack.py cms/templates/course-create-rerun.html
-#: cms/templates/index.html cms/templates/index.html
-#: cms/templates/settings.html
+#: cms/templates/course-create-rerun.html cms/templates/index.html
+#: cms/templates/index.html cms/templates/settings.html
 msgid "Organization"
-msgstr ""
+msgstr "Organizata"
 
 #: lms/envs/devstack.py
 msgid "Course Type"
@@ -7562,6 +7630,8 @@ msgid ""
 "      Your password has been set.  You may go ahead and %(link_start)slog in%(link_end)s now.\n"
 "      "
 msgstr ""
+"\n"
+"Fjalëkalimi juaj është vendosur. Ju mund të shkoni dhe të %(link_start)skyçeni%(link_end)s tani."
 
 #: lms/templates/registration/password_reset_confirm.html
 msgid ""
@@ -7587,6 +7657,8 @@ msgid ""
 "                We're sorry, %(platform_name)s enrollment is not available in your region\n"
 "            "
 msgstr ""
+"\n"
+"Na vjen keq, %(platform_name)s regjistrimi nuk është i mundshëm në regjionin tuaj"
 
 #: lms/templates/registration/password_reset_confirm.html
 msgid "The following errors occurred while processing your registration: "
@@ -7598,7 +7670,7 @@ msgstr "Ju duhet të i kompletoni të gjitha hapësirat."
 
 #: lms/templates/registration/password_reset_confirm.html
 msgid "The two password fields didn't match."
-msgstr ""
+msgstr "Dy hapësirat e fjalëkalimit nuk përputhen."
 
 #: lms/templates/registration/password_reset_confirm.html
 msgid ""
@@ -7635,7 +7707,7 @@ msgstr ""
 #: lms/templates/instructor/instructor_dashboard_2/invalidate_registration_code_modal.html
 #: lms/templates/instructor/instructor_dashboard_2/set_course_mode_price_modal.html
 msgid "Required Information"
-msgstr ""
+msgstr "Informacionet e detyrueshme"
 
 #: lms/templates/registration/password_reset_confirm.html
 msgid "Your New Password"
@@ -7643,7 +7715,7 @@ msgstr "Fjalëkalimi juaj i ri"
 
 #: lms/templates/registration/password_reset_confirm.html
 msgid "Your New Password Again"
-msgstr ""
+msgstr "Fjalëkalimi juaj i ri përsëri"
 
 #: lms/templates/registration/password_reset_confirm.html
 msgid "Change My Password"
@@ -7686,6 +7758,7 @@ msgstr ""
 #: lms/templates/registration/password_reset_email.html
 msgid "Please go to the following page and choose a new password:"
 msgstr ""
+"Ju lutem shkoni te faqja e më poshtme dhe zgjidhni një fjalëkalim të ri:"
 
 #: lms/templates/registration/password_reset_email.html
 msgid ""
@@ -7695,7 +7768,7 @@ msgstr ""
 
 #: lms/templates/registration/password_reset_email.html
 msgid "Thanks for using our site!"
-msgstr ""
+msgstr "Ju faleminderit që po e përdorni e faqen tonë!"
 
 #: lms/templates/registration/password_reset_email.html
 msgid "The %(platform_name)s Team"
@@ -7703,7 +7776,7 @@ msgstr ""
 
 #: lms/templates/wiki/article.html
 msgid "Last modified:"
-msgstr ""
+msgstr "Modifikimi i fundit:"
 
 #: lms/templates/wiki/article.html
 msgid "See all children"
@@ -7711,25 +7784,25 @@ msgstr ""
 
 #: lms/templates/wiki/article.html
 msgid "This article was last modified:"
-msgstr ""
+msgstr "Ky artikull është modifukuar herën e fundit:"
 
 #: lms/templates/wiki/create.html lms/templates/wiki/create.html.py
 msgid "Add new article"
-msgstr ""
+msgstr "Shto artikull të ri"
 
 #: lms/templates/wiki/create.html
 msgid "Create article"
-msgstr ""
+msgstr "Krijo artikull."
 
 #: lms/templates/wiki/create.html lms/templates/wiki/delete.html
 #: lms/templates/wiki/delete.html.py
 msgid "Go back"
-msgstr ""
+msgstr "Kthehu prapa."
 
 #: lms/templates/wiki/delete.html lms/templates/wiki/delete.html.py
 #: lms/templates/wiki/edit.html
 msgid "Delete article"
-msgstr ""
+msgstr "Fshije artikullin."
 
 #: lms/templates/wiki/delete.html
 #: lms/templates/wiki/plugins/attachments/index.html
@@ -7776,12 +7849,13 @@ msgid "Edit"
 msgstr "Edito"
 
 #: lms/templates/wiki/edit.html lms/templates/wiki/edit.html.py
+#: lms/templates/ccx/schedule.html lms/templates/ccx/schedule.html
 msgid "Save changes"
 msgstr "Ruaj ndryshimet"
 
 #: lms/templates/wiki/edit.html cms/templates/container.html
 msgid "Preview"
-msgstr ""
+msgstr "Parashiko"
 
 #. #-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a control to allow users to exit out of this modal
@@ -7824,7 +7898,7 @@ msgstr ""
 
 #: lms/templates/wiki/history.html
 msgid "History"
-msgstr ""
+msgstr "Historia"
 
 #: lms/templates/wiki/history.html
 msgid ""
@@ -7848,7 +7922,7 @@ msgstr ""
 
 #: lms/templates/wiki/history.html
 msgid "Change"
-msgstr ""
+msgstr "Ndrysho"
 
 #: lms/templates/wiki/history.html lms/templates/wiki/history.html
 msgid "Merge selected with current..."
@@ -7920,6 +7994,7 @@ msgstr ""
 #: lms/templates/wiki/includes/anonymous_blocked.html
 msgid "You need to log in or sign up to use this function."
 msgstr ""
+"Ju duhet të kyçeni ose të regjistroheni për të e përdorur këtë funksion."
 
 #: lms/templates/wiki/includes/cheatsheet.html
 msgid "Wiki Cheatsheet"
@@ -7955,7 +8030,7 @@ msgstr ""
 
 #: lms/templates/wiki/includes/cheatsheet.html
 msgid "[Article Name](wiki:ArticleName)"
-msgstr ""
+msgstr "[Emri i Artikullit](wiki:EmriiArtikullit)"
 
 #: lms/templates/wiki/includes/cheatsheet.html
 msgid "%(platform_name)s Additions:"
@@ -8029,15 +8104,15 @@ msgstr ""
 #: lms/templates/wiki/plugins/attachments/index.html
 #: wiki/plugins/attachments/wiki_plugin.py
 msgid "Attachments"
-msgstr ""
+msgstr "Atashime"
 
 #: lms/templates/wiki/plugins/attachments/index.html
 msgid "Upload new file"
-msgstr ""
+msgstr "Ngarko dokument të ri"
 
 #: lms/templates/wiki/plugins/attachments/index.html
 msgid "Search and add file"
-msgstr ""
+msgstr "Kërko dhe shto dokument"
 
 #: lms/templates/wiki/plugins/attachments/index.html
 msgid "Upload File"
@@ -8045,11 +8120,11 @@ msgstr "Ngarko dokumentin"
 
 #: lms/templates/wiki/plugins/attachments/index.html
 msgid "Upload file"
-msgstr ""
+msgstr "Ngarko dokument"
 
 #: lms/templates/wiki/plugins/attachments/index.html
 msgid "Search files and articles"
-msgstr ""
+msgstr "Kërko dokumente dhe artikuj"
 
 #: lms/templates/wiki/plugins/attachments/index.html
 msgid ""
@@ -8069,11 +8144,11 @@ msgstr ""
 
 #: lms/templates/wiki/plugins/attachments/index.html
 msgid "Uploaded by"
-msgstr ""
+msgstr "Ngarkuar nga"
 
 #: lms/templates/wiki/plugins/attachments/index.html
 msgid "Size"
-msgstr ""
+msgstr "Madhësia"
 
 #: lms/templates/wiki/plugins/attachments/index.html
 msgid "File History"
@@ -8179,18 +8254,24 @@ msgstr ""
 #: openedx/core/djangoapps/user_api/views.py
 #: openedx/core/djangoapps/user_api/views.py
 msgid "username@domain.com"
-msgstr ""
+msgstr "emriipërdorimit@domain.com"
 
 #: openedx/core/djangoapps/user_api/views.py
 #: openedx/core/djangoapps/user_api/views.py
 msgid "The email address you used to register with {platform_name}"
 msgstr ""
 
-#: cms/templates/login.html cms/templates/register.html
-#: lms/templates/login.html lms/templates/provider_login.html
-#: lms/templates/provider_login.html lms/templates/register.html
-#: lms/templates/register.html lms/templates/signup_modal.html
-#: lms/templates/sysadmin_dashboard.html
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This label appears above a field on the login form
+#. meant to hold the user's password.
+#. Translators: This label appears above a field on the registration form
+#. meant to hold the user's password.
+#: openedx/core/djangoapps/user_api/views.py
+#: openedx/core/djangoapps/user_api/views.py cms/templates/login.html
+#: cms/templates/register.html lms/templates/login.html
+#: lms/templates/provider_login.html lms/templates/provider_login.html
+#: lms/templates/register.html lms/templates/register.html
+#: lms/templates/signup_modal.html lms/templates/sysadmin_dashboard.html
 msgid "Password"
 msgstr "Fjalëkalimi"
 
@@ -8249,7 +8330,10 @@ msgstr ""
 msgid "Highest level of education completed"
 msgstr ""
 
-#: lms/templates/signup_modal.html
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This label appears above a dropdown menu on the registration
+#. form used to select the user's year of birth.
+#: openedx/core/djangoapps/user_api/views.py lms/templates/signup_modal.html
 msgid "Year of birth"
 msgstr "Viti i lindjes"
 
@@ -8325,7 +8409,7 @@ msgstr ""
 #: cms/djangoapps/contentstore/course_group_config.py
 #: cms/djangoapps/contentstore/views/certificates.py
 msgid "invalid JSON"
-msgstr ""
+msgstr "JSON jo valide"
 
 #: cms/djangoapps/contentstore/course_group_config.py
 msgid "must have name of the configuration"
@@ -8342,7 +8426,7 @@ msgstr ""
 
 #: cms/djangoapps/contentstore/course_info_model.py
 msgid "Course update not found."
-msgstr ""
+msgstr "Freskimi i kursit nuk u gjet."
 
 #: cms/djangoapps/contentstore/courseware_index.py
 msgid "Could not index item: {}"
@@ -8392,6 +8476,7 @@ msgstr "Nuk mund të eksportohet kursi në xml."
 #: cms/djangoapps/contentstore/git_export_utils.py
 msgid "Unable to configure git username and password"
 msgstr ""
+"E pamundur të bëhet konfigurimi i git emriipërdoruesit dhe fjalëkalimit"
 
 #: cms/djangoapps/contentstore/git_export_utils.py
 msgid ""
@@ -8428,7 +8513,7 @@ msgstr ""
 
 #: cms/djangoapps/contentstore/views/assets.py
 msgid "Upload completed"
-msgstr ""
+msgstr "Ngarkimi u kompletua"
 
 #: cms/djangoapps/contentstore/views/certificates.py
 msgid "must have name of the certificate"
@@ -8469,12 +8554,17 @@ msgid ""
 "Special characters not allowed in organization, course number, and course "
 "run."
 msgstr ""
+"Karakteret speciale nuk janë të lejueshme tek organizata, numri i kursit, "
+"dhe tek course run."
 
 #: cms/djangoapps/contentstore/views/course.py
 msgid ""
 "There is already a course defined with the same organization and course "
 "number. Please change either organization or course number to be unique."
 msgstr ""
+"Këtu është tashmë një kurs i definuar me organizatën dhe numrin e kursit të "
+"njëjtë. Ju lutem ndryshojeni organizatën ose numrin e kursit për t'u bërë "
+"unik."
 
 #: cms/djangoapps/contentstore/views/course.py
 #: cms/djangoapps/contentstore/views/course.py
@@ -8518,11 +8608,11 @@ msgstr ""
 
 #: cms/djangoapps/contentstore/views/helpers.py
 msgid "Vertical"
-msgstr ""
+msgstr "Vertikal"
 
 #: cms/djangoapps/contentstore/views/helpers.py
 msgid "Empty"
-msgstr ""
+msgstr "Zbrazët"
 
 #: cms/djangoapps/contentstore/views/import_export.py
 msgid "We only support uploading a .tar.gz file."
@@ -8564,7 +8654,7 @@ msgstr ""
 #. a percent value out of 100, e.g. "58%" means "58/100".
 #: cms/djangoapps/contentstore/views/item.py
 msgid "%"
-msgstr ""
+msgstr "%"
 
 #: cms/djangoapps/contentstore/views/item.py
 msgid "{section_or_subsection} \"{display_name}\""
@@ -8606,7 +8696,7 @@ msgstr ""
 
 #: cms/djangoapps/contentstore/views/user.py
 msgid "Could not find user by email address '{email}'."
-msgstr ""
+msgstr "Nuk u gjet përdorues me postë elektronike '{email}'."
 
 #: cms/djangoapps/contentstore/views/user.py
 msgid "User {email} has registered but has not yet activated his/her account."
@@ -8630,13 +8720,13 @@ msgstr ""
 #. Translators: This is the status of an active video upload
 #: cms/djangoapps/contentstore/views/videos.py cms/templates/import.html
 msgid "Uploading"
-msgstr ""
+msgstr "Ngarkimi"
 
 #. Translators: This is the status for a video that the servers are currently
 #. processing
 #: cms/djangoapps/contentstore/views/videos.py
 msgid "In Progress"
-msgstr ""
+msgstr "Në progres"
 
 #. Translators: This is the status for a video that the servers have
 #. successfully processed
@@ -8648,7 +8738,7 @@ msgstr ""
 #. process
 #: cms/djangoapps/contentstore/views/videos.py
 msgid "Failed"
-msgstr ""
+msgstr "Dështoi"
 
 #. Translators: This is the status for a video for which an invalid
 #. processing token was provided in the course settings
@@ -8665,7 +8755,7 @@ msgstr ""
 #. Translators: This is the status for a video that is in an unknown state
 #: cms/djangoapps/contentstore/views/videos.py
 msgid "Unknown"
-msgstr ""
+msgstr "I panjohur"
 
 #. Translators: This is the header for a CSV file column
 #. containing URLs for video encodings for the named profile
@@ -8680,7 +8770,7 @@ msgstr ""
 
 #: cms/djangoapps/contentstore/views/videos.py
 msgid "Date Added"
-msgstr ""
+msgstr "Data u shtua"
 
 #. #-#-#-#-#  django-studio.po (edx-platform)  #-#-#-#-#
 #. Translators: This is listed as the duration for a video that has not
@@ -8733,7 +8823,7 @@ msgstr ""
 
 #: cms/djangoapps/models/settings/course_metadata.py
 msgid "Incorrect format for field '{name}'. {detailed_message}"
-msgstr ""
+msgstr "Format jo korrekt për hapësirat '{name}'.{denied_message}"
 
 #: cms/templates/404.html cms/templates/error.html
 #: lms/templates/static_templates/404.html
@@ -8755,7 +8845,7 @@ msgstr "Faqja nuk u gjet"
 #: lms/templates/instructor/instructor_dashboard_2/metrics.html
 #: lms/templates/student_profile/learner_profile.html
 msgid "Loading"
-msgstr ""
+msgstr "Duke u ngarkuar"
 
 #: cms/templates/asset_index.html lms/templates/courseware/courseware.html
 #: lms/templates/verify_student/_modal_editname.html
@@ -8769,7 +8859,7 @@ msgstr "mbylle"
 #: cms/templates/widgets/header.html
 #: lms/templates/wiki/includes/article_menu.html
 msgid "Settings"
-msgstr ""
+msgstr "Konfigurimet"
 
 #: cms/templates/course-create-rerun.html
 #: cms/templates/course-create-rerun.html cms/templates/index.html
@@ -8810,7 +8900,7 @@ msgstr "Numri i kursit:"
 #: lms/templates/sysadmin_dashboard_gitlogs.html
 #: lms/templates/courseware/courses.html
 msgid "Courses"
-msgstr ""
+msgstr "Kurset"
 
 #: cms/templates/login.html cms/templates/register.html
 #: lms/templates/help_modal.html lms/templates/login.html
@@ -8819,7 +8909,7 @@ msgstr ""
 #: lms/templates/register.html lms/templates/signup_modal.html
 #: lms/templates/signup_modal.html
 msgid "E-mail"
-msgstr ""
+msgstr "E-mail"
 
 #. Translators: This is the placeholder text for a field that requests an
 #. email
@@ -8840,20 +8930,20 @@ msgstr "Harruat fjalëkalimin?"
 #: cms/templates/register.html lms/templates/register.html
 #: lms/templates/verify_student/face_upload.html
 msgid "example: Jane Doe"
-msgstr ""
+msgstr "shembull: Jane Doe"
 
 #: cms/templates/register.html lms/templates/register-shib.html
 #: lms/templates/register.html lms/templates/signup_modal.html
 #: lms/templates/signup_modal.html
 msgid "Public Username"
-msgstr ""
+msgstr "Pseudonimi publik"
 
 #. Translators: This is the placeholder text for a field that asks the user to
 #. pick a username
 #: cms/templates/register.html lms/templates/register-shib.html
 #: lms/templates/register.html lms/templates/register.html
 msgid "example: JaneDoe"
-msgstr ""
+msgstr "shembull: JaneDoe"
 
 #: cms/templates/register.html
 #: lms/templates/dashboard/_dashboard_info_language.html
@@ -8867,7 +8957,7 @@ msgstr ""
 
 #: cms/templates/settings.html lms/templates/courseware/course_about.html
 msgid "Requirements"
-msgstr ""
+msgstr "Kërkesat"
 
 #: cms/templates/studio_xblock_wrapper.html lms/templates/help_modal.html
 #: lms/templates/help_modal.html lms/templates/module-error.html
@@ -8878,7 +8968,7 @@ msgstr "Detajet"
 #: cms/templates/studio_xblock_wrapper.html
 #: lms/templates/wiki/includes/article_menu.html
 msgid "View"
-msgstr ""
+msgstr "Shiko"
 
 #: cms/templates/registration/activation_complete.html
 #: lms/templates/registration/activation_complete.html
@@ -8909,7 +8999,7 @@ msgstr "Ndihmë"
 #: cms/templates/widgets/header.html lms/templates/navigation-edx.html
 #: lms/templates/navigation.html
 msgid "Sign Out"
-msgstr ""
+msgstr "Dil"
 
 #: cms/templates/widgets/tabs-aggregator.html
 #: lms/templates/courseware/progress.html
@@ -8955,6 +9045,7 @@ msgstr ""
 #: common/templates/course_modes/choose.html
 msgid "Sorry, there was an error when trying to enroll you"
 msgstr ""
+"Na vjen keq, këtu u paraqit një problem kur provuam të ju regjistrojm juve"
 
 #: common/templates/course_modes/choose.html
 msgid "Pursue Academic Credit with a Verified Certificate"
@@ -9052,7 +9143,7 @@ msgstr "Udhëzimet"
 #: lms/templates/annotatable.html lms/templates/imageannotation.html
 #: lms/templates/textannotation.html lms/templates/videoannotation.html
 msgid "Collapse Instructions"
-msgstr ""
+msgstr "fshehi instruksionet"
 
 #: lms/templates/annotatable.html
 msgid "Guided Discussion"
@@ -9060,7 +9151,7 @@ msgstr ""
 
 #: lms/templates/annotatable.html
 msgid "Hide Annotations"
-msgstr ""
+msgstr "Fshehi Shenimet"
 
 #: lms/templates/course.html
 msgid "LEARN MORE"
@@ -9135,11 +9226,11 @@ msgstr "Ruaj konfigurimet"
 #: lms/templates/dashboard/_dashboard_course_listing.html
 #: lms/templates/instructor/instructor_dashboard_2/membership.html
 msgid "Unenroll"
-msgstr ""
+msgstr "Ç'regjistrohu"
 
 #: lms/templates/edit_unit_link.html
 msgid "View Unit in Studio"
-msgstr ""
+msgstr "Shiko pjesë në Studio"
 
 #: lms/templates/email_change_failed.html lms/templates/email_exists.html
 msgid "E-mail change failed"
@@ -9166,7 +9257,7 @@ msgstr ""
 
 #: lms/templates/email_exists.html
 msgid "An account with the new e-mail address already exists."
-msgstr ""
+msgstr "Një llogari me postën e re elektronike tashmë ekziston."
 
 #: lms/templates/enroll_students.html
 msgid "Student Enrollment Form"
@@ -9182,11 +9273,11 @@ msgstr "Shto student të ri"
 
 #: lms/templates/enroll_students.html
 msgid "Existing students:"
-msgstr ""
+msgstr "Studentët e pranishë:"
 
 #: lms/templates/enroll_students.html
 msgid "New students added: "
-msgstr ""
+msgstr "Studentët e ri që janë shtuar:"
 
 #: lms/templates/enroll_students.html
 msgid "Students rejected: "
@@ -9207,7 +9298,7 @@ msgstr ""
 #: lms/templates/folditbasic.html
 #: lms/templates/instructor/instructor_dashboard_2/certificates.html
 msgid "Status:"
-msgstr ""
+msgstr "Statusi:"
 
 #: lms/templates/folditbasic.html
 msgid "You have successfully gotten to level {goal_level}."
@@ -9228,7 +9319,7 @@ msgstr "Nivel"
 #: lms/templates/folditbasic.html
 #: lms/templates/courseware/legacy_instructor_dashboard.html
 msgid "Submitted"
-msgstr ""
+msgstr "Paraqitur"
 
 #: lms/templates/folditchallenge.html
 msgid "Puzzle Leaderboard"
@@ -9260,6 +9351,8 @@ msgid ""
 "Please enter your e-mail address below, and we will e-mail instructions for "
 "setting a new password."
 msgstr ""
+"Ju lutem shtypni postën tuaj elektronike më poshtë, dhe ne do të ju dërgojm "
+"udhëzimet për të e vendosur fjalëkalimin e ri."
 
 #: lms/templates/forgot_password_modal.html
 msgid "Your E-mail Address"
@@ -9289,6 +9382,9 @@ msgid ""
 "this course</strong>, post in the {link_start}course discussion "
 "forum{link_end}."
 msgstr ""
+"Për <strong>pyetjet për lekturat e kursit, detyrat e shtëpisë, mjetet, ose "
+"materialet për këtë kurs</strong>, postojini në {link_start}forumin e "
+"diskutimeve të kursit{link_end}."
 
 #: lms/templates/help_modal.html
 msgid ""
@@ -9305,7 +9401,7 @@ msgstr ""
 
 #: lms/templates/help_modal.html
 msgid "Report a problem"
-msgstr ""
+msgstr "Raporto një problem"
 
 #: lms/templates/help_modal.html
 msgid "Make a suggestion"
@@ -9328,7 +9424,7 @@ msgstr ""
 
 #: lms/templates/help_modal.html
 msgid "Tell us the details"
-msgstr ""
+msgstr "Na tregoni neve detajet"
 
 #: lms/templates/help_modal.html
 msgid "Include error messages, steps which lead to the issue, etc"
@@ -9381,7 +9477,7 @@ msgstr ""
 
 #: lms/templates/help_modal.html
 msgid "suggestion"
-msgstr ""
+msgstr "sugjerim"
 
 #: lms/templates/help_modal.html
 msgid "Make a Suggestion"
@@ -9397,7 +9493,7 @@ msgstr "pyetje"
 
 #: lms/templates/help_modal.html
 msgid "Ask a Question"
-msgstr ""
+msgstr "Bëj një pyetje"
 
 #: lms/templates/help_modal.html
 msgid "Brief summary of your question"
@@ -9409,7 +9505,7 @@ msgstr ""
 
 #: lms/templates/help_modal.html
 msgid "Please {link_start}send us e-mail{link_end}."
-msgstr ""
+msgstr "Ju lutem {link_start}na dërgoni një mesazh{link_end}."
 
 #: lms/templates/help_modal.html
 msgid "Please try again later."
@@ -9421,7 +9517,7 @@ msgstr ""
 
 #: lms/templates/index.html
 msgid "Free courses from <strong>{university_name}</strong>"
-msgstr ""
+msgstr "Kurse falas nga  <strong>{university_name}</strong>"
 
 #: lms/templates/index.html
 msgid "For anyone, anywhere, anytime"
@@ -9431,7 +9527,7 @@ msgstr "Për secilin,çdo vend, çdo kohë"
 #. http://openedx.org for more information.
 #: lms/templates/index.html
 msgid "Welcome to Open edX!"
-msgstr ""
+msgstr "Mirë se erdhët Open edX!"
 
 #. Translators: 'Open edX' is a brand, please keep this untranslated. See
 #. http://openedx.org for more information.
@@ -9483,21 +9579,23 @@ msgstr[1] ""
 
 #: lms/templates/login-sidebar.html
 msgid "Helpful Information"
-msgstr ""
+msgstr "Informacione të dobishme"
 
 #: lms/templates/login-sidebar.html lms/templates/login-sidebar.html
 msgid "Login via OpenID"
-msgstr ""
+msgstr "Kyçu me OpenID"
 
 #: lms/templates/login-sidebar.html
 msgid ""
 "You can now start learning with {platform_name} by logging in with your <a "
 "rel=\"external\" href=\"http://openid.net/\">OpenID account</a>."
 msgstr ""
+"Ju tani mund të filloni mësimin me {platform_name} duke u kyçur me llogarin "
+"tuaj <a rel=\"external\" href=\"http://openid.net/\">OpenID</a>."
 
 #: lms/templates/login-sidebar.html
 msgid "Not Enrolled?"
-msgstr ""
+msgstr "Nuk jeni i regjistruar?"
 
 #: lms/templates/login-sidebar.html
 msgid "Sign up for {platform_name} today!"
@@ -9513,11 +9611,11 @@ msgstr ""
 
 #: lms/templates/login.html
 msgid "Log into your {platform_name} Account"
-msgstr ""
+msgstr "Kyçu në llogarin të llogarisë tuaj {platform_name}"
 
 #: lms/templates/login.html
 msgid "Log into My {platform_name} Account"
-msgstr ""
+msgstr "Kyçu në llogarinë time {platform_name}"
 
 #: lms/templates/login.html
 msgid "Access My Courses"
@@ -9530,7 +9628,7 @@ msgstr ""
 
 #: lms/templates/login.html
 msgid "Please log in"
-msgstr ""
+msgstr "Ju lutem kyçuni"
 
 #: lms/templates/login.html
 msgid "to access your account and courses"
@@ -9539,10 +9637,11 @@ msgstr ""
 #: lms/templates/login.html
 msgid "We're Sorry, {platform_name} accounts are unavailable currently"
 msgstr ""
+"Na vjen keq, {platform_name} llogaritë nuk janë në dispozicion aktualisht"
 
 #: lms/templates/login.html
 msgid "We couldn't log you in."
-msgstr ""
+msgstr "Ne nuk mund të ju kyqim juve."
 
 #: lms/templates/login.html
 msgid "Your email or password is incorrect"
@@ -9567,7 +9666,7 @@ msgstr "Preferencat e llogarisë"
 #. authentication provider (like Google or LinkedIn).
 #: lms/templates/login.html
 msgid "Sign in with {provider_name}"
-msgstr ""
+msgstr "Kyçu me {provider_name}"
 
 #. Translators:  "External resource" means that this learning module is hosted
 #. on a platform external to the edX LMS
@@ -9579,13 +9678,13 @@ msgstr ""
 #. "total_points" is the maximum number of points achievable.
 #: lms/templates/lti.html
 msgid "{points} / {total_points} points"
-msgstr ""
+msgstr "{points} / {total_points} pikë"
 
 #. Translators: "total_points" is the maximum number of points achievable on
 #. this LTI unit
 #: lms/templates/lti.html
 msgid "{total_points} points possible"
-msgstr ""
+msgstr "{total_points} pikët e mundshme"
 
 #: lms/templates/lti.html
 msgid "View resource in a new window"
@@ -9638,7 +9737,7 @@ msgstr "Ç'aktivizo llogarinë"
 
 #: lms/templates/manage_user_standing.html
 msgid "Reenable Account"
-msgstr ""
+msgstr "Riaktivizo llogarinë"
 
 #: lms/templates/manage_user_standing.html
 msgid "Remove Profile Image"
@@ -9646,11 +9745,11 @@ msgstr ""
 
 #: lms/templates/manage_user_standing.html
 msgid "Students whose accounts have been disabled"
-msgstr ""
+msgstr "St"
 
 #: lms/templates/manage_user_standing.html
 msgid "(reload your page to refresh)"
-msgstr ""
+msgstr "(ringarkoni faqen tuaj duke e rifreskuar)"
 
 #: lms/templates/manage_user_standing.html
 #: lms/templates/manage_user_standing.html
@@ -9668,6 +9767,9 @@ msgid ""
 " fix it as soon as possible. Please email us at {tech_support_email} to "
 "report any problems or downtime."
 msgstr ""
+"Na vjen keq, ky modul përkohësisht është i padisponueshëm. Stafi jonë është "
+"duke punuar të e rregulloj sa më shpejt të jetë e mundur. Ju lutem na "
+"kontaktoni për çdo problem në email adresën {tech_support_email}."
 
 #: lms/templates/module-error.html
 msgid "Raw data:"
@@ -9680,12 +9782,12 @@ msgstr ""
 #: lms/templates/navigation-edx.html lms/templates/navigation-edx.html
 #: lms/templates/navigation.html
 msgid "How it Works"
-msgstr ""
+msgstr "Si punon kjo"
 
 #: lms/templates/navigation-edx.html lms/templates/navigation-edx.html
 #: lms/templates/navigation.html
 msgid "Find Courses"
-msgstr ""
+msgstr "Gjej kurset"
 
 #: lms/templates/navigation-edx.html lms/templates/navigation-edx.html
 msgid "Schools & Partners"
@@ -9716,7 +9818,7 @@ msgstr ""
 #: lms/templates/navigation-edx.html lms/templates/navigation-edx.html
 #: lms/templates/register.html
 msgid "Register"
-msgstr ""
+msgstr "Regjistrohu"
 
 #: lms/templates/navigation-edx.html lms/templates/navigation-edx.html
 #: lms/templates/navigation.html lms/templates/navigation.html
@@ -9728,6 +9830,8 @@ msgid ""
 "<strong>Warning:</strong> Your browser is not fully supported. We strongly "
 "recommend using {chrome_link} or {ff_link}."
 msgstr ""
+"<strong>Rrezik:</strong> Shfletuesi juaj nuk ka mbështetje të plotë. Ne ju "
+"rekumandojm që të e përdorni {chrome_link} ose {ff_link}."
 
 #: lms/templates/navigation.html
 msgid "Global"
@@ -9740,7 +9844,7 @@ msgstr ""
 
 #: lms/templates/navigation.html
 msgid "Schools"
-msgstr ""
+msgstr "Shkollat"
 
 #: lms/templates/navigation.html lms/templates/navigation.html
 msgid "Register Now"
@@ -9796,16 +9900,19 @@ msgstr "Preferencat për {platform_name}"
 
 #: lms/templates/register-shib.html
 msgid "Update my {platform_name} Account"
-msgstr ""
+msgstr "Freskoje {platform_name} llogarin time"
 
 #: lms/templates/register-shib.html
 msgid "Welcome {username}!  Please set your preferences below"
 msgstr ""
+"Mirë se erdhët {username}! Ju lutem zgjidhni preferencat tuaj më poshtë"
 
 #: lms/templates/register-shib.html lms/templates/register.html
 msgid ""
 "We're sorry, {platform_name} enrollment is not available in your region"
 msgstr ""
+"Na vjen keq, {platform_name} regjistrimi nuk është i mundshëm në regjionin "
+"tuaj"
 
 #: lms/templates/register-shib.html lms/templates/register.html
 msgid "The following errors occurred while processing your registration:"
@@ -9817,10 +9924,12 @@ msgid ""
 "Required fields are noted by <strong class=\"indicator\">bold text and an "
 "asterisk (*)</strong>."
 msgstr ""
+"Hapësirat e detyrueshme vërehen sepse janë me <strong "
+"class=\"indicator\">shkronja të trasha dhe me një yll(*)</strong>"
 
 #: lms/templates/register-shib.html lms/templates/signup_modal.html
 msgid "Enter a public username:"
-msgstr ""
+msgstr "Shtypeni emrin publik:"
 
 #: lms/templates/register-shib.html lms/templates/register.html
 #: lms/templates/register.html
@@ -9843,15 +9952,15 @@ msgstr "Unë pajtohem me {link_start}Kodin e Nderit{link_end}"
 
 #: lms/templates/register-shib.html
 msgid "Update My Account"
-msgstr ""
+msgstr "Fresko llogarinë time"
 
 #: lms/templates/register-sidebar.html
 msgid "Registration Help"
-msgstr ""
+msgstr "Ndihm për regjistrim"
 
 #: lms/templates/register-sidebar.html
 msgid "Already registered?"
-msgstr ""
+msgstr "Tashmë je regjistruar?"
 
 #: lms/templates/register-sidebar.html
 msgid "Log in"
@@ -9859,7 +9968,7 @@ msgstr "Kyçu"
 
 #: lms/templates/register-sidebar.html
 msgid "Welcome to {platform_name}"
-msgstr ""
+msgstr "Mirë se erdhët tek {platform_name}"
 
 #: lms/templates/register-sidebar.html
 msgid ""
@@ -9870,7 +9979,7 @@ msgstr ""
 
 #: lms/templates/register-sidebar.html
 msgid "Next Steps"
-msgstr ""
+msgstr "Hapat e tjerë"
 
 #: lms/templates/register-sidebar.html
 msgid ""
@@ -9879,6 +9988,10 @@ msgid ""
 "mark emails from class.stanford.edu as 'not spam', since you'll want to be "
 "able to receive email from your courses."
 msgstr ""
+"Ju do të merrni një mesazh aktivizimi. Ju duhet të klikoni në linkun e "
+"aktivizimit që të e kompletoni procesin. Nuk e shihni mesazhin? Shikone te "
+"dokumenti spam dhe mesazhet nga class.stanford.edu bëni si 'not spam', kur "
+"dëshironi të merrni meazhe nga kursi juaj."
 
 #: lms/templates/register-sidebar.html
 msgid ""
@@ -9890,7 +10003,7 @@ msgstr ""
 
 #: lms/templates/register-sidebar.html
 msgid "Need help in registering with {platform_name}?"
-msgstr ""
+msgstr "Ju nevojitet ndihmë në regjistrim në {platform_name}?"
 
 #: lms/templates/register-sidebar.html
 msgid "View our FAQs for answers to commonly asked questions."
@@ -9904,11 +10017,11 @@ msgstr ""
 
 #: lms/templates/register.html
 msgid "Register for {platform_name}"
-msgstr ""
+msgstr "Regjistrohu për {platform_name}"
 
 #: lms/templates/register.html
 msgid "Create My {platform_name} Account"
-msgstr ""
+msgstr "Krijoje llogarinë time {platform_name}"
 
 #: lms/templates/register.html
 msgid "Welcome!"
@@ -9916,13 +10029,13 @@ msgstr "Mirë se erdhët!"
 
 #: lms/templates/register.html
 msgid "Register below to create your {platform_name} account"
-msgstr ""
+msgstr "Regjistrohu më poshtë që të e krijosh llogarinë tuaj {platform_name}"
 
 #. Translators: provider_name is the name of an external, third-party user
 #. authentication service (like Google or LinkedIn).
 #: lms/templates/register.html
 msgid "Sign up with {provider_name}"
-msgstr ""
+msgstr "Regjistrohu me {provider_name}"
 
 #: lms/templates/register.html
 msgid "Create your own {platform_name} account below"
@@ -9943,6 +10056,7 @@ msgstr ""
 #: lms/templates/register.html
 msgid "Please complete the following fields to register for an account. "
 msgstr ""
+"Ju lutem kompletoni hapësirat e tjera të regjistrimit, për një llogari."
 
 #: lms/templates/register.html lms/templates/register.html
 msgid "cannot be changed later"
@@ -9950,11 +10064,11 @@ msgstr ""
 
 #: lms/templates/register.html
 msgid "Welcome {username}"
-msgstr ""
+msgstr "Mirë se erdhët {username}"
 
 #: lms/templates/register.html
 msgid "Enter a Public Display Name:"
-msgstr ""
+msgstr "Shtypni ermrin publik:"
 
 #: lms/templates/register.html
 msgid "Public Display Name"
@@ -9970,7 +10084,7 @@ msgstr "shembull: New York"
 
 #: lms/templates/register.html
 msgid "Highest Level of Education Completed"
-msgstr ""
+msgstr "Niveli më i lartë e edukimit që e keni përfunduar"
 
 #: lms/templates/register.html
 msgid "Please share with us your reasons for registering with {platform_name}"
@@ -9978,7 +10092,7 @@ msgstr ""
 
 #: lms/templates/register.html lms/templates/signup_modal.html
 msgid "Create My Account"
-msgstr ""
+msgstr "Krijo llogarin time"
 
 #: lms/templates/resubscribe.html
 msgid "Re-subscribe Successful!"
@@ -10068,7 +10182,7 @@ msgstr ""
 
 #: lms/templates/staff_problem_info.html
 msgid "Comment"
-msgstr ""
+msgstr "Koment"
 
 #: lms/templates/staff_problem_info.html
 msgid "comment"
@@ -10076,7 +10190,7 @@ msgstr "koment"
 
 #: lms/templates/staff_problem_info.html
 msgid "Tag"
-msgstr ""
+msgstr "Etiketo"
 
 #: lms/templates/staff_problem_info.html
 msgid "Optional tag (eg \"done\" or \"broken\"):"
@@ -10088,7 +10202,7 @@ msgstr "etiketo"
 
 #: lms/templates/staff_problem_info.html
 msgid "Add comment"
-msgstr ""
+msgstr "Shto koment"
 
 #: lms/templates/staff_problem_info.html
 msgid "Staff Debug"
@@ -10131,7 +10245,7 @@ msgstr ""
 
 #: lms/templates/staff_problem_info.html
 msgid "View History"
-msgstr ""
+msgstr "Shiko historinë"
 
 #: lms/templates/static_htmlbook.html lms/templates/static_pdfbook.html
 #: lms/templates/staticbook.html
@@ -10149,11 +10263,11 @@ msgstr ""
 
 #: lms/templates/staticbook.html
 msgid "Previous page"
-msgstr ""
+msgstr "Faqja paraprake"
 
 #: lms/templates/staticbook.html
 msgid "Next page"
-msgstr ""
+msgstr "Faqja tjetër"
 
 #: lms/templates/sysadmin_dashboard.html
 #: lms/templates/sysadmin_dashboard_gitlogs.html
@@ -10183,15 +10297,15 @@ msgstr ""
 
 #: lms/templates/sysadmin_dashboard.html
 msgid "Email or username"
-msgstr ""
+msgstr "Posta elektronike ose emri i përdorimit"
 
 #: lms/templates/sysadmin_dashboard.html
 msgid "Delete user"
-msgstr ""
+msgstr "Fshije përdoruesin"
 
 #: lms/templates/sysadmin_dashboard.html
 msgid "Create user"
-msgstr ""
+msgstr "Krijo përdorues"
 
 #: lms/templates/sysadmin_dashboard.html
 msgid "Download list of all users (csv file)"
@@ -10217,7 +10331,7 @@ msgstr "Shkarko listën e stafit dhe të instruktorëve(dokument csv)"
 
 #: lms/templates/sysadmin_dashboard.html
 msgid "Administer Courses"
-msgstr ""
+msgstr "Menaxho Kurset"
 
 #. Translators: Repo is short for git repository or source of
 #. courseware; see http://git-scm.com/about
@@ -10235,21 +10349,21 @@ msgstr ""
 #. Translators: Github is a popular website for hosting code
 #: lms/templates/sysadmin_dashboard.html
 msgid "Load new course from github"
-msgstr ""
+msgstr "Ngarko kurs të ri nga github"
 
 #. Translators: 'dir' is short for 'directory'
 #: lms/templates/sysadmin_dashboard.html
 msgid "Course ID or dir"
-msgstr ""
+msgstr "ID e kursit ose dir"
 
 #: lms/templates/sysadmin_dashboard.html
 msgid "Delete course from site"
-msgstr ""
+msgstr "Fshije kursin nga sajti"
 
 #. Translators: A version number appears after this string
 #: lms/templates/sysadmin_dashboard.html
 msgid "Platform Version"
-msgstr ""
+msgstr "Verzioni i Platformës"
 
 #: lms/templates/sysadmin_dashboard_gitlogs.html
 msgid "previous"
@@ -10294,7 +10408,7 @@ msgstr ""
 
 #: lms/templates/textannotation.html
 msgid "Source:"
-msgstr ""
+msgstr "Burimi:"
 
 #: lms/templates/tracking_log.html
 msgid "Tracking Log"
@@ -10306,11 +10420,11 @@ msgstr ""
 
 #: lms/templates/tracking_log.html
 msgid "ipaddr"
-msgstr ""
+msgstr "ipaddr"
 
 #: lms/templates/tracking_log.html
 msgid "source"
-msgstr ""
+msgstr "burimi"
 
 #: lms/templates/tracking_log.html
 msgid "type"
@@ -10351,6 +10465,10 @@ msgid ""
 "them up or down. Under Google Chrome, this is done by pressing ctrl-plus, or"
 " ctrl-minus at the same time."
 msgstr ""
+"Nëse juve ju nevojiten shkronja më të mëdha ose më të vogla, përdorni "
+"konfigurimet e shfletuesit tuaj që të i zmadhoni ose zvogëloni ato. Në "
+"Google Chrome, kjo bëhet duke shtypur Ctrl-plus, ose Ctrl-minus në të "
+"njëjtën kohë."
 
 #: lms/templates/video.html
 msgid "Skip to a navigable version of this video's transcript."
@@ -10370,11 +10488,11 @@ msgstr ""
 
 #: lms/templates/video.html
 msgid "Skip to end of transcript."
-msgstr ""
+msgstr "Kalo tek në fund të transkriptës."
 
 #: lms/templates/video.html
 msgid "Go back to start of transcript."
-msgstr ""
+msgstr "Kthehu prapa në fillim të transkriptës."
 
 #: lms/templates/video.html
 msgid "Download video"
@@ -10382,7 +10500,7 @@ msgstr "Shkarko videon"
 
 #: lms/templates/video.html lms/templates/video.html
 msgid "Download transcript"
-msgstr ""
+msgstr "Shkarko transkript"
 
 #: lms/templates/video.html
 msgid "Download Handout"
@@ -10394,7 +10512,7 @@ msgstr ""
 
 #: lms/templates/word_cloud.html
 msgid "Total number of words:"
-msgstr ""
+msgstr "Numri total i fjalëve:"
 
 #: lms/templates/calculator/toggle_calculator.html
 #: lms/templates/calculator/toggle_calculator.html
@@ -10460,7 +10578,7 @@ msgstr ""
 
 #: lms/templates/calculator/toggle_calculator.html
 msgid "Type"
-msgstr ""
+msgstr "Tipi"
 
 #: lms/templates/calculator/toggle_calculator.html
 msgid "Examples"
@@ -10480,7 +10598,7 @@ msgstr ""
 
 #: lms/templates/calculator/toggle_calculator.html
 msgid "Decimals"
-msgstr ""
+msgstr "Decimal"
 
 #: lms/templates/calculator/toggle_calculator.html
 msgid "Operators"
@@ -10552,7 +10670,7 @@ msgstr ""
 
 #: lms/templates/calculator/toggle_calculator.html
 msgid "Calculate"
-msgstr ""
+msgstr "Kalkulo"
 
 #: lms/templates/calculator/toggle_calculator.html
 msgid "Calculator Output"
@@ -10597,7 +10715,7 @@ msgstr ""
 #: lms/templates/ccx/coach_dashboard.html
 #: lms/templates/courseware/legacy_instructor_dashboard.html
 msgid "Enrollment"
-msgstr ""
+msgstr "Regjistrimi"
 
 #: lms/templates/ccx/coach_dashboard.html
 msgid "Schedule"
@@ -10631,7 +10749,7 @@ msgstr ""
 #: lms/templates/instructor/instructor_dashboard_2/membership.html
 #: lms/templates/instructor/instructor_dashboard_2/membership.html
 msgid "Email Addresses/Usernames"
-msgstr ""
+msgstr "Posta elektronike/Pseudonimi"
 
 #: lms/templates/ccx/enrollment.html
 #: lms/templates/instructor/instructor_dashboard_2/membership.html
@@ -10663,7 +10781,7 @@ msgstr ""
 #: lms/templates/instructor/instructor_dashboard_2/membership.html
 #: lms/templates/instructor/instructor_dashboard_2/membership.html
 msgid "Notify users by email"
-msgstr ""
+msgstr "Njofto përdoruesit përmes postës elektronike"
 
 #: lms/templates/ccx/enrollment.html
 #: lms/templates/instructor/instructor_dashboard_2/membership.html
@@ -10678,7 +10796,7 @@ msgstr ""
 #: lms/templates/courseware/mktg_course_about.html
 #: lms/templates/instructor/instructor_dashboard_2/membership.html
 msgid "Enroll"
-msgstr ""
+msgstr "Regjistrohu"
 
 #: lms/templates/ccx/enrollment.html
 msgid "Student List Management"
@@ -10721,7 +10839,7 @@ msgstr ""
 
 #: lms/templates/ccx/schedule.html
 msgid "Start Date"
-msgstr ""
+msgstr "Data e fillimit"
 
 #: lms/templates/ccx/schedule.html
 msgid "(Optional)"
@@ -10836,7 +10954,7 @@ msgstr ""
 
 #: lms/templates/combinedopenended/combined_open_ended.html
 msgid "Next Step"
-msgstr ""
+msgstr "Hapi tjetër"
 
 #: lms/templates/combinedopenended/combined_open_ended.html
 msgid ""
@@ -10898,7 +11016,7 @@ msgstr ""
 #: lms/templates/combinedopenended/open_ended_result_table.html
 #: lms/templates/combinedopenended/openended/open_ended_evaluation.html
 msgid "Partially Correct"
-msgstr ""
+msgstr "Pjesërisht e saktë"
 
 #: lms/templates/combinedopenended/open_ended_result_table.html
 #: lms/templates/combinedopenended/openended/open_ended_evaluation.html
@@ -10908,7 +11026,7 @@ msgstr ""
 #: lms/templates/combinedopenended/open_ended_result_table.html
 #: lms/templates/combinedopenended/openended/open_ended_evaluation.html
 msgid "Partially Incorrect"
-msgstr ""
+msgstr "Pjesërisht e pasaktë"
 
 #: lms/templates/combinedopenended/open_ended_result_table.html
 #: lms/templates/combinedopenended/openended/open_ended_evaluation.html
@@ -10953,7 +11071,7 @@ msgstr ""
 
 #: lms/templates/combinedopenended/openended/open_ended_rubric.html
 msgid "Rubric"
-msgstr ""
+msgstr "Rubrikë"
 
 #: lms/templates/combinedopenended/openended/open_ended_rubric.html
 msgid ""
@@ -11004,7 +11122,7 @@ msgstr ""
 #: lms/templates/courseware/course_about.html
 #: lms/templates/courseware/mktg_course_about.html
 msgid "An error occurred. Please try again later."
-msgstr ""
+msgstr "Një problem është paraqitur. Ju lutem provojeni përsëri më vonë."
 
 #: lms/templates/courseware/course_about.html
 msgid ""
@@ -11020,23 +11138,23 @@ msgstr "Ju jeni i regjistruar për këtë kurs"
 
 #: lms/templates/courseware/course_about.html
 msgid "View Courseware"
-msgstr ""
+msgstr "Shiko përmbajtjen e kursit"
 
 #: lms/templates/courseware/course_about.html
 msgid "This course is in your <a href=\"{cart_link}\">cart</a>."
-msgstr ""
+msgstr "Ky kurs është në <a href=\"{cart_link}\">kartën</a> tuaj."
 
 #: lms/templates/courseware/course_about.html
 msgid "Course is full"
-msgstr ""
+msgstr "Kursi është plotë"
 
 #: lms/templates/courseware/course_about.html
 msgid "Enrollment in this course is by invitation only"
-msgstr ""
+msgstr "Regjistrimi në këtë kurs është vetëm përmes ftesës"
 
 #: lms/templates/courseware/course_about.html
 msgid "Enrollment is Closed"
-msgstr ""
+msgstr "Regjistrimi është mbyllur"
 
 #: lms/templates/courseware/course_about.html
 msgid "Add {course_name} to Cart ({price})"
@@ -11056,7 +11174,7 @@ msgstr ""
 
 #: lms/templates/courseware/course_about.html
 msgid "Overview"
-msgstr ""
+msgstr "Pamje e përgjithshme"
 
 #: lms/templates/courseware/course_about.html
 msgid "Share with friends and family!"
@@ -11104,7 +11222,7 @@ msgstr ""
 
 #: lms/templates/courseware/course_about.html
 msgid "Price"
-msgstr ""
+msgstr "Çmimi"
 
 #: lms/templates/courseware/course_about.html
 msgid "Prerequisites"
@@ -11164,7 +11282,7 @@ msgstr ""
 
 #: lms/templates/courseware/courses.html
 msgid "Explore free courses from {university_name}."
-msgstr ""
+msgstr "Eksploro kurse falas nga {university_name}."
 
 #: lms/templates/courseware/courses.html
 msgid "Explore courses from {platform_name}."
@@ -11230,7 +11348,7 @@ msgstr ""
 
 #: lms/templates/courseware/gradebook.html
 msgid "Search students"
-msgstr ""
+msgstr "Kërko studentët"
 
 #: lms/templates/courseware/info.html
 msgid "{course_number} Course Info"
@@ -11238,7 +11356,7 @@ msgstr "{course_number} Informacionet e kursit"
 
 #: lms/templates/courseware/info.html
 msgid "You are not enrolled yet"
-msgstr ""
+msgstr "Ju nuk jeni i regjistruar ende"
 
 #: lms/templates/courseware/info.html
 msgid ""
@@ -11248,7 +11366,7 @@ msgstr ""
 
 #: lms/templates/courseware/info.html
 msgid "View Updates in Studio"
-msgstr ""
+msgstr "Shiko freskimet në Studio"
 
 #: lms/templates/courseware/info.html lms/templates/courseware/info.html
 msgid "Course Updates &amp; News"
@@ -11270,7 +11388,7 @@ msgstr ""
 #: lms/templates/courseware/legacy_instructor_dashboard.html
 #: lms/templates/instructor/instructor_dashboard_2/instructor_dashboard_2.html
 msgid "View Course in Studio"
-msgstr ""
+msgstr "Shiko kursin në Studio"
 
 #: lms/templates/courseware/legacy_instructor_dashboard.html
 msgid "Back To Instructor Dashboard"
@@ -11374,7 +11492,7 @@ msgstr ""
 
 #: lms/templates/courseware/legacy_instructor_dashboard.html
 msgid "Select a problem and an action:"
-msgstr ""
+msgstr "Zgjedh një problem dhe një veprim:"
 
 #: lms/templates/courseware/legacy_instructor_dashboard.html
 msgid ""
@@ -11447,17 +11565,17 @@ msgstr ""
 
 #: lms/templates/courseware/legacy_instructor_dashboard.html
 msgid "Student activity day by day"
-msgstr ""
+msgstr "Aktiviteti i studentëve ditë pas dite"
 
 #: lms/templates/courseware/legacy_instructor_dashboard.html
 msgid "Day"
-msgstr ""
+msgstr "Ditë"
 
 #: lms/templates/courseware/legacy_instructor_dashboard.html
 #: lms/templates/shoppingcart/receipt.html
 #: lms/templates/shoppingcart/receipt.html
 msgid "Students"
-msgstr ""
+msgstr "Studentët"
 
 #: lms/templates/courseware/legacy_instructor_dashboard.html
 msgid "Score distribution for problems"
@@ -11465,7 +11583,7 @@ msgstr ""
 
 #: lms/templates/courseware/legacy_instructor_dashboard.html
 msgid "Max"
-msgstr ""
+msgstr "Max"
 
 #: lms/templates/courseware/legacy_instructor_dashboard.html
 msgid "Points Earned (Num Students)"
@@ -11502,7 +11620,7 @@ msgstr ""
 
 #: lms/templates/courseware/legacy_instructor_dashboard.html
 msgid "Number of students"
-msgstr ""
+msgstr "Numri i studentëve"
 
 #: lms/templates/courseware/legacy_instructor_dashboard.html
 msgid ""
@@ -11564,7 +11682,7 @@ msgstr ""
 
 #: lms/templates/courseware/mktg_coming_soon.html
 msgid "About {course_id}"
-msgstr ""
+msgstr "Rreth {course_id}"
 
 #: lms/templates/courseware/mktg_coming_soon.html
 #: lms/templates/dashboard/_dashboard_course_listing.html
@@ -11573,7 +11691,7 @@ msgstr ""
 
 #: lms/templates/courseware/mktg_course_about.html
 msgid "About {course_number}"
-msgstr ""
+msgstr "Rreth {course_number}"
 
 #: lms/templates/courseware/mktg_course_about.html
 msgid "Access Courseware"
@@ -11581,7 +11699,7 @@ msgstr ""
 
 #: lms/templates/courseware/mktg_course_about.html
 msgid "You Are Enrolled"
-msgstr ""
+msgstr "Ju jeni regjistruar"
 
 #: lms/templates/courseware/mktg_course_about.html
 msgid "Enroll in"
@@ -11604,15 +11722,15 @@ msgstr ""
 #. verified certificate.
 #: lms/templates/courseware/mktg_course_about.html
 msgid "and proceed to verification"
-msgstr ""
+msgstr "dhe vazhdo me verifikim"
 
 #: lms/templates/courseware/mktg_course_about.html
 msgid "Enrollment Is Closed"
-msgstr ""
+msgstr "Regjistrimi është mbyllur"
 
 #: lms/templates/courseware/news.html
 msgid "News - MITx 6.002x"
-msgstr ""
+msgstr "Lajmet - MITx 6.002x"
 
 #: lms/templates/courseware/news.html
 msgid "Updates to Discussion Posts You Follow"
@@ -11726,11 +11844,11 @@ msgstr ""
 #: lms/templates/courseware/progress.html
 #: lms/templates/discussion/_underscore_templates.html
 msgid "More"
-msgstr ""
+msgstr "Më shumë"
 
 #: lms/templates/courseware/progress.html
 msgid "{earned:.3n} of {total:.3n} possible points"
-msgstr ""
+msgstr "{earned:.3n} nga {total:.3n} pikët e mundshme"
 
 #: lms/templates/courseware/progress.html
 msgid "Problem Scores: "
@@ -11802,7 +11920,7 @@ msgstr ""
 #: lms/templates/dashboard/_dashboard_certificate_information.html
 #: lms/templates/dashboard/_dashboard_certificate_information.html
 msgid "This link will open/download a PDF document"
-msgstr ""
+msgstr "Ky link do të hapet/shkarkohet si PDF dokument"
 
 #: lms/templates/dashboard/_dashboard_certificate_information.html
 msgid "Download {cert_name_short} (PDF)"
@@ -11810,17 +11928,18 @@ msgstr ""
 
 #: lms/templates/dashboard/_dashboard_certificate_information.html
 msgid "Download Your {cert_name_short} (PDF)"
-msgstr ""
+msgstr "Shkarkojeni {cert_name_short} tuaj (PDF)"
 
 #: lms/templates/dashboard/_dashboard_certificate_information.html
 msgid ""
 "This link will open/download a PDF document of your verified "
 "{cert_name_long}."
 msgstr ""
+"Ky link do të hap/shkarkon një dokument PDF të verifikimit {cert_name_long}."
 
 #: lms/templates/dashboard/_dashboard_certificate_information.html
 msgid "Download Your ID Verified {cert_name_short} (PDF)"
-msgstr ""
+msgstr "Shkarko ID tuaj të verifikuar {cert_name_short} (PDF)"
 
 #: lms/templates/dashboard/_dashboard_certificate_information.html
 msgid "Complete our course feedback survey"
@@ -11936,7 +12055,7 @@ msgstr ""
 #: lms/templates/dashboard/_dashboard_course_listing.html
 #: lms/templates/dashboard/_dashboard_course_listing.html
 msgid "Email Settings"
-msgstr ""
+msgstr "Konfigurimet e postës elektronike"
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
 msgid "Verification not yet complete."
@@ -11958,7 +12077,7 @@ msgstr ""
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
 msgid "Verify Now"
-msgstr ""
+msgstr "Verifikojeni tani"
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
 #: lms/templates/dashboard/_dashboard_course_listing.html
@@ -12069,17 +12188,19 @@ msgstr ""
 
 #: lms/templates/debug/run_python_form.html
 msgid "Results:"
-msgstr ""
+msgstr "Rezulatet:"
 
 #: lms/templates/discussion/_blank_slate.html
 msgid ""
 "Sorry! We can't find anything matching your search. Please try another "
 "search."
 msgstr ""
+"Na vjen keq! Ne nuk mund të gjenim asgjë që përputhet me kërkimin tuaj. Ju "
+"lutem provojeni të bëni kërkim të ri."
 
 #: lms/templates/discussion/_blank_slate.html
 msgid "There are no posts here yet. Be the first one to post!"
-msgstr ""
+msgstr "Këtu nuk është asnjë postim ende. Bëhu i pari që poston!"
 
 #: lms/templates/discussion/_discussion_course_navigation.html
 #: lms/templates/discussion/_discussion_module.html
@@ -12122,7 +12243,7 @@ msgstr ""
 
 #: lms/templates/discussion/_search_bar.html
 msgid "Search posts"
-msgstr ""
+msgstr "Kërko postime"
 
 #: lms/templates/discussion/_similar_posts.html
 msgid "Hide"
@@ -12135,7 +12256,7 @@ msgstr ""
 
 #: lms/templates/discussion/_thread_list_template.html
 msgid "Search all posts"
-msgstr ""
+msgstr "Kërko gjitha postimet"
 
 #. Translators: This labels a filter menu in forum navigation
 #: lms/templates/discussion/_thread_list_template.html
@@ -12185,7 +12306,7 @@ msgstr ""
 #. Translators: This is a menu option for sorting forum threads
 #: lms/templates/discussion/_thread_list_template.html
 msgid "by most votes"
-msgstr ""
+msgstr "sipas votave"
 
 #: lms/templates/discussion/_underscore_templates.html
 msgid "Add A Response"
@@ -12214,20 +12335,20 @@ msgstr ""
 
 #: lms/templates/discussion/_underscore_templates.html
 msgid "Edit post title"
-msgstr ""
+msgstr "Rregullo titullin e postimit"
 
 #: lms/templates/discussion/_underscore_templates.html
 msgid "Update post"
-msgstr ""
+msgstr "Fresko postimin"
 
 #: lms/templates/discussion/_underscore_templates.html
 msgid "Show Comments (%(num_comments)s)"
-msgstr ""
+msgstr "Shfaq komentet (%(num_comments)s)"
 
 #: lms/templates/discussion/_underscore_templates.html
 #: lms/templates/discussion/_underscore_templates.html
 msgid "Add a comment"
-msgstr ""
+msgstr "Shto një koment"
 
 #: lms/templates/discussion/_underscore_templates.html
 msgid "marked as answer %(time_ago)s by %(user)s"
@@ -12248,7 +12369,7 @@ msgstr ""
 #: lms/templates/discussion/_underscore_templates.html
 #: lms/templates/discussion/_underscore_templates.html
 msgid "Reported"
-msgstr ""
+msgstr "Raportuar"
 
 #: lms/templates/discussion/_underscore_templates.html
 msgid "Editing response"
@@ -12260,7 +12381,7 @@ msgstr ""
 
 #: lms/templates/discussion/_underscore_templates.html
 msgid "posted %(time_ago)s by %(author)s"
-msgstr ""
+msgstr "postuar %(time_ago)s nga %(author)s"
 
 #: lms/templates/discussion/_underscore_templates.html
 msgid "Editing comment"
@@ -12268,11 +12389,11 @@ msgstr ""
 
 #: lms/templates/discussion/_underscore_templates.html
 msgid "Update comment"
-msgstr ""
+msgstr "Fresko komentin"
 
 #: lms/templates/discussion/_underscore_templates.html
 msgid "discussion"
-msgstr ""
+msgstr "diskutim"
 
 #: lms/templates/discussion/_underscore_templates.html
 msgid "answered question"
@@ -12288,7 +12409,7 @@ msgstr ""
 
 #: lms/templates/discussion/_underscore_templates.html
 msgid "By: Staff"
-msgstr ""
+msgstr "Nga: Stafi"
 
 #: lms/templates/discussion/_underscore_templates.html
 msgid "By: Community TA"
@@ -12318,15 +12439,15 @@ msgstr ""
 
 #: lms/templates/discussion/_underscore_templates.html
 msgid "Find discussions"
-msgstr ""
+msgstr "Gjej diskutimet"
 
 #: lms/templates/discussion/_underscore_templates.html
 msgid "Focus in on specific topics"
-msgstr ""
+msgstr "Përqendrohu në tema specifike"
 
 #: lms/templates/discussion/_underscore_templates.html
 msgid "Search for specific posts "
-msgstr ""
+msgstr "Kërko për postime specifike"
 
 #: lms/templates/discussion/_underscore_templates.html
 msgid "Sort by date, vote, or comments"
@@ -12381,7 +12502,7 @@ msgstr ""
 
 #: lms/templates/discussion/_underscore_templates.html
 msgid "Title:"
-msgstr ""
+msgstr "Titulli:"
 
 #: lms/templates/discussion/_underscore_templates.html
 msgid "Add a clear and descriptive title to encourage participation."
@@ -12417,7 +12538,7 @@ msgstr ""
 #. Translators: This is a forum post type
 #: lms/templates/discussion/_underscore_templates.html
 msgid "Question"
-msgstr ""
+msgstr "Pyetje"
 
 #: lms/templates/discussion/_underscore_templates.html
 msgid ""
@@ -12472,7 +12593,7 @@ msgstr ""
 
 #: lms/templates/discussion/_underscore_templates.html
 msgid "Report"
-msgstr ""
+msgstr "Raporto"
 
 #: lms/templates/discussion/_underscore_templates.html
 msgid "Unreport"
@@ -12488,12 +12609,12 @@ msgstr ""
 
 #: lms/templates/discussion/_underscore_templates.html
 msgid "Open"
-msgstr ""
+msgstr "Hape"
 
 #: lms/templates/discussion/_underscore_templates.html
 #: lms/templates/discussion/mustache/_profile_thread.mustache
 msgid "anonymous"
-msgstr ""
+msgstr "anonim"
 
 #: lms/templates/discussion/_user_profile.html
 msgid ", "
@@ -12508,13 +12629,13 @@ msgstr[1] ""
 #: lms/templates/discussion/_user_profile.html
 msgid "%s comment"
 msgid_plural "%s comments"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%s komente"
+msgstr[1] "%s komente"
 
 #: lms/templates/discussion/index.html
 #: lms/templates/discussion/user_profile.html
 msgid "Discussion - {course_number}"
-msgstr ""
+msgstr "Diskutimet -{course_number}"
 
 #: lms/templates/discussion/index.html
 msgid "Discussion thread list"
@@ -12526,7 +12647,7 @@ msgstr ""
 
 #: lms/templates/discussion/maintenance.html
 msgid "We're sorry"
-msgstr ""
+msgstr "Na vjen keq"
 
 #: lms/templates/discussion/maintenance.html
 msgid ""
@@ -12536,7 +12657,7 @@ msgstr ""
 
 #: lms/templates/discussion/user_profile.html
 msgid "User Profile"
-msgstr ""
+msgstr "Profili i përdoruesit"
 
 #: lms/templates/discussion/mustache/_pagination.mustache
 #: lms/templates/discussion/mustache/_pagination.mustache
@@ -12545,7 +12666,7 @@ msgstr "..."
 
 #: lms/templates/discussion/mustache/_profile_thread.mustache
 msgid "View discussion"
-msgstr ""
+msgstr "Shiko disutimet"
 
 #: lms/templates/discussion/mustache/_user_profile.mustache
 msgid "Active Threads"
@@ -12607,13 +12728,15 @@ msgstr ""
 
 #: lms/templates/emails/account_creation_and_enroll_emailMessage.txt
 msgid "Welcome to {course_name}"
-msgstr ""
+msgstr "Mirë se erdhët te {course_name}"
 
 #: lms/templates/emails/account_creation_and_enroll_emailMessage.txt
 msgid ""
 "To get started, please visit https://{site_name}. The login information for "
 "your account follows."
 msgstr ""
+"Që të filloni, ju lutem vizitojeni https://{site_name}. Informacionet e "
+"kyçjes për llogarin tuaj."
 
 #: lms/templates/emails/account_creation_and_enroll_emailMessage.txt
 msgid "email: {email}"
@@ -12621,7 +12744,7 @@ msgstr "posta elektronike: {email}"
 
 #: lms/templates/emails/account_creation_and_enroll_emailMessage.txt
 msgid "password: {password}"
-msgstr ""
+msgstr "fjalëkalimi: {password}"
 
 #: lms/templates/emails/account_creation_and_enroll_emailMessage.txt
 msgid "It is recommended that you change your password."
@@ -12633,7 +12756,7 @@ msgstr ""
 
 #: lms/templates/emails/activation_email.txt
 msgid "Thank you for signing up for {platform_name}."
-msgstr ""
+msgstr "Ju faleminderit që u regjistruat për {platform_name}."
 
 #: lms/templates/emails/activation_email.txt
 msgid ""
@@ -12686,7 +12809,7 @@ msgstr ""
 
 #: lms/templates/emails/activation_email_subject.txt
 msgid "Activate Your {platform_name} Account"
-msgstr ""
+msgstr "Aktivizion llogarinë tuaj {platform_name}"
 
 #: lms/templates/emails/add_beta_tester_email_message.txt
 #: lms/templates/emails/enroll_email_enrolledmessage.txt
@@ -12707,14 +12830,19 @@ msgstr ""
 #: lms/templates/emails/enroll_email_enrolledmessage.txt
 msgid "To start accessing course materials, please visit {course_url}"
 msgstr ""
+"Të filloni akcesin në materialet e kursit, ju lutem vizitojeni {course_url}"
 
 #: lms/templates/emails/add_beta_tester_email_message.txt
 msgid "Visit {course_about_url} to join the course and begin the beta test."
 msgstr ""
+"Vizitoje {course_about_url} që të i bashkoheni kursit dhe të filloni beta "
+"testet."
 
 #: lms/templates/emails/add_beta_tester_email_message.txt
 msgid "Visit {site_name} to enroll in the course and begin the beta test."
 msgstr ""
+"Vizitoje {site_name} që të regjistroheni tek kursi dhe të filloni beta "
+"testet."
 
 #: lms/templates/emails/add_beta_tester_email_message.txt
 #: lms/templates/emails/enroll_email_allowedmessage.txt
@@ -12725,12 +12853,12 @@ msgstr ""
 
 #: lms/templates/emails/add_beta_tester_email_subject.txt
 msgid "You have been invited to a beta test for {course_name}"
-msgstr ""
+msgstr "Ju jeni ftuar tek një test beta tek {course_name}"
 
 #: lms/templates/emails/business_order_confirmation_email.txt
 #: lms/templates/emails/order_confirmation_email.txt
 msgid "Hi {name},"
-msgstr ""
+msgstr "Përshëndetje {name},"
 
 #: lms/templates/emails/business_order_confirmation_email.txt
 msgid "Thank you for your purchase of "
@@ -12772,7 +12900,7 @@ msgstr ""
 #: lms/templates/emails/business_order_confirmation_email.txt
 #: lms/templates/emails/order_confirmation_email.txt
 msgid "Quantity - Description - Price"
-msgstr ""
+msgstr "Sasia - Përshkrimi - Çmimi"
 
 #: lms/templates/emails/business_order_confirmation_email.txt
 #: lms/templates/emails/order_confirmation_email.txt
@@ -12781,7 +12909,7 @@ msgstr ""
 
 #: lms/templates/emails/business_order_confirmation_email.txt
 msgid "Company Name:"
-msgstr ""
+msgstr "Emri i kompanisë:"
 
 #: lms/templates/emails/business_order_confirmation_email.txt
 msgid "Purchase Order Number:"
@@ -12898,6 +13026,8 @@ msgid ""
 "{platform_name} from {old_email} to {new_email}. If you did not make this "
 "request, please contact us immediately. Contact information is listed at:"
 msgstr ""
+"Ky është konfirmim që ju e keni ndryshuar postën elektronike e lidhur me {platform_name} nga {old_email} në {new_email}. Nëse ju nuk e keni bërë këtë kërkes, ju lutem na kontaktoni neve urgjentisht.\n"
+"Informacionet e kontaktit janë të listuara në:"
 
 #: lms/templates/emails/confirm_email_change.txt
 msgid ""
@@ -12941,6 +13071,7 @@ msgstr "Që të mund të hysh në këtë kurs vizitoje {course_url} dhe kyçu."
 msgid ""
 "To access the course visit {course_about_url} and register for the course."
 msgstr ""
+"Që të futesh në kurs vizitoje {course_about_url} dhe regjistrohu për kurs."
 
 #: lms/templates/emails/enroll_email_allowedmessage.txt
 msgid ""
@@ -12967,7 +13098,7 @@ msgstr ""
 
 #: lms/templates/emails/enroll_email_allowedsubject.txt
 msgid "You have been invited to register for {course_name}"
-msgstr ""
+msgstr "Ju jeni ftuar të regjistroheni te {course_name}"
 
 #: lms/templates/emails/enroll_email_enrolledmessage.txt
 msgid ""
@@ -12982,7 +13113,7 @@ msgstr "Ky mesazh dërgohet automatikisht nga {site_name} tek {full_name}"
 
 #: lms/templates/emails/enroll_email_enrolledsubject.txt
 msgid "You have been enrolled in {course_name}"
-msgstr ""
+msgstr "Ju jeni regjistrua në {course_name}"
 
 #: lms/templates/emails/order_confirmation_email.txt
 msgid ""
@@ -13048,7 +13179,7 @@ msgstr ""
 #. template for course teams to use.
 #: lms/templates/emails/registration_codes_sale_email.txt
 msgid "Dear [[Name]]:"
-msgstr ""
+msgstr "I dashur [[Name]]:"
 
 #. Translators: please translate the text inside [[ ]]. This is meant as a
 #. template for course teams to use.
@@ -13165,7 +13296,7 @@ msgstr ""
 
 #: lms/templates/emails/remove_beta_tester_email_subject.txt
 msgid "You have been removed from a beta test for {course_name}"
-msgstr ""
+msgstr "Ju jeni fshirë nga testuesit beta për {course_name}"
 
 #: lms/templates/emails/reverification_processed.txt
 msgid ""
@@ -13213,7 +13344,7 @@ msgstr ""
 
 #: lms/templates/emails/unenroll_email_allowedmessage.txt
 msgid "Dear Student,"
-msgstr ""
+msgstr "I dashur student,"
 
 #: lms/templates/emails/unenroll_email_allowedmessage.txt
 msgid ""
@@ -13230,13 +13361,13 @@ msgstr ""
 
 #: lms/templates/emails/unenroll_email_subject.txt
 msgid "You have been un-enrolled from {course_name}"
-msgstr ""
+msgstr "Ju jeni ç'regjitstruar nga {course_name}"
 
 #: lms/templates/embargo/default_courseware.html
 #: lms/templates/embargo/default_enrollment.html
 #: lms/templates/static_templates/embargo.html
 msgid "This Course Unavailable In Your Country"
-msgstr ""
+msgstr "Ky kurs nuk është në dispozicion në shtetin tuaj"
 
 #: lms/templates/embargo/default_courseware.html
 msgid ""
@@ -13252,7 +13383,7 @@ msgstr ""
 
 #: lms/templates/enrollment/course_enrollment_message.html
 msgid "Enrollment Successful"
-msgstr ""
+msgstr "Regjistrimi u bë sukseshëm"
 
 #: lms/templates/enrollment/course_enrollment_message.html
 msgid ""
@@ -13309,7 +13440,7 @@ msgstr "(Fshihe)"
 #: lms/templates/instructor/staff_grading.html
 #: lms/templates/peer_grading/peer_grading_problem.html
 msgid "Student Response"
-msgstr ""
+msgstr "Përgjigjjet e studentëve"
 
 #: lms/templates/instructor/staff_grading.html
 #: lms/templates/peer_grading/peer_grading_problem.html
@@ -13326,7 +13457,7 @@ msgstr ""
 
 #: lms/templates/instructor/staff_grading.html
 msgid "Skip"
-msgstr ""
+msgstr "Kaloni"
 
 #: lms/templates/instructor/instructor_dashboard_2/add_coupon_modal.html
 #: lms/templates/instructor/instructor_dashboard_2/add_coupon_modal.html
@@ -13396,7 +13527,7 @@ msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/course_info.html
 msgid "Enrollment Information"
-msgstr ""
+msgstr "Informacionet e regjistrimit"
 
 #. Translators: 'track' refers to the enrollment type ('honor', 'verified', or
 #. 'audit')
@@ -13415,19 +13546,19 @@ msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/course_info.html
 msgid "Basic Course Information"
-msgstr ""
+msgstr "Informacionet Bazike të Kursit"
 
 #: lms/templates/instructor/instructor_dashboard_2/course_info.html
 msgid "Course Name:"
-msgstr ""
+msgstr "Emri i kursit:"
 
 #: lms/templates/instructor/instructor_dashboard_2/course_info.html
 msgid "Course Display Name:"
-msgstr ""
+msgstr "Emri i kursit:"
 
 #: lms/templates/instructor/instructor_dashboard_2/course_info.html
 msgid "Has the course started?"
-msgstr ""
+msgstr "A ka filluar kursi?"
 
 #: lms/templates/instructor/instructor_dashboard_2/course_info.html
 #: lms/templates/instructor/instructor_dashboard_2/course_info.html
@@ -13441,7 +13572,7 @@ msgstr "Jo"
 
 #: lms/templates/instructor/instructor_dashboard_2/course_info.html
 msgid "Has the course ended?"
-msgstr ""
+msgstr "A ka përfunduar kursi?"
 
 #: lms/templates/instructor/instructor_dashboard_2/course_info.html
 msgid "Grade Cutoffs:"
@@ -13488,7 +13619,7 @@ msgstr ""
 #: lms/templates/instructor/instructor_dashboard_2/data_download.html
 #: lms/templates/instructor/instructor_dashboard_2/e-commerce.html
 msgid "Reports"
-msgstr ""
+msgstr "Raportet"
 
 #: lms/templates/instructor/instructor_dashboard_2/data_download.html
 msgid ""
@@ -13513,7 +13644,7 @@ msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/data_download.html
 msgid "Download profile information as a CSV"
-msgstr ""
+msgstr "Shkarko informacionet e profilit si një CSV"
 
 #: lms/templates/instructor/instructor_dashboard_2/data_download.html
 msgid ""
@@ -13627,7 +13758,7 @@ msgstr ""
 #: lms/templates/instructor/instructor_dashboard_2/e-commerce.html
 #: lms/templates/instructor/instructor_dashboard_2/set_course_mode_price_modal.html
 msgid "Course Price"
-msgstr ""
+msgstr "Çmimi i kursit"
 
 #: lms/templates/instructor/instructor_dashboard_2/e-commerce.html
 msgid "Course price per seat: "
@@ -13739,15 +13870,15 @@ msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/e-commerce.html
 msgid "{code}"
-msgstr ""
+msgstr "{code}"
 
 #: lms/templates/instructor/instructor_dashboard_2/e-commerce.html
 msgid "{description}"
-msgstr ""
+msgstr "{description}"
 
 #: lms/templates/instructor/instructor_dashboard_2/e-commerce.html
 msgid "{discount}"
-msgstr ""
+msgstr "{discount}"
 
 #: lms/templates/instructor/instructor_dashboard_2/e-commerce.html
 msgid "The Invoice Number field cannot be empty."
@@ -13855,7 +13986,7 @@ msgstr "shembull: A123DS"
 
 #: lms/templates/instructor/instructor_dashboard_2/edit_coupon_modal.html
 msgid "Percentage Discount"
-msgstr ""
+msgstr "Zbritja në përqindje"
 
 #: lms/templates/instructor/instructor_dashboard_2/edit_coupon_modal.html
 msgid "Update Coupon Code"
@@ -14051,7 +14182,7 @@ msgstr ""
 #: lms/templates/instructor/instructor_dashboard_2/generate_registarion_codes_modal.html
 #: lms/templates/instructor/instructor_dashboard_2/generate_registarion_codes_modal.html
 msgid "Organization Name"
-msgstr ""
+msgstr "Emri i Organizatës"
 
 #: lms/templates/instructor/instructor_dashboard_2/generate_registarion_codes_modal.html
 msgid "The organization that purchased enrollments in the course"
@@ -14096,11 +14227,11 @@ msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/generate_registarion_codes_modal.html
 msgid "State/Province"
-msgstr ""
+msgstr "Shteti/Provinca"
 
 #: lms/templates/instructor/instructor_dashboard_2/generate_registarion_codes_modal.html
 msgid "Zip"
-msgstr ""
+msgstr "Zip"
 
 #: lms/templates/instructor/instructor_dashboard_2/generate_registarion_codes_modal.html
 msgid "Unit Price"
@@ -14222,7 +14353,7 @@ msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/membership.html
 msgid "Upload CSV"
-msgstr ""
+msgstr "Ngarko CSV"
 
 #: lms/templates/instructor/instructor_dashboard_2/membership.html
 msgid "Batch Beta Tester Addition"
@@ -14246,11 +14377,11 @@ msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/membership.html
 msgid "Add beta testers"
-msgstr ""
+msgstr "Shto beta testues "
 
 #: lms/templates/instructor/instructor_dashboard_2/membership.html
 msgid "Remove beta testers"
-msgstr ""
+msgstr "Fshije beta testues"
 
 #. Translators: an "Administration List" is a list, such as Course Staff, that
 #. users can be added to.
@@ -14263,7 +14394,7 @@ msgstr ""
 #. users can be added to.
 #: lms/templates/instructor/instructor_dashboard_2/membership.html
 msgid "Select an Administrator Group:"
-msgstr ""
+msgstr "Zgjedh një Grup Administrimi"
 
 #: lms/templates/instructor/instructor_dashboard_2/membership.html
 msgid "Getting available lists..."
@@ -14286,11 +14417,11 @@ msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/membership.html
 msgid "Add Staff"
-msgstr ""
+msgstr "Shto staf"
 
 #: lms/templates/instructor/instructor_dashboard_2/membership.html
 msgid "Instructors"
-msgstr ""
+msgstr "Instruktorët"
 
 #: lms/templates/instructor/instructor_dashboard_2/membership.html
 msgid ""
@@ -14300,11 +14431,11 @@ msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/membership.html
 msgid "Add Instructor"
-msgstr ""
+msgstr "Shto Instruktor"
 
 #: lms/templates/instructor/instructor_dashboard_2/membership.html
 msgid "Beta Testers"
-msgstr ""
+msgstr "Testuesit Beta"
 
 #: lms/templates/instructor/instructor_dashboard_2/membership.html
 msgid ""
@@ -14314,7 +14445,7 @@ msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/membership.html
 msgid "Add Beta Tester"
-msgstr ""
+msgstr "Shto Testues Beta"
 
 #: lms/templates/instructor/instructor_dashboard_2/membership.html
 msgid "Discussion Admins"
@@ -14345,7 +14476,7 @@ msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/membership.html
 msgid "Add Moderator"
-msgstr ""
+msgstr "Shto Moderator."
 
 #: lms/templates/instructor/instructor_dashboard_2/membership.html
 msgid "Discussion Community TAs"
@@ -14433,7 +14564,7 @@ msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/metrics.html
 msgid "Download Student Grades as a CSV"
-msgstr ""
+msgstr "Shkarko notat e Studentëve si një CSV"
 
 #: lms/templates/instructor/instructor_dashboard_2/metrics.html
 #: lms/templates/instructor/instructor_dashboard_2/metrics.html
@@ -14447,7 +14578,7 @@ msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/send_email.html
 msgid "Send to:"
-msgstr ""
+msgstr "Dërgo tek:"
 
 #: lms/templates/instructor/instructor_dashboard_2/send_email.html
 msgid "Myself"
@@ -14456,12 +14587,12 @@ msgstr ""
 #: lms/templates/instructor/instructor_dashboard_2/send_email.html
 #: lms/templates/instructor/instructor_dashboard_2/send_email.html
 msgid "Staff and instructors"
-msgstr ""
+msgstr "Stafi dhe instruktorët"
 
 #: lms/templates/instructor/instructor_dashboard_2/send_email.html
 #: lms/templates/instructor/instructor_dashboard_2/send_email.html
 msgid "All (students, staff and instructors)"
-msgstr ""
+msgstr "Të gjithë (studentët, stafi dhe instruktorët)"
 
 #: lms/templates/instructor/instructor_dashboard_2/send_email.html
 msgid "Subject: "
@@ -14473,7 +14604,7 @@ msgstr "(Maksimumi 128 karaktere)"
 
 #: lms/templates/instructor/instructor_dashboard_2/send_email.html
 msgid "Message:"
-msgstr ""
+msgstr "Mesazhi:"
 
 #: lms/templates/instructor/instructor_dashboard_2/send_email.html
 msgid ""
@@ -14550,7 +14681,7 @@ msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/set_course_mode_price_modal.html
 msgid "Set Price"
-msgstr ""
+msgstr "Vendos çmimin"
 
 #: lms/templates/instructor/instructor_dashboard_2/student_admin.html
 msgid "Student Gradebook"
@@ -14709,10 +14840,12 @@ msgid ""
 "Don't see your preferred language? {link_start}Volunteer to become a "
 "translator!{link_end}"
 msgstr ""
+"Nuk e shihni gjuhën tuaj të preferuar? {link_start}Vullnetar për t'u bërë "
+"përkthyes{link_end}"
 
 #: lms/templates/modal/accessible_confirm.html
 msgid "Confirm"
-msgstr ""
+msgstr "Konfirmo"
 
 #. Translators: this text gives status on if the modal interface (a menu or
 #. piece of UI that takes the full focus of the screen) is open or not
@@ -14722,7 +14855,7 @@ msgstr ""
 
 #: lms/templates/modal/accessible_confirm.html
 msgid "OK"
-msgstr ""
+msgstr "Në rregull"
 
 #: lms/templates/modal/accessible_confirm.html
 msgid "open"
@@ -14789,7 +14922,7 @@ msgstr ""
 #: lms/templates/open_ended_problems/open_ended_problems.html
 #: lms/templates/peer_grading/peer_grading.html
 msgid "Problem Name"
-msgstr ""
+msgstr "Emri i problemit"
 
 #: lms/templates/open_ended_problems/open_ended_problems.html
 msgid "Grader Type"
@@ -14826,11 +14959,11 @@ msgstr ""
 #: lms/templates/peer_grading/peer_grading.html
 #: lms/templates/shoppingcart/receipt.html
 msgid "Available"
-msgstr ""
+msgstr "Në dispozicion"
 
 #: lms/templates/peer_grading/peer_grading.html
 msgid "Required"
-msgstr ""
+msgstr "E detyrueshme"
 
 #: lms/templates/peer_grading/peer_grading.html
 msgid "No due date"
@@ -14866,7 +14999,7 @@ msgstr ""
 
 #: lms/templates/peer_grading/peer_grading_problem.html
 msgid "Continue"
-msgstr ""
+msgstr "Vazhdo"
 
 #: lms/templates/peer_grading/peer_grading_problem.html
 msgid "Ready to grade!"
@@ -14928,7 +15061,7 @@ msgstr ""
 
 #: lms/templates/peer_grading/peer_grading_problem.html
 msgid "Go Back"
-msgstr ""
+msgstr "Kthehu prapa"
 
 #: lms/templates/registration/activate_account_notice.html
 msgid "Thanks for Registering!"
@@ -14946,11 +15079,11 @@ msgstr ""
 
 #: lms/templates/registration/activation_complete.html
 msgid "Activation Complete!"
-msgstr ""
+msgstr "Aktivizimi u kompletua!"
 
 #: lms/templates/registration/activation_complete.html
 msgid "Account already active!"
-msgstr ""
+msgstr "Llogaria tashmë është aktive!"
 
 #: lms/templates/registration/activation_complete.html
 msgid "You can now {link_start}log in{link_end}."
@@ -14958,7 +15091,7 @@ msgstr "Ju tani mund të {link_start}kyçeni{link_end}."
 
 #: lms/templates/registration/activation_invalid.html
 msgid "Activation Invalid"
-msgstr ""
+msgstr "Aktivizimi jo valid"
 
 #: lms/templates/registration/activation_invalid.html
 msgid ""
@@ -14969,7 +15102,7 @@ msgstr ""
 
 #: lms/templates/registration/activation_invalid.html
 msgid "Or you can go back to the {link_start}home page{link_end}."
-msgstr ""
+msgstr "Ose ju mund të ktheheni prapa te {link_start}ballina{link_end}."
 
 #: lms/templates/registration/password_reset_done.html
 msgid "Password reset successful"
@@ -15011,7 +15144,7 @@ msgstr ""
 #: lms/templates/shoppingcart/billing_details.html
 #: lms/templates/shoppingcart/billing_details.html
 msgid "email@example.com"
-msgstr ""
+msgstr "email@shembull.com"
 
 #: lms/templates/shoppingcart/billing_details.html
 msgid "Additional Receipt Recipient"
@@ -15040,11 +15173,11 @@ msgstr "Shiko Kurset"
 #: lms/templates/shoppingcart/cybersource_form.html
 #: lms/templates/shoppingcart/shopping_cart_flow.html
 msgid "Payment"
-msgstr ""
+msgstr "Pagesa"
 
 #: lms/templates/shoppingcart/download_report.html
 msgid "Download CSV Data"
-msgstr ""
+msgstr "Shkarko të dhënat CSV"
 
 #: lms/templates/shoppingcart/download_report.html
 msgid "These reports are delimited by start and end dates."
@@ -15052,11 +15185,11 @@ msgstr ""
 
 #: lms/templates/shoppingcart/download_report.html
 msgid "Start Date: "
-msgstr ""
+msgstr "Data e fillimit:"
 
 #: lms/templates/shoppingcart/download_report.html
 msgid "End Date: "
-msgstr ""
+msgstr "Data e përfundimit:"
 
 #: lms/templates/shoppingcart/download_report.html
 msgid ""
@@ -15156,7 +15289,7 @@ msgstr ""
 #: lms/templates/shoppingcart/receipt.html
 #: lms/templates/shoppingcart/receipt.html
 msgid "N/A"
-msgstr ""
+msgstr "N/A "
 
 #: lms/templates/shoppingcart/receipt.html
 msgid "Purchase Order Number"
@@ -15214,7 +15347,7 @@ msgstr ""
 #: lms/templates/shoppingcart/shopping_cart.html
 #: lms/templates/shoppingcart/shopping_cart.html
 msgid "Price per student:"
-msgstr ""
+msgstr "Çmimi për student:"
 
 #: lms/templates/shoppingcart/receipt.html
 #: lms/templates/shoppingcart/receipt.html
@@ -15231,7 +15364,7 @@ msgstr ""
 #: lms/templates/shoppingcart/registration_code_receipt.html
 #: lms/templates/shoppingcart/registration_code_redemption.html
 msgid "Confirm Enrollment"
-msgstr ""
+msgstr "Konfirmo Regjistrimin"
 
 #: lms/templates/shoppingcart/registration_code_receipt.html
 #: lms/templates/shoppingcart/registration_code_redemption.html
@@ -15250,7 +15383,7 @@ msgstr ""
 
 #: lms/templates/shoppingcart/registration_code_receipt.html
 msgid "{course_name}"
-msgstr ""
+msgstr "{course_name}"
 
 #: lms/templates/shoppingcart/registration_code_receipt.html
 msgid "{start_date} - {end_date}"
@@ -15322,7 +15455,7 @@ msgstr ""
 
 #: lms/templates/shoppingcart/shopping_cart.html
 msgid "Students:"
-msgstr ""
+msgstr "Studentët:"
 
 #: lms/templates/shoppingcart/shopping_cart.html
 msgid "Input quantity and press enter."
@@ -15342,7 +15475,7 @@ msgstr ""
 
 #: lms/templates/shoppingcart/shopping_cart.html
 msgid "TOTAL:"
-msgstr ""
+msgstr "GJITHSEJT:"
 
 #. Translators: currency_symbol is a symbol indicating type of currency, ex
 #. "$". currency_abbr is
@@ -15389,7 +15522,7 @@ msgstr ""
 #: lms/templates/verify_student/photo_reverification.html
 #: lms/templates/verify_student/reverification_confirmation.html
 msgid "Confirmation"
-msgstr ""
+msgstr "Konfirmim"
 
 #: lms/templates/static_templates/404.html
 msgid ""
@@ -15481,7 +15614,7 @@ msgstr ""
 
 #: lms/templates/student_profile/index.html
 msgid "Student Profile"
-msgstr ""
+msgstr "Profili i Studentit"
 
 #: lms/templates/student_profile/learner_profile.html
 msgid "Learner Profile"
@@ -15535,7 +15668,7 @@ msgstr ""
 
 #: lms/templates/survey/survey.html
 msgid "You are missing the following required fields:"
-msgstr ""
+msgstr "Juve janë duke ju munguar hapësirat e detyrushme:"
 
 #: lms/templates/survey/survey.html
 msgid "Cancel and Return to Dashboard"
@@ -15543,7 +15676,7 @@ msgstr ""
 
 #: lms/templates/survey/survey.html
 msgid "Why do I need to complete this information?"
-msgstr ""
+msgstr "Pse duhet që unë të e kompletoj këtë informacion?"
 
 #: lms/templates/survey/survey.html
 msgid ""
@@ -15554,17 +15687,19 @@ msgstr ""
 
 #: lms/templates/survey/survey.html
 msgid "Who can I contact if I have questions?"
-msgstr ""
+msgstr "Kë mund të e kontaktoj nëse unë kam ndonjë pyetje?"
 
 #: lms/templates/survey/survey.html
 msgid ""
 "If you have any questions about this course or this form, you can contact <a"
 " href=\"{mail_to_link}\"\">{mail_to_link}</a>."
 msgstr ""
+"Nëse ju keni ndonjë pyetje rreth këtij kursi ose kësaj forme, ju mund të e kontaktoni \n"
+"<a href=\"{mail_to_link}\"\">{mail_to_link}</a>."
 
 #: lms/templates/verify_student/_modal_editname.html
 msgid "Edit Your Name"
-msgstr ""
+msgstr "Rregullo Emrin tuaj"
 
 #: lms/templates/verify_student/_modal_editname.html
 #: lms/templates/verify_student/face_upload.html
@@ -15583,7 +15718,7 @@ msgstr ""
 
 #: lms/templates/verify_student/_modal_editname.html
 msgid "Change my name"
-msgstr ""
+msgstr "Ndrysho emrin tim"
 
 #: lms/templates/verify_student/_reverification_support.html
 msgid "Why Do I Need to Re-Verify My Identity?"
@@ -15613,7 +15748,7 @@ msgstr ""
 #: lms/templates/verify_student/_verification_support.html
 #: lms/templates/verify_student/pay_and_verify.html
 msgid "Have questions?"
-msgstr ""
+msgstr "Keni pyetje?"
 
 #: lms/templates/verify_student/_reverification_support.html
 #: lms/templates/verify_student/_verification_support.html
@@ -15652,10 +15787,14 @@ msgid ""
 "turned on, and allowed to function in your web browser (commonly adjustable "
 "in your browser settings).</strong>"
 msgstr ""
+"Sigurohuni që shfletuesi juaj është freskuar në {a_start}verzioni më të ri "
+"të mundshëm{a_end}. Poashtu, sigurohuni që <strong>kamera juaj është e "
+"lidhur, e ndezur, dhe që lejon të funksionon në shfletuesin tuaj (zakonisht "
+"i rregulluar në konfigurimet e shfletuesit tuaj).</strong>"
 
 #: lms/templates/verify_student/face_upload.html
 msgid "Edit Your Full Name"
-msgstr ""
+msgstr "Rregullo emrin tuaj të plotë"
 
 #: lms/templates/verify_student/incourse_reverify.html
 msgid "Re-Verify for {course_name}"
@@ -15693,7 +15832,7 @@ msgstr "Ri-Verifikimi"
 
 #: lms/templates/verify_student/photo_reverification.html
 msgid "No Webcam Detected"
-msgstr ""
+msgstr "Asnjë Webkam nuk u gjet"
 
 #: lms/templates/verify_student/photo_reverification.html
 msgid ""
@@ -15718,6 +15857,8 @@ msgstr ""
 #: lms/templates/verify_student/photo_reverification.html
 msgid "Oops! Something went wrong. Please confirm your details and try again."
 msgstr ""
+"Oops! Diçka shkoj keq. Ju lutem konfirmoni detajet tuaja dhe provojeni "
+"përsëri."
 
 #: lms/templates/verify_student/photo_reverification.html
 msgid "Verify Your Identity"
@@ -15769,6 +15910,8 @@ msgid ""
 "Don't see your picture? Make sure to allow your browser to use your camera "
 "when it asks for permission."
 msgstr ""
+"Nuk e shihni fotografinë tuaj? Sigurohuni që e keni lejuar shfletuesin tuaj "
+"të e përdor kamerën kur pyet për leje."
 
 #: lms/templates/verify_student/photo_reverification.html
 #: lms/templates/verify_student/photo_reverification.html
@@ -15814,7 +15957,7 @@ msgstr ""
 
 #: lms/templates/verify_student/photo_reverification.html
 msgid "Why do you need my photo?"
-msgstr ""
+msgstr "Pse nevojitet fotoja ime?"
 
 #: lms/templates/verify_student/photo_reverification.html
 msgid ""
@@ -15825,11 +15968,13 @@ msgstr ""
 #: lms/templates/verify_student/photo_reverification.html
 #: lms/templates/verify_student/photo_reverification.html
 msgid "What do you do with this picture?"
-msgstr ""
+msgstr "Çka do të bëni ju me këtë fotografi?"
 
 #: lms/templates/verify_student/photo_reverification.html
 msgid "We only use it to verify your identity.  It is not displayed anywhere."
 msgstr ""
+"Ne e përdorim vetëm që të e verifikojm identitetin tuaj. Ajo nuk shfaqet "
+"askund."
 
 #: lms/templates/verify_student/photo_reverification.html
 #: lms/templates/verify_student/photo_reverification.html
@@ -15840,6 +15985,8 @@ msgstr ""
 #: lms/templates/verify_student/photo_reverification.html
 msgid "Once you verify your photo looks good, you can move on to step 2."
 msgstr ""
+"Vetëm pasi që ju të e verifikoni që fotoja juaj duket mirë, atëherë ju mund "
+"të vazhdoni në hapin 2."
 
 #: lms/templates/verify_student/photo_reverification.html
 msgid "Go to Step 2: Re-Take ID Photo"
@@ -15905,7 +16052,7 @@ msgstr ""
 
 #: lms/templates/verify_student/photo_reverification.html
 msgid "Go to Step 3: Review Your Info"
-msgstr ""
+msgstr "Shko te hapi 3: Rishiko informacionet tuaja"
 
 #: lms/templates/verify_student/photo_reverification.html
 msgid "Verify Your Submission"
@@ -15972,7 +16119,7 @@ msgstr ""
 
 #: lms/templates/verify_student/photo_reverification.html
 msgid "Edit your name"
-msgstr ""
+msgstr "Rregullo emrin tuaj"
 
 #: lms/templates/verify_student/photo_reverification.html
 msgid ""
@@ -15986,7 +16133,7 @@ msgstr ""
 
 #: lms/templates/verify_student/prompt_midcourse_reverify.html
 msgid "You need to re-verify to continue"
-msgstr ""
+msgstr "Ju duhet të e ri-verifikoni për të vazhduar"
 
 #: lms/templates/verify_student/prompt_midcourse_reverify.html
 msgid ""
@@ -16018,7 +16165,7 @@ msgstr ""
 #: lms/templates/verify_student/reverification_window_expired.html
 #: lms/templates/verify_student/reverification_window_expired.html
 msgid "Re-Verification Failed"
-msgstr ""
+msgstr "Ri-Verifikimi dështoi"
 
 #: lms/templates/verify_student/reverification_window_expired.html
 msgid ""
@@ -16035,7 +16182,7 @@ msgstr ""
 #: lms/templates/wiki/includes/article_menu.html
 #: lms/templates/wiki/includes/article_menu.html
 msgid "{span_start}(active){span_end}"
-msgstr ""
+msgstr "{span_start}(aktiv){span_end}"
 
 #: lms/templates/wiki/includes/article_menu.html
 msgid "Changes"
@@ -16043,7 +16190,7 @@ msgstr "Ndryshimet"
 
 #: lms/templates/wiki/includes/article_menu.html
 msgid "{span_start}active{span_end}"
-msgstr ""
+msgstr "{span_start}aktiv{span_end}"
 
 #: lms/templates/wiki/includes/breadcrumbs.html
 msgid "Add article"
@@ -16051,7 +16198,7 @@ msgstr "Shto një artikull"
 
 #: cms/templates/404.html
 msgid "The page that you were looking for was not found."
-msgstr ""
+msgstr "Faqja të cilën ju e kërkuat nuk u gjet."
 
 #: cms/templates/404.html
 msgid ""
@@ -16100,7 +16247,7 @@ msgstr ""
 
 #: cms/templates/activation_active.html cms/templates/activation_complete.html
 msgid "Sign into {studio_name}"
-msgstr ""
+msgstr "Kyçu në {studio_name}"
 
 #: cms/templates/activation_complete.html
 msgid "Your account activation is complete!"
@@ -16169,13 +16316,16 @@ msgstr "Shto dokumt të ri"
 
 #: cms/templates/asset_index.html
 msgid "Adding Files for Your Course"
-msgstr ""
+msgstr "Shto dokumente në kursin tuaj"
 
 #: cms/templates/asset_index.html
 msgid ""
 "To add files to use in your course, click {em_start}Upload New File{em_end}."
 " Then follow the prompts to upload a file from your computer."
 msgstr ""
+"Që të shtosh dokumen e të e përdorësh në kurs, kliko {em_start}Ngarko "
+"Dokument të Ri{em_end}. Pastaj ndiq udhëzimet që të ngarkoni dokumentet nga "
+"kompjuteri juaj."
 
 #: cms/templates/asset_index.html
 msgid ""
@@ -16215,7 +16365,7 @@ msgstr ""
 
 #: cms/templates/asset_index.html
 msgid "Learn more about managing files"
-msgstr ""
+msgstr "Mëso më shumë rreth menaxhimit të dokumenteve"
 
 #: cms/templates/asset_index.html
 msgid "Max per-file size: {max_filesize}MB"
@@ -16308,7 +16458,7 @@ msgstr ""
 #: cms/templates/settings_advanced.html cms/templates/settings_graders.html
 #: cms/templates/widgets/header.html
 msgid "Course Team"
-msgstr ""
+msgstr "Ekipi i kursit"
 
 #: cms/templates/certificates.html cms/templates/group_configurations.html
 #: cms/templates/settings.html cms/templates/settings_advanced.html
@@ -16356,7 +16506,7 @@ msgstr ""
 #: cms/templates/component.html cms/templates/studio_xblock_wrapper.html
 #: cms/templates/studio_xblock_wrapper.html
 msgid "Duplicate"
-msgstr ""
+msgstr "Dublikatë"
 
 #: cms/templates/component.html
 msgid "Duplicate this component"
@@ -16440,7 +16590,7 @@ msgstr ""
 
 #: cms/templates/container.html
 msgid "Location ID"
-msgstr ""
+msgstr "Lokacioni ID"
 
 #: cms/templates/container.html
 msgid ""
@@ -16508,12 +16658,14 @@ msgid ""
 "The name of the organization sponsoring the new course. (This name is often "
 "the same as the original organization name.)"
 msgstr ""
+"Emri i organizatë që e sponzoron kursin e ri. (Ky emër është shpesh i njëjtë"
+" me emri origjinal të organizatës.)"
 
 #: cms/templates/course-create-rerun.html
 #: cms/templates/course-create-rerun.html
 #: cms/templates/course-create-rerun.html
 msgid "Note: No spaces or special characters are allowed."
-msgstr ""
+msgstr "Vërejtje: Hapësira ose karakteret speciale nuk lejohen."
 
 #. Translators: This is an example for the number used to identify a course,
 #. seen when filling out the form to create a new course. The number here is
@@ -16629,7 +16781,7 @@ msgstr "Kliko të e shtosh një pjesë"
 
 #: cms/templates/course_outline.html
 msgid "New Section"
-msgstr ""
+msgstr "Pjesë e re"
 
 #: cms/templates/course_outline.html
 msgid "Reindex current course"
@@ -16641,11 +16793,11 @@ msgstr ""
 
 #: cms/templates/course_outline.html
 msgid "Collapse All Sections"
-msgstr ""
+msgstr "Hapi të gjitha seksionet"
 
 #: cms/templates/course_outline.html
 msgid "Expand All Sections"
-msgstr ""
+msgstr "Hapi të gjitha sekcionet"
 
 #: cms/templates/course_outline.html
 msgid "Click to open the courseware in the LMS in a new tab"
@@ -16658,11 +16810,11 @@ msgstr "Shiko Drejtpërdrejt"
 
 #: cms/templates/course_outline.html
 msgid "Course Start Date:"
-msgstr ""
+msgstr "Data e fillimit të kursit:"
 
 #: cms/templates/course_outline.html cms/templates/course_outline.html
 msgid "Edit Start Date"
-msgstr ""
+msgstr "Rregullo datën e fillimit"
 
 #: cms/templates/course_outline.html
 msgid "Creating your course organization"
@@ -16757,7 +16909,7 @@ msgstr "Shto faqe të re"
 
 #: cms/templates/edit-tabs.html
 msgid "What are pages?"
-msgstr ""
+msgstr "Çka janë faqet?"
 
 #: cms/templates/edit-tabs.html
 msgid ""
@@ -16809,7 +16961,7 @@ msgstr ""
 #: cms/templates/edit-tabs.html cms/templates/howitworks.html
 #: cms/templates/howitworks.html cms/templates/howitworks.html
 msgid "close modal"
-msgstr ""
+msgstr "mbylle modalin"
 
 #: cms/templates/error.html
 msgid "Internal Server Error"
@@ -16855,7 +17007,7 @@ msgstr ""
 
 #: cms/templates/export.html cms/templates/export.html
 msgid "Course Export"
-msgstr ""
+msgstr "Eksport i kurseve"
 
 #: cms/templates/export.html
 msgid "About Exporting Libraries"
@@ -16872,7 +17024,7 @@ msgstr ""
 
 #: cms/templates/export.html
 msgid "About Exporting Courses"
-msgstr ""
+msgstr "Rreth eksportimit të kurseve"
 
 #. Translators: ".tar.gz" is a file extension, and should not be translated
 #: cms/templates/export.html
@@ -16898,7 +17050,7 @@ msgstr ""
 
 #: cms/templates/export.html
 msgid "Export My Course Content"
-msgstr ""
+msgstr "Eksporto përmbajtjen e kursit tim"
 
 #: cms/templates/export.html
 msgid "Export Library Content"
@@ -16906,7 +17058,7 @@ msgstr ""
 
 #: cms/templates/export.html
 msgid "Export Course Content"
-msgstr ""
+msgstr "Eksporto përmbajtjen e kursit"
 
 #: cms/templates/export.html
 msgid "Data {em_start}exported with{em_end} your course:"
@@ -16983,7 +17135,7 @@ msgstr ""
 
 #: cms/templates/export.html
 msgid "Why export a course?"
-msgstr ""
+msgstr "Pse të eksportosh kurse?"
 
 #: cms/templates/export.html
 msgid ""
@@ -17020,7 +17172,7 @@ msgstr "Mëso më shumë rreth eksportimit të një kursi"
 
 #: cms/templates/export_git.html
 msgid "Export Course to Git"
-msgstr ""
+msgstr "Eksporto Kursin tek Git"
 
 #: cms/templates/export_git.html cms/templates/export_git.html
 #: cms/templates/widgets/header.html
@@ -17057,7 +17209,7 @@ msgstr "Eksportimi dështoj"
 
 #: cms/templates/export_git.html
 msgid "Export Succeeded"
-msgstr ""
+msgstr "Eksport u bë sukseshëm"
 
 #: cms/templates/export_git.html
 msgid "Your course:"
@@ -17080,7 +17232,7 @@ msgstr ""
 
 #: cms/templates/group_configurations.html
 msgid "This module is disabled at the moment."
-msgstr ""
+msgstr "Ky modul është i deaktivizuar në këtë moment."
 
 #: cms/templates/group_configurations.html
 msgid ""
@@ -17136,7 +17288,7 @@ msgstr "Mirë se erdhët"
 
 #: cms/templates/howitworks.html
 msgid "Welcome to {studio_name}"
-msgstr ""
+msgstr "Mirë se erdhët te {studio_name}"
 
 #: cms/templates/howitworks.html
 msgid ""
@@ -17219,7 +17371,7 @@ msgstr ""
 
 #: cms/templates/howitworks.html
 msgid "Work Visually, Organize Quickly"
-msgstr ""
+msgstr "Puno vizualisht, Organizo shpejt"
 
 #: cms/templates/howitworks.html
 msgid ""
@@ -17245,7 +17397,7 @@ msgstr ""
 
 #: cms/templates/howitworks.html
 msgid "Simple, Fast, and Incremental Publishing. With Friends."
-msgstr ""
+msgstr "Thjeshtë, Shpejt, dhe Ngritje e Publikimeve. Me shokët"
 
 #: cms/templates/howitworks.html
 msgid ""
@@ -17310,7 +17462,7 @@ msgstr ""
 
 #: cms/templates/howitworks.html
 msgid "More than Just Lectures"
-msgstr ""
+msgstr "Më shumë sesa vetëm ligjërata"
 
 #: cms/templates/howitworks.html
 msgid ""
@@ -17428,7 +17580,7 @@ msgstr ""
 
 #: cms/templates/import.html
 msgid "Transferring your file to our servers"
-msgstr ""
+msgstr "Transfero dokumentet tuaj te serverët tonë"
 
 #: cms/templates/import.html
 msgid "Unpacking"
@@ -17471,7 +17623,7 @@ msgstr ""
 
 #: cms/templates/import.html
 msgid "Success"
-msgstr ""
+msgstr "Sukses"
 
 #: cms/templates/import.html
 msgid "Your imported content has now been integrated into this library"
@@ -17562,7 +17714,7 @@ msgstr ""
 
 #: cms/templates/index.html
 msgid "New Course"
-msgstr ""
+msgstr "Kurs i ri"
 
 #: cms/templates/index.html
 msgid "New Library"
@@ -17574,7 +17726,7 @@ msgstr ""
 
 #: cms/templates/index.html cms/templates/index.html
 msgid "Please correct the highlighted fields below."
-msgstr ""
+msgstr "Ju lutem përmirësoni hapësirat e dukshme më poshtë."
 
 #: cms/templates/index.html
 msgid "Create a New Course"
@@ -17642,7 +17794,7 @@ msgstr ""
 #. content or problems.)
 #: cms/templates/index.html
 msgid "e.g. Computer Science Problems"
-msgstr ""
+msgstr "p.sh. Shkenca Kompjuterike Probleme"
 
 #: cms/templates/index.html
 msgid "The public display name for your library."
@@ -17886,7 +18038,7 @@ msgstr ""
 
 #: cms/templates/index.html
 msgid "Need help?"
-msgstr ""
+msgstr "Ju nevojitet ndihmë?"
 
 #: cms/templates/index.html
 msgid ""
@@ -17971,15 +18123,15 @@ msgstr ""
 
 #: cms/templates/manage_users.html
 msgid "Course Team Settings"
-msgstr ""
+msgstr "Ekipi i kursit konfigurimet"
 
 #: cms/templates/manage_users.html cms/templates/manage_users_lib.html
 msgid "New Team Member"
-msgstr ""
+msgstr "Anëtar i ri i ekipit"
 
 #: cms/templates/manage_users.html
 msgid "Add a User to Your Course's Team"
-msgstr ""
+msgstr "Shto një përdorues në ekipin e kursit tuaj"
 
 #: cms/templates/manage_users.html cms/templates/manage_users_lib.html
 msgid "New Team Member Information"
@@ -18001,7 +18153,7 @@ msgstr "Shto përdorues"
 
 #: cms/templates/manage_users.html
 msgid "Add Team Members to This Course"
-msgstr ""
+msgstr "Shto antarë të ekipit në këtë kurs"
 
 #: cms/templates/manage_users.html
 msgid ""
@@ -18011,11 +18163,11 @@ msgstr ""
 
 #: cms/templates/manage_users.html
 msgid "Add a New Team Member"
-msgstr ""
+msgstr "Shto antarë të ri në ekip"
 
 #: cms/templates/manage_users.html
 msgid "Course Team Roles"
-msgstr ""
+msgstr "Rolet e ekipit të kursit"
 
 #: cms/templates/manage_users.html
 msgid ""
@@ -18028,6 +18180,8 @@ msgid ""
 "Admins are course team members who can add and remove other course team "
 "members."
 msgstr ""
+"Administratorët janë anëtar të ekipit të kursit të cilët mund të shtojnë dhe"
+" fshijnë anëtarët e tjerë të ekipit të kursit."
 
 #: cms/templates/manage_users.html
 msgid "Transferring Ownership"
@@ -18098,7 +18252,7 @@ msgstr ""
 
 #: cms/templates/register.html cms/templates/widgets/header.html
 msgid "Sign Up"
-msgstr ""
+msgstr "Regjistrohu"
 
 #: cms/templates/register.html
 msgid "Sign Up for {studio_name}"
@@ -18123,6 +18277,8 @@ msgid ""
 "This will be used in public discussions with your courses and in our edX101 "
 "support forums"
 msgstr ""
+"Kjo do të përdoret në diskutime publike me kurset e juaja dhe në edX101 "
+"mbështetjen e forumeve"
 
 #: cms/templates/register.html
 msgid "Your Location"
@@ -18168,7 +18324,7 @@ msgstr ""
 
 #: cms/templates/register.html
 msgid "I've never authored a course online before. Is there help?"
-msgstr ""
+msgstr "Unë nuk kam bërë kurse online kurrë më parë. Është këtu ndihma?"
 
 #: cms/templates/register.html
 msgid ""
@@ -18184,11 +18340,11 @@ msgstr ""
 
 #: cms/templates/settings.html
 msgid "Schedule & Details"
-msgstr ""
+msgstr "Orari & Detajet"
 
 #: cms/templates/settings.html
 msgid "Basic Information"
-msgstr ""
+msgstr "Informacionet bazike"
 
 #: cms/templates/settings.html
 msgid "The nuts and bolts of your course"
@@ -18201,10 +18357,11 @@ msgstr ""
 #: cms/templates/settings.html cms/templates/settings.html
 msgid "This field is disabled: this information cannot be changed."
 msgstr ""
+"Kjo hapësirë është e deaktivizuar: ky informacion nuk mund të ndërrohet."
 
 #: cms/templates/settings.html
 msgid "Course Summary Page"
-msgstr ""
+msgstr "Faqja përmbledhëse e kursit "
 
 #: cms/templates/settings.html
 msgid "(for student enrollment and access)"
@@ -18212,7 +18369,7 @@ msgstr ""
 
 #: cms/templates/settings.html
 msgid "Enroll in {course_display_name}"
-msgstr ""
+msgstr "Regjistrohu në {course_display}"
 
 #: cms/templates/settings.html
 msgid ""
@@ -18227,7 +18384,7 @@ msgstr ""
 
 #: cms/templates/settings.html
 msgid "Invite your students"
-msgstr ""
+msgstr "Fto studentët tuaj"
 
 #: cms/templates/settings.html
 msgid "Promoting Your Course with {platform_name}"
@@ -18266,7 +18423,7 @@ msgstr ""
 
 #: cms/templates/settings.html
 msgid "Course Schedule"
-msgstr ""
+msgstr "Orari i kursit"
 
 #: cms/templates/settings.html
 msgid "Dates that control when your course can be viewed"
@@ -18274,11 +18431,11 @@ msgstr ""
 
 #: cms/templates/settings.html
 msgid "First day the course begins"
-msgstr ""
+msgstr "Dita e parë që kursi fillon"
 
 #: cms/templates/settings.html
 msgid "Course Start Time"
-msgstr ""
+msgstr "Data e fillimit të kursit"
 
 #: cms/templates/settings.html cms/templates/settings.html
 #: cms/templates/settings.html cms/templates/settings.html
@@ -18295,7 +18452,7 @@ msgstr ""
 
 #: cms/templates/settings.html
 msgid "Enrollment Start Date"
-msgstr ""
+msgstr "Data e fillimit të regjistrimit"
 
 #: cms/templates/settings.html
 msgid "First day students can enroll"
@@ -18307,11 +18464,11 @@ msgstr ""
 
 #: cms/templates/settings.html
 msgid "Enrollment End Date"
-msgstr ""
+msgstr "Data e fundit për regjistrim"
 
 #: cms/templates/settings.html
 msgid "Last day students can enroll"
-msgstr ""
+msgstr "Dita e fundit që studentët mund të regjistrohen"
 
 #: cms/templates/settings.html
 msgid "Enrollment End Time"
@@ -18345,7 +18502,7 @@ msgstr ""
 
 #: cms/templates/settings.html
 msgid "Introducing Your Course"
-msgstr ""
+msgstr "Hyrje në kursin tuaj"
 
 #: cms/templates/settings.html
 msgid "Information for prospective students"
@@ -18363,11 +18520,11 @@ msgstr ""
 
 #: cms/templates/settings.html
 msgid "Course Overview"
-msgstr ""
+msgstr "Pamja e përgjithshme e kursit"
 
 #: cms/templates/settings.html
 msgid "your course summary page"
-msgstr ""
+msgstr "faqja përmbledhëse e kursit tuaj"
 
 #: cms/templates/settings.html
 msgid ""
@@ -18390,6 +18547,9 @@ msgid ""
 "Your course currently does not have an image. Please upload one (JPEG or PNG"
 " format, and minimum suggested dimensions are 375px wide by 200px tall)"
 msgstr ""
+"Kursi juaj tani nuk ka ndonjë imazh. Ju lutem ngarkojene një (në formatin "
+"JPEG ose PNG, dhe dimenzionet minimale që sugjerohen janë 375px e gjerë me "
+"200px e gjatë)"
 
 #. Translators: This is the placeholder text for a field that requests the URL
 #. for a course image
@@ -18405,11 +18565,11 @@ msgstr ""
 
 #: cms/templates/settings.html
 msgid "Upload Course Image"
-msgstr ""
+msgstr "Ngarko"
 
 #: cms/templates/settings.html cms/templates/settings.html
 msgid "Course Introduction Video"
-msgstr ""
+msgstr "Hyrje në kurs Video"
 
 #: cms/templates/settings.html
 msgid "Delete Current Video"
@@ -18635,7 +18795,7 @@ msgstr ""
 #: cms/templates/studio_xblock_wrapper.html
 #: cms/templates/studio_xblock_wrapper.html
 msgid "Expand or Collapse"
-msgstr ""
+msgstr "Hape ose mbylle"
 
 #: cms/templates/studio_xblock_wrapper.html
 msgid "Visibility Settings"
@@ -18856,6 +19016,8 @@ msgid ""
 "An activation link has been sent to {email}, along with instructions for "
 "activating your account."
 msgstr ""
+"Një link aktivizimi është dërguar te {email}, me instruksionet për "
+"aktivizimin e llogarisë suaj."
 
 #: cms/templates/widgets/footer.html cms/templates/widgets/sock.html
 msgid "Contact Us"
@@ -18879,7 +19041,7 @@ msgstr ""
 
 #: cms/templates/widgets/header.html
 msgid "Updates"
-msgstr ""
+msgstr "Freskimet"
 
 #: cms/templates/widgets/header.html
 msgid "Schedule &amp; Details"
@@ -18895,7 +19057,7 @@ msgstr "Importo"
 
 #: cms/templates/widgets/header.html cms/templates/widgets/header.html
 msgid "Export"
-msgstr ""
+msgstr "Eksporto"
 
 #: cms/templates/widgets/header.html
 msgid "Current Library:"
@@ -18924,7 +19086,7 @@ msgstr ""
 #: cms/templates/widgets/problem-edit.html
 #: cms/templates/widgets/problem-edit.html
 msgid "Heading 1"
-msgstr ""
+msgstr "header 1"
 
 #: cms/templates/widgets/problem-edit.html
 #: cms/templates/widgets/problem-edit.html
@@ -18973,11 +19135,11 @@ msgstr ""
 
 #: cms/templates/widgets/sock.html
 msgid "Enroll in edX101"
-msgstr ""
+msgstr "Regjistrohu në edX101"
 
 #: cms/templates/widgets/sock.html
 msgid "How to use {studio_name} to build your course"
-msgstr ""
+msgstr "Si të e përdorni {studio_name} që të e krijoni kursin tuaj"
 
 #: cms/templates/widgets/sock.html
 msgid "Have problems, questions, or suggestions about {studio_name}?"
@@ -18993,15 +19155,17 @@ msgstr "krijuar"
 
 #: wiki/forms.py
 msgid "Only localhost... muahahaha"
-msgstr ""
+msgstr "Vetëm localhost.... muahahaha"
 
 #: wiki/forms.py
 msgid "Initial title of the article. May be overridden with revision titles."
 msgstr ""
+"Titull paraprak për artikullin. Titulli mund të zëvendësohet gjatë "
+"ndryshimeve. "
 
 #: wiki/forms.py
 msgid "Type in some contents"
-msgstr ""
+msgstr "Shto diçka si përmbajtje"
 
 #: wiki/forms.py
 msgid ""
@@ -19009,19 +19173,24 @@ msgid ""
 "can use more complex features like adding plugins, meta data, related "
 "articles etc..."
 msgstr ""
+"Kjo është vec përmbajtje fillestare për artikullin. Pasi e ke krijuar, mund "
+"të shtosh elementë më kompleks si psh pluggins, meta data, artikuj te lidhur"
+" me te, etj. "
 
 #: wiki/forms.py wiki/forms.py
 msgid "Contents"
-msgstr ""
+msgstr "Përmbajtjet"
 
 #: wiki/forms.py wiki/forms.py
 msgid "Summary"
-msgstr ""
+msgstr "Përmbledhje"
 
 #: wiki/forms.py
 msgid ""
 "Give a short reason for your edit, which will be stated in the revision log."
 msgstr ""
+"Jep shkurt një arsye për editimin, e cila do të shtohet në regjistrin e "
+"ndryshimeve/rishikimeve. "
 
 #: wiki/forms.py
 msgid ""
@@ -19029,6 +19198,9 @@ msgid ""
 "have been automatically merged with the new contents. Please review the text"
 " below."
 msgstr ""
+"Ndërsa ju editonit, dikush tjetër bëri ndryshime në artikull. Ndryshimi juaj"
+" ju bashkua automakisht përmbajtjes së re. Ju lutemi rishikoni tekstin më "
+"poshtë. "
 
 #: wiki/forms.py
 msgid "No changes made. Nothing to save."
@@ -19040,7 +19212,7 @@ msgstr "Zgjidh një opsion"
 
 #: wiki/forms.py
 msgid "Slug"
-msgstr ""
+msgstr "Slug"
 
 #: wiki/forms.py
 msgid ""
@@ -19048,22 +19220,26 @@ msgid ""
 "alphanumeric characters and - or _. Note that you cannot change the slug "
 "after creating the article."
 msgstr ""
+"Kjo do të jetë adresa ku gjendet artikulli juaj ne web. Përdor vetëm "
+"shkronja, numra dhe simbolet - apo _, Kij parasysh qe slug nuk mund të "
+"ndryshohet pasi artikulli është krijuar. "
 
 #: wiki/forms.py
 msgid "Write a brief message for the article's history log."
 msgstr ""
+"Shkruaj një mesazh të shkurtër për regjistrin e historisë së artikullit. "
 
 #: wiki/forms.py
 msgid "A slug may not begin with an underscore."
-msgstr ""
+msgstr "Një slug nuk mund të fillojë me simbolin _."
 
 #: wiki/forms.py
 msgid "A deleted article with slug \"%s\" already exists."
-msgstr ""
+msgstr "Ekziston një artikull i fshire me slug-un \"%s\"."
 
 #: wiki/forms.py
 msgid "A slug named \"%s\" already exists."
-msgstr ""
+msgstr "Ekziston një slug me emrin \"%s\"."
 
 #: wiki/forms.py
 msgid "Yes, I am sure"
@@ -19071,7 +19247,7 @@ msgstr "Po, Unë jam i sigurtë"
 
 #: wiki/forms.py
 msgid "Purge"
-msgstr ""
+msgstr "Spastro"
 
 #: wiki/forms.py
 msgid ""
@@ -19079,6 +19255,10 @@ msgid ""
 " Purging is a good idea if you want to free the slug such that users can "
 "create new articles in its place."
 msgstr ""
+"Spastro artikullin: Fshije përfundimisht (artikullin me gjithë përmbajtjen e"
+" tij) pa qenë e mundur të zhbëhet. Spastrimi është zgjidhje e mirë nëse do "
+"të lirosh slug-un në mënyrë që përdoruesit e tjerë të mund të krijojnë një "
+"artikull të ri në atë vend/adresë. "
 
 #: wiki/forms.py wiki/plugins/attachments/forms.py
 #: wiki/plugins/images/forms.py
@@ -19088,6 +19268,7 @@ msgstr "Ju nuk jeni i sigurtë mjaftueshëm!"
 #: wiki/forms.py
 msgid "While you tried to delete this article, it was modified. TAKE CARE!"
 msgstr ""
+"Artikulli u modifikua ndërkohë që ju u përpoqët ta fshini atë. BEJ KUJDES!"
 
 #: wiki/forms.py
 msgid "Lock article"
@@ -19099,7 +19280,7 @@ msgstr "Blloko të gjithë përdoruesve akcesin në editimin e këtij artikulli.
 
 #: wiki/forms.py
 msgid "Permissions"
-msgstr ""
+msgstr "Lejet"
 
 #: wiki/forms.py
 msgid "Owner"
@@ -19107,29 +19288,31 @@ msgstr "Pronar"
 
 #: wiki/forms.py
 msgid "Enter the username of the owner."
-msgstr ""
+msgstr "Shtyp emri i përdoruesit të pronarit."
 
 #: wiki/forms.py
 msgid "(none)"
-msgstr ""
+msgstr "(asgjë)"
 
 #: wiki/forms.py
 msgid "Inherit permissions"
-msgstr ""
+msgstr "Trashëgo/kalo lejet"
 
 #: wiki/forms.py
 msgid ""
 "Check here to apply the above permissions recursively to articles under this"
 " one."
 msgstr ""
+"Check-o këtu për të aplikuar në mënyre rekursive lejet e mësipërme në "
+"artikujt poshtë këtij. "
 
 #: wiki/forms.py
 msgid "Permission settings for the article were updated."
-msgstr ""
+msgstr "U azhornua konfigurimi i lejeve për këtë artikull. "
 
 #: wiki/forms.py
 msgid "Your permission settings were unchanged, so nothing saved."
-msgstr ""
+msgstr "Nuk ka ndryshime në konfigurimin e lejeve, ndaj nuk u ruajt asgjë. "
 
 #: wiki/forms.py
 msgid "No user with that username"
@@ -19137,38 +19320,40 @@ msgstr "S'ka përdorues me këtë pseudonim"
 
 #: wiki/forms.py
 msgid "Article locked for editing"
-msgstr ""
+msgstr "Artikulli është i mbyllur për ndryshime"
 
 #: wiki/forms.py
 msgid "Article unlocked for editing"
-msgstr ""
+msgstr "Artikulli i hapur për ndryshime"
 
 #: wiki/forms.py
 msgid "Filter..."
-msgstr ""
+msgstr "Filtro..."
 
 #: wiki/core/plugins/base.py
 msgid "Settings for plugin"
-msgstr ""
+msgstr "Konfigurimet për plugin"
 
 #: wiki/models/article.py wiki/models/pluginbase.py
 #: wiki/plugins/attachments/models.py
 msgid "current revision"
-msgstr ""
+msgstr "versioni aktual"
 
 #: wiki/models/article.py
 msgid ""
 "The revision being displayed for this article. If you need to do a roll-"
 "back, simply change the value of this field."
 msgstr ""
+"Versioni që po shfaqet për këtë artikull. Nëse doni të bëni një rollback, "
+"ndryshoni vlerën e kësaj fushe. "
 
 #: wiki/models/article.py
 msgid "modified"
-msgstr ""
+msgstr "modifikuar"
 
 #: wiki/models/article.py
 msgid "Article properties last modified"
-msgstr ""
+msgstr "Vetitë e artikullit ndryshuar së fundmi"
 
 #: wiki/models/article.py
 msgid "owner"
@@ -19179,6 +19364,8 @@ msgid ""
 "The owner of the article, usually the creator. The owner always has both "
 "read and write access."
 msgstr ""
+"Pronari i artikullit, zakonish krijues. Pronari gjithmonë ka akces për të e "
+"lexuar dhe shkruar."
 
 #: wiki/models/article.py
 msgid "group"
@@ -19189,46 +19376,48 @@ msgid ""
 "Like in a UNIX file system, permissions can be given to a user according to "
 "group membership. Groups are handled through the Django auth system."
 msgstr ""
+"Si dhe në sistemet e skedarëve UNIX, lejet mund t´u jepen përdoruesve sipas "
+"antarësisë në grupe. Grupet menaxhohen nga sistemi i Django auth. "
 
 #: wiki/models/article.py
 msgid "group read access"
-msgstr ""
+msgstr "e drejta për lexim për grupin"
 
 #: wiki/models/article.py
 msgid "group write access"
-msgstr ""
+msgstr "e drejta për shkrim për grupin"
 
 #: wiki/models/article.py
 msgid "others read access"
-msgstr ""
+msgstr "e drejta për lexim nga të tjerët"
 
 #: wiki/models/article.py
 msgid "others write access"
-msgstr ""
+msgstr "e drejta për shkrim nga të tjerët"
 
 #: wiki/models/article.py
 msgid "Article without content (%(id)d)"
-msgstr ""
+msgstr "Artikull pa përmbajtje (%(id)d)"
 
 #: wiki/models/article.py
 msgid "content type"
-msgstr ""
+msgstr "lloji i përmbajtjes"
 
 #: wiki/models/article.py
 msgid "object ID"
-msgstr ""
+msgstr "objekt ID"
 
 #: wiki/models/article.py
 msgid "Article for object"
-msgstr ""
+msgstr "Artikulli për objekt"
 
 #: wiki/models/article.py
 msgid "Articles for object"
-msgstr ""
+msgstr "Artikujt për objektin"
 
 #: wiki/models/article.py
 msgid "revision number"
-msgstr ""
+msgstr "numri i versionit/rishikimit"
 
 #: wiki/models/article.py
 msgid "IP address"
@@ -19240,43 +19429,47 @@ msgstr "përdorues"
 
 #: wiki/models/article.py
 msgid "locked"
-msgstr ""
+msgstr "mbyllur"
 
 #: wiki/models/article.py wiki/models/pluginbase.py
 msgid "article"
-msgstr ""
+msgstr "artikull"
 
 #: wiki/models/article.py
 msgid "article contents"
-msgstr ""
+msgstr "përmbajtja e artikullit"
 
 #: wiki/models/article.py
 msgid "article title"
-msgstr ""
+msgstr "titulli i artikullit"
 
 #: wiki/models/article.py
 msgid ""
 "Each revision contains a title field that must be filled out, even if the "
 "title has not changed"
 msgstr ""
+"Çdo rishikim ka një fushë titull që duhet plotësuar edhe nëse titulli nuk ka"
+" ndryshuar"
 
 #: wiki/models/pluginbase.py
 msgid "original article"
-msgstr ""
+msgstr "artikulli origjinal"
 
 #: wiki/models/pluginbase.py
 msgid "Permissions are inherited from this article"
-msgstr ""
+msgstr "Lejet janë trashëguar nga ky artikull"
 
 #: wiki/models/pluginbase.py
 msgid "A plugin was changed"
-msgstr ""
+msgstr "Është ndryshuar një plugin"
 
 #: wiki/models/pluginbase.py
 msgid ""
 "The revision being displayed for this plugin.If you need to do a roll-back, "
 "simply change the value of this field."
 msgstr ""
+"Versioni që po shfaqet për këtë plugin. Nëse doni të bëni një rollback, "
+"ndryshoni vlerën e kësaj fushe. "
 
 #: wiki/models/urlpath.py
 msgid "Cache lookup value for articles"
@@ -19284,7 +19477,7 @@ msgstr ""
 
 #: wiki/models/urlpath.py
 msgid "slug"
-msgstr ""
+msgstr "slug"
 
 #: wiki/models/urlpath.py
 msgid "(root)"
@@ -19292,23 +19485,23 @@ msgstr "(root)"
 
 #: wiki/models/urlpath.py
 msgid "URL path"
-msgstr ""
+msgstr "shtegu URL"
 
 #: wiki/models/urlpath.py
 msgid "URL paths"
-msgstr ""
+msgstr "shtigjet URL"
 
 #: wiki/models/urlpath.py
 msgid "Sorry but you cannot have a root article with a slug."
-msgstr ""
+msgstr "Një artikull root/rrenjë nuk mund të ketë slug."
 
 #: wiki/models/urlpath.py
 msgid "A non-root note must always have a slug."
-msgstr ""
+msgstr "Një artikull jo-rrenjë duhet patjetër të ketë një slug."
 
 #: wiki/models/urlpath.py
 msgid "There is already a root node on %s"
-msgstr ""
+msgstr "Ekziston ndërkohë një rrenjë për %s"
 
 #: wiki/models/urlpath.py
 msgid ""
@@ -19317,18 +19510,22 @@ msgid ""
 "\n"
 "The children of this article have had their parents deleted. You should probably find a new home for them."
 msgstr ""
+"Artikuj që kanë humbur prindërit/paraardhësit e tyre\n"
+"===============================\n"
+"\n"
+"Fëmijëve/pasardhësve të këtij artikulli u janë fshirë prindërit. Ndoshta duhet të gjeni një vend të ri për ta. "
 
 #: wiki/models/urlpath.py
 msgid "Lost and found"
-msgstr ""
+msgstr "Humbur dhe gjetur"
 
 #: wiki/plugins/attachments/forms.py
 msgid "A short summary of what the file contains"
-msgstr ""
+msgstr "Një përmbledhje e shkurtër për përmbjatjen e skedarit"
 
 #: wiki/plugins/attachments/forms.py
 msgid "Yes I am sure..."
-msgstr ""
+msgstr "Po unë jam i sigurtë..."
 
 #: wiki/plugins/attachments/markdown_extensions.py
 msgid "Click to download file"
@@ -19339,84 +19536,92 @@ msgid ""
 "The revision of this attachment currently in use (on all articles using the "
 "attachment)"
 msgstr ""
+"Një  version i këtij dokumenti të atashuar është aktualisht në përdorim (në "
+"gjithë artikujt që përdorin këtë atashim)"
 
 #: wiki/plugins/attachments/models.py
 msgid "original filename"
-msgstr ""
+msgstr "emri origjinal i skedarit"
 
 #: wiki/plugins/attachments/models.py
 msgid "attachment"
-msgstr ""
+msgstr "atashim"
 
 #: wiki/plugins/attachments/models.py
 msgid "attachments"
-msgstr ""
+msgstr "atashime"
 
 #: wiki/plugins/attachments/models.py
 msgid "file"
-msgstr ""
+msgstr "dokument"
 
 #: wiki/plugins/attachments/models.py
 msgid "attachment revision"
-msgstr ""
+msgstr "versioni i atashimit"
 
 #: wiki/plugins/attachments/models.py
 msgid "attachment revisions"
-msgstr ""
+msgstr "versionet e atashimit"
 
 #: wiki/plugins/attachments/views.py
 msgid "%s was successfully added."
-msgstr ""
+msgstr "%s u shtua sukseshëm."
 
 #: wiki/plugins/attachments/views.py wiki/plugins/attachments/views.py
 msgid "Your file could not be saved: %s"
-msgstr ""
+msgstr "Dokumenti juaj nuk mund të ruhet: %s"
 
 #: wiki/plugins/attachments/views.py wiki/plugins/attachments/views.py
 msgid ""
 "Your file could not be saved, probably because of a permission error on the "
 "web server."
 msgstr ""
+"Dokumenti juaj nuk u ruajt, ndoshta për shkak të një problemi me lejet në "
+"web server-in."
 
 #: wiki/plugins/attachments/views.py
 msgid "%s uploaded and replaces old attachment."
-msgstr ""
+msgstr "%s u ngarkua dhe zëvendëson atashimin e vjetër."
 
 #: wiki/plugins/attachments/views.py
 msgid ""
 "Your new file will automatically be renamed to match the file already "
 "present. Files with different extensions are not allowed."
 msgstr ""
+"Skedari juaj i ri do të riemërtohet që të përkasë me skedarin ekzistues. "
+"Skedarët nuk lejohen të kenë shtesa/extentions të ndryshme. "
 
 #: wiki/plugins/attachments/views.py
 msgid "Current revision changed for %s."
-msgstr ""
+msgstr "Versioni aktual i %s u ndryshua. "
 
 #: wiki/plugins/attachments/views.py
 msgid "Added a reference to \"%(att)s\" from \"%(art)s\"."
-msgstr ""
+msgstr "U shtua një referencë në \"%(att)s\" nga \"%(art)s\"."
 
 #: wiki/plugins/attachments/views.py
 msgid "The file %s was deleted."
-msgstr ""
+msgstr "Dokumenti %s është fshirë."
 
 #: wiki/plugins/attachments/views.py
 msgid "This article is no longer related to the file %s."
-msgstr ""
+msgstr "Ky artikull nuk është më i lidhur me skedarin %s."
 
 #: wiki/plugins/attachments/wiki_plugin.py
 msgid "A file was changed: %s"
-msgstr ""
+msgstr "Dokumenti është ndryshuar: %s"
 
 #: wiki/plugins/attachments/wiki_plugin.py
 msgid "A file was deleted: %s"
-msgstr ""
+msgstr "Dokumenti është fshirë: %s"
 
 #: wiki/plugins/images/forms.py
 msgid ""
 "New image %s was successfully uploaded. You can use it by selecting it from "
 "the list of available images."
 msgstr ""
+"Nje imazh i ri %s u ngarkua me sukses. Mund ta përdorni atë duke e "
+"përzgjedhur në listën e imazheve të disponueshme.  "
 
 #: wiki/plugins/images/forms.py
 msgid "Are you sure?"
@@ -19424,7 +19629,7 @@ msgstr "A jeni i sigurt?"
 
 #: wiki/plugins/images/models.py
 msgid "image"
-msgstr ""
+msgstr "imazh"
 
 #: wiki/plugins/images/models.py
 msgid "images"
@@ -19432,35 +19637,35 @@ msgstr "imazhe"
 
 #: wiki/plugins/images/models.py
 msgid "Image: %s"
-msgstr ""
+msgstr "Imazh: %s"
 
 #: wiki/plugins/images/models.py
 msgid "Current revision not set!!"
-msgstr ""
+msgstr "Versioni aktual i papërcaktuar!!"
 
 #: wiki/plugins/images/models.py
 msgid "image revision"
-msgstr ""
+msgstr "ndryshim i imazhit"
 
 #: wiki/plugins/images/models.py
 msgid "image revisions"
-msgstr ""
+msgstr "ndryshime të imazhit"
 
 #: wiki/plugins/images/models.py
 msgid "Image Revsion: %d"
-msgstr ""
+msgstr "Versioni i imazhit: %d"
 
 #: wiki/plugins/images/views.py
 msgid "%s has been restored"
-msgstr ""
+msgstr "%s u risoll"
 
 #: wiki/plugins/images/views.py
 msgid "%s has been marked as deleted"
-msgstr ""
+msgstr "%s janë bërë me shenjë si të fshira"
 
 #: wiki/plugins/images/views.py
 msgid "%(file)s has been changed to revision #%(revision)d"
-msgstr ""
+msgstr "%(file)s u ndryshua ne versionin #%(revision)d"
 
 #: wiki/plugins/images/views.py
 msgid "%(file)s has been saved."
@@ -19476,7 +19681,7 @@ msgstr "Një imazh është shtuar: %s"
 
 #: wiki/plugins/links/wiki_plugin.py
 msgid "Links"
-msgstr ""
+msgstr "Linqet"
 
 #: wiki/plugins/notifications/forms.py
 msgid "Notifications"
@@ -19488,19 +19693,19 @@ msgstr "Kur ky artikull është ndryshuar"
 
 #: wiki/plugins/notifications/forms.py
 msgid "Also receive emails about article edits"
-msgstr ""
+msgstr "Merr gjithashtu mesazhe mbi ndryshimet e artikullit"
 
 #: wiki/plugins/notifications/forms.py
 msgid "Your notification settings were updated."
-msgstr ""
+msgstr "Preferencat tuaja për njoftimet u azhornuan."
 
 #: wiki/plugins/notifications/forms.py
 msgid "Your notification settings were unchanged, so nothing saved."
-msgstr ""
+msgstr "Nuk ka ndryshime në preferencat për njoftime, ndaj nuk u ruajt asgjë."
 
 #: wiki/plugins/notifications/models.py
 msgid "%(user)s subscribing to %(article)s (%(type)s)"
-msgstr ""
+msgstr "%(user)s abonohu te %(article)s (%(type)s)"
 
 #: wiki/plugins/notifications/models.py
 msgid "Article deleted: %s"
@@ -19532,27 +19737,33 @@ msgstr "Artikulli i ri '%s' u krijua."
 
 #: wiki/views/article.py
 msgid "There was an error creating this article: %s"
-msgstr ""
+msgstr "Pati një problem me krijimin e këtij artikulli: %s"
 
 #: wiki/views/article.py
 msgid "There was an error creating this article."
-msgstr ""
+msgstr "Pati një problem me krijimin e këtij artikulli."
 
 #: wiki/views/article.py
 msgid ""
 "This article cannot be deleted because it has children or is a root article."
 msgstr ""
+"Ky artikull nuk mund të fshihet sepse ka pasardhës ose është artikull "
+"rrenjë. "
 
 #: wiki/views/article.py
 msgid ""
 "This article together with all its contents are now completely gone! Thanks!"
 msgstr ""
+"Artikulli së bashku me përmbajtjen e tij janë hequr përfundimisht. "
+"Faleminderit!"
 
 #: wiki/views/article.py
 msgid ""
 "The article \"%s\" is now marked as deleted! Thanks for keeping the site "
 "free from unwanted material!"
 msgstr ""
+"Artikulli %s është shënuar i fshirë. Faleminderit që po mbani këtë site të "
+"pastër nga materialet e padëshiruara. "
 
 #: wiki/views/article.py
 msgid "Your changes were saved."
@@ -19560,30 +19771,31 @@ msgstr "Ndryshimet e juaja janë ruajtur."
 
 #: wiki/views/article.py
 msgid "A new revision of the article was succesfully added."
-msgstr ""
+msgstr "U shtua me sukses një version i ri i artikullit."
 
 #: wiki/views/article.py
 msgid "Restoring article"
-msgstr ""
+msgstr "Duke risjellë artikullin"
 
 #: wiki/views/article.py
 msgid "The article \"%s\" and its children are now restored."
-msgstr ""
+msgstr "Artikulli \"%s\" dhe pasardhësit e tij janë risjellë."
 
 #: wiki/views/article.py
 msgid "The article %s is now set to display revision #%d"
-msgstr ""
+msgstr "U caktua që artikulli %s të shfaqë versionin #%d"
 
 #: wiki/views/article.py
 msgid "New title"
-msgstr ""
+msgstr "Titull i ri"
 
 #: wiki/views/article.py
 msgid "Merge between Revision #%(r1)d and Revision #%(r2)d"
-msgstr ""
+msgstr "Shkrirje e versioneve #%(r1)d dhe #%(r2)d"
 
 #: wiki/views/article.py
 msgid ""
 "A new revision was created: Merge between Revision #%(r1)d and Revision "
 "#%(r2)d"
 msgstr ""
+"U krijua një version i ri: Shkrirje mes versioneve #%(r1)d dhe #%(r2)d"

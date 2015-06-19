@@ -114,7 +114,7 @@ msgstr ""
 #: lms/templates/shoppingcart/billing_details.html
 #: lms/templates/shoppingcart/receipt.html
 msgid "Name"
-msgstr ""
+msgstr "নাম "
 
 #: cms/djangoapps/contentstore/views/videos.py
 #: common/lib/xmodule/xmodule/video_module/video_xfields.py
@@ -1114,7 +1114,7 @@ msgstr ""
 
 #: common/lib/capa/capa/inputtypes.py common/lib/capa/capa/inputtypes.py
 msgid "unanswered"
-msgstr ""
+msgstr "অনুত্তরিত"
 
 #: common/lib/capa/capa/inputtypes.py
 msgid "processing"
@@ -1542,7 +1542,7 @@ msgstr ""
 #: common/lib/xmodule/xmodule/modulestore/inheritance.py
 #: lms/templates/problem.html
 msgid "Show Answer"
-msgstr ""
+msgstr "উত্তর প্রদর্শন"
 
 #: common/lib/xmodule/xmodule/capa_base.py
 msgid ""
@@ -3846,6 +3846,7 @@ msgstr ""
 msgid ""
 "Your response has been submitted. Please check back later for your grade."
 msgstr ""
+"তোমার প্রতিবেদন জমা করা হয়েছে. আপনার ক্রমাংক জানার জন্য পরে যোগাযোগ করুন "
 
 #. Translators: "Not started" communicates to a student that their response
 #. has not yet been graded
@@ -7766,7 +7767,7 @@ msgstr ""
 #: cms/templates/studio_xblock_wrapper.html
 #: lms/templates/discussion/_underscore_templates.html
 msgid "Delete"
-msgstr ""
+msgstr "মুছে ফেলা "
 
 #: lms/templates/wiki/delete.html
 msgid "You cannot delete a root article."
@@ -7832,7 +7833,7 @@ msgstr ""
 #: lms/templates/modal/_modal-settings-language.html
 #: lms/templates/modal/accessible_confirm.html
 msgid "Close"
-msgstr ""
+msgstr "বন্ধ করা "
 
 #: lms/templates/wiki/edit.html
 msgid "Wiki Preview"
@@ -8070,6 +8071,8 @@ msgstr ""
 #: lms/templates/wiki/plugins/attachments/index.html
 msgid "Upload File"
 msgstr ""
+"ফাইল আপলোড করা\n"
+"ফাইল ইন্টারনেট-এ তুলে রাখা  "
 
 #: lms/templates/wiki/plugins/attachments/index.html
 msgid "Upload file"
@@ -8694,7 +8697,7 @@ msgstr ""
 #. Translators: This is the status for a video that is in an unknown state
 #: cms/djangoapps/contentstore/views/videos.py
 msgid "Unknown"
-msgstr ""
+msgstr "অজানা "
 
 #. Translators: This is the header for a CSV file column
 #. containing URLs for video encodings for the named profile
@@ -8811,7 +8814,7 @@ msgstr ""
 #: lms/templates/modal/accessible_confirm.html
 #: lms/templates/verify_student/face_upload.html
 msgid "Cancel"
-msgstr ""
+msgstr "বাতিল "
 
 #: cms/templates/course-create-rerun.html cms/templates/index.html
 #: cms/templates/settings.html lms/templates/courseware/course_about.html
@@ -9081,7 +9084,7 @@ msgstr ""
 #: lms/templates/annotatable.html lms/templates/imageannotation.html
 #: lms/templates/textannotation.html lms/templates/videoannotation.html
 msgid "Collapse Instructions"
-msgstr ""
+msgstr "নির্দেশ লুকান  "
 
 #: lms/templates/annotatable.html
 msgid "Guided Discussion"
@@ -9089,7 +9092,7 @@ msgstr ""
 
 #: lms/templates/annotatable.html
 msgid "Hide Annotations"
-msgstr ""
+msgstr "মন্তব্য লুকান "
 
 #: lms/templates/course.html
 msgid "LEARN MORE"
@@ -9373,6 +9376,8 @@ msgstr ""
 #: lms/templates/survey/survey.html
 msgid "Submit"
 msgstr ""
+"জমা করা\n"
+"জমা দেওয়া "
 
 #: lms/templates/help_modal.html
 msgid "Thank You!"
@@ -9797,6 +9802,8 @@ msgstr ""
 #: lms/templates/verify_student/face_upload.html
 msgid "Save"
 msgstr ""
+"জমানো \n"
+"রক্ষা করা"
 
 #: lms/templates/problem.html
 msgid "You have used {num_used} of {num_total} submissions"
@@ -10299,6 +10306,8 @@ msgstr ""
 #: lms/templates/ccx/schedule.html
 msgid "Error"
 msgstr ""
+"বিভ্রম\n"
+"ভুল"
 
 #: lms/templates/sysadmin_dashboard_gitlogs.html
 msgid "Date"
@@ -12520,7 +12529,7 @@ msgstr ""
 #: lms/templates/discussion/_underscore_templates.html
 #: lms/templates/discussion/mustache/_profile_thread.mustache
 msgid "anonymous"
-msgstr ""
+msgstr "বেনামী"
 
 #: lms/templates/discussion/_user_profile.html
 msgid ", "
@@ -14747,7 +14756,7 @@ msgstr ""
 
 #: lms/templates/modal/accessible_confirm.html
 msgid "OK"
-msgstr ""
+msgstr "ঠিক আছে "
 
 #: lms/templates/modal/accessible_confirm.html
 msgid "open"

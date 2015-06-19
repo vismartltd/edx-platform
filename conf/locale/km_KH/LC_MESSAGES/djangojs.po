@@ -53,7 +53,7 @@ msgstr ""
 #: cms/static/js/views/utils/xblock_utils.js lms/static/js/ccx/schedule.js
 #: lms/static/js/views/fields.js
 msgid "Saving"
-msgstr ""
+msgstr "កំពុងរក្សាទុក"
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -123,7 +123,7 @@ msgstr ""
 #: cms/templates/js/xblock-outline.underscore
 #: cms/templates/js/xblock-outline.underscore
 msgid "Delete"
-msgstr ""
+msgstr "លុបចោល"
 
 #. Translators: This is the status of an active video upload
 #: cms/static/js/models/active_video_upload.js cms/static/js/views/assets.js
@@ -141,7 +141,7 @@ msgstr ""
 #: cms/templates/js/signatory-details.underscore
 #: cms/templates/js/signatory-editor.underscore
 msgid "Name"
-msgstr ""
+msgstr "ឈ្មោះ"
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -159,14 +159,14 @@ msgstr ""
 
 #: cms/static/js/views/metadata.js lms/static/js/views/file_uploader.js
 msgid "Upload File"
-msgstr ""
+msgstr "ផ្ទុកឯកសារឡើង"
 
 #: cms/static/js/views/validation.js
 #: lms/static/js/groups/views/cohort_discussions_course_wide.js
 #: lms/static/js/groups/views/cohort_discussions_inline.js
 #: lms/static/js/views/fields.js
 msgid "Your changes have been saved."
-msgstr ""
+msgstr "ការផ្លាស់ប្តូរត្រូវបានរក្សាទុក។"
 
 #. Translators: This message will be added to the front of messages of type
 #. error,
@@ -196,7 +196,7 @@ msgstr ""
 #: lms/templates/instructor/instructor_dashboard_2/cohort-discussions-inline.underscore
 #: lms/templates/instructor/instructor_dashboard_2/cohort-form.underscore
 msgid "Save"
-msgstr ""
+msgstr "រក្សាទុក"
 
 #. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
@@ -1475,14 +1475,11 @@ msgid ""
 "required http:// prefix?"
 msgstr ""
 
-#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
 #: common/lib/xmodule/xmodule/js/src/html/edit.js
-#: cms/templates/js/signatory-details.underscore
-#: cms/templates/js/signatory-editor.underscore
 msgid "Title"
-msgstr ""
+msgstr "ចំនង​ជើង"
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -3849,10 +3846,13 @@ msgid ""
 "This may be happening because of an error with our server or your internet "
 "connection. Try refreshing the page or making sure you are online."
 msgstr ""
+"នេះអចនឹងកើតឡើង ព្រោះមានកំហុសកើតឡើងជាមួយប្រព័ន្ធរបស់យើង​ ឬ "
+"ប្រព័ន្ធអ៊ីនធើណែតរបស់អ្នក។ សូមសាកល្បងចូលទំព័រម្តងទៀត ឬ "
+"ពិនិត្យមើលប្រព័ន្ធអ៊ីនធើណែតរបស់អ្នក។"
 
 #: cms/static/coffee/src/main.js
 msgid "Studio's having trouble saving your work"
-msgstr ""
+msgstr "ស្ទូឌីយោមានបញ្ហាក្នុងការរក្សាទុកឯកសាររបស់អ្នក"
 
 #: cms/static/coffee/src/views/tabs.js
 msgid "Delete Page Confirmation"
@@ -3869,7 +3869,7 @@ msgstr ""
 #: cms/static/js/views/show_textbook.js
 #: cms/static/js/views/utils/xblock_utils.js
 msgid "Deleting"
-msgstr ""
+msgstr "កំពុងលុបចោល"
 
 #: cms/static/coffee/src/xblock/cms.runtime.v1.js
 msgid "OpenAssessment Save Error"
@@ -3877,7 +3877,7 @@ msgstr ""
 
 #: cms/static/js/base.js
 msgid "This link will open in a modal window"
-msgstr ""
+msgstr "អាស័យដ្ឋាននេះនឹងលេចឡើងក្នុងអេក្រង់ដែលបានបើករួចជាស្រេច"
 
 #: cms/static/js/certificates/collections/certificates.js
 msgid "Could not parse certificate JSON. %(message)s"
@@ -3935,7 +3935,7 @@ msgstr ""
 #: cms/static/js/certificates/views/signatory_editor.js
 #: cms/static/js/views/course_info_update.js
 msgid "This action cannot be undone."
-msgstr ""
+msgstr "សកម្មភាពមិនអាចផ្លាស់ប្តូរ។"
 
 #: cms/static/js/certificates/views/signatory_editor.js
 msgid "Upload signature image."
@@ -4105,7 +4105,7 @@ msgstr ""
 
 #: cms/static/js/models/course.js cms/static/js/models/section.js
 msgid "You must specify a name"
-msgstr ""
+msgstr "អ្នកត្រូវតែបញ្ជាក់ឈ្មោះ"
 
 #: cms/static/js/models/group.js
 msgid "Group name is required"
@@ -4140,10 +4140,12 @@ msgid ""
 "Only <%= fileTypes %> files can be uploaded. Please select a file ending in "
 "<%= fileExtensions %> to upload."
 msgstr ""
+"មានតែឯកសារ​ <%=fileTypes %> ប៉ុណ្ណោះដែលត្រូវអាចបញ្ចូលឡើង។​ "
+"សូមជ្រើសរើសឯកសារដែលបញ្ចប់ដោយ​ <%=fileExtensions %> ដើម្បីផ្ទុកឡើង។"
 
 #: cms/static/js/models/uploads.js
 msgid "or"
-msgstr ""
+msgstr "ឬ"
 
 #: cms/static/js/models/xblock_validation.js
 msgid "This component has validation issues."
@@ -4151,27 +4153,32 @@ msgstr ""
 
 #: cms/static/js/models/settings/course_details.js
 msgid "The course must have an assigned start date."
-msgstr ""
+msgstr "វគ្គវិធីសិក្សា ត្រូវតែមានកាលបរិច្ឆេទកំណត់។"
 
 #: cms/static/js/models/settings/course_details.js
 msgid "The course end date cannot be before the course start date."
 msgstr ""
+"កាលបរិច្ឆេទបញ្ចប់វគ្គសិក្សា "
+"មិនអាចប្រព្រឹត្តទៅមុនកាលបរិច្ឆេទនៃការចាប់ផ្ដើមនោះទេ។"
 
 #: cms/static/js/models/settings/course_details.js
 msgid "The course start date cannot be before the enrollment start date."
 msgstr ""
+"កាលបរិច្ឆេទចាប់ផ្តើមវគ្គសិក្សាមិនអាចកំណត់មុនកាលបរិច្ឆេទចាប់ផ្តើមចុះឈ្មោះ។"
 
 #: cms/static/js/models/settings/course_details.js
 msgid "The enrollment start date cannot be after the enrollment end date."
 msgstr ""
+"កាលបរិច្ឆទចាប់ចុះឈ្មោះចូលរៀនមិនអាចកើតឡើងមុនកាលបរិច្ឆេទចុះឈ្មោះត្រូវបានបិទ។"
 
 #: cms/static/js/models/settings/course_details.js
 msgid "The enrollment end date cannot be after the course end date."
 msgstr ""
+"កាលបរិច្ឆេទបិទការចុះឈ្មោះមិនអាចកើតឡើង បន្ទាប់ពីវគ្គសិក្សាត្រូវបានបញ្ចាប់។"
 
 #: cms/static/js/models/settings/course_details.js
 msgid "Key should only contain letters, numbers, _, or -"
-msgstr ""
+msgstr "ពាក្យគួរតែមានត្រឹម​តែជា តួរអក្សរ, លេខ, _, ឬ -"
 
 #: cms/static/js/models/settings/course_details.js
 msgid "Please enter an integer between %(min)s and %(max)s."
@@ -4179,27 +4186,27 @@ msgstr ""
 
 #: cms/static/js/models/settings/course_grader.js
 msgid "There's already another assignment type with this name."
-msgstr ""
+msgstr "មានកិច្ចការមួយផ្សេងទៀតដែលមានឈ្មោះនេះ។"
 
 #: cms/static/js/models/settings/course_grader.js
 msgid "Please enter an integer between 0 and 100."
-msgstr ""
+msgstr "សូមបញ្ចួលលេខគត់ក្នុងចន្លោះ 0 និង 100។"
 
 #: cms/static/js/models/settings/course_grader.js
 msgid "Please enter an integer greater than 0."
-msgstr ""
+msgstr "សូមបញ្ចូលលេខគត់ដែលធំជាង 0។"
 
 #: cms/static/js/models/settings/course_grader.js
 msgid "Please enter non-negative integer."
-msgstr ""
+msgstr "សូមបញ្ចូលលេខគត់វិជ្ជមាន។"
 
 #: cms/static/js/models/settings/course_grader.js
 msgid "Cannot drop more <% attrs.types %> than will assigned."
-msgstr ""
+msgstr "មិនអាចបោះបង់ចោល <% attrs.types %> ច្រើនជាងដែលបានប្រគល់ឲ្យ។"
 
 #: cms/static/js/models/settings/course_grading_policy.js
 msgid "Grace period must be specified in HH:MM format."
-msgstr ""
+msgstr "សញ្ញា ចុច​ ត្រូវបញ្ចាក់ឲ្យច្បាស់ក្នុងទំរង់ ថថៈខខ"
 
 #: cms/static/js/models/settings/course_grading_policy.js
 msgid "Not able to set passing grade to less than %(minimum_grade_cutoff)s%."
@@ -4212,7 +4219,7 @@ msgstr ""
 
 #: cms/static/js/views/asset.js
 msgid "Delete File Confirmation"
-msgstr ""
+msgstr "បញ្ចាក់ការលុបចោលឯកសារ"
 
 #: cms/static/js/views/asset.js
 msgid ""
@@ -4220,15 +4227,18 @@ msgid ""
 "\n"
 "Also any content that links/refers to this item will no longer work (e.g. broken images and/or links)"
 msgstr ""
+"តើអ្វកពិតជាត្រូវការលុបវាចោលមែនទេ។ ការប្រព្រឹត្តមិនអាចកែប្រែ!\n"
+"\n"
+"ទន្ទឹមនឹងនោះ, ឯកសារផ្សេងៗទាក់ទិននឹងមិនអាតដំណើរការ (ដូចជា រូបភាព និងអាស័យដ្ឋានមិនអាចរកឃើញ)"
 
 #: cms/static/js/views/asset.js
 msgid "Your file has been deleted."
-msgstr ""
+msgstr "ឯកសាររបស់អ្នកត្រូវបានលុប។"
 
 #: cms/static/js/views/assets.js cms/templates/js/asset-library.underscore
 #: cms/templates/js/previous-video-upload-list.underscore
 msgid "Date Added"
-msgstr ""
+msgstr "ការបរិច្ឆេទត្រូវបានបញ្ចូល"
 
 #: cms/static/js/views/assets.js
 msgid "File {filename} exceeds maximum size of {maxFileSizeInMBs} MB"
@@ -4301,7 +4311,7 @@ msgstr ""
 
 #: cms/static/js/views/course_info_update.js
 msgid "Are you sure you want to delete this update?"
-msgstr ""
+msgstr "តើអ្នកចង់លុបចោលការនូវទិន្នន័យថី្ម មែនឬ?"
 
 #: cms/static/js/views/course_rerun.js
 msgid "Create Re-run"
@@ -4313,11 +4323,11 @@ msgstr ""
 
 #: cms/static/js/views/edit_chapter.js
 msgid "Upload a new PDF to “<%= name %>”"
-msgstr ""
+msgstr "បញ្ចូលឯកសារ PDF ថ្មី ទៅ \"<%=name %>\""
 
 #: cms/static/js/views/edit_chapter.js
 msgid "Please select a PDF file to upload."
-msgstr ""
+msgstr "សូមជ្រើសរើសឯកសារ PDF ដើម្បីផ្ទុកឡើង។"
 
 #. Translators: 'count' is number of groups that the group
 #. configuration contains.
@@ -4354,7 +4364,7 @@ msgstr ""
 
 #: cms/static/js/views/import.js
 msgid "There was an error with the upload"
-msgstr ""
+msgstr "គ្មានបញ្ហាក្នុងការបញ្ចូលឯកសារ"
 
 #: cms/static/js/views/license.js cms/templates/js/license-selector.underscore
 #: cms/templates/js/license-selector.underscore
@@ -4478,29 +4488,29 @@ msgstr ""
 
 #: cms/static/js/views/overview.js
 msgid "Collapse All Sections"
-msgstr ""
+msgstr "គ្រប់ផ្នែកបរាជ័យ"
 
 #: cms/static/js/views/overview.js
 msgid "Expand All Sections"
-msgstr ""
+msgstr "ពង្រីកគ្រប់ផ្នែក"
 
 #: cms/static/js/views/overview.js
 msgid "Release date:"
-msgstr ""
+msgstr "កាលបរិច្ឆេទបញ្ចេញ"
 
 #: cms/static/js/views/overview.js
 msgid "{month}/{day}/{year} at {hour}:{minute} UTC"
-msgstr ""
+msgstr "{ខែ}/{ថ្ងៃ}/{ឆ្នាំ} នៅ {ម៉ោង}:{នាទី} UTC"
 
 #: cms/static/js/views/overview.js
 msgid "Edit section release date"
-msgstr ""
+msgstr "កាលបរិច្ឆេទបញ្ចេញផ្នែកដែលបានកែសម្រួល"
 
 #: cms/static/js/views/overview_assignment_grader.js
 #: cms/templates/js/course-outline.underscore
 #: cms/templates/js/grading-editor.underscore
 msgid "Not Graded"
-msgstr ""
+msgstr "មិនបានចំនាត់ថ្នាក់"
 
 #: cms/static/js/views/paged_container.js
 msgid "Date added"
@@ -4515,53 +4525,56 @@ msgstr ""
 
 #: cms/static/js/views/show_textbook.js
 msgid "Delete “<%= name %>”?"
-msgstr ""
+msgstr "លុប \"<%= name %>\"?"
 
 #: cms/static/js/views/show_textbook.js
 msgid ""
 "Deleting a textbook cannot be undone and once deleted any reference to it in"
 " your courseware's navigation will also be removed."
 msgstr ""
+"ឯកសារបោះពុម្ពដែលបានលុប មិនអាចស្រាវត្រលប់មកវិញបានទេ ហើយនៅពេលដែលលុបហើយ "
+"ឯកសារយោងភ្ជាប់នឹងវគ្គសិក្សាក៏នឹងត្រូវលុបចោល។"
 
 #: cms/static/js/views/uploads.js
 #: cms/templates/js/metadata-file-uploader-item.underscore
 #: cms/templates/js/video/metadata-translations-item.underscore
 msgid "Upload"
-msgstr ""
+msgstr "បញ្ចូល/ផ្ទុកឡើង"
 
 #: cms/static/js/views/uploads.js
 msgid "We're sorry, there was an error"
-msgstr ""
+msgstr "យើងសូមអភ័យទោស, វាមានកំហុសឆ្គង។"
 
 #: cms/static/js/views/validation.js
 msgid "You've made some changes"
-msgstr ""
+msgstr "អ្នកបានធ្វើការផ្លាស់ប្តូរ។"
 
 #: cms/static/js/views/validation.js
 msgid "Your changes will not take effect until you save your progress."
 msgstr ""
+"ការផ្លាស់ប្តូររបស់អ្នកមិនអាចប្រព្រឹត្តទៅបាន រហូតដល់អ្នកធ្វើការរក្សាទុកឯកសារ។"
 
 #: cms/static/js/views/validation.js
 msgid "You've made some changes, but there are some errors"
-msgstr ""
+msgstr "អ្នកបានធ្វើការផ្លាស់ប្តូរ,​ ប៉ុន្តែវាមានកំហុសឆ្គង"
 
 #: cms/static/js/views/validation.js
 msgid ""
 "Please address the errors on this page first, and then save your progress."
-msgstr ""
+msgstr "សូមសម្គាល់កំហុសលើទំព័រដំបូង, ហើយនឹងរក្សាប្រតិបត្តិការណ៍។"
 
 #: cms/static/js/views/validation.js
 msgid "Save Changes"
-msgstr ""
+msgstr "រក្សាទុកការផ្លាស់ប្តូរ"
 
 #: cms/static/js/views/xblock_editor.js
 msgid "Editor"
-msgstr ""
+msgstr "អ្នកកែសម្រួល"
 
 #: cms/static/js/views/xblock_editor.js
 #: lms/templates/instructor/instructor_dashboard_2/cohort-editor.underscore
 msgid "Settings"
-msgstr ""
+msgstr "ការរៀបចំ"
 
 #: cms/static/js/views/xblock_outline.js
 msgid "New %(component_type)s"
@@ -4605,11 +4618,11 @@ msgstr ""
 #. Translators: "title" is the name of the current component being edited.
 #: cms/static/js/views/modals/edit_xblock.js
 msgid "Editing: %(title)s"
-msgstr ""
+msgstr "កែសម្រួល: %(title)s"
 
 #: cms/static/js/views/modals/edit_xblock.js
 msgid "Component"
-msgstr ""
+msgstr "ផ្នែក"
 
 #: cms/static/js/views/modals/validation_error_modal.js
 msgid "Validation Error While Saving"
@@ -4701,10 +4714,12 @@ msgid ""
 "Your changes will not take effect until you save your progress. Take care "
 "with key and value formatting, as validation is not implemented."
 msgstr ""
+"ការផ្លាស់ប្តូររបស់អ្នកនឹងមិនមានប្រសិទ្ធភាពរហូតដល់ប្រតិបត្តិការត្រូវបានរក្សាទុក។"
+" រក្សាសោរ និងទម្រង់តម្លៃ ព្រោះសុពលភាពមិនបានប្រព្រឹត្ត។"
 
 #: cms/static/js/views/settings/advanced.js
 msgid "Your policy changes have been saved."
-msgstr ""
+msgstr "ប្រតិបត្តិការផ្លាស់ប្តូររបស់អ្នកត្រូវបានរក្សាទុក។"
 
 #: cms/static/js/views/settings/advanced.js
 msgid ""
@@ -4712,6 +4727,9 @@ msgid ""
 "currently in place yet. If you are having difficulties, please review your "
 "policy pairs."
 msgstr ""
+"សូមសម្គាល់ថា សុពលភាពសោរប្រតិបត្តិការរបស់អ្នក និងគូរតម្លៃ "
+"គីបច្ចុប្បន្នមិនទាន់បានកំណត់។​ ប្រសិនបើអ្នកមានបញ្ហា, "
+"សូមមើលគូរប្រតិបត្តិការរបស់អ្នកម្តងទៀត។"
 
 #: cms/static/js/views/settings/main.js
 msgid "Credit Eligibility Requirements"
@@ -4727,11 +4745,11 @@ msgstr ""
 
 #: cms/static/js/views/settings/main.js
 msgid "Upload your course image."
-msgstr ""
+msgstr "បញ្ចូលរូបភាពសម្រាប់វគ្គសិក្សារបស់អ្នក។"
 
 #: cms/static/js/views/settings/main.js
 msgid "Files must be in JPEG or PNG format."
-msgstr ""
+msgstr "ឯកសារត្រូវស្ថិតក្នុងទម្រង់ជា JPEG ឬ PNG។"
 
 #: cms/static/js/views/utils/create_course_utils.js
 msgid ""
@@ -4747,15 +4765,15 @@ msgstr ""
 
 #: cms/static/js/views/utils/view_utils.js
 msgid "Required field."
-msgstr ""
+msgstr "តំបន់ត្រូវបំពេញ។"
 
 #: cms/static/js/views/utils/view_utils.js
 msgid "Please do not use any spaces in this field."
-msgstr ""
+msgstr "សូមកុំវាយដកឃ្លានៅទីនេះ។"
 
 #: cms/static/js/views/utils/view_utils.js
 msgid "Please do not use any spaces or special characters in this field."
-msgstr ""
+msgstr "សូមកុំ ដកឃ្លា ឬ តួពិសេស ក្នុងផ្នែកនេះ។"
 
 #: cms/static/js/views/utils/xblock_utils.js
 msgid "component"
@@ -4790,10 +4808,12 @@ msgid ""
 "Sorry, there was an error parsing the subtitles that you uploaded. Please "
 "check the format and try again."
 msgstr ""
+"សូមអភ័យទោស វាមានបញ្ហាក្នុងការផ្ទុកឯកសារឡើងរបស់អ្នក។ "
+"សូមពិនិត្យមើលទម្រង់ឯកសារម្តងទៀត និងសាកល្បងម្តងទៀត។"
 
 #: cms/static/js/views/video/translations_editor.js
 msgid "Upload translation"
-msgstr ""
+msgstr "បញ្ចូលការបកប្រែ"
 
 #: cms/static/js/views/video/transcripts/file_uploader.js
 msgid "Please select a file in .srt format."

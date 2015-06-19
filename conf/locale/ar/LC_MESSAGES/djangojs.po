@@ -100,7 +100,7 @@ msgstr ""
 #: cms/static/js/views/utils/xblock_utils.js lms/static/js/ccx/schedule.js
 #: lms/static/js/views/fields.js
 msgid "Saving"
-msgstr ""
+msgstr "جاري الحفظ"
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -186,7 +186,7 @@ msgstr "حذف"
 #: cms/static/js/models/active_video_upload.js cms/static/js/views/assets.js
 #: lms/static/js/views/fields.js
 msgid "Uploading"
-msgstr ""
+msgstr "جاري التحميل"
 
 #. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
@@ -223,7 +223,7 @@ msgstr "تحميل الملف"
 #: lms/static/js/groups/views/cohort_discussions_inline.js
 #: lms/static/js/views/fields.js
 msgid "Your changes have been saved."
-msgstr ""
+msgstr "جرى حفظ التغييرات التي أجريتها. "
 
 #. Translators: This message will be added to the front of messages of type
 #. error,
@@ -359,6 +359,7 @@ msgstr "لم يلبِّ مجموع نقاطك المعيار المطلوب لل
 
 #: common/lib/xmodule/xmodule/js/src/combinedopenended/display.js
 #: lms/static/coffee/src/staff_grading/staff_grading.js
+#: lms/templates/verify_student/incourse_reverify.underscore
 msgid "Submit"
 msgstr "تقديم"
 
@@ -2509,6 +2510,7 @@ msgid "Reply"
 msgstr "الرد"
 
 #: common/static/js/vendor/ova/catch/js/catch.js
+#: lms/templates/edxnotes/note-item.underscore
 msgid "Tags:"
 msgstr "العلامات: "
 
@@ -2991,7 +2993,7 @@ msgstr ""
 #: lms/static/js/spec/instructor_dashboard/student_admin_spec.js
 #: lms/static/js/spec/instructor_dashboard/student_admin_spec.js
 msgid "Enter a student's username or email address."
-msgstr ""
+msgstr "الرجاء إدخال اسم الطالب أو عنوان بريده الإلكتروني."
 
 #: lms/static/coffee/src/instructor_dashboard/student_admin.js
 msgid ""
@@ -3405,7 +3407,7 @@ msgstr ""
 
 #: lms/static/js/ccx/schedule.js lms/static/js/ccx/schedule.js.c
 msgid "Save changes"
-msgstr ""
+msgstr "حفظ التغييرات"
 
 #: lms/static/js/ccx/schedule.js
 msgid "Enter Due Date"
@@ -3752,6 +3754,7 @@ msgid ""
 "your username."
 msgstr ""
 
+#: lms/static/js/student_account/views/account_settings_factory.js
 #: lms/templates/student_profile/profile.underscore
 msgid "Full Name"
 msgstr "الاسم الكامل"
@@ -3764,7 +3767,7 @@ msgstr ""
 
 #: lms/static/js/student_account/views/account_settings_factory.js
 msgid "Email Address"
-msgstr ""
+msgstr "عنوان البريد الإلكتروني"
 
 #: lms/static/js/student_account/views/account_settings_factory.js
 msgid ""
@@ -3772,6 +3775,7 @@ msgid ""
 "and your courses are sent to this address."
 msgstr ""
 
+#: lms/static/js/student_account/views/account_settings_factory.js
 #: lms/templates/student_account/account.underscore
 msgid "Password"
 msgstr "كلمة السر"
@@ -3780,6 +3784,7 @@ msgstr "كلمة السر"
 msgid "Reset your Password"
 msgstr ""
 
+#: lms/static/js/student_account/views/account_settings_factory.js
 #: lms/templates/student_account/account.underscore
 msgid "Reset Password"
 msgstr "إعادة ضبط كلمة السر"
@@ -3792,7 +3797,7 @@ msgstr ""
 
 #: lms/static/js/student_account/views/account_settings_factory.js
 msgid "Language"
-msgstr ""
+msgstr "اللغة"
 
 #: lms/static/js/student_account/views/account_settings_factory.js
 msgid ""
@@ -3814,19 +3819,21 @@ msgstr ""
 
 #: lms/static/js/student_account/views/account_settings_factory.js
 msgid "Gender"
-msgstr ""
+msgstr "الجنس"
 
 #: lms/static/js/student_account/views/account_settings_factory.js
 msgid "Year of Birth"
-msgstr ""
+msgstr "سنة ميلادك"
 
+#: lms/static/js/student_account/views/account_settings_factory.js
+#: lms/static/js/student_profile/views/learner_profile_factory.js
 #: lms/templates/student_profile/profile.underscore
 msgid "Preferred Language"
 msgstr "اللغة المفضّلة"
 
 #: lms/static/js/student_account/views/account_settings_factory.js
 msgid "Connected Accounts"
-msgstr ""
+msgstr "الحسابات المترابطة"
 
 #: lms/static/js/student_account/views/account_settings_factory.js
 msgid "Connect your {accountName} account"
@@ -3847,11 +3854,11 @@ msgstr ""
 
 #: lms/static/js/student_account/views/account_settings_fields.js
 msgid "Unlink"
-msgstr ""
+msgstr "افصل"
 
 #: lms/static/js/student_account/views/account_settings_fields.js
 msgid "Link"
-msgstr ""
+msgstr "اربط"
 
 #: lms/static/js/student_account/views/account_settings_fields.js
 msgid "Unlinking"
@@ -3895,7 +3902,7 @@ msgstr ""
 
 #: lms/static/js/student_profile/views/learner_profile_factory.js
 msgid "Country"
-msgstr ""
+msgstr "البلد"
 
 #: lms/static/js/student_profile/views/learner_profile_factory.js
 msgid "Add Country"
@@ -3963,7 +3970,7 @@ msgstr ""
 
 #: lms/static/js/verify_student/views/make_payment_step_view.js
 msgid "Professional Education"
-msgstr ""
+msgstr "التعليم المهني"
 
 #: lms/static/js/verify_student/views/make_payment_step_view.js
 msgid "Verified Certificate upgrade"
@@ -4035,7 +4042,7 @@ msgstr ""
 
 #: lms/static/js/verify_student/views/webcam_photo_view.js
 msgid "No Flash Detected"
-msgstr ""
+msgstr "لم يُعثر على الفلاش "
 
 #: lms/static/js/verify_student/views/webcam_photo_view.js
 msgid ""
@@ -4053,7 +4060,7 @@ msgstr ""
 
 #: lms/static/js/views/fields.js
 msgid "In Progress"
-msgstr ""
+msgstr "قيد المعالجة"
 
 #: lms/static/js/views/fields.js
 msgid "Placeholder"
@@ -4071,9 +4078,15 @@ msgstr ""
 msgid "Change image"
 msgstr ""
 
+#: lms/static/js/views/fields.js
 #: cms/templates/js/video/metadata-translations-item.underscore
+#, fuzzy
 msgid "Remove"
-msgstr "حذف"
+msgstr ""
+"#-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#\n"
+"إزالة \n"
+"#-#-#-#-#  underscore-studio.po (edx-platform)  #-#-#-#-#\n"
+"حذف"
 
 #: lms/static/js/views/fields.js
 msgid "Removing"
@@ -4378,12 +4391,12 @@ msgstr ""
 #: cms/static/js/factories/manage_users.js
 #: cms/static/js/factories/manage_users_lib.js
 msgid "Staff"
-msgstr ""
+msgstr "طاقم المساق"
 
 #: cms/static/js/factories/manage_users.js
 #: cms/static/js/factories/manage_users_lib.js
 msgid "Admin"
-msgstr ""
+msgstr "مشرف"
 
 #: cms/static/js/factories/manage_users_lib.js
 msgid "Already a library team member"
@@ -5238,15 +5251,15 @@ msgstr "الحالة"
 
 #: lms/templates/ccx/schedule.underscore
 msgid "Unit"
-msgstr ""
+msgstr "الوحدة"
 
 #: lms/templates/ccx/schedule.underscore
 msgid "Start Date"
-msgstr ""
+msgstr "تاريخ البدء"
 
 #: lms/templates/ccx/schedule.underscore
 msgid "Due Date"
-msgstr ""
+msgstr "تاريخ الاستحقاق"
 
 #: lms/templates/ccx/schedule.underscore
 msgid "remove all"
@@ -5312,7 +5325,7 @@ msgstr "ليس هناك من إيصال. "
 
 #: lms/templates/commerce/receipt.underscore
 msgid "Go to Dashboard"
-msgstr ""
+msgstr "لوحة المعلومات الخاصة بالمشرف على النظام Sysadmin "
 
 #: lms/templates/commerce/receipt.underscore
 #: lms/templates/verify_student/payment_confirmation_step.underscore
@@ -5331,7 +5344,7 @@ msgstr "هل تريد تأكيد هويّتك لاحقًا؟"
 
 #: lms/templates/commerce/receipt.underscore
 msgid "Verify Now"
-msgstr ""
+msgstr "إجراء التحقّق الآن"
 
 #: lms/templates/dashboard/donation.underscore
 msgid "Donate"
@@ -6105,7 +6118,7 @@ msgstr ""
 
 #: lms/templates/verify_student/make_payment_step.underscore
 msgid "You have already verified your ID!"
-msgstr ""
+msgstr "سبق أن خضتَ عملية التحقّق من بطاقتك الشخصية! "
 
 #: lms/templates/verify_student/make_payment_step.underscore
 msgid "Your verification status is good until %(verificationGoodUntil)s."
@@ -7014,19 +7027,19 @@ msgstr ""
 
 #: cms/templates/js/team-member.underscore
 msgid "Current Role:"
-msgstr ""
+msgstr "الدور الحالي:"
 
 #: cms/templates/js/team-member.underscore
 msgid "You!"
-msgstr ""
+msgstr "أنت!"
 
 #: cms/templates/js/team-member.underscore
 msgid "send an email message to {email}"
-msgstr ""
+msgstr "أرسل رسالة عبر البريد الإلكتروني إلى {email} "
 
 #: cms/templates/js/team-member.underscore
 msgid "Promote another member to Admin to remove your admin rights"
-msgstr ""
+msgstr "يجب أن ترقّي عضوًا آخر إلى درجة مُشرِف لتتمكّن من إلغاء حقوقك كمشرف"
 
 #: cms/templates/js/team-member.underscore
 msgid "Add {role} Access"
@@ -7038,7 +7051,7 @@ msgstr ""
 
 #: cms/templates/js/team-member.underscore
 msgid "Delete the user, {username}"
-msgstr ""
+msgstr "حذف المستخدم،  {username} "
 
 #: cms/templates/js/upload-dialog.underscore
 msgid "File upload succeeded"

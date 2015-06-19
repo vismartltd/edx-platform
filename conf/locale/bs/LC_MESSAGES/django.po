@@ -625,6 +625,7 @@ msgstr ""
 #: common/djangoapps/student/views.py
 msgid "Unknown error. Please e-mail us to let us know how it happened."
 msgstr ""
+"Nepoznata greško. Molimo pošaljite e-mail, s objašnjenjem šta se dogodilo."
 
 #: common/djangoapps/student/views.py
 msgid ""
@@ -666,11 +667,11 @@ msgstr ""
 
 #: common/djangoapps/student/views.py
 msgid "Old email is the same as the new email."
-msgstr ""
+msgstr "Stari e-mail je isti kao novi e-mail."
 
 #: common/djangoapps/student/views.py
 msgid "An account with this e-mail already exists."
-msgstr ""
+msgstr "Korisnički račun sa ovom e-mail adresom već postoji."
 
 #: common/djangoapps/student/views.py
 msgid "Unable to send email activation link. Please try again later."
@@ -678,7 +679,7 @@ msgstr ""
 
 #: common/djangoapps/student/views.py
 msgid "Name required"
-msgstr ""
+msgstr "Potrebno ime."
 
 #: common/djangoapps/student/views.py
 msgid "Invalid ID"
@@ -4170,7 +4171,7 @@ msgstr ""
 
 #: common/static/js/vendor/mathjax-MathJax-c9db6ac/docs/source/mjtheme/layout.html
 msgid "About these documents"
-msgstr ""
+msgstr "O ovim dokumentima"
 
 #: common/static/js/vendor/mathjax-MathJax-c9db6ac/docs/source/mjtheme/layout.html
 msgid "Index"
@@ -4182,7 +4183,7 @@ msgstr ""
 #: lms/templates/discussion/_thread_list_template.html
 #: lms/templates/edxnotes/edxnotes.html
 msgid "Search"
-msgstr ""
+msgstr "Traži"
 
 #: common/static/js/vendor/mathjax-MathJax-c9db6ac/docs/source/mjtheme/layout.html
 #: lms/templates/static_templates/copyright.html
@@ -5417,7 +5418,7 @@ msgstr ""
 #: lms/templates/instructor/instructor_dashboard_2/edit_coupon_modal.html
 #: wiki/plugins/attachments/forms.py
 msgid "Description"
-msgstr ""
+msgstr "Opis"
 
 #: lms/djangoapps/instructor/views/api.py
 #: lms/templates/instructor/instructor_dashboard_2/e-commerce.html
@@ -5894,7 +5895,7 @@ msgstr ""
 #: lms/djangoapps/instructor_task/tasks.py
 #: lms/templates/wiki/plugins/attachments/index.html wiki/models/article.py
 msgid "deleted"
-msgstr ""
+msgstr "izbrisano"
 
 #. Translators: This is a past-tense verb that is inserted into task progress
 #. messages as {action}.
@@ -5953,7 +5954,7 @@ msgstr ""
 #: lms/templates/discussion/_underscore_templates.html wiki/forms.py
 #: wiki/forms.py wiki/forms.py
 msgid "Title"
-msgstr ""
+msgstr "Naslov"
 
 #: lms/djangoapps/instructor_task/tasks_helper.py lms/templates/register.html
 #: lms/templates/instructor/instructor_dashboard_2/instructor_analytics.html
@@ -7741,7 +7742,7 @@ msgstr ""
 
 #: lms/templates/registration/password_reset_email.html
 msgid "Thanks for using our site!"
-msgstr ""
+msgstr "Hvala na korištenju naše stranice!"
 
 #: lms/templates/registration/password_reset_email.html
 msgid "The %(platform_name)s Team"
@@ -7749,7 +7750,7 @@ msgstr ""
 
 #: lms/templates/wiki/article.html
 msgid "Last modified:"
-msgstr ""
+msgstr "Zadnji put promjenjeno."
 
 #: lms/templates/wiki/article.html
 msgid "See all children"
@@ -7757,25 +7758,25 @@ msgstr ""
 
 #: lms/templates/wiki/article.html
 msgid "This article was last modified:"
-msgstr ""
+msgstr "Ovaj članak je zadnji put izmijenjen:"
 
 #: lms/templates/wiki/create.html lms/templates/wiki/create.html.py
 msgid "Add new article"
-msgstr ""
+msgstr "Dodaj novi članak"
 
 #: lms/templates/wiki/create.html
 msgid "Create article"
-msgstr ""
+msgstr "Kreiraj novi članak"
 
 #: lms/templates/wiki/create.html lms/templates/wiki/delete.html
 #: lms/templates/wiki/delete.html.py
 msgid "Go back"
-msgstr ""
+msgstr "Vrati se nazad."
 
 #: lms/templates/wiki/delete.html lms/templates/wiki/delete.html.py
 #: lms/templates/wiki/edit.html
 msgid "Delete article"
-msgstr ""
+msgstr "Izbriši članak."
 
 #: lms/templates/wiki/delete.html
 #: lms/templates/wiki/plugins/attachments/index.html
@@ -7783,7 +7784,7 @@ msgstr ""
 #: cms/templates/studio_xblock_wrapper.html
 #: lms/templates/discussion/_underscore_templates.html
 msgid "Delete"
-msgstr ""
+msgstr "Izbriši"
 
 #: lms/templates/wiki/delete.html
 msgid "You cannot delete a root article."
@@ -7803,15 +7804,15 @@ msgstr ""
 
 #: lms/templates/wiki/delete.html
 msgid "Articles that will be deleted"
-msgstr ""
+msgstr "Članci koji će biti izbrisani"
 
 #: lms/templates/wiki/delete.html
 msgid "...and more!"
-msgstr ""
+msgstr "... i više!"
 
 #: lms/templates/wiki/delete.html
 msgid "You are deleting an article. Please confirm."
-msgstr ""
+msgstr "Vi brištete članak. Molimo, potvrdite to."
 
 #: lms/templates/wiki/edit.html cms/templates/component.html
 #: cms/templates/container.html cms/templates/studio_xblock_wrapper.html
@@ -7819,12 +7820,12 @@ msgstr ""
 #: lms/templates/instructor/instructor_dashboard_2/e-commerce.html
 #: lms/templates/wiki/includes/article_menu.html
 msgid "Edit"
-msgstr ""
+msgstr "Izmjeni"
 
 #: lms/templates/wiki/edit.html lms/templates/wiki/edit.html.py
 #: lms/templates/ccx/schedule.html lms/templates/ccx/schedule.html
 msgid "Save changes"
-msgstr ""
+msgstr "Sačuvaj promjene."
 
 #: lms/templates/wiki/edit.html cms/templates/container.html
 msgid "Preview"
@@ -7849,7 +7850,7 @@ msgstr ""
 #: lms/templates/modal/_modal-settings-language.html
 #: lms/templates/modal/accessible_confirm.html
 msgid "Close"
-msgstr ""
+msgstr "Blizu"
 
 #: lms/templates/wiki/edit.html
 msgid "Wiki Preview"
@@ -8074,7 +8075,7 @@ msgstr ""
 #: lms/templates/wiki/plugins/attachments/index.html
 #: wiki/plugins/attachments/wiki_plugin.py
 msgid "Attachments"
-msgstr ""
+msgstr "Dodaci"
 
 #: lms/templates/wiki/plugins/attachments/index.html
 msgid "Upload new file"
@@ -8950,7 +8951,7 @@ msgstr ""
 #: lms/templates/help_modal.html lms/templates/static_templates/help.html
 #: lms/templates/static_templates/help.html wiki/plugins/help/wiki_plugin.py
 msgid "Help"
-msgstr ""
+msgstr "Pomoć"
 
 #: cms/templates/widgets/header.html lms/templates/navigation-edx.html
 #: lms/templates/navigation.html
@@ -19031,19 +19032,19 @@ msgstr "Ovaj ključ je string."
 
 #: wiki/admin.py wiki/models/article.py
 msgid "created"
-msgstr ""
+msgstr "kreirano"
 
 #: wiki/forms.py
 msgid "Only localhost... muahahaha"
-msgstr ""
+msgstr "Samo localhost... muahahaha"
 
 #: wiki/forms.py
 msgid "Initial title of the article. May be overridden with revision titles."
-msgstr ""
+msgstr "Početni naslov članka. Moguće ga je izmijeniti kasnijim revizijama."
 
 #: wiki/forms.py
 msgid "Type in some contents"
-msgstr ""
+msgstr "Vrsta u nekim sadržajima"
 
 #: wiki/forms.py
 msgid ""
@@ -19051,19 +19052,23 @@ msgid ""
 "can use more complex features like adding plugins, meta data, related "
 "articles etc..."
 msgstr ""
+"Ovo je samo početni sadržaj vašeg članka. Nakon što ga kreirate, možete "
+"koristiti kompleksnije sadržaje kao što su dodavanje plugina, meta data, "
+"povezanih članaka, i slično."
 
 #: wiki/forms.py wiki/forms.py
 msgid "Contents"
-msgstr ""
+msgstr "Sadržaj"
 
 #: wiki/forms.py wiki/forms.py
 msgid "Summary"
-msgstr ""
+msgstr "Sažetak"
 
 #: wiki/forms.py
 msgid ""
 "Give a short reason for your edit, which will be stated in the revision log."
 msgstr ""
+"Dajte sažet razlog vaše izmjene, koji će biti sadržan u upisu pregleda."
 
 #: wiki/forms.py
 msgid ""
@@ -19071,18 +19076,21 @@ msgid ""
 "have been automatically merged with the new contents. Please review the text"
 " below."
 msgstr ""
+"Dok ste vi uređivali, neko drugi je promijenio reviziju. Vaš sadržaj je "
+"automatski pridružen drugim sadržajima. Molimo da pregledate dolje navedeni "
+"tekst."
 
 #: wiki/forms.py
 msgid "No changes made. Nothing to save."
-msgstr ""
+msgstr "Nijedna promjena nije napravljena. Ništa za sačuvati."
 
 #: wiki/forms.py
 msgid "Select an option"
-msgstr ""
+msgstr "Izaberite opciju."
 
 #: wiki/forms.py
 msgid "Slug"
-msgstr ""
+msgstr "Radni naziv"
 
 #: wiki/forms.py
 msgid ""
@@ -19090,30 +19098,33 @@ msgid ""
 "alphanumeric characters and - or _. Note that you cannot change the slug "
 "after creating the article."
 msgstr ""
+"Ovo će biti adresa na kojoj se može pogledati vaš članak. Koristite samo "
+"alfanumeričke znakove i - ili _. Zapamtite da ne možete promijeniti radni "
+"naziv nakon što kreirate članak."
 
 #: wiki/forms.py
 msgid "Write a brief message for the article's history log."
-msgstr ""
+msgstr "Pogledajte kratak opis historije članka."
 
 #: wiki/forms.py
 msgid "A slug may not begin with an underscore."
-msgstr ""
+msgstr "Radni naziv ne može počinjati znakom \"_\" ."
 
 #: wiki/forms.py
 msgid "A deleted article with slug \"%s\" already exists."
-msgstr ""
+msgstr "Obrisani članak sa radnim nazivom \"%s\" već postoji."
 
 #: wiki/forms.py
 msgid "A slug named \"%s\" already exists."
-msgstr ""
+msgstr "Radni naziv \"%s\" se već koristi."
 
 #: wiki/forms.py
 msgid "Yes, I am sure"
-msgstr ""
+msgstr "Da, sigurna sam."
 
 #: wiki/forms.py
 msgid "Purge"
-msgstr ""
+msgstr "Očisti"
 
 #: wiki/forms.py
 msgid ""
@@ -19121,236 +19132,255 @@ msgid ""
 " Purging is a good idea if you want to free the slug such that users can "
 "create new articles in its place."
 msgstr ""
+"Očistiti članak: U potpunosti ga ukloniti (skupa sa svim sadržajima), i ova "
+"akcija se ne može poništiti. Čišćenje članka je dobra ideja ako želite "
+"osloboditi radni naziv tako da drugi korisnici mogu kreirati nove članke pod"
+" tim imenom."
 
 #: wiki/forms.py wiki/plugins/attachments/forms.py
 #: wiki/plugins/images/forms.py
 msgid "You are not sure enough!"
-msgstr ""
+msgstr "Niste dovoljno sigurni."
 
 #: wiki/forms.py
 msgid "While you tried to delete this article, it was modified. TAKE CARE!"
 msgstr ""
+"Dok ste pokušavali da izbrišete ovaj članak, on je bio promijenjen. ČUVAJTE "
+"SE."
 
 #: wiki/forms.py
 msgid "Lock article"
-msgstr ""
+msgstr "Zaključajte članak."
 
 #: wiki/forms.py
 msgid "Deny all users access to edit this article."
-msgstr ""
+msgstr "Zabrani svim korisnicima pristup za promjenu ovog članka."
 
 #: wiki/forms.py
 msgid "Permissions"
-msgstr ""
+msgstr "Dozvole."
 
 #: wiki/forms.py
 msgid "Owner"
-msgstr ""
+msgstr "Vlasnik"
 
 #: wiki/forms.py
 msgid "Enter the username of the owner."
-msgstr ""
+msgstr "Ukucajte korisničko ime vlasnika."
 
 #: wiki/forms.py
 msgid "(none)"
-msgstr ""
+msgstr "(ništa)"
 
 #: wiki/forms.py
 msgid "Inherit permissions"
-msgstr ""
+msgstr "Naslijedi dopuštenja"
 
 #: wiki/forms.py
 msgid ""
 "Check here to apply the above permissions recursively to articles under this"
 " one."
 msgstr ""
+"Označite ovo da rekurzivno primijenite gore navedena dopuštenja za članke "
+"ispod ovoga."
 
 #: wiki/forms.py
 msgid "Permission settings for the article were updated."
-msgstr ""
+msgstr "Postavke dopuštenja za ovaj članak su ažurirana."
 
 #: wiki/forms.py
 msgid "Your permission settings were unchanged, so nothing saved."
-msgstr ""
+msgstr "Postavke dopuštenja nisu izmijenjene, ništa nije spremljeno."
 
 #: wiki/forms.py
 msgid "No user with that username"
-msgstr ""
+msgstr "Ne postoji korisnik sa ovim korisničkim imenom."
 
 #: wiki/forms.py
 msgid "Article locked for editing"
-msgstr ""
+msgstr "Članak je zaključan za izmjene."
 
 #: wiki/forms.py
 msgid "Article unlocked for editing"
-msgstr ""
+msgstr "Članak otključan za uređivanje"
 
 #: wiki/forms.py
 msgid "Filter..."
-msgstr ""
+msgstr "Filtriraj."
 
 #: wiki/core/plugins/base.py
 msgid "Settings for plugin"
-msgstr ""
+msgstr "Postavke plugina"
 
 #: wiki/models/article.py wiki/models/pluginbase.py
 #: wiki/plugins/attachments/models.py
 msgid "current revision"
-msgstr ""
+msgstr "trenutni pregled"
 
 #: wiki/models/article.py
 msgid ""
 "The revision being displayed for this article. If you need to do a roll-"
 "back, simply change the value of this field."
 msgstr ""
+"Revizije koje se prikazuju za ovaj članak. Ako trebate vratiti na prethodnu "
+"vrijednost, samo promijenite unos ovog polja."
 
 #: wiki/models/article.py
 msgid "modified"
-msgstr ""
+msgstr "Izmijenjeno"
 
 #: wiki/models/article.py
 msgid "Article properties last modified"
-msgstr ""
+msgstr "Svojstva članka koja su posljednja mijenjana."
 
 #: wiki/models/article.py
 msgid "owner"
-msgstr ""
+msgstr "vlasnik"
 
 #: wiki/models/article.py
 msgid ""
 "The owner of the article, usually the creator. The owner always has both "
 "read and write access."
 msgstr ""
+"Vlasnik ovog člank, obično i kreator. Vlasnik uvijek ima dozvolu i za "
+"čitanje i za pisanje."
 
 #: wiki/models/article.py
 msgid "group"
-msgstr ""
+msgstr "grupa"
 
 #: wiki/models/article.py
 msgid ""
 "Like in a UNIX file system, permissions can be given to a user according to "
 "group membership. Groups are handled through the Django auth system."
 msgstr ""
+"Kao u UNIX file sistemu, dopuštenja mogu biti doznačena nekom korisniku u "
+"skladu sa članstvom u nekoj grupi. Grupama se upravlja kroz Django "
+"autorizacijski sistem."
 
 #: wiki/models/article.py
 msgid "group read access"
-msgstr ""
+msgstr "grupa ima dopuštenje da čita"
 
 #: wiki/models/article.py
 msgid "group write access"
-msgstr ""
+msgstr "grupa ima dopuštenje da uređuje "
 
 #: wiki/models/article.py
 msgid "others read access"
-msgstr ""
+msgstr "drugi imaju dopuštenje da čitaju"
 
 #: wiki/models/article.py
 msgid "others write access"
-msgstr ""
+msgstr "drugi imaju dopuštenje da uređuju"
 
 #: wiki/models/article.py
 msgid "Article without content (%(id)d)"
-msgstr ""
+msgstr "Članak vez sadržaja (%(id)d)"
 
 #: wiki/models/article.py
 msgid "content type"
-msgstr ""
+msgstr "tip sadržaja"
 
 #: wiki/models/article.py
 msgid "object ID"
-msgstr ""
+msgstr "ID objekta"
 
 #: wiki/models/article.py
 msgid "Article for object"
-msgstr ""
+msgstr "Članak za objekat "
 
 #: wiki/models/article.py
 msgid "Articles for object"
-msgstr ""
+msgstr "Članci za objekat"
 
 #: wiki/models/article.py
 msgid "revision number"
-msgstr ""
+msgstr "broj revizije"
 
 #: wiki/models/article.py
 msgid "IP address"
-msgstr ""
+msgstr "IP adresa"
 
 #: wiki/models/article.py
 msgid "user"
-msgstr ""
+msgstr "korisnik"
 
 #: wiki/models/article.py
 msgid "locked"
-msgstr ""
+msgstr "zaključano"
 
 #: wiki/models/article.py wiki/models/pluginbase.py
 msgid "article"
-msgstr ""
+msgstr "članak"
 
 #: wiki/models/article.py
 msgid "article contents"
-msgstr ""
+msgstr "sadržaj članka"
 
 #: wiki/models/article.py
 msgid "article title"
-msgstr ""
+msgstr "naslov članka"
 
 #: wiki/models/article.py
 msgid ""
 "Each revision contains a title field that must be filled out, even if the "
 "title has not changed"
 msgstr ""
+"Svaka revizija sadrži naslovno polje koje mora biti popunjeno, iako se "
+"naslov nije mijenjao."
 
 #: wiki/models/pluginbase.py
 msgid "original article"
-msgstr ""
+msgstr "originalni članak"
 
 #: wiki/models/pluginbase.py
 msgid "Permissions are inherited from this article"
-msgstr ""
+msgstr "Dopuštenja su naslijeđena iz ovog članka."
 
 #: wiki/models/pluginbase.py
 msgid "A plugin was changed"
-msgstr ""
+msgstr "Plugin je promijenjen."
 
 #: wiki/models/pluginbase.py
 msgid ""
 "The revision being displayed for this plugin.If you need to do a roll-back, "
 "simply change the value of this field."
 msgstr ""
+"Prikazana revizija za ovaj plugin. Ako trebate neku prethodnu vrijednost, "
+"promijenite sadržaj ovog polja."
 
 #: wiki/models/urlpath.py
 msgid "Cache lookup value for articles"
-msgstr ""
+msgstr "Pregledna vrijednost članaka u cacheu"
 
 #: wiki/models/urlpath.py
 msgid "slug"
-msgstr ""
+msgstr "Radni naziv"
 
 #: wiki/models/urlpath.py
 msgid "(root)"
-msgstr ""
+msgstr "(root)"
 
 #: wiki/models/urlpath.py
 msgid "URL path"
-msgstr ""
+msgstr "URL veza"
 
 #: wiki/models/urlpath.py
 msgid "URL paths"
-msgstr ""
+msgstr "URL veze"
 
 #: wiki/models/urlpath.py
 msgid "Sorry but you cannot have a root article with a slug."
-msgstr ""
+msgstr "Žao nam je, ali ne možete imati root članak sa radnim nazivom."
 
 #: wiki/models/urlpath.py
 msgid "A non-root note must always have a slug."
-msgstr ""
+msgstr "Članak koji nije root mora uvijek imati radni naziv."
 
 #: wiki/models/urlpath.py
 msgid "There is already a root node on %s"
-msgstr ""
+msgstr "Već postoji root čvor na %s"
 
 #: wiki/models/urlpath.py
 msgid ""
@@ -19359,186 +19389,198 @@ msgid ""
 "\n"
 "The children of this article have had their parents deleted. You should probably find a new home for them."
 msgstr ""
+"Članci koji su izgubili matične članke\n"
+"====================================\n"
+"\n"
+"Matični članci ovog članka su izbrisani. Vjerovatno biste im trebali doznačiti novo porijeklo."
 
 #: wiki/models/urlpath.py
 msgid "Lost and found"
-msgstr ""
+msgstr "Izgubljeno i nađeno"
 
 #: wiki/plugins/attachments/forms.py
 msgid "A short summary of what the file contains"
-msgstr ""
+msgstr "Kratak sažetak sadržaja datoteke"
 
 #: wiki/plugins/attachments/forms.py
 msgid "Yes I am sure..."
-msgstr ""
+msgstr "Da, sigurna sam."
 
 #: wiki/plugins/attachments/markdown_extensions.py
 msgid "Click to download file"
-msgstr ""
+msgstr "Kliknite da biste downloadovali datoteku."
 
 #: wiki/plugins/attachments/models.py
 msgid ""
 "The revision of this attachment currently in use (on all articles using the "
 "attachment)"
 msgstr ""
+"Revizija ovog dodatka je trenutno u upotrebi (na svim člancima koji koriste "
+"dodatak)"
 
 #: wiki/plugins/attachments/models.py
 msgid "original filename"
-msgstr ""
+msgstr "originalno ime datoteke"
 
 #: wiki/plugins/attachments/models.py
 msgid "attachment"
-msgstr ""
+msgstr "dodatak"
 
 #: wiki/plugins/attachments/models.py
 msgid "attachments"
-msgstr ""
+msgstr "dodaci"
 
 #: wiki/plugins/attachments/models.py
 msgid "file"
-msgstr ""
+msgstr "datoteka"
 
 #: wiki/plugins/attachments/models.py
 msgid "attachment revision"
-msgstr ""
+msgstr "revizija dodatka"
 
 #: wiki/plugins/attachments/models.py
 msgid "attachment revisions"
-msgstr ""
+msgstr "revizije dodataka"
 
 #: wiki/plugins/attachments/views.py
 msgid "%s was successfully added."
-msgstr ""
+msgstr "%s je uspješno dodan."
 
 #: wiki/plugins/attachments/views.py wiki/plugins/attachments/views.py
 msgid "Your file could not be saved: %s"
-msgstr ""
+msgstr "Vaša datoteka nije mogla biti sačuvana: %s"
 
 #: wiki/plugins/attachments/views.py wiki/plugins/attachments/views.py
 msgid ""
 "Your file could not be saved, probably because of a permission error on the "
 "web server."
 msgstr ""
+"Vaša datoteka nije mogla biti sačuvana, vjerovatno zbog greške dopuštenja na"
+" mrežnom serveru."
 
 #: wiki/plugins/attachments/views.py
 msgid "%s uploaded and replaces old attachment."
-msgstr ""
+msgstr "%s je uploadan i zamjenjuje prethodni dodatak"
 
 #: wiki/plugins/attachments/views.py
 msgid ""
 "Your new file will automatically be renamed to match the file already "
 "present. Files with different extensions are not allowed."
 msgstr ""
+"Vaša nova datoteka će automatski biti preimenovana da se uskladi sa već "
+"prisutnom datotekom. Datoteke sa različitim ekstenzijama nisu dozvoljene."
 
 #: wiki/plugins/attachments/views.py
 msgid "Current revision changed for %s."
-msgstr ""
+msgstr "Trenutna revizija je izmijenjena %s."
 
 #: wiki/plugins/attachments/views.py
 msgid "Added a reference to \"%(att)s\" from \"%(art)s\"."
-msgstr ""
+msgstr "Dodana referenca na \"%(att)s\" iz \"%(art)s\"."
 
 #: wiki/plugins/attachments/views.py
 msgid "The file %s was deleted."
-msgstr ""
+msgstr "Datoteka %s je izbrisana."
 
 #: wiki/plugins/attachments/views.py
 msgid "This article is no longer related to the file %s."
-msgstr ""
+msgstr "Ovaj članak više nije uvezan sa datotekom %s."
 
 #: wiki/plugins/attachments/wiki_plugin.py
 msgid "A file was changed: %s"
-msgstr ""
+msgstr "Datoteka je izmijenjena: %s"
 
 #: wiki/plugins/attachments/wiki_plugin.py
 msgid "A file was deleted: %s"
-msgstr ""
+msgstr "Datoteka je izbrisana: %s"
 
 #: wiki/plugins/images/forms.py
 msgid ""
 "New image %s was successfully uploaded. You can use it by selecting it from "
 "the list of available images."
 msgstr ""
+"Nova slika %s je uspješno dodana. Možete je koristiti ako je odaberete sa "
+"liste raspoloživih slika."
 
 #: wiki/plugins/images/forms.py
 msgid "Are you sure?"
-msgstr ""
+msgstr "Da li ste sigurni?"
 
 #: wiki/plugins/images/models.py
 msgid "image"
-msgstr ""
+msgstr "Slika"
 
 #: wiki/plugins/images/models.py
 msgid "images"
-msgstr ""
+msgstr "Slike"
 
 #: wiki/plugins/images/models.py
 msgid "Image: %s"
-msgstr ""
+msgstr "Slika: %s"
 
 #: wiki/plugins/images/models.py
 msgid "Current revision not set!!"
-msgstr ""
+msgstr "Trenutna revizija nije zadana!!"
 
 #: wiki/plugins/images/models.py
 msgid "image revision"
-msgstr ""
+msgstr "revizija slike"
 
 #: wiki/plugins/images/models.py
 msgid "image revisions"
-msgstr ""
+msgstr "revizije slik"
 
 #: wiki/plugins/images/models.py
 msgid "Image Revsion: %d"
-msgstr ""
+msgstr "Revizija slike: %d"
 
 #: wiki/plugins/images/views.py
 msgid "%s has been restored"
-msgstr ""
+msgstr "%s je uspješno povraćena"
 
 #: wiki/plugins/images/views.py
 msgid "%s has been marked as deleted"
-msgstr ""
+msgstr "%s je označena kao obrisana"
 
 #: wiki/plugins/images/views.py
 msgid "%(file)s has been changed to revision #%(revision)d"
-msgstr ""
+msgstr "%(file)s je izmijenjeno u reviziji #%(revision)d"
 
 #: wiki/plugins/images/views.py
 msgid "%(file)s has been saved."
-msgstr ""
+msgstr "%(file)s je sačuvano."
 
 #: wiki/plugins/images/wiki_plugin.py
 msgid "Images"
-msgstr ""
+msgstr "Slike"
 
 #: wiki/plugins/images/wiki_plugin.py
 msgid "An image was added: %s"
-msgstr ""
+msgstr "Slika je dodata: %s"
 
 #: wiki/plugins/links/wiki_plugin.py
 msgid "Links"
-msgstr ""
+msgstr "Poveznice"
 
 #: wiki/plugins/notifications/forms.py
 msgid "Notifications"
-msgstr ""
+msgstr "Obavijesti"
 
 #: wiki/plugins/notifications/forms.py
 msgid "When this article is edited"
-msgstr ""
+msgstr "Kad je ovaj članak uređen"
 
 #: wiki/plugins/notifications/forms.py
 msgid "Also receive emails about article edits"
-msgstr ""
+msgstr "Primajte mailove i o izmjenama ovog članka."
 
 #: wiki/plugins/notifications/forms.py
 msgid "Your notification settings were updated."
-msgstr ""
+msgstr "Vaša podešavanja obavijesti su bila izmijenjena."
 
 #: wiki/plugins/notifications/forms.py
 msgid "Your notification settings were unchanged, so nothing saved."
-msgstr ""
+msgstr "Vaše postavke objašnjenja nisu izmijenjene, ništa nije sačuvano."
 
 #: wiki/plugins/notifications/models.py
 msgid "%(user)s subscribing to %(article)s (%(type)s)"
@@ -19562,11 +19604,11 @@ msgstr ""
 
 #: wiki/views/accounts.py
 msgid "You are no longer logged in. Bye bye!"
-msgstr ""
+msgstr "Više niste logovani. Doviđenja!"
 
 #: wiki/views/accounts.py
 msgid "You are now logged in! Have fun!"
-msgstr ""
+msgstr "Sada ste logovani! Zabavite se!"
 
 #: wiki/views/article.py
 msgid "New article '%s' created."
@@ -19578,7 +19620,7 @@ msgstr ""
 
 #: wiki/views/article.py
 msgid "There was an error creating this article."
-msgstr ""
+msgstr "Desila se greška prilikom kreiranja ovog članka."
 
 #: wiki/views/article.py
 msgid ""
@@ -19598,7 +19640,7 @@ msgstr ""
 
 #: wiki/views/article.py
 msgid "Your changes were saved."
-msgstr ""
+msgstr "Vaše promjene su sačuvane."
 
 #: wiki/views/article.py
 msgid "A new revision of the article was succesfully added."
@@ -19618,7 +19660,7 @@ msgstr ""
 
 #: wiki/views/article.py
 msgid "New title"
-msgstr ""
+msgstr "Novi naslov"
 
 #: wiki/views/article.py
 msgid "Merge between Revision #%(r1)d and Revision #%(r2)d"

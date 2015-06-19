@@ -114,7 +114,7 @@ msgstr ""
 #: lms/templates/shoppingcart/billing_details.html
 #: lms/templates/shoppingcart/receipt.html
 msgid "Name"
-msgstr ""
+msgstr "नाव"
 
 #: cms/djangoapps/contentstore/views/videos.py
 #: common/lib/xmodule/xmodule/video_module/video_xfields.py
@@ -1542,7 +1542,7 @@ msgstr ""
 #: common/lib/xmodule/xmodule/modulestore/inheritance.py
 #: lms/templates/problem.html
 msgid "Show Answer"
-msgstr ""
+msgstr "उत्तर दर्शवा"
 
 #: common/lib/xmodule/xmodule/capa_base.py
 msgid ""
@@ -7766,7 +7766,7 @@ msgstr ""
 #: cms/templates/studio_xblock_wrapper.html
 #: lms/templates/discussion/_underscore_templates.html
 msgid "Delete"
-msgstr ""
+msgstr "हटवा"
 
 #: lms/templates/wiki/delete.html
 msgid "You cannot delete a root article."
@@ -8659,7 +8659,7 @@ msgstr ""
 #. Translators: This is the status of an active video upload
 #: cms/djangoapps/contentstore/views/videos.py cms/templates/import.html
 msgid "Uploading"
-msgstr ""
+msgstr " अप्लॉदिङ्ग "
 
 #. Translators: This is the status for a video that the servers are currently
 #. processing
@@ -8811,7 +8811,7 @@ msgstr ""
 #: lms/templates/modal/accessible_confirm.html
 #: lms/templates/verify_student/face_upload.html
 msgid "Cancel"
-msgstr ""
+msgstr "रद्द"
 
 #: cms/templates/course-create-rerun.html cms/templates/index.html
 #: cms/templates/settings.html lms/templates/courseware/course_about.html
@@ -9081,7 +9081,7 @@ msgstr ""
 #: lms/templates/annotatable.html lms/templates/imageannotation.html
 #: lms/templates/textannotation.html lms/templates/videoannotation.html
 msgid "Collapse Instructions"
-msgstr ""
+msgstr "संकुचित सूचना"
 
 #: lms/templates/annotatable.html
 msgid "Guided Discussion"
@@ -9796,7 +9796,7 @@ msgstr ""
 #: lms/templates/combinedopenended/selfassessment/self_assessment_prompt.html
 #: lms/templates/verify_student/face_upload.html
 msgid "Save"
-msgstr ""
+msgstr "जतन करा"
 
 #: lms/templates/problem.html
 msgid "You have used {num_used} of {num_total} submissions"
@@ -12520,7 +12520,7 @@ msgstr ""
 #: lms/templates/discussion/_underscore_templates.html
 #: lms/templates/discussion/mustache/_profile_thread.mustache
 msgid "anonymous"
-msgstr ""
+msgstr "निनावी"
 
 #: lms/templates/discussion/_user_profile.html
 msgid ", "
@@ -14747,7 +14747,7 @@ msgstr ""
 
 #: lms/templates/modal/accessible_confirm.html
 msgid "OK"
-msgstr ""
+msgstr "ठीक"
 
 #: lms/templates/modal/accessible_confirm.html
 msgid "open"

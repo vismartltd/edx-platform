@@ -75,7 +75,7 @@ msgstr ""
 #: cms/djangoapps/contentstore/views/component.py
 #: common/lib/xmodule/xmodule/video_module/video_module.py
 msgid "Advanced"
-msgstr ""
+msgstr "மேம்பட்ட"
 
 #: cms/djangoapps/contentstore/views/entrance_exam.py
 #: cms/djangoapps/contentstore/views/entrance_exam.py
@@ -117,7 +117,7 @@ msgstr ""
 #: lms/templates/shoppingcart/billing_details.html
 #: lms/templates/shoppingcart/receipt.html
 msgid "Name"
-msgstr ""
+msgstr "பெயர்"
 
 #: cms/djangoapps/contentstore/views/videos.py
 #: common/lib/xmodule/xmodule/video_module/video_xfields.py
@@ -409,17 +409,17 @@ msgstr ""
 
 #: common/djangoapps/student/models.py
 msgid "Male"
-msgstr ""
+msgstr "ஆண்"
 
 #: common/djangoapps/student/models.py
 msgid "Female"
-msgstr ""
+msgstr "பெண்"
 
 #. Translators: 'Other' refers to the student's gender
 #. Translators: 'Other' refers to the student's level of education
 #: common/djangoapps/student/models.py common/djangoapps/student/models.py
 msgid "Other"
-msgstr ""
+msgstr "ஏனைய"
 
 #: common/djangoapps/student/models.py
 msgid "Doctorate"
@@ -454,7 +454,7 @@ msgstr ""
 #: common/djangoapps/student/models.py
 #: common/lib/xmodule/xmodule/course_module.py cms/templates/settings.html
 msgid "None"
-msgstr ""
+msgstr "எதுவுமில்லை"
 
 #: common/djangoapps/student/models.py
 msgid "{platform_name} Honor Code Certificate for {course_name}"
@@ -1117,7 +1117,7 @@ msgstr ""
 
 #: common/lib/capa/capa/inputtypes.py common/lib/capa/capa/inputtypes.py
 msgid "unanswered"
-msgstr ""
+msgstr "பதிலளிக்கப்படாத"
 
 #: common/lib/capa/capa/inputtypes.py
 msgid "processing"
@@ -1545,7 +1545,7 @@ msgstr ""
 #: common/lib/xmodule/xmodule/modulestore/inheritance.py
 #: lms/templates/problem.html
 msgid "Show Answer"
-msgstr ""
+msgstr "பதிலை காட்டு"
 
 #: common/lib/xmodule/xmodule/capa_base.py
 msgid ""
@@ -2802,7 +2802,7 @@ msgstr ""
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "General"
-msgstr ""
+msgstr "பொது"
 
 #. Translators: TBD stands for 'To Be Determined' and is used when a course
 #. does not yet have an announced start date.
@@ -3849,6 +3849,8 @@ msgstr ""
 msgid ""
 "Your response has been submitted. Please check back later for your grade."
 msgstr ""
+"உங்களுடைய பதில் சமர்ப்பிக்கப்பட்டது. உங்களுடைய தரத்தை பின்னர் "
+"சரிபார்க்கவும்."
 
 #. Translators: "Not started" communicates to a student that their response
 #. has not yet been graded
@@ -4210,7 +4212,7 @@ msgstr ""
 #: lms/djangoapps/branding/api.py lms/templates/static_templates/contact.html
 #: lms/templates/static_templates/contact.html
 msgid "Contact"
-msgstr ""
+msgstr "தொடர்பு"
 
 #: lms/djangoapps/branding/api.py lms/templates/static_templates/jobs.html
 #: lms/templates/static_templates/jobs.html
@@ -4698,7 +4700,7 @@ msgstr ""
 
 #: lms/djangoapps/courseware/tabs.py lms/templates/courseware/syllabus.html
 msgid "Syllabus"
-msgstr ""
+msgstr "பாடத்திட்டம்"
 
 #: lms/djangoapps/courseware/tabs.py
 #: lms/templates/peer_grading/peer_grading.html
@@ -5405,7 +5407,7 @@ msgstr ""
 #: lms/templates/instructor/instructor_dashboard_2/edit_coupon_modal.html
 #: wiki/plugins/attachments/forms.py
 msgid "Description"
-msgstr ""
+msgstr "விளக்கம்"
 
 #: lms/djangoapps/instructor/views/api.py
 #: lms/templates/instructor/instructor_dashboard_2/e-commerce.html
@@ -5934,7 +5936,10 @@ msgstr ""
 msgid "Company Name"
 msgstr ""
 
-#: wiki/forms.py wiki/forms.py wiki/forms.py
+#: lms/djangoapps/instructor_task/tasks_helper.py
+#: lms/templates/discussion/_underscore_templates.html
+#: lms/templates/discussion/_underscore_templates.html wiki/forms.py
+#: wiki/forms.py wiki/forms.py
 msgid "Title"
 msgstr "தலைப்பு"
 
@@ -7766,7 +7771,7 @@ msgstr ""
 #: cms/templates/studio_xblock_wrapper.html
 #: lms/templates/discussion/_underscore_templates.html
 msgid "Delete"
-msgstr ""
+msgstr "நீக்கு"
 
 #: lms/templates/wiki/delete.html
 msgid "You cannot delete a root article."
@@ -7802,7 +7807,7 @@ msgstr ""
 #: lms/templates/instructor/instructor_dashboard_2/e-commerce.html
 #: lms/templates/wiki/includes/article_menu.html
 msgid "Edit"
-msgstr ""
+msgstr "தொகு"
 
 #: lms/templates/wiki/edit.html lms/templates/wiki/edit.html.py
 #: lms/templates/ccx/schedule.html lms/templates/ccx/schedule.html
@@ -7811,7 +7816,7 @@ msgstr ""
 
 #: lms/templates/wiki/edit.html cms/templates/container.html
 msgid "Preview"
-msgstr ""
+msgstr "முன்பார்வை"
 
 #. #-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a control to allow users to exit out of this modal
@@ -7832,7 +7837,7 @@ msgstr ""
 #: lms/templates/modal/_modal-settings-language.html
 #: lms/templates/modal/accessible_confirm.html
 msgid "Close"
-msgstr ""
+msgstr "மூடு"
 
 #: lms/templates/wiki/edit.html
 msgid "Wiki Preview"
@@ -8113,7 +8118,7 @@ msgstr ""
 
 #: lms/templates/wiki/plugins/attachments/index.html
 msgid "Replace"
-msgstr ""
+msgstr "இடமாற்று"
 
 #: lms/templates/wiki/plugins/attachments/index.html
 msgid "Restore"
@@ -8811,7 +8816,7 @@ msgstr ""
 #: lms/templates/modal/accessible_confirm.html
 #: lms/templates/verify_student/face_upload.html
 msgid "Cancel"
-msgstr ""
+msgstr "ரத்துசெய்"
 
 #: cms/templates/course-create-rerun.html cms/templates/index.html
 #: cms/templates/settings.html lms/templates/courseware/course_about.html
@@ -8907,7 +8912,7 @@ msgstr ""
 #: cms/templates/studio_xblock_wrapper.html
 #: lms/templates/wiki/includes/article_menu.html
 msgid "View"
-msgstr ""
+msgstr "பார்வை"
 
 #: cms/templates/registration/activation_complete.html
 #: lms/templates/registration/activation_complete.html
@@ -9076,12 +9081,12 @@ msgstr ""
 #: lms/templates/open_ended_problems/open_ended_problems.html
 #: lms/templates/peer_grading/peer_grading.html
 msgid "Instructions"
-msgstr ""
+msgstr "அறிவுறுத்தல்கள்"
 
 #: lms/templates/annotatable.html lms/templates/imageannotation.html
 #: lms/templates/textannotation.html lms/templates/videoannotation.html
 msgid "Collapse Instructions"
-msgstr ""
+msgstr "வழிமுறைகளை சுருக்கு"
 
 #: lms/templates/annotatable.html
 msgid "Guided Discussion"
@@ -9089,7 +9094,7 @@ msgstr ""
 
 #: lms/templates/annotatable.html
 msgid "Hide Annotations"
-msgstr ""
+msgstr "சிறுகுறிப்புகளை மறை"
 
 #: lms/templates/course.html
 msgid "LEARN MORE"
@@ -9372,7 +9377,7 @@ msgstr ""
 #: lms/templates/peer_grading/peer_grading_problem.html
 #: lms/templates/survey/survey.html
 msgid "Submit"
-msgstr ""
+msgstr "சமர்ப்பிக்க"
 
 #: lms/templates/help_modal.html
 msgid "Thank You!"
@@ -9796,7 +9801,7 @@ msgstr ""
 #: lms/templates/combinedopenended/selfassessment/self_assessment_prompt.html
 #: lms/templates/verify_student/face_upload.html
 msgid "Save"
-msgstr ""
+msgstr "சேமி"
 
 #: lms/templates/problem.html
 msgid "You have used {num_used} of {num_total} submissions"
@@ -10025,7 +10030,7 @@ msgstr ""
 #: lms/templates/seq_module.html lms/templates/seq_module.html
 #: lms/templates/discussion/mustache/_pagination.mustache
 msgid "Next"
-msgstr ""
+msgstr "அடுத்த"
 
 #: lms/templates/signup_modal.html
 msgid "Sign Up for {platform_name}"
@@ -10176,11 +10181,11 @@ msgstr ""
 
 #: lms/templates/staticbook.html
 msgid "Previous page"
-msgstr ""
+msgstr "முந்தைய பக்கம்"
 
 #: lms/templates/staticbook.html
 msgid "Next page"
-msgstr ""
+msgstr "அடுத்த பக்கம்"
 
 #: lms/templates/sysadmin_dashboard.html
 #: lms/templates/sysadmin_dashboard_gitlogs.html
@@ -10302,7 +10307,7 @@ msgstr ""
 
 #: lms/templates/sysadmin_dashboard_gitlogs.html
 msgid "Date"
-msgstr ""
+msgstr "திகதி"
 
 #. Translators: Git is a version-control system; see http://git-scm.com/about
 #: lms/templates/sysadmin_dashboard_gitlogs.html
@@ -10624,7 +10629,7 @@ msgstr ""
 #: lms/templates/ccx/coach_dashboard.html
 #: lms/templates/courseware/legacy_instructor_dashboard.html
 msgid "Enrollment"
-msgstr ""
+msgstr "பதிவு செய்தல்"
 
 #: lms/templates/ccx/coach_dashboard.html
 msgid "Schedule"
@@ -10855,7 +10860,7 @@ msgstr ""
 #: lms/templates/combinedopenended/combined_open_ended.html
 #: lms/templates/peer_grading/peer_grading_problem.html
 msgid "Hide Question"
-msgstr ""
+msgstr "கேள்வியை மறை"
 
 #: lms/templates/combinedopenended/combined_open_ended.html
 msgid "New Submission"
@@ -12115,7 +12120,7 @@ msgstr ""
 
 #: lms/templates/discussion/_discussion_module.html
 msgid "Show Discussion"
-msgstr ""
+msgstr "கலந்துரையாடுதலை காட்டு"
 
 #: lms/templates/discussion/_discussion_module_studio.html
 msgid "To view live discussions, click Preview or View Live in Unit Settings."
@@ -12311,7 +12316,7 @@ msgstr ""
 
 #: lms/templates/discussion/_underscore_templates.html
 msgid "Pinned"
-msgstr ""
+msgstr "பின்செய்யப்பட்ட"
 
 #: lms/templates/discussion/_underscore_templates.html
 msgid "By: Staff"
@@ -12515,12 +12520,12 @@ msgstr ""
 
 #: lms/templates/discussion/_underscore_templates.html
 msgid "Open"
-msgstr ""
+msgstr "திறக்க"
 
 #: lms/templates/discussion/_underscore_templates.html
 #: lms/templates/discussion/mustache/_profile_thread.mustache
 msgid "anonymous"
-msgstr ""
+msgstr "பெயரற்ற"
 
 #: lms/templates/discussion/_user_profile.html
 msgid ", "
@@ -12568,7 +12573,7 @@ msgstr ""
 #: lms/templates/discussion/mustache/_pagination.mustache
 #: lms/templates/discussion/mustache/_pagination.mustache
 msgid "…"
-msgstr ""
+msgstr "..."
 
 #: lms/templates/discussion/mustache/_profile_thread.mustache
 msgid "View discussion"
@@ -13872,7 +13877,7 @@ msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/edit_coupon_modal.html
 msgid "Code"
-msgstr ""
+msgstr "குறியீடு"
 
 #: lms/templates/instructor/instructor_dashboard_2/edit_coupon_modal.html
 msgid "example: A123DS"
@@ -14747,7 +14752,7 @@ msgstr ""
 
 #: lms/templates/modal/accessible_confirm.html
 msgid "OK"
-msgstr ""
+msgstr "சரி"
 
 #: lms/templates/modal/accessible_confirm.html
 msgid "open"
@@ -14968,11 +14973,11 @@ msgstr ""
 
 #: lms/templates/registration/activation_complete.html
 msgid "Activation Complete!"
-msgstr ""
+msgstr "செயலாக்கம் நிறைவுற்றது!"
 
 #: lms/templates/registration/activation_complete.html
 msgid "Account already active!"
-msgstr ""
+msgstr "கணக்கு ஏற்கனவே செயலில்!"
 
 #: lms/templates/registration/activation_complete.html
 msgid "You can now {link_start}log in{link_end}."
@@ -14980,7 +14985,7 @@ msgstr ""
 
 #: lms/templates/registration/activation_invalid.html
 msgid "Activation Invalid"
-msgstr ""
+msgstr "செயலாக்கம் செல்லுபடியற்றது"
 
 #: lms/templates/registration/activation_invalid.html
 msgid ""
@@ -16347,7 +16352,7 @@ msgstr ""
 #: cms/templates/export_git.html cms/templates/import.html
 #: cms/templates/widgets/header.html cms/templates/widgets/header.html
 msgid "Tools"
-msgstr ""
+msgstr "கருவிகள்"
 
 #: cms/templates/checklists.html
 msgid "Current Checklists"
@@ -18941,7 +18946,7 @@ msgstr ""
 #: cms/templates/widgets/problem-edit.html
 #: cms/templates/widgets/problem-edit.html
 msgid "Heading 1"
-msgstr ""
+msgstr "தலைப்பு 1"
 
 #: cms/templates/widgets/problem-edit.html
 #: cms/templates/widgets/problem-edit.html
@@ -19002,7 +19007,7 @@ msgstr ""
 
 # empty
 msgid "This is a key string."
-msgstr ""
+msgstr "இது ஒரு முக்கிய சரம்."
 
 #: wiki/admin.py wiki/models/article.py
 msgid "created"
@@ -19018,7 +19023,7 @@ msgstr ""
 
 #: wiki/forms.py
 msgid "Type in some contents"
-msgstr ""
+msgstr "சில உள்ளடக்கங்களை தட்டச்சு செய்க"
 
 #: wiki/forms.py
 msgid ""
@@ -19053,7 +19058,7 @@ msgstr ""
 
 #: wiki/forms.py
 msgid "Select an option"
-msgstr ""
+msgstr "ஒரு விருப்பத்தை தேர்ந்தெடுங்கள்"
 
 #: wiki/forms.py
 msgid "Slug"
@@ -19084,11 +19089,11 @@ msgstr ""
 
 #: wiki/forms.py
 msgid "Yes, I am sure"
-msgstr ""
+msgstr "ஆமாம், நான் உறுதியாக இருக்கிறேன்"
 
 #: wiki/forms.py
 msgid "Purge"
-msgstr ""
+msgstr "சுத்தி செய்"
 
 #: wiki/forms.py
 msgid ""
@@ -19116,7 +19121,7 @@ msgstr ""
 
 #: wiki/forms.py
 msgid "Permissions"
-msgstr ""
+msgstr "அனுமதிகள்"
 
 #: wiki/forms.py
 msgid "Owner"
@@ -19124,7 +19129,7 @@ msgstr "உரிமையாளர்"
 
 #: wiki/forms.py
 msgid "Enter the username of the owner."
-msgstr ""
+msgstr "உரிமையாளர் பெயர் சேர்க்கவும்."
 
 #: wiki/forms.py
 msgid "(none)"

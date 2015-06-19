@@ -84,7 +84,7 @@ msgstr ""
 #: cms/djangoapps/contentstore/views/component.py
 #: common/lib/xmodule/xmodule/video_module/video_module.py
 msgid "Advanced"
-msgstr ""
+msgstr "Avansat"
 
 #: cms/djangoapps/contentstore/views/entrance_exam.py
 #: cms/djangoapps/contentstore/views/entrance_exam.py
@@ -99,7 +99,7 @@ msgstr ""
 #: lms/templates/ccx/schedule.html
 #: lms/templates/instructor/instructor_dashboard_2/metrics.html
 msgid "Section"
-msgstr ""
+msgstr "Secțiune"
 
 #: cms/djangoapps/contentstore/views/helpers.py
 #: lms/djangoapps/class_dashboard/dashboard_data.py
@@ -126,7 +126,7 @@ msgstr ""
 #: lms/templates/shoppingcart/billing_details.html
 #: lms/templates/shoppingcart/receipt.html
 msgid "Name"
-msgstr ""
+msgstr "Nume"
 
 #: cms/djangoapps/contentstore/views/videos.py
 #: common/lib/xmodule/xmodule/video_module/video_xfields.py
@@ -227,7 +227,7 @@ msgstr ""
 #: lms/templates/static_templates/honor.html
 #: lms/templates/static_templates/honor.html
 msgid "Honor Code"
-msgstr ""
+msgstr "Codul onoarei"
 
 #: common/djangoapps/course_modes/models.py
 msgid "You're auditing this course"
@@ -247,7 +247,7 @@ msgstr ""
 
 #: common/djangoapps/course_modes/views.py
 msgid "Enrollment is closed"
-msgstr ""
+msgstr "Inscrierea este inchisa"
 
 #: common/djangoapps/course_modes/views.py
 msgid "Enrollment mode not supported"
@@ -272,7 +272,7 @@ msgstr ""
 #: common/djangoapps/django_comment_common/models.py
 #: lms/templates/discussion/_underscore_templates.html
 msgid "Community TA"
-msgstr ""
+msgstr "Asistent din comunitate"
 
 #: common/djangoapps/django_comment_common/models.py
 #: lms/djangoapps/instructor/paidcourse_enrollment_report.py
@@ -349,6 +349,8 @@ msgstr ""
 #: common/djangoapps/student/forms.py
 msgid "Username should only consist of A-Z and 0-9, with no spaces."
 msgstr ""
+"Numele de utilizator trebuie sa contina doar caracterele A-Z si 0-9, fara "
+"spatii."
 
 #: common/djangoapps/student/forms.py
 msgid "Username cannot be more than %(limit_value)s characters long"
@@ -360,7 +362,7 @@ msgstr ""
 
 #: common/djangoapps/student/forms.py
 msgid "You must accept the terms of service."
-msgstr ""
+msgstr "Trebuie sa accepti termenii serviciului."
 
 #: common/djangoapps/student/forms.py
 msgid "A level of education is required"
@@ -392,7 +394,7 @@ msgstr ""
 
 #: common/djangoapps/student/forms.py
 msgid "To enroll, you must follow the honor code."
-msgstr ""
+msgstr "Pentru a te inscrie, trebuie sa respecti codul de onoare."
 
 #: common/djangoapps/student/forms.py
 msgid "You are missing one or more required fields"
@@ -418,21 +420,21 @@ msgstr ""
 
 #: common/djangoapps/student/models.py
 msgid "Male"
-msgstr ""
+msgstr "Masculin"
 
 #: common/djangoapps/student/models.py
 msgid "Female"
-msgstr ""
+msgstr "Feminin"
 
 #. Translators: 'Other' refers to the student's gender
 #. Translators: 'Other' refers to the student's level of education
 #: common/djangoapps/student/models.py common/djangoapps/student/models.py
 msgid "Other"
-msgstr ""
+msgstr "Altele"
 
 #: common/djangoapps/student/models.py
 msgid "Doctorate"
-msgstr ""
+msgstr "Doctorat"
 
 #: common/djangoapps/student/models.py
 msgid "Master's or professional degree"
@@ -463,7 +465,7 @@ msgstr ""
 #: common/djangoapps/student/models.py
 #: common/lib/xmodule/xmodule/course_module.py cms/templates/settings.html
 msgid "None"
-msgstr ""
+msgstr "Nimic"
 
 #: common/djangoapps/student/models.py
 msgid "{platform_name} Honor Code Certificate for {course_name}"
@@ -512,7 +514,7 @@ msgstr ""
 
 #: common/djangoapps/student/views.py
 msgid "Course id not specified"
-msgstr ""
+msgstr "ID-ul cursului nu a fost specificat"
 
 #: common/djangoapps/student/views.py lms/djangoapps/dashboard/support.py
 msgid "Invalid course id"
@@ -520,7 +522,7 @@ msgstr ""
 
 #: common/djangoapps/student/views.py
 msgid "Course id is invalid"
-msgstr ""
+msgstr "ID-ul cursului nu este valid"
 
 #: common/djangoapps/student/views.py
 msgid "Could not enroll"
@@ -528,11 +530,11 @@ msgstr ""
 
 #: common/djangoapps/student/views.py
 msgid "You are not enrolled in this course"
-msgstr ""
+msgstr "Nu esti inscris la acest curs"
 
 #: common/djangoapps/student/views.py
 msgid "Enrollment action is invalid"
-msgstr ""
+msgstr "Actiunea de inscriere nu este valida"
 
 #: common/djangoapps/student/views.py
 msgid ""
@@ -556,6 +558,8 @@ msgstr ""
 #: common/djangoapps/student/views.py
 msgid "There was an error receiving your login information. Please email us."
 msgstr ""
+"Nu au putut fi obtinute informatiile tale de autentificare. Te rog sa ne "
+"trimiti un email."
 
 #: common/djangoapps/student/views.py
 msgid ""
@@ -576,7 +580,7 @@ msgstr ""
 
 #: common/djangoapps/student/views.py lms/templates/provider_login.html
 msgid "Email or password is incorrect."
-msgstr ""
+msgstr "Adresa de email sau parola sunt incorecte."
 
 #: common/djangoapps/student/views.py
 msgid ""
@@ -610,11 +614,11 @@ msgstr ""
 
 #: common/djangoapps/student/views.py
 msgid "An account with the Public Username '{username}' already exists."
-msgstr ""
+msgstr "Un cont cu numele de utilizator '{username}' exista deja."
 
 #: common/djangoapps/student/views.py
 msgid "An account with the Email '{email}' already exists."
-msgstr ""
+msgstr "Un cont cu adresa de email '{email}' exista deja."
 
 #: common/djangoapps/student/views.py
 msgid "An access_token is required when passing value ({}) for provider."
@@ -631,6 +635,8 @@ msgstr ""
 #: common/djangoapps/student/views.py
 msgid "Unknown error. Please e-mail us to let us know how it happened."
 msgstr ""
+"Eroare necunoscuta. Te rog sa ne contactezi prin email pentru a ne spune ce "
+"s-a intamplat."
 
 #: common/djangoapps/student/views.py
 msgid ""
@@ -660,23 +666,23 @@ msgstr ""
 
 #: common/djangoapps/student/views.py
 msgid "No inactive user with this e-mail exists"
-msgstr ""
+msgstr "Nu exista utilizatori inactivi cu acest email"
 
 #: common/djangoapps/student/views.py
 msgid "Unable to send reactivation email"
-msgstr ""
+msgstr "Nu s-a putut trimite email de reactivare"
 
 #: common/djangoapps/student/views.py
 msgid "Valid e-mail address required."
-msgstr ""
+msgstr "Trebuie o adresa de e-mail valida."
 
 #: common/djangoapps/student/views.py
 msgid "Old email is the same as the new email."
-msgstr ""
+msgstr "Adresa de email veche este identica cu adresa noua de email."
 
 #: common/djangoapps/student/views.py
 msgid "An account with this e-mail already exists."
-msgstr ""
+msgstr "Exista deja un cont cu acest email."
 
 #: common/djangoapps/student/views.py
 msgid "Unable to send email activation link. Please try again later."
@@ -684,11 +690,11 @@ msgstr ""
 
 #: common/djangoapps/student/views.py
 msgid "Name required"
-msgstr ""
+msgstr "Lipseste numele"
 
 #: common/djangoapps/student/views.py
 msgid "Invalid ID"
-msgstr ""
+msgstr "ID incorect"
 
 #: common/djangoapps/third_party_auth/pipeline.py
 msgid ""
@@ -1117,7 +1123,7 @@ msgstr ""
 
 #: common/lib/capa/capa/inputtypes.py
 msgid "correct"
-msgstr ""
+msgstr "Corect"
 
 #: common/lib/capa/capa/inputtypes.py
 msgid "incorrect"
@@ -1129,7 +1135,7 @@ msgstr ""
 
 #: common/lib/capa/capa/inputtypes.py common/lib/capa/capa/inputtypes.py
 msgid "unanswered"
-msgstr ""
+msgstr "fara raspuns"
 
 #: common/lib/capa/capa/inputtypes.py
 msgid "processing"
@@ -1205,17 +1211,15 @@ msgstr ""
 msgid "Expected a {expected_tag} tag; got {given_tag} instead"
 msgstr ""
 
-#: common/lib/capa/capa/responsetypes.py
 #: lms/templates/combinedopenended/open_ended_result_table.html
 #: lms/templates/combinedopenended/openended/open_ended_evaluation.html
 msgid "Correct"
-msgstr ""
+msgstr "Corect/ă"
 
-#: common/lib/capa/capa/responsetypes.py
 #: lms/templates/combinedopenended/open_ended_result_table.html
 #: lms/templates/combinedopenended/openended/open_ended_evaluation.html
 msgid "Incorrect"
-msgstr ""
+msgstr "Incorect/ă"
 
 #: common/lib/capa/capa/responsetypes.py
 msgid "Error {err} in evaluating hint function {hintfn}."
@@ -1349,7 +1353,7 @@ msgstr ""
 #: common/templates/course_modes/choose.html lms/templates/login.html
 #: lms/templates/register.html
 msgid "or"
-msgstr ""
+msgstr "sau"
 
 #: common/lib/capa/capa/responsetypes.py
 msgid "Custom Evaluated Script"
@@ -1513,7 +1517,7 @@ msgstr ""
 
 #: common/lib/xmodule/xmodule/annotatable_module.py
 msgid "Annotation"
-msgstr ""
+msgstr "Adnotare"
 
 #: common/lib/xmodule/xmodule/capa_base.py
 #: common/lib/xmodule/xmodule/combined_open_ended_module.py
@@ -1557,7 +1561,7 @@ msgstr ""
 #: common/lib/xmodule/xmodule/modulestore/inheritance.py
 #: lms/templates/problem.html
 msgid "Show Answer"
-msgstr ""
+msgstr "Arată răspunsul"
 
 #: common/lib/xmodule/xmodule/capa_base.py
 msgid ""
@@ -1859,7 +1863,7 @@ msgstr ""
 #: common/lib/xmodule/xmodule/peer_grading_module.py
 #: lms/templates/peer_grading/peer_grading.html
 msgid "Graded"
-msgstr ""
+msgstr "Notat"
 
 #: common/lib/xmodule/xmodule/combined_open_ended_module.py
 msgid ""
@@ -2743,7 +2747,7 @@ msgstr ""
 #: lms/templates/footer.html lms/templates/static_templates/about.html
 #: lms/templates/static_templates/about.html
 msgid "About"
-msgstr ""
+msgstr "Despre"
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Entrance Exam Enabled"
@@ -2817,7 +2821,7 @@ msgstr ""
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "General"
-msgstr ""
+msgstr "General"
 
 #. Translators: TBD stands for 'To Be Determined' and is used when a course
 #. does not yet have an announced start date.
@@ -2856,7 +2860,7 @@ msgstr ""
 
 #: common/lib/xmodule/xmodule/html_module.py
 msgid "Text"
-msgstr ""
+msgstr "Text"
 
 #: common/lib/xmodule/xmodule/html_module.py
 #: common/lib/xmodule/xmodule/html_module.py
@@ -2878,7 +2882,7 @@ msgstr ""
 
 #: common/lib/xmodule/xmodule/html_module.py
 msgid "Editor"
-msgstr ""
+msgstr "Editor"
 
 #: common/lib/xmodule/xmodule/html_module.py
 msgid "Visual"
@@ -3866,6 +3870,8 @@ msgstr ""
 msgid ""
 "Your response has been submitted. Please check back later for your grade."
 msgstr ""
+"Răspunsul dumneavoastră a fost trimis. Vă rugăm reveniți pentru a vă afla "
+"nota."
 
 #. Translators: "Not started" communicates to a student that their response
 #. has not yet been graded
@@ -4172,29 +4178,34 @@ msgstr ""
 
 #: common/static/js/vendor/mathjax-MathJax-c9db6ac/docs/source/mjtheme/layout.html
 msgid "Navigation"
-msgstr ""
+msgstr "Navigare"
 
 #: common/static/js/vendor/mathjax-MathJax-c9db6ac/docs/source/mjtheme/layout.html
 msgid "About these documents"
-msgstr ""
+msgstr "Despre aceste documente"
 
 #: common/static/js/vendor/mathjax-MathJax-c9db6ac/docs/source/mjtheme/layout.html
 msgid "Index"
-msgstr ""
+msgstr "Index"
 
 #: common/static/js/vendor/mathjax-MathJax-c9db6ac/docs/source/mjtheme/layout.html
 #: lms/templates/wiki/plugins/attachments/index.html
 #: lms/templates/dashboard.html lms/templates/courseware/courses.html
 #: lms/templates/discussion/_thread_list_template.html
 #: lms/templates/edxnotes/edxnotes.html
+#, fuzzy
 msgid "Search"
 msgstr ""
+"#-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#\n"
+"Cauta\n"
+"#-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#\n"
+"Caută"
 
 #: common/static/js/vendor/mathjax-MathJax-c9db6ac/docs/source/mjtheme/layout.html
 #: lms/templates/static_templates/copyright.html
 #: lms/templates/static_templates/copyright.html
 msgid "Copyright"
-msgstr ""
+msgstr "Drepturi de autor"
 
 #: lms/djangoapps/branding/api.py
 msgid ""
@@ -4227,12 +4238,12 @@ msgstr ""
 #: lms/djangoapps/branding/api.py lms/templates/static_templates/contact.html
 #: lms/templates/static_templates/contact.html
 msgid "Contact"
-msgstr ""
+msgstr "Contact"
 
 #: lms/djangoapps/branding/api.py lms/templates/static_templates/jobs.html
 #: lms/templates/static_templates/jobs.html
 msgid "Jobs"
-msgstr ""
+msgstr "Angajări"
 
 #: lms/djangoapps/branding/api.py lms/templates/static_templates/donate.html
 #: lms/templates/static_templates/donate.html
@@ -4255,7 +4266,7 @@ msgstr ""
 #: lms/templates/static_templates/privacy.html
 #: lms/templates/static_templates/privacy.html
 msgid "Privacy Policy"
-msgstr ""
+msgstr "Polița de intimite"
 
 #: lms/djangoapps/branding/api.py
 msgid "Accessibility Policy"
@@ -4268,7 +4279,7 @@ msgstr ""
 #: cms/templates/widgets/footer.html lms/templates/static_templates/tos.html
 #: lms/templates/static_templates/tos.html
 msgid "Terms of Service"
-msgstr ""
+msgstr "Termenii de serviciu"
 
 #: lms/djangoapps/branding/api.py
 msgid "Download the {platform_name} mobile app from the Apple App Store"
@@ -4591,7 +4602,7 @@ msgstr ""
 #: lms/templates/instructor/instructor_dashboard_2/metrics.html
 #: lms/templates/instructor/instructor_dashboard_2/metrics.html
 msgid "Username"
-msgstr ""
+msgstr "Utilizator"
 
 #: lms/djangoapps/class_dashboard/dashboard_data.py
 #: lms/templates/instructor/instructor_dashboard_2/metrics.html
@@ -4622,7 +4633,7 @@ msgstr ""
 #: lms/djangoapps/class_dashboard/dashboard_data.py
 #: lms/templates/folditchallenge.html
 msgid "Score"
-msgstr ""
+msgstr "Notă"
 
 #: lms/djangoapps/class_dashboard/dashboard_data.py
 msgid "problems"
@@ -4706,7 +4717,7 @@ msgstr ""
 #: lms/djangoapps/courseware/tabs.py
 #: lms/templates/courseware/courseware-error.html
 msgid "Courseware"
-msgstr ""
+msgstr "Materiale curs"
 
 #: lms/djangoapps/courseware/tabs.py
 #: lms/djangoapps/instructor/views/instructor_dashboard.py
@@ -4715,12 +4726,12 @@ msgstr ""
 
 #: lms/djangoapps/courseware/tabs.py lms/templates/courseware/syllabus.html
 msgid "Syllabus"
-msgstr ""
+msgstr "Curriculum"
 
 #: lms/djangoapps/courseware/tabs.py
 #: lms/templates/peer_grading/peer_grading.html
 msgid "Progress"
-msgstr ""
+msgstr "Progres"
 
 #. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: 'Textbooks' refers to the tab in the course that leads to the
@@ -5138,6 +5149,8 @@ msgstr ""
 msgid ""
 "Error uploading file. Please contact the site administrator. Thank you."
 msgstr ""
+"Eroare la incarcarea fisierului. Te rog sa contactezi administratorul site-"
+"ului. Iti multumesc."
 
 #: lms/djangoapps/django_comment_client/base/views.py
 msgid "Good"
@@ -5199,7 +5212,7 @@ msgstr ""
 #: lms/djangoapps/instructor/tests/test_api.py
 #: lms/djangoapps/instructor/views/instructor_task_helpers.py
 msgid "Complete"
-msgstr ""
+msgstr "Complet"
 
 #: lms/djangoapps/instructor/tests/test_api.py
 #: lms/djangoapps/instructor/views/api.py
@@ -5322,7 +5335,7 @@ msgstr ""
 #: lms/templates/instructor/instructor_dashboard_2/generate_registarion_codes_modal.html
 #: lms/templates/instructor/instructor_dashboard_2/generate_registarion_codes_modal.html
 msgid "Email"
-msgstr ""
+msgstr "Email"
 
 #: lms/djangoapps/instructor/views/api.py
 #: lms/djangoapps/instructor_task/tasks_helper.py lms/envs/devstack.py
@@ -5345,7 +5358,7 @@ msgstr ""
 #: openedx/core/djangoapps/user_api/views.py lms/templates/register.html
 #: lms/templates/signup_modal.html
 msgid "Gender"
-msgstr ""
+msgstr "Genul"
 
 #: lms/djangoapps/instructor/views/api.py
 #: lms/djangoapps/instructor_task/tasks_helper.py
@@ -5356,7 +5369,7 @@ msgstr ""
 #: lms/djangoapps/instructor/views/api.py
 #: lms/djangoapps/instructor_task/tasks_helper.py lms/templates/register.html
 msgid "Mailing Address"
-msgstr ""
+msgstr "Adresa poștală"
 
 #: lms/djangoapps/instructor/views/api.py
 #: lms/djangoapps/instructor_task/tasks_helper.py
@@ -5423,7 +5436,7 @@ msgstr ""
 #: lms/templates/instructor/instructor_dashboard_2/edit_coupon_modal.html
 #: wiki/plugins/attachments/forms.py
 msgid "Description"
-msgstr ""
+msgstr "Descriere"
 
 #: lms/djangoapps/instructor/views/api.py
 #: lms/templates/instructor/instructor_dashboard_2/e-commerce.html
@@ -5623,7 +5636,7 @@ msgstr ""
 
 #: lms/djangoapps/instructor/views/instructor_dashboard.py
 msgid "Instructor"
-msgstr ""
+msgstr "Titular"
 
 #: lms/djangoapps/instructor/views/instructor_dashboard.py
 msgid ""
@@ -5715,7 +5728,7 @@ msgstr[2] ""
 
 #: lms/djangoapps/instructor/views/instructor_task_helpers.py
 msgid "Incomplete"
-msgstr ""
+msgstr "Incomplet"
 
 #: lms/djangoapps/instructor/views/legacy.py
 #: lms/templates/courseware/legacy_instructor_dashboard.html
@@ -5815,7 +5828,7 @@ msgstr ""
 #: lms/templates/verify_student/_modal_editname.html
 #: lms/templates/verify_student/face_upload.html
 msgid "Full Name"
-msgstr ""
+msgstr "Nume complet"
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid "edX email"
@@ -5900,7 +5913,7 @@ msgstr ""
 #: lms/djangoapps/instructor_task/tasks.py
 #: lms/templates/wiki/plugins/attachments/index.html wiki/models/article.py
 msgid "deleted"
-msgstr ""
+msgstr "şters"
 
 #. Translators: This is a past-tense verb that is inserted into task progress
 #. messages as {action}.
@@ -5959,12 +5972,12 @@ msgstr ""
 #: lms/templates/discussion/_underscore_templates.html wiki/forms.py
 #: wiki/forms.py wiki/forms.py
 msgid "Title"
-msgstr ""
+msgstr "Titlu"
 
 #: lms/djangoapps/instructor_task/tasks_helper.py lms/templates/register.html
 #: lms/templates/instructor/instructor_dashboard_2/instructor_analytics.html
 msgid "Year of Birth"
-msgstr ""
+msgstr "Anul nașterii"
 
 #. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: This label appears above a field on the registration form
@@ -5974,7 +5987,7 @@ msgstr ""
 #: lms/templates/instructor/instructor_dashboard_2/generate_registarion_codes_modal.html
 #: lms/templates/shoppingcart/receipt.html
 msgid "City"
-msgstr ""
+msgstr "Oraș"
 
 #. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: This label appears above a dropdown menu on the registration
@@ -6231,9 +6244,9 @@ msgstr ""
 msgid "This component refers to deleted or invalid content groups."
 msgstr ""
 
-#: lms/djangoapps/notes/views.py lms/templates/notes.html
+#: lms/templates/notes.html
 msgid "My Notes"
-msgstr ""
+msgstr "Notițele mele"
 
 #: lms/djangoapps/open_ended_grading/staff_grading_service.py
 msgid ""
@@ -6572,7 +6585,7 @@ msgstr ""
 
 #: lms/djangoapps/shoppingcart/reports.py
 msgid "Comments"
-msgstr ""
+msgstr "Comentarii"
 
 #: lms/djangoapps/shoppingcart/reports.py
 #: lms/djangoapps/shoppingcart/reports.py
@@ -6584,7 +6597,7 @@ msgstr ""
 #: cms/templates/widgets/header.html cms/templates/widgets/header.html
 #: cms/templates/widgets/header.html
 msgid "Course"
-msgstr ""
+msgstr "Curs"
 
 #: lms/djangoapps/shoppingcart/reports.py
 msgid "Course Announce Date"
@@ -6617,7 +6630,7 @@ msgstr ""
 
 #: lms/djangoapps/shoppingcart/reports.py
 msgid "Verified Enrollment"
-msgstr ""
+msgstr "Înscriere verificată"
 
 #: lms/djangoapps/shoppingcart/reports.py
 msgid "Gross Revenue"
@@ -7687,7 +7700,7 @@ msgstr ""
 #: lms/templates/instructor/instructor_dashboard_2/invalidate_registration_code_modal.html
 #: lms/templates/instructor/instructor_dashboard_2/set_course_mode_price_modal.html
 msgid "Required Information"
-msgstr ""
+msgstr "Informații necesare"
 
 #: lms/templates/registration/password_reset_confirm.html
 msgid "Your New Password"
@@ -7720,7 +7733,7 @@ msgstr ""
 #: cms/templates/login.html lms/templates/login-sidebar.html
 #: lms/templates/register-sidebar.html
 msgid "Need Help?"
-msgstr ""
+msgstr "Ai nevoie de ajutor?"
 
 #: lms/templates/registration/password_reset_confirm.html
 msgid ""
@@ -7737,7 +7750,7 @@ msgstr ""
 
 #: lms/templates/registration/password_reset_email.html
 msgid "Please go to the following page and choose a new password:"
-msgstr ""
+msgstr "Te rog sa mergi la pagina urmatoare si sa alegi o parola noua:"
 
 #: lms/templates/registration/password_reset_email.html
 msgid ""
@@ -7747,7 +7760,7 @@ msgstr ""
 
 #: lms/templates/registration/password_reset_email.html
 msgid "Thanks for using our site!"
-msgstr ""
+msgstr "Iti multumesc pentru folosirea site-ului nostru!"
 
 #: lms/templates/registration/password_reset_email.html
 msgid "The %(platform_name)s Team"
@@ -7755,7 +7768,7 @@ msgstr ""
 
 #: lms/templates/wiki/article.html
 msgid "Last modified:"
-msgstr ""
+msgstr "Ultima modificare:"
 
 #: lms/templates/wiki/article.html
 msgid "See all children"
@@ -7763,78 +7776,97 @@ msgstr ""
 
 #: lms/templates/wiki/article.html
 msgid "This article was last modified:"
-msgstr ""
+msgstr "Acest articol a fost modificat ultima oara:"
 
 #: lms/templates/wiki/create.html lms/templates/wiki/create.html.py
 msgid "Add new article"
-msgstr ""
+msgstr "Adauga articol nou"
 
 #: lms/templates/wiki/create.html
 msgid "Create article"
-msgstr ""
+msgstr "Creeaza articol"
 
 #: lms/templates/wiki/create.html lms/templates/wiki/delete.html
 #: lms/templates/wiki/delete.html.py
 msgid "Go back"
-msgstr ""
+msgstr "Inapoi"
 
 #: lms/templates/wiki/delete.html lms/templates/wiki/delete.html.py
 #: lms/templates/wiki/edit.html
 msgid "Delete article"
-msgstr ""
+msgstr "Sterge articol"
 
 #: lms/templates/wiki/delete.html
 #: lms/templates/wiki/plugins/attachments/index.html
 #: cms/templates/component.html cms/templates/studio_xblock_wrapper.html
 #: cms/templates/studio_xblock_wrapper.html
 #: lms/templates/discussion/_underscore_templates.html
+#, fuzzy
 msgid "Delete"
 msgstr ""
+"#-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#\n"
+"Sterge\n"
+"#-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#\n"
+"Șterge"
 
 #: lms/templates/wiki/delete.html
 msgid "You cannot delete a root article."
-msgstr ""
+msgstr "Nu poti sterge un articol de baza."
 
 #: lms/templates/wiki/delete.html
 msgid ""
 "You cannot delete this article because you do not have permission to delete "
 "articles with children. Try to remove the children manually one-by-one."
 msgstr ""
+"Nu poti sterge acest articol pentru ca nu ai dreptul de a sterge articole cu"
+" sub-articole. Incearca sa stergi sub-articolele manual."
 
 #: lms/templates/wiki/delete.html
 msgid ""
 "You are deleting an article. This means that its children will be deleted as"
 " well. If you choose to purge, children will also be purged!"
 msgstr ""
+"Stergi un articol. Asta inseamna ca sub-articolele vor fi sterse. Daca "
+"activezi curatenia, sub-articolele vor fi si ele curatate."
 
 #: lms/templates/wiki/delete.html
 msgid "Articles that will be deleted"
-msgstr ""
+msgstr "Articole care vor fi sterse"
 
 #: lms/templates/wiki/delete.html
 msgid "...and more!"
-msgstr ""
+msgstr "...si multe altele!"
 
 #: lms/templates/wiki/delete.html
 msgid "You are deleting an article. Please confirm."
-msgstr ""
+msgstr "Stergi un articol. Te rog sa confirmi."
 
 #: lms/templates/wiki/edit.html cms/templates/component.html
 #: cms/templates/container.html cms/templates/studio_xblock_wrapper.html
 #: lms/templates/discussion/_underscore_templates.html
 #: lms/templates/instructor/instructor_dashboard_2/e-commerce.html
 #: lms/templates/wiki/includes/article_menu.html
+#, fuzzy
 msgid "Edit"
 msgstr ""
+"#-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#\n"
+"Editeaza\n"
+"#-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#\n"
+"Editează"
 
 #: lms/templates/wiki/edit.html lms/templates/wiki/edit.html.py
 #: lms/templates/ccx/schedule.html lms/templates/ccx/schedule.html
 msgid "Save changes"
-msgstr ""
+msgstr "Salveaza modificarile"
 
 #: lms/templates/wiki/edit.html cms/templates/container.html
+#, fuzzy
 msgid "Preview"
 msgstr ""
+"#-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#\n"
+"PrevizualizeazaPrevizualizeaza\n"
+"#-#-#-#-#  mako-studio.po (edx-platform)  #-#-#-#-#\n"
+"Previzualizează"
 
 #. #-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a control to allow users to exit out of this modal
@@ -7855,7 +7887,7 @@ msgstr ""
 #: lms/templates/modal/_modal-settings-language.html
 #: lms/templates/modal/accessible_confirm.html
 msgid "Close"
-msgstr ""
+msgstr "Închide"
 
 #: lms/templates/wiki/edit.html
 msgid "Wiki Preview"
@@ -7873,11 +7905,11 @@ msgstr ""
 
 #: lms/templates/wiki/edit.html
 msgid "Back to editor"
-msgstr ""
+msgstr "Inapoi la editor"
 
 #: lms/templates/wiki/history.html
 msgid "History"
-msgstr ""
+msgstr "Istoric"
 
 #: lms/templates/wiki/history.html
 msgid ""
@@ -8080,7 +8112,7 @@ msgstr ""
 #: lms/templates/wiki/plugins/attachments/index.html
 #: wiki/plugins/attachments/wiki_plugin.py
 msgid "Attachments"
-msgstr ""
+msgstr "Ataşamente"
 
 #: lms/templates/wiki/plugins/attachments/index.html
 msgid "Upload new file"
@@ -8092,7 +8124,7 @@ msgstr ""
 
 #: lms/templates/wiki/plugins/attachments/index.html
 msgid "Upload File"
-msgstr ""
+msgstr "Uploadează un fișier"
 
 #: lms/templates/wiki/plugins/attachments/index.html
 msgid "Upload file"
@@ -8136,7 +8168,7 @@ msgstr ""
 
 #: lms/templates/wiki/plugins/attachments/index.html
 msgid "Replace"
-msgstr ""
+msgstr "Inlocuieste"
 
 #: lms/templates/wiki/plugins/attachments/index.html
 msgid "Restore"
@@ -8249,11 +8281,11 @@ msgstr ""
 #: lms/templates/register.html lms/templates/register.html
 #: lms/templates/signup_modal.html lms/templates/sysadmin_dashboard.html
 msgid "Password"
-msgstr ""
+msgstr "Parolă"
 
 #: openedx/core/djangoapps/user_api/views.py lms/templates/login.html
 msgid "Remember me"
-msgstr ""
+msgstr "Păstrează-mă minte"
 
 #: openedx/core/djangoapps/user_api/views.py
 msgid ""
@@ -8311,7 +8343,7 @@ msgstr ""
 #. form used to select the user's year of birth.
 #: openedx/core/djangoapps/user_api/views.py lms/templates/signup_modal.html
 msgid "Year of birth"
-msgstr ""
+msgstr "Anul nașterii"
 
 #. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: This label appears above a field on the registration form
@@ -8332,7 +8364,7 @@ msgstr ""
 #. in order to register a new account.
 #: openedx/core/djangoapps/user_api/views.py
 msgid "Terms of Service and Honor Code"
-msgstr ""
+msgstr "Codul onoarei și Termenii de oferire a serviciilor"
 
 #: openedx/core/djangoapps/user_api/views.py
 #: openedx/core/djangoapps/user_api/views.py
@@ -8385,7 +8417,7 @@ msgstr ""
 #: cms/djangoapps/contentstore/course_group_config.py
 #: cms/djangoapps/contentstore/views/certificates.py
 msgid "invalid JSON"
-msgstr ""
+msgstr "ID incorect"
 
 #: cms/djangoapps/contentstore/course_group_config.py
 msgid "must have name of the configuration"
@@ -8398,7 +8430,7 @@ msgstr ""
 #: cms/djangoapps/contentstore/course_info_model.py
 #: cms/djangoapps/contentstore/course_info_model.py
 msgid "Invalid course update id."
-msgstr ""
+msgstr "Actualizarea cursului nevalidată"
 
 #: cms/djangoapps/contentstore/course_info_model.py
 msgid "Course update not found."
@@ -8485,7 +8517,7 @@ msgstr ""
 
 #: cms/djangoapps/contentstore/views/assets.py
 msgid "Upload completed"
-msgstr ""
+msgstr "Upload complet"
 
 #: cms/djangoapps/contentstore/views/certificates.py
 msgid "must have name of the certificate"
@@ -8502,11 +8534,11 @@ msgstr ""
 
 #: cms/djangoapps/contentstore/views/component.py
 msgid "HTML"
-msgstr ""
+msgstr "HTML"
 
 #: cms/djangoapps/contentstore/views/component.py
 msgid "Video"
-msgstr ""
+msgstr "Video"
 
 #: cms/djangoapps/contentstore/views/component.py
 msgid "Blank"
@@ -8576,7 +8608,7 @@ msgstr ""
 
 #: cms/djangoapps/contentstore/views/helpers.py
 msgid "Empty"
-msgstr ""
+msgstr "Gol"
 
 #: cms/djangoapps/contentstore/views/import_export.py
 msgid "We only support uploading a .tar.gz file."
@@ -8682,7 +8714,7 @@ msgstr ""
 #. Translators: This is the status of an active video upload
 #: cms/djangoapps/contentstore/views/videos.py cms/templates/import.html
 msgid "Uploading"
-msgstr ""
+msgstr "Încarcă"
 
 #. Translators: This is the status for a video that the servers are currently
 #. processing
@@ -8717,7 +8749,7 @@ msgstr ""
 #. Translators: This is the status for a video that is in an unknown state
 #: cms/djangoapps/contentstore/views/videos.py
 msgid "Unknown"
-msgstr ""
+msgstr "Necunoscut"
 
 #. Translators: This is the header for a CSV file column
 #. containing URLs for video encodings for the named profile
@@ -8732,7 +8764,7 @@ msgstr ""
 
 #: cms/djangoapps/contentstore/views/videos.py
 msgid "Date Added"
-msgstr ""
+msgstr "Dată adăugată"
 
 #. #-#-#-#-#  django-studio.po (edx-platform)  #-#-#-#-#
 #. Translators: This is listed as the duration for a video that has not
@@ -8741,7 +8773,7 @@ msgstr ""
 #: cms/djangoapps/contentstore/views/videos.py cms/templates/index.html
 #: lms/templates/dashboard/_dashboard_status_verification.html
 msgid "Pending"
-msgstr ""
+msgstr "In așteptare"
 
 #. Translators: This is the suggested filename when downloading the URL
 #. listing for videos uploaded through Studio
@@ -8790,11 +8822,11 @@ msgstr ""
 #: cms/templates/404.html cms/templates/error.html
 #: lms/templates/static_templates/404.html
 msgid "Page Not Found"
-msgstr ""
+msgstr "Pagina nu a fost găsită"
 
 #: cms/templates/404.html lms/templates/static_templates/404.html
 msgid "Page not found"
-msgstr ""
+msgstr "Pagina nu a fost găsită"
 
 #: cms/templates/asset_index.html cms/templates/certificates.html
 #: cms/templates/container.html cms/templates/course_outline.html
@@ -8807,12 +8839,12 @@ msgstr ""
 #: lms/templates/instructor/instructor_dashboard_2/metrics.html
 #: lms/templates/student_profile/learner_profile.html
 msgid "Loading"
-msgstr ""
+msgstr "Se încarcă"
 
 #: cms/templates/asset_index.html lms/templates/courseware/courseware.html
 #: lms/templates/verify_student/_modal_editname.html
 msgid "close"
-msgstr ""
+msgstr "Închide"
 
 #: cms/templates/certificates.html cms/templates/group_configurations.html
 #: cms/templates/manage_users.html cms/templates/manage_users_lib.html
@@ -8821,7 +8853,7 @@ msgstr ""
 #: cms/templates/widgets/header.html
 #: lms/templates/wiki/includes/article_menu.html
 msgid "Settings"
-msgstr ""
+msgstr "Setări"
 
 #: cms/templates/course-create-rerun.html
 #: cms/templates/course-create-rerun.html cms/templates/index.html
@@ -8834,35 +8866,35 @@ msgstr ""
 #: lms/templates/modal/accessible_confirm.html
 #: lms/templates/verify_student/face_upload.html
 msgid "Cancel"
-msgstr ""
+msgstr "Anulează"
 
 #: cms/templates/course-create-rerun.html cms/templates/index.html
 #: cms/templates/settings.html lms/templates/courseware/course_about.html
 msgid "Course Number"
-msgstr ""
+msgstr "Numărul cursului"
 
 #: cms/templates/html_error.html lms/templates/module-error.html
 msgid "Error:"
-msgstr ""
+msgstr "Eroare:"
 
 #: cms/templates/index.html cms/templates/index.html cms/templates/index.html
 #: cms/templates/index.html
 #: lms/templates/instructor/instructor_dashboard_2/course_info.html
 msgid "Organization:"
-msgstr ""
+msgstr "Organizație"
 
 #: cms/templates/index.html cms/templates/index.html cms/templates/index.html
 #: cms/templates/index.html
 #: lms/templates/instructor/instructor_dashboard_2/course_info.html
 msgid "Course Number:"
-msgstr ""
+msgstr "Numărul cursului:"
 
 #: cms/templates/index.html lms/templates/navigation.html
 #: lms/templates/sysadmin_dashboard.html
 #: lms/templates/sysadmin_dashboard_gitlogs.html
 #: lms/templates/courseware/courses.html
 msgid "Courses"
-msgstr ""
+msgstr "Cursuri"
 
 #: cms/templates/login.html cms/templates/register.html
 #: lms/templates/help_modal.html lms/templates/login.html
@@ -8871,7 +8903,7 @@ msgstr ""
 #: lms/templates/register.html lms/templates/signup_modal.html
 #: lms/templates/signup_modal.html
 msgid "E-mail"
-msgstr ""
+msgstr "E-mail"
 
 #. Translators: This is the placeholder text for a field that requests an
 #. email
@@ -8881,36 +8913,36 @@ msgstr ""
 #: lms/templates/login.html lms/templates/register-shib.html
 #: lms/templates/register.html lms/templates/register.html
 msgid "example: username@domain.com"
-msgstr ""
+msgstr "exemplu: username@domain.com"
 
 #: cms/templates/login.html lms/templates/login.html
 msgid "Forgot password?"
-msgstr ""
+msgstr "Ți-ai uitat parola?"
 
 #. Translators: This is the placeholder text for a field that requests the
 #. user's full name.
 #: cms/templates/register.html lms/templates/register.html
 #: lms/templates/verify_student/face_upload.html
 msgid "example: Jane Doe"
-msgstr ""
+msgstr "exemplu: Jane Doe"
 
 #: cms/templates/register.html lms/templates/register-shib.html
 #: lms/templates/register.html lms/templates/signup_modal.html
 #: lms/templates/signup_modal.html
 msgid "Public Username"
-msgstr ""
+msgstr "Pseudonim public"
 
 #. Translators: This is the placeholder text for a field that asks the user to
 #. pick a username
 #: cms/templates/register.html lms/templates/register-shib.html
 #: lms/templates/register.html lms/templates/register.html
 msgid "example: JaneDoe"
-msgstr ""
+msgstr "exemplu: JaneDoe"
 
 #: cms/templates/register.html
 #: lms/templates/dashboard/_dashboard_info_language.html
 msgid "Preferred Language"
-msgstr ""
+msgstr "Limba preferată"
 
 #: cms/templates/settings.html
 #: lms/templates/instructor/instructor_dashboard_2/executive_summary.html
@@ -8924,23 +8956,23 @@ msgstr ""
 #: cms/templates/studio_xblock_wrapper.html lms/templates/help_modal.html
 #: lms/templates/help_modal.html lms/templates/module-error.html
 msgid "Details"
-msgstr ""
+msgstr "Detalii"
 
 #. Translators: this is a verb describing the action of viewing more details
 #: cms/templates/studio_xblock_wrapper.html
 #: lms/templates/wiki/includes/article_menu.html
 msgid "View"
-msgstr ""
+msgstr "Vizualizează"
 
 #: cms/templates/registration/activation_complete.html
 #: lms/templates/registration/activation_complete.html
 msgid "Thanks for activating your account."
-msgstr ""
+msgstr "Mulțumim pentru activarea contului."
 
 #: cms/templates/registration/activation_complete.html
 #: lms/templates/registration/activation_complete.html
 msgid "This account has already been activated."
-msgstr ""
+msgstr "Acest cont a fost deja luat."
 
 #: cms/templates/registration/activation_complete.html
 #: lms/templates/registration/activation_complete.html
@@ -8956,7 +8988,7 @@ msgstr ""
 #: lms/templates/help_modal.html lms/templates/static_templates/help.html
 #: lms/templates/static_templates/help.html wiki/plugins/help/wiki_plugin.py
 msgid "Help"
-msgstr ""
+msgstr "Ajutor"
 
 #: cms/templates/widgets/header.html lms/templates/navigation-edx.html
 #: lms/templates/navigation.html
@@ -9089,7 +9121,7 @@ msgstr ""
 
 #: lms/templates/admin_dashboard.html
 msgid "{platform_name}-wide Summary"
-msgstr ""
+msgstr "Sumar de-a lungul {platform_name}"
 
 #: lms/templates/annotatable.html lms/templates/imageannotation.html
 #: lms/templates/textannotation.html lms/templates/videoannotation.html
@@ -9099,20 +9131,20 @@ msgstr ""
 #: lms/templates/open_ended_problems/open_ended_problems.html
 #: lms/templates/peer_grading/peer_grading.html
 msgid "Instructions"
-msgstr ""
+msgstr "Instrucțiuni"
 
 #: lms/templates/annotatable.html lms/templates/imageannotation.html
 #: lms/templates/textannotation.html lms/templates/videoannotation.html
 msgid "Collapse Instructions"
-msgstr ""
+msgstr "Ascunde instrucțiunile"
 
 #: lms/templates/annotatable.html
 msgid "Guided Discussion"
-msgstr ""
+msgstr "Discuție ghidată"
 
 #: lms/templates/annotatable.html
 msgid "Hide Annotations"
-msgstr ""
+msgstr "Ascunde adnotările"
 
 #: lms/templates/course.html
 msgid "LEARN MORE"
@@ -9124,11 +9156,11 @@ msgstr ""
 
 #: lms/templates/dashboard.html
 msgid "Dashboard"
-msgstr ""
+msgstr "Panou"
 
 #: lms/templates/dashboard.html
 msgid "Current Courses"
-msgstr ""
+msgstr "Cursuri curente"
 
 #: lms/templates/dashboard.html
 msgid "Looks like you haven't enrolled in any courses yet."
@@ -9136,11 +9168,11 @@ msgstr ""
 
 #: lms/templates/dashboard.html
 msgid "Find courses now!"
-msgstr ""
+msgstr "Găsește cursuri acum!"
 
 #: lms/templates/dashboard.html
 msgid "Course-loading errors"
-msgstr ""
+msgstr "Erori întâmpinate la încărcarea cursului"
 
 #: lms/templates/dashboard.html
 msgid "Search Your Courses"
@@ -9195,7 +9227,7 @@ msgstr ""
 
 #: lms/templates/email_change_failed.html lms/templates/email_exists.html
 msgid "E-mail change failed"
-msgstr ""
+msgstr "Schimbare de e-mail eșuată"
 
 #: lms/templates/email_change_failed.html
 msgid "We were unable to send a confirmation email to {email}"
@@ -9209,7 +9241,7 @@ msgstr ""
 #: lms/templates/email_change_successful.html
 #: lms/templates/emails_change_successful.html
 msgid "E-mail change successful!"
-msgstr ""
+msgstr "Schimbare E-mail cu succes!"
 
 #: lms/templates/email_change_successful.html
 #: lms/templates/emails_change_successful.html
@@ -9218,48 +9250,48 @@ msgstr ""
 
 #: lms/templates/email_exists.html
 msgid "An account with the new e-mail address already exists."
-msgstr ""
+msgstr "Un cont cu noua adresă de e-mail există deja."
 
 #: lms/templates/enroll_students.html
 msgid "Student Enrollment Form"
-msgstr ""
+msgstr "Formular înscriere studenți"
 
 #: lms/templates/enroll_students.html
 msgid "Course: "
-msgstr ""
+msgstr "Curs:"
 
 #: lms/templates/enroll_students.html
 msgid "Add new students"
-msgstr ""
+msgstr "Adaugă studenți noi"
 
 #: lms/templates/enroll_students.html
 msgid "Existing students:"
-msgstr ""
+msgstr "Studenți existenți:"
 
 #: lms/templates/enroll_students.html
 msgid "New students added: "
-msgstr ""
+msgstr "Următorii studenți noi au fost adăugați:"
 
 #: lms/templates/enroll_students.html
 msgid "Students rejected: "
-msgstr ""
+msgstr "Studenți respinși:"
 
 #: lms/templates/enroll_students.html
 msgid "Debug: "
-msgstr ""
+msgstr "Depanare:"
 
 #: lms/templates/extauth_failure.html lms/templates/extauth_failure.html
 msgid "External Authentication failed"
-msgstr ""
+msgstr "Autentificare externă eșuată"
 
 #: lms/templates/folditbasic.html
 msgid "Due:"
-msgstr ""
+msgstr "Scadent/ă la:"
 
 #: lms/templates/folditbasic.html
 #: lms/templates/instructor/instructor_dashboard_2/certificates.html
 msgid "Status:"
-msgstr ""
+msgstr "Stare:"
 
 #: lms/templates/folditbasic.html
 msgid "You have successfully gotten to level {goal_level}."
@@ -9271,24 +9303,24 @@ msgstr ""
 
 #: lms/templates/folditbasic.html
 msgid "Completed puzzles"
-msgstr ""
+msgstr "Puzzle-uri îndeplinite"
 
 #: lms/templates/folditbasic.html
 msgid "Level"
-msgstr ""
+msgstr "Nivel"
 
 #: lms/templates/folditbasic.html
 #: lms/templates/courseware/legacy_instructor_dashboard.html
 msgid "Submitted"
-msgstr ""
+msgstr "Trimisă la"
 
 #: lms/templates/folditchallenge.html
 msgid "Puzzle Leaderboard"
-msgstr ""
+msgstr "Tabelă scoruri Puzzle"
 
 #: lms/templates/folditchallenge.html
 msgid "User"
-msgstr ""
+msgstr "Utilizator"
 
 #: lms/templates/footer-edx-v3.html
 msgid "Page Footer"
@@ -9305,7 +9337,7 @@ msgstr ""
 #: lms/templates/forgot_password_modal.html
 #: lms/templates/forgot_password_modal.html
 msgid "Password Reset"
-msgstr ""
+msgstr "Resetează parola"
 
 #: lms/templates/forgot_password_modal.html
 msgid ""
@@ -9315,7 +9347,7 @@ msgstr ""
 
 #: lms/templates/forgot_password_modal.html
 msgid "Your E-mail Address"
-msgstr ""
+msgstr "Adresa de E-mail"
 
 #: lms/templates/forgot_password_modal.html lms/templates/login.html
 msgid "This is the e-mail address you used to register with {platform}"
@@ -9327,7 +9359,7 @@ msgstr ""
 
 #: lms/templates/forgot_password_modal.html
 msgid "Email is incorrect."
-msgstr ""
+msgstr "E-mailul este incorect."
 
 #: lms/templates/help_modal.html lms/templates/help_modal.html
 msgid "{platform_name} Help"
@@ -9355,15 +9387,15 @@ msgstr ""
 
 #: lms/templates/help_modal.html
 msgid "Report a problem"
-msgstr ""
+msgstr "Raportează o problemă"
 
 #: lms/templates/help_modal.html
 msgid "Make a suggestion"
-msgstr ""
+msgstr "Fă o sugestie"
 
 #: lms/templates/help_modal.html
 msgid "Ask a question"
-msgstr ""
+msgstr "Pune o întrebare"
 
 #: lms/templates/help_modal.html
 msgid ""
@@ -9395,11 +9427,11 @@ msgstr ""
 #: lms/templates/peer_grading/peer_grading_problem.html
 #: lms/templates/survey/survey.html
 msgid "Submit"
-msgstr ""
+msgstr "Trimite"
 
 #: lms/templates/help_modal.html
 msgid "Thank You!"
-msgstr ""
+msgstr "Îți mulțumim!"
 
 #: lms/templates/help_modal.html
 msgid ""
@@ -9431,11 +9463,11 @@ msgstr ""
 
 #: lms/templates/help_modal.html
 msgid "suggestion"
-msgstr ""
+msgstr "sugestie"
 
 #: lms/templates/help_modal.html
 msgid "Make a Suggestion"
-msgstr ""
+msgstr "Fă o sugestie"
 
 #: lms/templates/help_modal.html
 msgid "Brief description of your suggestion"
@@ -9443,11 +9475,11 @@ msgstr ""
 
 #: lms/templates/help_modal.html
 msgid "question"
-msgstr ""
+msgstr "întrebare"
 
 #: lms/templates/help_modal.html
 msgid "Ask a Question"
-msgstr ""
+msgstr "Pune o întrebare"
 
 #: lms/templates/help_modal.html
 msgid "Brief summary of your question"
@@ -9455,7 +9487,7 @@ msgstr ""
 
 #: lms/templates/help_modal.html
 msgid "An error has occurred."
-msgstr ""
+msgstr "O eroare a fost întâmpinată."
 
 #: lms/templates/help_modal.html
 msgid "Please {link_start}send us e-mail{link_end}."
@@ -9471,11 +9503,11 @@ msgstr ""
 
 #: lms/templates/index.html
 msgid "Free courses from <strong>{university_name}</strong>"
-msgstr ""
+msgstr "Cursuri gratuite oferite de <strong>{university_name}</strong>"
 
 #: lms/templates/index.html
 msgid "For anyone, anywhere, anytime"
-msgstr ""
+msgstr "Oricând, oriunde, pentru oricine"
 
 #. Translators: 'Open edX' is a brand, please keep this untranslated. See
 #. http://openedx.org for more information.
@@ -9534,11 +9566,11 @@ msgstr[2] ""
 
 #: lms/templates/login-sidebar.html
 msgid "Helpful Information"
-msgstr ""
+msgstr "Informații utile"
 
 #: lms/templates/login-sidebar.html lms/templates/login-sidebar.html
 msgid "Login via OpenID"
-msgstr ""
+msgstr "Autentificare via OpenID"
 
 #: lms/templates/login-sidebar.html
 msgid ""
@@ -9548,7 +9580,7 @@ msgstr ""
 
 #: lms/templates/login-sidebar.html
 msgid "Not Enrolled?"
-msgstr ""
+msgstr "Nu v-ați înscris?"
 
 #: lms/templates/login-sidebar.html
 msgid "Sign up for {platform_name} today!"
@@ -9572,7 +9604,7 @@ msgstr ""
 
 #: lms/templates/login.html
 msgid "Access My Courses"
-msgstr ""
+msgstr "Accesează Cursurile mele"
 
 #: lms/templates/login.html lms/templates/register-shib.html
 #: lms/templates/register.html
@@ -9581,11 +9613,11 @@ msgstr ""
 
 #: lms/templates/login.html
 msgid "Please log in"
-msgstr ""
+msgstr "Vă rugăm autentificați-vă"
 
 #: lms/templates/login.html
 msgid "to access your account and courses"
-msgstr ""
+msgstr "pentru a vă accesa contul și cursurile"
 
 #: lms/templates/login.html
 msgid "We're Sorry, {platform_name} accounts are unavailable currently"
@@ -9597,7 +9629,7 @@ msgstr ""
 
 #: lms/templates/login.html
 msgid "Your email or password is incorrect"
-msgstr ""
+msgstr "Adresa de e-mail sau parola este incorectă."
 
 #: lms/templates/login.html
 msgid "An error occurred when signing you in to {platform_name}."
@@ -9612,7 +9644,7 @@ msgstr ""
 
 #: lms/templates/login.html
 msgid "Account Preferences"
-msgstr ""
+msgstr "Preferințe cont"
 
 #. Translators: provider_name is the name of an external, third-party user
 #. authentication provider (like Google or LinkedIn).
@@ -9731,12 +9763,12 @@ msgstr ""
 #: lms/templates/navigation-edx.html lms/templates/navigation-edx.html
 #: lms/templates/navigation.html
 msgid "How it Works"
-msgstr ""
+msgstr "Cum funcționează"
 
 #: lms/templates/navigation-edx.html lms/templates/navigation-edx.html
 #: lms/templates/navigation.html
 msgid "Find Courses"
-msgstr ""
+msgstr "Găsește cursuri"
 
 #: lms/templates/navigation-edx.html lms/templates/navigation-edx.html
 msgid "Schools & Partners"
@@ -9744,7 +9776,7 @@ msgstr ""
 
 #: lms/templates/navigation-edx.html lms/templates/navigation.html
 msgid "Dashboard for:"
-msgstr ""
+msgstr "Panou pentru:"
 
 #: lms/templates/navigation-edx.html lms/templates/navigation.html
 msgid "More options dropdown"
@@ -9767,7 +9799,7 @@ msgstr ""
 #: lms/templates/navigation-edx.html lms/templates/navigation-edx.html
 #: lms/templates/register.html
 msgid "Register"
-msgstr ""
+msgstr "Înregistrare"
 
 #: lms/templates/navigation-edx.html lms/templates/navigation-edx.html
 #: lms/templates/navigation.html lms/templates/navigation.html
@@ -9791,16 +9823,16 @@ msgstr ""
 
 #: lms/templates/navigation.html
 msgid "Schools"
-msgstr ""
+msgstr "Școli"
 
 #: lms/templates/navigation.html lms/templates/navigation.html
 msgid "Register Now"
-msgstr ""
+msgstr "Înregistrează-te acum"
 
 #: lms/templates/notes.html lms/templates/textannotation.html
 #: lms/templates/videoannotation.html
 msgid "You do not have any notes."
-msgstr ""
+msgstr "Nu aveți nicio notiță."
 
 #: lms/templates/problem.html lms/templates/problem.html
 #: lms/templates/problem.html
@@ -9813,14 +9845,14 @@ msgstr ""
 
 #: lms/templates/problem.html lms/templates/shoppingcart/shopping_cart.html
 msgid "Reset"
-msgstr ""
+msgstr "Resetează"
 
 #: lms/templates/problem.html lms/templates/word_cloud.html
 #: lms/templates/combinedopenended/openended/open_ended.html
 #: lms/templates/combinedopenended/selfassessment/self_assessment_prompt.html
 #: lms/templates/verify_student/face_upload.html
 msgid "Save"
-msgstr ""
+msgstr "Salvează"
 
 #: lms/templates/problem.html
 msgid "You have used {num_used} of {num_total} submissions"
@@ -9828,7 +9860,7 @@ msgstr ""
 
 #: lms/templates/provider_login.html
 msgid "Log In"
-msgstr ""
+msgstr "Autentificare"
 
 #: lms/templates/provider_login.html
 msgid ""
@@ -9839,11 +9871,11 @@ msgstr ""
 
 #: lms/templates/provider_login.html
 msgid "Return To %s"
-msgstr ""
+msgstr "Întoarcere la %s"
 
 #: lms/templates/register-shib.html
 msgid "Preferences for {platform_name}"
-msgstr ""
+msgstr "Preferințe pentru {platform_name}"
 
 #: lms/templates/register-shib.html
 msgid "Update my {platform_name} Account"
@@ -9871,7 +9903,7 @@ msgstr ""
 
 #: lms/templates/register-shib.html lms/templates/signup_modal.html
 msgid "Enter a public username:"
-msgstr ""
+msgstr "Introdu un pseudonim public:"
 
 #: lms/templates/register-shib.html lms/templates/register.html
 #: lms/templates/register.html
@@ -9898,19 +9930,19 @@ msgstr ""
 
 #: lms/templates/register-sidebar.html
 msgid "Registration Help"
-msgstr ""
+msgstr "Ajutor Înregistrare"
 
 #: lms/templates/register-sidebar.html
 msgid "Already registered?"
-msgstr ""
+msgstr "Deja înregistrat?"
 
 #: lms/templates/register-sidebar.html
 msgid "Log in"
-msgstr ""
+msgstr "Autentificare"
 
 #: lms/templates/register-sidebar.html
 msgid "Welcome to {platform_name}"
-msgstr ""
+msgstr "Bine ai venit pe {platform_name}"
 
 #: lms/templates/register-sidebar.html
 msgid ""
@@ -9921,7 +9953,7 @@ msgstr ""
 
 #: lms/templates/register-sidebar.html
 msgid "Next Steps"
-msgstr ""
+msgstr "Pașii următori"
 
 #: lms/templates/register-sidebar.html
 msgid ""
@@ -9945,7 +9977,7 @@ msgstr ""
 
 #: lms/templates/register-sidebar.html
 msgid "View our FAQs for answers to commonly asked questions."
-msgstr ""
+msgstr "Vizualizați zona de FAQ pentru răspunsuri la cele mai dese întrebări."
 
 #: lms/templates/register-sidebar.html
 msgid ""
@@ -9955,7 +9987,7 @@ msgstr ""
 
 #: lms/templates/register.html
 msgid "Register for {platform_name}"
-msgstr ""
+msgstr "Înregistrați-vă pentru {platform_name}"
 
 #: lms/templates/register.html
 msgid "Create My {platform_name} Account"
@@ -9963,7 +9995,7 @@ msgstr ""
 
 #: lms/templates/register.html
 msgid "Welcome!"
-msgstr ""
+msgstr "Bine ați venit!"
 
 #: lms/templates/register.html
 msgid "Register below to create your {platform_name} account"
@@ -9994,6 +10026,7 @@ msgstr ""
 #: lms/templates/register.html
 msgid "Please complete the following fields to register for an account. "
 msgstr ""
+"Vă rugăm completați următoarele câmpuri pentru a vă înregistra un cont nou."
 
 #: lms/templates/register.html lms/templates/register.html
 msgid "cannot be changed later"
@@ -10001,7 +10034,7 @@ msgstr ""
 
 #: lms/templates/register.html
 msgid "Welcome {username}"
-msgstr ""
+msgstr "Bine ai venit {username}"
 
 #: lms/templates/register.html
 msgid "Enter a Public Display Name:"
@@ -10021,15 +10054,17 @@ msgstr ""
 
 #: lms/templates/register.html
 msgid "Highest Level of Education Completed"
-msgstr ""
+msgstr "Ultimul nivel de educație absolvit"
 
 #: lms/templates/register.html
 msgid "Please share with us your reasons for registering with {platform_name}"
 msgstr ""
+"Vă rugăm împărțiți cu noi motivele pentru care v-ați înregistrat cu "
+"{platform_name}"
 
 #: lms/templates/register.html lms/templates/signup_modal.html
 msgid "Create My Account"
-msgstr ""
+msgstr "Crează contul meu"
 
 #: lms/templates/resubscribe.html
 msgid "Re-subscribe Successful!"
@@ -10044,12 +10079,12 @@ msgstr ""
 #: lms/templates/seq_module.html lms/templates/seq_module.html
 #: lms/templates/discussion/mustache/_pagination.mustache
 msgid "Previous"
-msgstr ""
+msgstr "Anterior"
 
 #: lms/templates/seq_module.html lms/templates/seq_module.html
 #: lms/templates/discussion/mustache/_pagination.mustache
 msgid "Next"
-msgstr ""
+msgstr "Următor"
 
 #: lms/templates/signup_modal.html
 msgid "Sign Up for {platform_name}"
@@ -10057,23 +10092,23 @@ msgstr ""
 
 #: lms/templates/signup_modal.html lms/templates/signup_modal.html
 msgid "e.g. yourname@domain.com"
-msgstr ""
+msgstr "de ex. yourname@domain.com"
 
 #: lms/templates/signup_modal.html lms/templates/signup_modal.html
 msgid "e.g. yourname (shown on forums)"
-msgstr ""
+msgstr "de ex. yourname (vizibil pe forumuri)"
 
 #: lms/templates/signup_modal.html lms/templates/signup_modal.html
 msgid "e.g. Your Name (for certificates)"
-msgstr ""
+msgstr "de ex. Your Name (pentru certificări)"
 
 #: lms/templates/signup_modal.html
 msgid "<i>Welcome</i> {name}"
-msgstr ""
+msgstr "<i>Bine ai venit</i> {name}"
 
 #: lms/templates/signup_modal.html
 msgid "Full Name *"
-msgstr ""
+msgstr "Numele complet"
 
 #: lms/templates/signup_modal.html
 msgid "Ed. Completed"
@@ -10085,11 +10120,11 @@ msgstr ""
 
 #: lms/templates/signup_modal.html
 msgid "Already have an account?"
-msgstr ""
+msgstr "Dețineți deja un cont?"
 
 #: lms/templates/signup_modal.html
 msgid "Login."
-msgstr ""
+msgstr "Autentificare."
 
 #: lms/templates/split_test_author_view.html
 msgid ""
@@ -10119,15 +10154,15 @@ msgstr ""
 
 #: lms/templates/staff_problem_info.html
 msgid "Comment"
-msgstr ""
+msgstr "Comentariu"
 
 #: lms/templates/staff_problem_info.html
 msgid "comment"
-msgstr ""
+msgstr "comentariu"
 
 #: lms/templates/staff_problem_info.html
 msgid "Tag"
-msgstr ""
+msgstr "Etichetă"
 
 #: lms/templates/staff_problem_info.html
 msgid "Optional tag (eg \"done\" or \"broken\"):"
@@ -10135,11 +10170,11 @@ msgstr ""
 
 #: lms/templates/staff_problem_info.html
 msgid "tag"
-msgstr ""
+msgstr "etichetă"
 
 #: lms/templates/staff_problem_info.html
 msgid "Add comment"
-msgstr ""
+msgstr "Adaugă un comentariu"
 
 #: lms/templates/staff_problem_info.html
 msgid "Staff Debug"
@@ -10178,7 +10213,7 @@ msgstr ""
 
 #: lms/templates/staff_problem_info.html
 msgid "User:"
-msgstr ""
+msgstr "Utilizator:"
 
 #: lms/templates/staff_problem_info.html
 msgid "View History"
@@ -10200,11 +10235,11 @@ msgstr ""
 
 #: lms/templates/staticbook.html
 msgid "Previous page"
-msgstr ""
+msgstr "Pagina anterioară"
 
 #: lms/templates/staticbook.html
 msgid "Next page"
-msgstr ""
+msgstr "Pagina următoare"
 
 #: lms/templates/sysadmin_dashboard.html
 #: lms/templates/sysadmin_dashboard_gitlogs.html
@@ -10214,7 +10249,7 @@ msgstr ""
 #: lms/templates/sysadmin_dashboard.html
 #: lms/templates/sysadmin_dashboard_gitlogs.html
 msgid "Users"
-msgstr ""
+msgstr "Utilizatori"
 
 #: lms/templates/sysadmin_dashboard.html
 #: lms/templates/sysadmin_dashboard_gitlogs.html
@@ -10238,11 +10273,11 @@ msgstr ""
 
 #: lms/templates/sysadmin_dashboard.html
 msgid "Delete user"
-msgstr ""
+msgstr "Șterge utilizator"
 
 #: lms/templates/sysadmin_dashboard.html
 msgid "Create user"
-msgstr ""
+msgstr "Creează utilizator"
 
 #: lms/templates/sysadmin_dashboard.html
 msgid "Download list of all users (csv file)"
@@ -10322,11 +10357,11 @@ msgstr ""
 #: lms/templates/sysadmin_dashboard_gitlogs.html
 #: lms/templates/ccx/schedule.html
 msgid "Error"
-msgstr ""
+msgstr "Eroare"
 
 #: lms/templates/sysadmin_dashboard_gitlogs.html
 msgid "Date"
-msgstr ""
+msgstr "Data"
 
 #. Translators: Git is a version-control system; see http://git-scm.com/about
 #: lms/templates/sysadmin_dashboard_gitlogs.html
@@ -10345,7 +10380,7 @@ msgstr ""
 
 #: lms/templates/textannotation.html
 msgid "Source:"
-msgstr ""
+msgstr "Sursa:"
 
 #: lms/templates/tracking_log.html
 msgid "Tracking Log"
@@ -10413,7 +10448,7 @@ msgstr ""
 
 #: lms/templates/video.html
 msgid "Play video"
-msgstr ""
+msgstr "Redare clip video"
 
 #: lms/templates/video.html
 msgid "No playable video sources found."
@@ -10429,7 +10464,7 @@ msgstr ""
 
 #: lms/templates/video.html
 msgid "Download video"
-msgstr ""
+msgstr "Descarcă video"
 
 #: lms/templates/video.html lms/templates/video.html
 msgid "Download transcript"
@@ -10450,7 +10485,7 @@ msgstr ""
 #: lms/templates/calculator/toggle_calculator.html
 #: lms/templates/calculator/toggle_calculator.html
 msgid "Open Calculator"
-msgstr ""
+msgstr "Deschide calculator"
 
 #: lms/templates/calculator/toggle_calculator.html
 msgid "Calculator Input"
@@ -10468,7 +10503,7 @@ msgstr ""
 
 #: lms/templates/calculator/toggle_calculator.html
 msgid "Hints"
-msgstr ""
+msgstr "Indicii"
 
 #: lms/templates/calculator/toggle_calculator.html
 msgid ""
@@ -10648,7 +10683,7 @@ msgstr ""
 #: lms/templates/ccx/coach_dashboard.html
 #: lms/templates/courseware/legacy_instructor_dashboard.html
 msgid "Enrollment"
-msgstr ""
+msgstr "Înscriere"
 
 #: lms/templates/ccx/coach_dashboard.html
 msgid "Schedule"
@@ -10870,7 +10905,7 @@ msgstr ""
 
 #: lms/templates/combinedopenended/combined_open_ended.html
 msgid "Open Response"
-msgstr ""
+msgstr "Deschide răspuns"
 
 #: lms/templates/combinedopenended/combined_open_ended.html
 msgid "Assessments:"
@@ -10879,11 +10914,11 @@ msgstr ""
 #: lms/templates/combinedopenended/combined_open_ended.html
 #: lms/templates/peer_grading/peer_grading_problem.html
 msgid "Hide Question"
-msgstr ""
+msgstr "Ascunde întrebarea"
 
 #: lms/templates/combinedopenended/combined_open_ended.html
 msgid "New Submission"
-msgstr ""
+msgstr "Submisie nouă"
 
 #: lms/templates/combinedopenended/combined_open_ended.html
 msgid "Next Step"
@@ -10949,17 +10984,17 @@ msgstr ""
 #: lms/templates/combinedopenended/open_ended_result_table.html
 #: lms/templates/combinedopenended/openended/open_ended_evaluation.html
 msgid "Partially Correct"
-msgstr ""
+msgstr "Parțial corect/ă"
 
 #: lms/templates/combinedopenended/open_ended_result_table.html
 #: lms/templates/combinedopenended/openended/open_ended_evaluation.html
 msgid "No Opinion"
-msgstr ""
+msgstr "Nicio opinie"
 
 #: lms/templates/combinedopenended/open_ended_result_table.html
 #: lms/templates/combinedopenended/openended/open_ended_evaluation.html
 msgid "Partially Incorrect"
-msgstr ""
+msgstr "Parțial incorect/ă"
 
 #: lms/templates/combinedopenended/open_ended_result_table.html
 #: lms/templates/combinedopenended/openended/open_ended_evaluation.html
@@ -10969,7 +11004,7 @@ msgstr ""
 #: lms/templates/combinedopenended/open_ended_result_table.html
 #: lms/templates/combinedopenended/openended/open_ended_evaluation.html
 msgid "Submit Feedback"
-msgstr ""
+msgstr "Trimite feedback"
 
 #. Translators: "Response" labels an area that contains the user's
 #. Response to an openended problem. It is a noun.
@@ -10979,7 +11014,7 @@ msgstr ""
 #: lms/templates/combinedopenended/selfassessment/self_assessment_prompt.html
 #: lms/templates/open_ended_problems/open_ended_flagged_problems.html
 msgid "Response"
-msgstr ""
+msgstr "Răspuns:"
 
 #. Translators: This is a menu option for showing only unanswered forum
 #. question threads
@@ -11005,7 +11040,7 @@ msgstr ""
 
 #: lms/templates/combinedopenended/openended/open_ended_rubric.html
 msgid "Rubric"
-msgstr ""
+msgstr "Rubrica"
 
 #: lms/templates/combinedopenended/openended/open_ended_rubric.html
 msgid ""
@@ -11050,7 +11085,7 @@ msgstr ""
 #: lms/templates/courseware/accordion.html
 #: lms/templates/courseware/progress.html
 msgid "due {date}"
-msgstr ""
+msgstr "data limită {date}"
 
 #: lms/templates/courseware/course_about.html
 #: lms/templates/courseware/course_about.html
@@ -11109,11 +11144,11 @@ msgstr ""
 
 #: lms/templates/courseware/course_about.html
 msgid "Overview"
-msgstr ""
+msgstr "Privire de ansamblu"
 
 #: lms/templates/courseware/course_about.html
 msgid "Share with friends and family!"
-msgstr ""
+msgstr "Partajează cu familia și prietenii!"
 
 #: lms/templates/courseware/course_about.html
 #: lms/templates/courseware/course_about.html
@@ -11145,15 +11180,15 @@ msgstr ""
 
 #: lms/templates/courseware/course_about.html
 msgid "Classes Start"
-msgstr ""
+msgstr "Cursurile încep"
 
 #: lms/templates/courseware/course_about.html
 msgid "Classes End"
-msgstr ""
+msgstr "Cursurile se încheie"
 
 #: lms/templates/courseware/course_about.html
 msgid "Estimated Effort"
-msgstr ""
+msgstr "Efort estimativ"
 
 #: lms/templates/courseware/course_about.html
 msgid "Price"
@@ -11279,7 +11314,7 @@ msgstr ""
 
 #: lms/templates/courseware/gradebook.html
 msgid "Gradebook"
-msgstr ""
+msgstr "Carnet de note"
 
 #: lms/templates/courseware/gradebook.html
 msgid "Search students"
@@ -11351,7 +11386,7 @@ msgstr ""
 
 #: lms/templates/courseware/legacy_instructor_dashboard.html
 msgid "Admin"
-msgstr ""
+msgstr "Administrator"
 
 #: lms/templates/courseware/legacy_instructor_dashboard.html
 msgid "Forum Admin"
@@ -11466,7 +11501,7 @@ msgstr ""
 #: lms/templates/courseware/legacy_instructor_dashboard.html
 #: lms/templates/courseware/legacy_instructor_dashboard.html
 msgid "Section:"
-msgstr ""
+msgstr "Secțiune:"
 
 #: lms/templates/courseware/legacy_instructor_dashboard.html
 msgid "Problem urlname:"
@@ -11504,13 +11539,13 @@ msgstr ""
 
 #: lms/templates/courseware/legacy_instructor_dashboard.html
 msgid "Day"
-msgstr ""
+msgstr "Ziua"
 
 #: lms/templates/courseware/legacy_instructor_dashboard.html
 #: lms/templates/shoppingcart/receipt.html
 #: lms/templates/shoppingcart/receipt.html
 msgid "Students"
-msgstr ""
+msgstr "Stundenți"
 
 #: lms/templates/courseware/legacy_instructor_dashboard.html
 msgid "Score distribution for problems"
@@ -11555,7 +11590,7 @@ msgstr ""
 
 #: lms/templates/courseware/legacy_instructor_dashboard.html
 msgid "Number of students"
-msgstr ""
+msgstr "Numărul de studenți"
 
 #: lms/templates/courseware/legacy_instructor_dashboard.html
 msgid ""
@@ -11574,11 +11609,11 @@ msgstr ""
 
 #: lms/templates/courseware/legacy_instructor_dashboard.html
 msgid "Task Type"
-msgstr ""
+msgstr "Tip tema"
 
 #: lms/templates/courseware/legacy_instructor_dashboard.html
 msgid "Task inputs"
-msgstr ""
+msgstr "Inputuri sarcina"
 
 #: lms/templates/courseware/legacy_instructor_dashboard.html
 msgid "Task Id"
@@ -11586,7 +11621,7 @@ msgstr ""
 
 #: lms/templates/courseware/legacy_instructor_dashboard.html
 msgid "Requester"
-msgstr ""
+msgstr "Primit/ă de la"
 
 #: lms/templates/courseware/legacy_instructor_dashboard.html
 msgid "Task State"
@@ -11594,11 +11629,11 @@ msgstr ""
 
 #: lms/templates/courseware/legacy_instructor_dashboard.html
 msgid "Duration (sec)"
-msgstr ""
+msgstr "Durata (sec)"
 
 #: lms/templates/courseware/legacy_instructor_dashboard.html
 msgid "Task Progress"
-msgstr ""
+msgstr "Progres activitate"
 
 #: lms/templates/courseware/legacy_instructor_dashboard.html
 #: lms/templates/courseware/legacy_instructor_dashboard.html
@@ -11673,7 +11708,7 @@ msgstr ""
 
 #: lms/templates/courseware/progress.html
 msgid "{course_number} Progress"
-msgstr ""
+msgstr "Progresul tău în {course_number}"
 
 #: lms/templates/courseware/progress.html
 msgid "Course Progress"
@@ -11779,7 +11814,7 @@ msgstr ""
 #: lms/templates/courseware/progress.html
 #: lms/templates/discussion/_underscore_templates.html
 msgid "More"
-msgstr ""
+msgstr "Mai mult"
 
 #: lms/templates/courseware/progress.html
 msgid "{earned:.3n} of {total:.3n} possible points"
@@ -11812,10 +11847,12 @@ msgid ""
 "Final course details are being wrapped up at this time. Your final standing "
 "will be available shortly."
 msgstr ""
+"Detaliile finale legate de curs sunt sumarizate în acest moment. Poziția ta "
+"finală în clasament va fi disponibilă în curând."
 
 #: lms/templates/dashboard/_dashboard_certificate_information.html
 msgid "Your final grade:"
-msgstr ""
+msgstr "Nota ta finală:"
 
 #: lms/templates/dashboard/_dashboard_certificate_information.html
 msgid "Grade required for a {cert_name_short}:"
@@ -11855,7 +11892,7 @@ msgstr ""
 #: lms/templates/dashboard/_dashboard_certificate_information.html
 #: lms/templates/dashboard/_dashboard_certificate_information.html
 msgid "This link will open/download a PDF document"
-msgstr ""
+msgstr "Acest link va deschide/descărca un document PDF"
 
 #: lms/templates/dashboard/_dashboard_certificate_information.html
 msgid "Download {cert_name_short} (PDF)"
@@ -11877,7 +11914,7 @@ msgstr ""
 
 #: lms/templates/dashboard/_dashboard_certificate_information.html
 msgid "Complete our course feedback survey"
-msgstr ""
+msgstr "Completează formularul de feedback pentru curs"
 
 #: lms/templates/dashboard/_dashboard_certificate_information.html
 msgid "Add Certificate to LinkedIn Profile"
@@ -11901,7 +11938,7 @@ msgstr ""
 #: lms/templates/dashboard/_dashboard_course_listing.html
 #: lms/templates/dashboard/_dashboard_course_listing.html
 msgid "{course_number} {course_name} Cover Image"
-msgstr ""
+msgstr "Imagine de copertă pentru {course_number} {course_name} "
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
 msgid "Enrolled as: "
@@ -11910,13 +11947,13 @@ msgstr ""
 #: lms/templates/dashboard/_dashboard_course_listing.html
 #: lms/templates/dashboard/_dashboard_course_listing.html
 msgid "View Archived Course"
-msgstr ""
+msgstr "Vezi arhivă curs"
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
 #: lms/templates/dashboard/_dashboard_course_listing.html
 #: lms/templates/shoppingcart/registration_code_receipt.html
 msgid "View Course"
-msgstr ""
+msgstr "Vezi curs"
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
 #: lms/templates/dashboard/_dashboard_course_listing.html
@@ -11989,7 +12026,7 @@ msgstr ""
 #: lms/templates/dashboard/_dashboard_course_listing.html
 #: lms/templates/dashboard/_dashboard_course_listing.html
 msgid "Email Settings"
-msgstr ""
+msgstr "Setări E-mail"
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
 msgid "Verification not yet complete."
@@ -12070,7 +12107,7 @@ msgstr ""
 
 #: lms/templates/dashboard/_dashboard_info_language.html
 msgid "edit"
-msgstr ""
+msgstr "editează"
 
 #: lms/templates/dashboard/_dashboard_status_verification.html
 #: lms/templates/dashboard/_dashboard_status_verification.html
@@ -12123,7 +12160,7 @@ msgstr ""
 
 #: lms/templates/debug/run_python_form.html
 msgid "Results:"
-msgstr ""
+msgstr "Rezultate:"
 
 #: lms/templates/discussion/_blank_slate.html
 msgid ""
@@ -12142,7 +12179,7 @@ msgstr ""
 
 #: lms/templates/discussion/_discussion_module.html
 msgid "Show Discussion"
-msgstr ""
+msgstr "Afișează discuție"
 
 #: lms/templates/discussion/_discussion_module_studio.html
 msgid "To view live discussions, click Preview or View Live in Unit Settings."
@@ -12180,7 +12217,7 @@ msgstr ""
 
 #: lms/templates/discussion/_similar_posts.html
 msgid "Hide"
-msgstr ""
+msgstr "Ascunde"
 
 #: lms/templates/discussion/_thread_list_template.html
 #: lms/templates/discussion/_underscore_templates.html
@@ -12338,7 +12375,7 @@ msgstr ""
 
 #: lms/templates/discussion/_underscore_templates.html
 msgid "Pinned"
-msgstr ""
+msgstr "Agățat"
 
 #: lms/templates/discussion/_underscore_templates.html
 msgid "By: Staff"
@@ -12425,7 +12462,7 @@ msgstr ""
 
 #: lms/templates/discussion/_underscore_templates.html
 msgid "All Groups"
-msgstr ""
+msgstr "Toate grupurile"
 
 #: lms/templates/discussion/_underscore_templates.html
 msgid ""
@@ -12542,16 +12579,16 @@ msgstr ""
 
 #: lms/templates/discussion/_underscore_templates.html
 msgid "Open"
-msgstr ""
+msgstr "Deschide"
 
 #: lms/templates/discussion/_underscore_templates.html
 #: lms/templates/discussion/mustache/_profile_thread.mustache
 msgid "anonymous"
-msgstr ""
+msgstr "anonim"
 
 #: lms/templates/discussion/_user_profile.html
 msgid ", "
-msgstr ""
+msgstr ","
 
 #: lms/templates/discussion/_user_profile.html
 msgid "%s discussion started"
@@ -12582,7 +12619,7 @@ msgstr ""
 
 #: lms/templates/discussion/maintenance.html
 msgid "We're sorry"
-msgstr ""
+msgstr "Ne pare rău"
 
 #: lms/templates/discussion/maintenance.html
 msgid ""
@@ -12592,12 +12629,12 @@ msgstr ""
 
 #: lms/templates/discussion/user_profile.html
 msgid "User Profile"
-msgstr ""
+msgstr "Profil utilizator"
 
 #: lms/templates/discussion/mustache/_pagination.mustache
 #: lms/templates/discussion/mustache/_pagination.mustache
 msgid "…"
-msgstr ""
+msgstr "..."
 
 #: lms/templates/discussion/mustache/_profile_thread.mustache
 msgid "View discussion"
@@ -12979,7 +13016,7 @@ msgstr ""
 
 #: lms/templates/emails/enroll_email_allowedmessage.txt
 msgid "Dear student,"
-msgstr ""
+msgstr "Dragă student/ă,"
 
 #: lms/templates/emails/enroll_email_allowedmessage.txt
 msgid ""
@@ -13358,7 +13395,7 @@ msgstr ""
 
 #: lms/templates/instructor/staff_grading.html
 msgid "(Hide)"
-msgstr ""
+msgstr "(Ascunde)"
 
 #: lms/templates/instructor/staff_grading.html
 #: lms/templates/peer_grading/peer_grading_problem.html
@@ -13473,11 +13510,11 @@ msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/course_info.html
 msgid "Course Name:"
-msgstr ""
+msgstr "Nume curs:"
 
 #: lms/templates/instructor/instructor_dashboard_2/course_info.html
 msgid "Course Display Name:"
-msgstr ""
+msgstr "Nume curs afișaj:"
 
 #: lms/templates/instructor/instructor_dashboard_2/course_info.html
 msgid "Has the course started?"
@@ -13486,12 +13523,12 @@ msgstr ""
 #: lms/templates/instructor/instructor_dashboard_2/course_info.html
 #: lms/templates/instructor/instructor_dashboard_2/course_info.html
 msgid "Yes"
-msgstr ""
+msgstr "Da"
 
 #: lms/templates/instructor/instructor_dashboard_2/course_info.html
 #: lms/templates/instructor/instructor_dashboard_2/course_info.html
 msgid "No"
-msgstr ""
+msgstr "Nu"
 
 #: lms/templates/instructor/instructor_dashboard_2/course_info.html
 msgid "Has the course ended?"
@@ -13901,7 +13938,7 @@ msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/edit_coupon_modal.html
 msgid "Code"
-msgstr ""
+msgstr "Cod"
 
 #: lms/templates/instructor/instructor_dashboard_2/edit_coupon_modal.html
 msgid "example: A123DS"
@@ -14344,7 +14381,7 @@ msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/membership.html
 msgid "Instructors"
-msgstr ""
+msgstr "Instructori"
 
 #: lms/templates/instructor/instructor_dashboard_2/membership.html
 msgid ""
@@ -14354,7 +14391,7 @@ msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/membership.html
 msgid "Add Instructor"
-msgstr ""
+msgstr "Adaugă instructor"
 
 #: lms/templates/instructor/instructor_dashboard_2/membership.html
 msgid "Beta Testers"
@@ -14501,11 +14538,11 @@ msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/send_email.html
 msgid "Send to:"
-msgstr ""
+msgstr "Trimite către:"
 
 #: lms/templates/instructor/instructor_dashboard_2/send_email.html
 msgid "Myself"
-msgstr ""
+msgstr "Mine însumi"
 
 #: lms/templates/instructor/instructor_dashboard_2/send_email.html
 #: lms/templates/instructor/instructor_dashboard_2/send_email.html
@@ -14519,7 +14556,7 @@ msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/send_email.html
 msgid "Subject: "
-msgstr ""
+msgstr "Subiect:"
 
 #: lms/templates/instructor/instructor_dashboard_2/send_email.html
 msgid "(Max 128 characters)"
@@ -14527,7 +14564,7 @@ msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/send_email.html
 msgid "Message:"
-msgstr ""
+msgstr "Mesaj:"
 
 #: lms/templates/instructor/instructor_dashboard_2/send_email.html
 msgid ""
@@ -14549,7 +14586,7 @@ msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/send_email.html
 msgid "CAUTION!"
-msgstr ""
+msgstr "ATENȚIE!"
 
 #: lms/templates/instructor/instructor_dashboard_2/send_email.html
 msgid ""
@@ -14630,7 +14667,7 @@ msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/student_admin.html
 msgid "Student Progress Page"
-msgstr ""
+msgstr "Pagina progres studenți"
 
 #: lms/templates/instructor/instructor_dashboard_2/student_admin.html
 msgid "Student-specific grade adjustment"
@@ -14721,7 +14758,7 @@ msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/student_admin.html
 msgid "Then select an action"
-msgstr ""
+msgstr "Apoi alegeți o acțiune"
 
 #: lms/templates/instructor/instructor_dashboard_2/student_admin.html
 msgid "Reset ALL students' attempts"
@@ -14766,7 +14803,7 @@ msgstr ""
 
 #: lms/templates/modal/accessible_confirm.html
 msgid "Confirm"
-msgstr ""
+msgstr "Confirmare"
 
 #. Translators: this text gives status on if the modal interface (a menu or
 #. piece of UI that takes the full focus of the screen) is open or not
@@ -14776,7 +14813,7 @@ msgstr ""
 
 #: lms/templates/modal/accessible_confirm.html
 msgid "OK"
-msgstr ""
+msgstr "OK"
 
 #: lms/templates/modal/accessible_confirm.html
 msgid "open"
@@ -14843,7 +14880,7 @@ msgstr ""
 #: lms/templates/open_ended_problems/open_ended_problems.html
 #: lms/templates/peer_grading/peer_grading.html
 msgid "Problem Name"
-msgstr ""
+msgstr "Numele problemei"
 
 #: lms/templates/open_ended_problems/open_ended_problems.html
 msgid "Grader Type"
@@ -14875,20 +14912,20 @@ msgstr ""
 
 #: lms/templates/peer_grading/peer_grading.html
 msgid "Due date"
-msgstr ""
+msgstr "Dată scadentă"
 
 #: lms/templates/peer_grading/peer_grading.html
 #: lms/templates/shoppingcart/receipt.html
 msgid "Available"
-msgstr ""
+msgstr "Disponibil"
 
 #: lms/templates/peer_grading/peer_grading.html
 msgid "Required"
-msgstr ""
+msgstr "Necesar"
 
 #: lms/templates/peer_grading/peer_grading.html
 msgid "No due date"
-msgstr ""
+msgstr "Fără dată scadentă"
 
 #: lms/templates/peer_grading/peer_grading_closed.html
 msgid ""
@@ -14920,7 +14957,7 @@ msgstr ""
 
 #: lms/templates/peer_grading/peer_grading_problem.html
 msgid "Continue"
-msgstr ""
+msgstr "Continuă"
 
 #: lms/templates/peer_grading/peer_grading_problem.html
 msgid "Ready to grade!"
@@ -14997,11 +15034,11 @@ msgstr ""
 
 #: lms/templates/registration/activation_complete.html
 msgid "Activation Complete!"
-msgstr ""
+msgstr "Activare cu succes!"
 
 #: lms/templates/registration/activation_complete.html
 msgid "Account already active!"
-msgstr ""
+msgstr "Contul este activ deja!"
 
 #: lms/templates/registration/activation_complete.html
 msgid "You can now {link_start}log in{link_end}."
@@ -15009,7 +15046,7 @@ msgstr ""
 
 #: lms/templates/registration/activation_invalid.html
 msgid "Activation Invalid"
-msgstr ""
+msgstr "Activare nevalidă"
 
 #: lms/templates/registration/activation_invalid.html
 msgid ""
@@ -15017,10 +15054,14 @@ msgid ""
 "e-mail programs will sometimes split it into two lines. If you still have "
 "issues, e-mail us to let us know what happened at {email}."
 msgstr ""
+"Ceva nu a mers bine. Verifică dacă URL-ul accesat de tine a fost corect -- "
+"unele programe de e-mail îl pot împărți câteodată în două linii. Dacă încă "
+"întâmpini dificultăți, trimite-ne un mesaj e-mail pe {email} și spune-ne ce "
+"s-a întâmplat."
 
 #: lms/templates/registration/activation_invalid.html
 msgid "Or you can go back to the {link_start}home page{link_end}."
-msgstr ""
+msgstr "Sau te poți întoarce pe {link_start}pagina de start{link_end}."
 
 #: lms/templates/registration/password_reset_done.html
 msgid "Password reset successful"
@@ -15248,7 +15289,7 @@ msgstr ""
 
 #: lms/templates/shoppingcart/receipt.html
 msgid "State"
-msgstr ""
+msgstr "Stare"
 
 #: lms/templates/shoppingcart/receipt.html
 #: lms/templates/shoppingcart/shopping_cart.html
@@ -15481,19 +15522,19 @@ msgstr ""
 #: lms/templates/static_templates/faq.html
 #: lms/templates/static_templates/faq.html
 msgid "FAQ"
-msgstr ""
+msgstr "FAQ"
 
 #: lms/templates/static_templates/media-kit.html
 #: lms/templates/static_templates/media-kit.html
 msgid "Media Kit"
-msgstr ""
+msgstr "Kit media"
 
 #: lms/templates/static_templates/news.html
 #: lms/templates/static_templates/news.html
 #: lms/templates/static_templates/press.html
 #: lms/templates/static_templates/press.html
 msgid "In the Press"
-msgstr ""
+msgstr "În presă"
 
 #: lms/templates/static_templates/server-down.html
 msgid "Currently the {platform_name} servers are down"
@@ -15629,10 +15670,12 @@ msgid ""
 "To uphold the credibility of {platform} certificates, all name changes will "
 "be logged and recorded."
 msgstr ""
+"Pentru a păstra credibilitatea certificatelor {platform}, toate schimbările "
+"de nume vor fi consemnate și înregistrate."
 
 #: lms/templates/verify_student/_modal_editname.html
 msgid "Reason for name change:"
-msgstr ""
+msgstr "Motivul pentru schimbarea numelui:"
 
 #: lms/templates/verify_student/_modal_editname.html
 msgid "Change my name"
@@ -16092,7 +16135,7 @@ msgstr ""
 
 #: lms/templates/wiki/includes/article_menu.html
 msgid "Changes"
-msgstr ""
+msgstr "Schimbări"
 
 #: lms/templates/wiki/includes/article_menu.html
 msgid "{span_start}active{span_end}"
@@ -16100,11 +16143,11 @@ msgstr ""
 
 #: lms/templates/wiki/includes/breadcrumbs.html
 msgid "Add article"
-msgstr ""
+msgstr "Adaugă articol nou"
 
 #: cms/templates/404.html
 msgid "The page that you were looking for was not found."
-msgstr ""
+msgstr "Pagina pe care o cauți nu a fost găsită."
 
 #: cms/templates/404.html
 msgid ""
@@ -16196,7 +16239,7 @@ msgstr ""
 #: cms/templates/textbooks.html cms/templates/videos_index.html
 #: cms/templates/widgets/header.html
 msgid "Content"
-msgstr ""
+msgstr "Conţinut"
 
 #: cms/templates/asset_index.html cms/templates/asset_index.html
 #: cms/templates/container.html cms/templates/container.html
@@ -16218,7 +16261,7 @@ msgstr ""
 #: cms/templates/asset_index.html cms/templates/asset_index.html
 #: cms/templates/videos_index.html
 msgid "Upload New File"
-msgstr ""
+msgstr "Uploadeaza un fișier nou"
 
 #: cms/templates/asset_index.html
 msgid "Adding Files for Your Course"
@@ -16276,15 +16319,15 @@ msgstr ""
 
 #: cms/templates/asset_index.html
 msgid "Choose File"
-msgstr ""
+msgstr "Alege fișier"
 
 #: cms/templates/asset_index.html
 msgid "Your file has been deleted."
-msgstr ""
+msgstr "Fișierul a fost șters."
 
 #: cms/templates/asset_index.html
 msgid "close alert"
-msgstr ""
+msgstr "inchide alerta"
 
 #: cms/templates/certificates.html
 msgid "Course Certificates"
@@ -16378,7 +16421,7 @@ msgstr ""
 #: cms/templates/export_git.html cms/templates/import.html
 #: cms/templates/widgets/header.html cms/templates/widgets/header.html
 msgid "Tools"
-msgstr ""
+msgstr "Unelte"
 
 #: cms/templates/checklists.html
 msgid "Current Checklists"
@@ -16600,7 +16643,7 @@ msgstr ""
 
 #: cms/templates/course-create-rerun.html
 msgid "Create Re-run"
-msgstr ""
+msgstr "Creează Re-run"
 
 #: cms/templates/course-create-rerun.html
 msgid "When will my course re-run start?"
@@ -16654,7 +16697,7 @@ msgstr ""
 #: cms/templates/course_outline.html cms/templates/course_outline.html
 #: cms/templates/course_outline.html
 msgid "Course Outline"
-msgstr ""
+msgstr "Planul cursului "
 
 #: cms/templates/course_outline.html
 msgid ""
@@ -16691,11 +16734,11 @@ msgstr ""
 
 #: cms/templates/course_outline.html
 msgid "Collapse All Sections"
-msgstr ""
+msgstr "Reduceţi toate secţiunile"
 
 #: cms/templates/course_outline.html
 msgid "Expand All Sections"
-msgstr ""
+msgstr "Extindeţi toate secţiunile"
 
 #: cms/templates/course_outline.html
 msgid "Click to open the courseware in the LMS in a new tab"
@@ -18146,7 +18189,7 @@ msgstr ""
 
 #: cms/templates/register.html cms/templates/widgets/header.html
 msgid "Sign Up"
-msgstr ""
+msgstr "Înscrie-te"
 
 #: cms/templates/register.html
 msgid "Sign Up for {studio_name}"
@@ -18555,7 +18598,7 @@ msgstr ""
 
 #: cms/templates/settings_advanced.html
 msgid "Your policy changes have been saved."
-msgstr ""
+msgstr "Modificările privind politica au fost salvate."
 
 #: cms/templates/settings_advanced.html
 msgid "There was an error saving your information. Please see below."
@@ -18821,7 +18864,7 @@ msgstr ""
 
 #: cms/templates/visibility_editor.html
 msgid "Make visible to:"
-msgstr ""
+msgstr "Fă-l vizibil lui:"
 
 #: cms/templates/visibility_editor.html
 msgid "All Students and Staff"
@@ -18972,7 +19015,7 @@ msgstr ""
 #: cms/templates/widgets/problem-edit.html
 #: cms/templates/widgets/problem-edit.html
 msgid "Heading 1"
-msgstr ""
+msgstr "Rubrica 1"
 
 #: cms/templates/widgets/problem-edit.html
 #: cms/templates/widgets/problem-edit.html
@@ -19033,23 +19076,23 @@ msgstr ""
 
 # empty
 msgid "This is a key string."
-msgstr ""
+msgstr "Acesta este un șir cheie."
 
 #: wiki/admin.py wiki/models/article.py
 msgid "created"
-msgstr ""
+msgstr "a fost creat"
 
 #: wiki/forms.py
 msgid "Only localhost... muahahaha"
-msgstr ""
+msgstr "Doar localhost..."
 
 #: wiki/forms.py
 msgid "Initial title of the article. May be overridden with revision titles."
-msgstr ""
+msgstr "Titlul initial al articolului. Poate fi suprascris mai tarziu."
 
 #: wiki/forms.py
 msgid "Type in some contents"
-msgstr ""
+msgstr "Adauga ceva continut"
 
 #: wiki/forms.py
 msgid ""
@@ -19057,19 +19100,23 @@ msgid ""
 "can use more complex features like adding plugins, meta data, related "
 "articles etc..."
 msgstr ""
+"Acesta este doar conținutul inițial al articolului. După creare, poți folosi"
+" funcționalități mai complexe, precum adăugarea de plugin-uri, meta data, "
+"articole conexe, etc ..."
 
 #: wiki/forms.py wiki/forms.py
 msgid "Contents"
-msgstr ""
+msgstr "Continut"
 
 #: wiki/forms.py wiki/forms.py
 msgid "Summary"
-msgstr ""
+msgstr "Rezumat"
 
 #: wiki/forms.py
 msgid ""
 "Give a short reason for your edit, which will be stated in the revision log."
 msgstr ""
+"Adauga un motiv pentru editare, va fi afisat in istoricul schimbarilor"
 
 #: wiki/forms.py
 msgid ""
@@ -19077,18 +19124,20 @@ msgid ""
 "have been automatically merged with the new contents. Please review the text"
 " below."
 msgstr ""
+"In timp ce tu editati, cineva a revizuit. Continutul creat de tine a fost "
+"unit automat cu celalalt continut. Te rog sa verifici textul de mai jos."
 
 #: wiki/forms.py
 msgid "No changes made. Nothing to save."
-msgstr ""
+msgstr "Nu au fost facute schimbari. Nu este nimic de salvat."
 
 #: wiki/forms.py
 msgid "Select an option"
-msgstr ""
+msgstr "Alege o optiune"
 
 #: wiki/forms.py
 msgid "Slug"
-msgstr ""
+msgstr "Slug"
 
 #: wiki/forms.py
 msgid ""
@@ -19099,27 +19148,27 @@ msgstr ""
 
 #: wiki/forms.py
 msgid "Write a brief message for the article's history log."
-msgstr ""
+msgstr "Scrie un mesaj scurt pentru istoricul articolului"
 
 #: wiki/forms.py
 msgid "A slug may not begin with an underscore."
-msgstr ""
+msgstr "Un slug nu poate începe cu o subliniere"
 
 #: wiki/forms.py
 msgid "A deleted article with slug \"%s\" already exists."
-msgstr ""
+msgstr "Există deja un articol șters ce conține slug-ul \"%s\""
 
 #: wiki/forms.py
 msgid "A slug named \"%s\" already exists."
-msgstr ""
+msgstr "Există deja un slug cu numele \"%s\"."
 
 #: wiki/forms.py
 msgid "Yes, I am sure"
-msgstr ""
+msgstr "Da, sunt sigur"
 
 #: wiki/forms.py
 msgid "Purge"
-msgstr ""
+msgstr "Șterge"
 
 #: wiki/forms.py
 msgid ""
@@ -19212,7 +19261,7 @@ msgstr ""
 
 #: wiki/models/article.py
 msgid "modified"
-msgstr ""
+msgstr "modificat"
 
 #: wiki/models/article.py
 msgid "Article properties last modified"
@@ -19220,7 +19269,7 @@ msgstr ""
 
 #: wiki/models/article.py
 msgid "owner"
-msgstr ""
+msgstr "proprietar"
 
 #: wiki/models/article.py
 msgid ""
@@ -19230,7 +19279,7 @@ msgstr ""
 
 #: wiki/models/article.py
 msgid "group"
-msgstr ""
+msgstr "Grup"
 
 #: wiki/models/article.py
 msgid ""
@@ -19292,15 +19341,15 @@ msgstr ""
 
 #: wiki/models/article.py wiki/models/pluginbase.py
 msgid "article"
-msgstr ""
+msgstr "articol"
 
 #: wiki/models/article.py
 msgid "article contents"
-msgstr ""
+msgstr "conţinuturile articolului"
 
 #: wiki/models/article.py
 msgid "article title"
-msgstr ""
+msgstr "titlul articolului"
 
 #: wiki/models/article.py
 msgid ""
@@ -19310,7 +19359,7 @@ msgstr ""
 
 #: wiki/models/pluginbase.py
 msgid "original article"
-msgstr ""
+msgstr "articolul original"
 
 #: wiki/models/pluginbase.py
 msgid "Permissions are inherited from this article"
@@ -19368,7 +19417,7 @@ msgstr ""
 
 #: wiki/models/urlpath.py
 msgid "Lost and found"
-msgstr ""
+msgstr "Pierdut şi găsit"
 
 #: wiki/plugins/attachments/forms.py
 msgid "A short summary of what the file contains"
@@ -19376,11 +19425,11 @@ msgstr ""
 
 #: wiki/plugins/attachments/forms.py
 msgid "Yes I am sure..."
-msgstr ""
+msgstr "Da sunt sigur/ă..."
 
 #: wiki/plugins/attachments/markdown_extensions.py
 msgid "Click to download file"
-msgstr ""
+msgstr "Apasă pentru a descărca fişierul"
 
 #: wiki/plugins/attachments/models.py
 msgid ""
@@ -19390,19 +19439,19 @@ msgstr ""
 
 #: wiki/plugins/attachments/models.py
 msgid "original filename"
-msgstr ""
+msgstr "numele original al fişierului"
 
 #: wiki/plugins/attachments/models.py
 msgid "attachment"
-msgstr ""
+msgstr "ataşament"
 
 #: wiki/plugins/attachments/models.py
 msgid "attachments"
-msgstr ""
+msgstr "ataşamente"
 
 #: wiki/plugins/attachments/models.py
 msgid "file"
-msgstr ""
+msgstr "fişier"
 
 #: wiki/plugins/attachments/models.py
 msgid "attachment revision"
@@ -19472,11 +19521,11 @@ msgstr ""
 
 #: wiki/plugins/images/models.py
 msgid "image"
-msgstr ""
+msgstr "imagine"
 
 #: wiki/plugins/images/models.py
 msgid "images"
-msgstr ""
+msgstr "imagini"
 
 #: wiki/plugins/images/models.py
 msgid "Image: %s"
@@ -19516,7 +19565,7 @@ msgstr ""
 
 #: wiki/plugins/images/wiki_plugin.py
 msgid "Images"
-msgstr ""
+msgstr "Imagini"
 
 #: wiki/plugins/images/wiki_plugin.py
 msgid "An image was added: %s"
@@ -19604,7 +19653,7 @@ msgstr ""
 
 #: wiki/views/article.py
 msgid "Your changes were saved."
-msgstr ""
+msgstr "Scimbările tale au fost salvate. "
 
 #: wiki/views/article.py
 msgid "A new revision of the article was succesfully added."
@@ -19624,7 +19673,7 @@ msgstr ""
 
 #: wiki/views/article.py
 msgid "New title"
-msgstr ""
+msgstr "Titlu nou"
 
 #: wiki/views/article.py
 msgid "Merge between Revision #%(r1)d and Revision #%(r2)d"
