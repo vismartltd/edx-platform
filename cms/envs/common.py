@@ -139,7 +139,7 @@ FEATURES = {
     'MILESTONES_APP': False,
 
     # Prerequisite courses feature flag
-    'ENABLE_PREREQUISITE_COURSES': False,
+    'ENABLE_PREREQUISITE_COURSES': True,
 
     # Toggle course milestones app/feature
     'MILESTONES_APP': False,
