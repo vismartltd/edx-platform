@@ -3,6 +3,7 @@ import random
 
 from xmodule.x_module import XModule, STUDENT_VIEW, AUTHOR_VIEW
 from xmodule.seq_module import SequenceDescriptor
+from xmodule.progress import Progress
 from xmodule.studio_editable import StudioEditableModule, StudioEditableDescriptor
 
 from lxml import etree
@@ -22,6 +23,8 @@ log = logging.getLogger('edx.' + __name__)
 
 class RandomizeFields(object):
     base_course_key = String(help="Course ID as grading source for additional questions", scope=Scope.settings)
+    base_course_grading_section = String(help="Detailed base course grading section (optional)", scope=Scope.settings)
+    reuired_question_count = Integer(default=1, help="Constant number of required questions to ask", scope=Scope.settings)
     choices = List(help="Which random child was chosen", scope=Scope.user_state)
 
 def grades_for_student(student, course_id):
@@ -95,11 +98,24 @@ class RandomizeModule(RandomizeFields, XModule, StudioEditableModule):
                 #     self.choice = self.system.seed % num_choices
                 # else:
                 #     self.choice = random.randrange(0, num_choices)
-                base_course_percent = user_grades['percent']
-                question_count = 1 + int(round((1.0 - base_course_percent) * (num_choices - 1)))
+                base_percent = None
+
+                if self.base_course_grading_section:
+                    for grading_category in user_grades.get('section_breakdown', []):
+                        if grading_category['category'] == self.base_course_grading_section:
+                            base_percent = grading_category['percent']
+                            break
+
+                if base_percent is None:
+                    base_percent = user_grades['percent']
+
+                required_questions = min(
+                    num_choices, 0 if self.reuired_question_count is None else self.reuired_question_count)
+                question_count = required_questions + int(round(
+                    (1.0 - base_percent) * (num_choices - required_questions)))
                 self.choices = random.sample(list(range(0, num_choices)), question_count)
                 log.debug("chose %s questions of %s based on grade percent %s",
-                          question_count, num_choices, base_course_percent)
+                          question_count, num_choices, base_percent)
 
         if self.choices is not None:
             descriptor_children = self.descriptor.get_children()
@@ -111,10 +127,17 @@ class RandomizeModule(RandomizeFields, XModule, StudioEditableModule):
             self.child_descriptor = None
             self.child = None
 
+    def get_progress(self):
+        if self.child_descriptor is None:
+            return None
+        children = self.get_children()
+        progresses = [child.get_progress() for child in children]
+        progress = reduce(Progress.add_counts, progresses, None)
+        return progress
+
     def max_score(self):
         if self.child_descriptor is None:
             return None
-
         return sum(map(lambda child: child.max_score(), self.get_children()))
 
     def get_child_descriptors(self):
