@@ -197,10 +197,17 @@ class CustomOAuth2(BaseOAuth2):
 
     def get_user_details(self, response):
         """Return user details from account"""
-        full_name = response.get('FirstName') + response.get('LastName');
+        name = u"{} {}".format(response.get('FirstName'), response.get('LastName'))
+        full_name = u"{} {} {}".format(response.get('LastName'),
+                                       response.get('FirstName'),
+                                       response.get('MiddleName'))
         return {'username': response.get('UserName'),
-                'email': full_name + '@example.com',
-                'first_name': response.get('FirstName')}
+                'email': response.get('Email'),
+                'first_name': response.get('FirstName'),
+                'last_name': response.get('LastName'),
+                'middle_name': response.get('MiddleName'),
+                'fullname': full_name,
+                'name': name}
 
     def user_data(self, access_token, *args, **kwargs):
         """Loads user data from service"""
@@ -228,7 +235,7 @@ class CustomOauth2Provider(BaseProvider):
 
     @classmethod
     def get_name(cls, provider_details):
-        return provider_details.get('username')
+        return provider_details.get('fullname')
 
 
 class Registry(object):
