@@ -209,6 +209,9 @@ class CustomOAuth2(BaseOAuth2):
                 'fullname': full_name,
                 'name': name}
 
+    def get_user_id(self, details, response):
+        return details['username']
+
     def user_data(self, access_token, *args, **kwargs):
         """Loads user data from service"""
         url = self._get_host_url() + 'Api/Id'
@@ -217,8 +220,6 @@ class CustomOAuth2(BaseOAuth2):
         })
 
 class CustomOauth2Provider(BaseProvider):
-    """Provider for Google's Oauth2 auth system."""
-
     BACKEND_CLASS = CustomOAuth2
     ICON_CLASS = 'fa-key'
     NAME = 'Custom'
