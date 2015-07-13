@@ -111,7 +111,9 @@ def _set_global_settings(django_settings):
         'social.pipeline.social_auth.auth_allowed',
         'social.pipeline.social_auth.social_user',
         'social.pipeline.user.get_username',
-        'third_party_auth.pipeline.ensure_user_information',
+        #'third_party_auth.pipeline.ensure_user_information',
+        'third_party_auth.pipeline.check_if_user_registered',
+        'third_party_auth.pipeline.create_user_profile',
         'social.pipeline.user.create_user',
         'social.pipeline.social_auth.associate_user',
         'social.pipeline.social_auth.load_extra_data',
@@ -127,7 +129,7 @@ def _set_global_settings(django_settings):
     # Disable exceptions by default for prod so you get redirect behavior
     # instead of a Django error page. During development you may want to
     # enable this when you want to get stack traces rather than redirections.
-    django_settings.SOCIAL_AUTH_RAISE_EXCEPTIONS = False
+    django_settings.SOCIAL_AUTH_RAISE_EXCEPTIONS = True
 
     # Context processors required under Django.
     django_settings.SOCIAL_AUTH_UUID_LENGTH = 4
