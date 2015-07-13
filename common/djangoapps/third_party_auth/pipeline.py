@@ -64,15 +64,22 @@ import urllib
 import analytics
 from eventtracking import tracker
 
+from django.contrib.auth import authenticate, login
 from django.contrib.auth.models import User
 from django.core.urlresolvers import reverse
+from django.db import transaction, IntegrityError
 from django.http import HttpResponseBadRequest
 from django.shortcuts import redirect
 from social.apps.django_app.default import models
 from social.exceptions import AuthException
 from social.pipeline import partial
+from django.utils.translation import get_language
 
 import student
+from student.models import (
+    create_comments_service_user,
+    Registration, UserProfile, PasswordHistory
+)
 from shoppingcart.models import Order, PaidCourseRegistration  # pylint: disable=import-error
 from shoppingcart.exceptions import (  # pylint: disable=import-error
     CourseDoesNotExistException,
@@ -85,8 +92,10 @@ from opaque_keys.edx.keys import CourseKey
 
 from logging import getLogger
 
-from . import provider
+from . import provider, is_enabled
 
+from openedx.core.djangoapps.user_api.models import UserPreference
+from lang_pref import LANGUAGE_KEY
 
 # These are the query string params you can pass
 # to the URL that starts the authentication process.
@@ -716,3 +725,126 @@ def change_enrollment(strategy, user=None, *args, **kwargs):
             # Log errors, but don't stop the authentication pipeline.
             except Exception as ex:
                 logger.exception(ex)
+
+def check_if_user_registered(strategy, user, is_login, is_login_2, is_dashboard, is_profile, is_api, *args, **kwargs):
+    user_unset = user is None
+    dispatch_to_login = is_login and user_unset
+    reject_api_request = is_api and user_unset
+    if reject_api_request:
+        # Content doesn't matter; we just want to exit the pipeline
+        return HttpResponseBadRequest()
+
+    # TODO (ECOM-369): Consolidate this with `dispatch_to_login`
+    # once the A/B test completes. # pylint: disable=fixme
+    dispatch_to_login_2 = is_login_2 and user_unset
+
+    if is_dashboard or is_profile:
+        return
+
+    # if dispatch_to_login or dispatch_to_login_2:
+    #     return redirect(_create_redirect_url(AUTH_DISPATCH_URLS[AUTH_ENTRY_LOGIN], strategy))
+
+def create_user_profile(strategy, user, details, request, *args, **kwargs):
+    third_party_auth_enabled = is_enabled()
+    if not third_party_auth_enabled:
+        raise AuthException(strategy.backend, 'third party auth not enabled or pipeline is not running')
+
+    # skip account registration
+    if user:
+        return
+
+    post_vars = dict(details.items())
+    post_vars.update({'password': make_random_password()})
+
+    # Confirm we have a properly formed request
+    for req_field in ['username', 'email', 'password', 'name']:
+        if req_field not in post_vars:
+            raise AuthException(strategy.backend, '{} is not in post_vars'.format(req_field))
+
+    # Ok, looks like everything is legit.  Create the account.
+    with transaction.commit_on_success():
+        ret = _do_create_profile(strategy, post_vars)
+
+    (user, profile, registration) = ret
+
+    create_comments_service_user(user)
+
+    context = {'name': post_vars['name'],
+               'key': registration.activation_key}
+
+    # Immediately after a user creates an account, we log them in. They are only
+    # logged in until they close the browser. They can't log in again until they click
+    # the activation link from the email.
+    new_user = authenticate(username=post_vars['username'], password=post_vars['password'])
+    login(request, new_user)
+
+    # Activate the user
+    registration.activate()
+    registration.save()
+
+    return {'user': user}
+
+def _do_create_profile(strategy, post_vars):
+    """
+    Given cleaned post variables, create the User and UserProfile objects, as well as the
+    registration for this user.kwargs
+
+    Returns a tuple (User, UserProfile, Registration).
+
+    Note: this function is also used for creating test users.
+    """
+    user = User(username=post_vars['username'],
+                email=post_vars['email'],
+                is_active=False)
+    user.set_password(post_vars['password'])
+    registration = Registration()
+
+    # TODO: Rearrange so that if part of the process fails, the whole process fails.
+    # Right now, we can have e.g. no registration e-mail sent out and a zombie account
+    try:
+        user.save()
+    except IntegrityError as ex:
+        # Figure out the cause of the integrity error
+        if len(User.objects.filter(username=post_vars['username'])) > 0:
+            raise AuthException(
+                strategy.backend,
+                "An account with the Public Username '{username}' already exists.".format(username=post_vars['username'])
+            )
+        elif len(User.objects.filter(email=post_vars['email'])) > 0:
+            raise AuthException(
+                strategy.backend,
+                "An account with the Email '{email}' already exists.".format(email=post_vars['email'])
+            )
+        else:
+            raise
+
+    # add this account creation to password history
+    # NOTE, this will be a NOP unless the feature has been turned on in configuration
+    password_history_entry = PasswordHistory()
+    password_history_entry.create(user)
+
+    registration.register(user)
+
+    profile = UserProfile(user=user)
+    profile.name = post_vars['name']
+    profile.level_of_education = post_vars.get('level_of_education')
+    profile.gender = post_vars.get('gender')
+    profile.mailing_address = post_vars.get('mailing_address')
+    profile.city = post_vars.get('city')
+    profile.country = post_vars.get('country')
+    profile.goals = post_vars.get('goals')
+
+    try:
+        profile.year_of_birth = int(post_vars['year_of_birth'])
+    except (ValueError, KeyError):
+        # If they give us garbage, just ignore it instead
+        # of asking them to put an integer.
+        profile.year_of_birth = None
+    try:
+        profile.save()
+    except Exception:  # pylint: disable=broad-except
+        raise AuthException(strategy.backend, "UserProfile creation failed for user {id}.".format(id=user.id))
+
+    UserPreference.set_preference(user, LANGUAGE_KEY, get_language())
+
+    return (user, profile, registration)
