@@ -135,6 +135,21 @@ from django.utils.http import urlquote_plus
         %endfor
       </div> <!--End chapters-->
 
+      <div class="recommendations">
+        <h3> ${ _("Sections recommended for studying") } </h3>
+        <ol>
+          <%
+              nonzero_cutoffs = [cutoff for cutoff in course.grade_cutoffs.values() if cutoff > 0]
+              success_cutoff = min(nonzero_cutoffs) if nonzero_cutoffs else None
+              filtered_grade_sections = [section for section in grade_summary['section_breakdown']
+                                                 if section['percent'] <= success_cutoff]
+          %>
+          %for section in sorted(filtered_grade_sections, key=lambda s: s['percent']):
+            <li>${section['category']}</li>
+          %endfor
+        </ol>
+      </div>
+
     </div>
   </div>
 </div>
