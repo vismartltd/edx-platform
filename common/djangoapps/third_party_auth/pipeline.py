@@ -64,6 +64,7 @@ import urllib
 import analytics
 from eventtracking import tracker
 
+from django.conf import settings
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.models import User
 from django.core.urlresolvers import reverse
@@ -130,6 +131,7 @@ AUTH_ENTRY_LOGIN_2 = 'account_login'
 AUTH_ENTRY_REGISTER_2 = 'account_register'
 
 AUTH_ENTRY_API = 'api'
+AUTH_ENTRY_STUDIO = 'studio'
 
 # URLs associated with auth entry points
 # These are used to request additional user information
@@ -152,7 +154,7 @@ AUTH_DISPATCH_URLS = {
     # If linking/unlinking an account from the new student profile
     # page, redirect to the profile page.  Only used if
     # `FEATURES['ENABLE_NEW_DASHBOARD']` is true.
-    AUTH_ENTRY_PROFILE: '/profile/',
+    AUTH_ENTRY_PROFILE: '/profile/'
 }
 
 _AUTH_ENTRY_CHOICES = frozenset([
@@ -170,6 +172,7 @@ _AUTH_ENTRY_CHOICES = frozenset([
     AUTH_ENTRY_REGISTER_2,
 
     AUTH_ENTRY_API,
+    AUTH_ENTRY_STUDIO,
 ])
 
 _DEFAULT_RANDOM_PASSWORD_LENGTH = 12
@@ -463,6 +466,8 @@ def parse_query_params(strategy, response, *args, **kwargs):
         'is_profile': auth_entry == AUTH_ENTRY_PROFILE,
         # Whether the auth pipeline entered from an API
         'is_api': auth_entry == AUTH_ENTRY_API,
+        # Whether the auth pipeline entered from Studio
+        'is_studio': auth_entry == AUTH_ENTRY_STUDIO,
 
         # TODO (ECOM-369): Delete these once the A/B test
         # for the combined login/registration form completes.
@@ -725,6 +730,11 @@ def change_enrollment(strategy, user=None, *args, **kwargs):
             # Log errors, but don't stop the authentication pipeline.
             except Exception as ex:
                 logger.exception(ex)
+
+@partial.partial
+def redirect_to_studio(strategy, is_studio, *args, **kwargs):
+    if is_studio and settings.CMS_BASE:
+        return redirect("//" + settings.CMS_BASE)
 
 def check_if_user_registered(strategy, user, is_login, is_login_2, is_dashboard, is_profile, is_api, *args, **kwargs):
     user_unset = user is None
