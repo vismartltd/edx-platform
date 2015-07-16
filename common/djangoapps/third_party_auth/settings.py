@@ -121,7 +121,6 @@ def _set_global_settings(django_settings):
         'third_party_auth.pipeline.set_logged_in_cookie',
         'third_party_auth.pipeline.login_analytics',
         'third_party_auth.pipeline.change_enrollment',
-        'third_party_auth.pipeline.redirect_to_studio',
     )
 
     # We let the user specify their email address during signup.

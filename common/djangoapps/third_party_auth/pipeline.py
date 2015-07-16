@@ -131,7 +131,6 @@ AUTH_ENTRY_LOGIN_2 = 'account_login'
 AUTH_ENTRY_REGISTER_2 = 'account_register'
 
 AUTH_ENTRY_API = 'api'
-AUTH_ENTRY_STUDIO = 'studio'
 
 # URLs associated with auth entry points
 # These are used to request additional user information
@@ -172,7 +171,6 @@ _AUTH_ENTRY_CHOICES = frozenset([
     AUTH_ENTRY_REGISTER_2,
 
     AUTH_ENTRY_API,
-    AUTH_ENTRY_STUDIO,
 ])
 
 _DEFAULT_RANDOM_PASSWORD_LENGTH = 12
@@ -731,9 +729,8 @@ def change_enrollment(strategy, user=None, *args, **kwargs):
             except Exception as ex:
                 logger.exception(ex)
 
-@partial.partial
-def redirect_to_studio(strategy, is_studio, *args, **kwargs):
-    if is_studio and settings.CMS_BASE:
+def redirect_to_studio(*args, **kwargs):
+    if settings.CMS_BASE:
         return redirect("//" + settings.CMS_BASE)
 
 def check_if_user_registered(strategy, user, is_login, is_login_2, is_dashboard, is_profile, is_api, *args, **kwargs):
