@@ -465,7 +465,7 @@ def parse_query_params(strategy, response, *args, **kwargs):
         # Whether the auth pipeline entered from an API
         'is_api': auth_entry == AUTH_ENTRY_API,
         # Whether the auth pipeline entered from Studio
-        'is_studio': auth_entry == AUTH_ENTRY_STUDIO,
+        #'is_studio': auth_entry == AUTH_ENTRY_STUDIO,
 
         # TODO (ECOM-369): Delete these once the A/B test
         # for the combined login/registration form completes.
