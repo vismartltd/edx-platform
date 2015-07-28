@@ -1,0 +1,85 @@
+<%inherit file="base.html" />
+<%def name="online_help_token()"><% return "randomize" %></%def>
+<%namespace name='static' file='static_content.html'/>
+
+<%!
+  from django.utils.translation import ugettext as _
+  from django.middleware import csrf
+  import json
+%>
+<%block name="title">${_("Course Randomize")}</%block>
+<%block name="bodyclass">is-signedin course tools view-export</%block>
+
+<%block name="requirejs">
+  var isError = ${json.dumps(bool(in_err))},
+      isSuccess = ${json.dumps(bool(is_success))},
+      hasUnit = ${json.dumps(bool(unit))},
+      editUnitUrl = "${edit_unit_url or ""}",
+      courseHomeUrl = "${course_home_url or ""}",
+      errMsg = ${json.dumps(raw_err_msg or "")};
+
+  require(["js/factories/convert_randomize"], function(ExportFactory) {
+      ExportFactory(isError, isSuccess, hasUnit, editUnitUrl, courseHomeUrl, errMsg);
+  });
+</%block>
+
+<%block name="content">
+<div class="wrapper-mast wrapper">
+  <header class="mast has-subtitle">
+    <h1 class="page-header">
+      <small class="subtitle">${_("Tools")}</small>
+      <span class="sr">&gt; </span>${_("Course Randomize")}
+    </h1>
+  </header>
+</div>
+
+<div class="wrapper-content wrapper">
+  <section class="content">
+    <article class="content-primary" role="main">
+
+      <div class="introduction">
+        <h2 class="title">${_("About Randomizing Courses")}</h2>
+        <div class="copy">
+          <p>${_("You can export courses and edit them outside of {studio_name}. The exported file is a .tar.gz file (that is, a .tar file compressed with GNU Zip) that contains the course structure and content. You can also re-import courses that you've exported.").format(
+            studio_name=settings.STUDIO_SHORT_NAME, em_start='<strong>', em_end="</strong>"
+          )}</p>
+        </div>
+      </div>
+
+      <div class="export-controls">
+        <h2 class="title">${_("Randomize My Course Content")}</h2>
+
+        <ul class="list-actions">
+          <li class="item-action">
+            <form name="randomize-post-form" action="${convert_randomize_url}" method="post" style="display: none">
+              <input type="hidden" name="csrfmiddlewaretoken" value="${csrf.get_token(request)}" />
+            </form>
+            <a class="action action-export action-primary" style="display: none">
+              <i class="icon fa fa-random"></i>
+              <span class="copy">${_("Randomize Course Content")}</span>
+            </a>
+          </li>
+        </ul>
+
+        <ol class="status-progress list-progress">
+          <li class="item-progresspoint item-progresspoint-processing" style="display: none">
+              <span class="deco status-visual">
+                <i class="icon fa fa-cog fa-spin"></i>
+              </span>
+              <span>Processing course content...</span>
+          </li>
+          <li class="item-progresspoint item-progresspoint-complete" style="display: none">
+              <span class="deco status-visual">
+                <i class="icon fa fa-check"></i>
+              </span>
+            <span>Course content processing complete.</span>
+          </li>
+        </ol>
+      </div>
+    </article>
+
+    <aside class="content-supplementary" role="complementary">
+    </aside>
+  </section>
+</div>
+</%block>

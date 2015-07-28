@@ -36,8 +36,10 @@ from util.views import ensure_valid_course_key
 
 from contentstore.utils import reverse_course_url, reverse_usage_url
 
+from lxml import etree
 
-__all__ = ['import_handler', 'import_status_handler', 'export_handler']
+
+__all__ = ['import_handler', 'import_status_handler', 'export_handler', 'convert_randomize_handler']
 
 
 log = logging.getLogger(__name__)
@@ -421,3 +423,127 @@ def export_handler(request, course_key_string):
     else:
         # Only HTML or x-tgz request formats are supported (no JSON).
         return HttpResponse(status=406)
+
+@ensure_csrf_cookie
+@login_required
+@require_http_methods(["GET", "POST"])
+@ensure_valid_course_key
+def convert_randomize_handler(request, course_key_string):
+    course_key = CourseKey.from_string(course_key_string)
+    if not has_course_author_access(request.user, course_key):
+        raise PermissionDenied()
+
+    course_module = modulestore().get_course(course_key)
+    convert_url = reverse_course_url('convert_randomize_handler', course_key)
+
+    if request.method == 'POST':
+        name = course_module.url_name
+        root_dir = path(mkdtemp())
+        course_subdir_name = name
+        has_converted_anything = False
+
+        try:
+            # Exporting course to temporary directory
+            export_to_xml(modulestore(), contentstore(), course_module.id, root_dir, name)
+            logging.debug(u'couse extracted at {0}'.format(root_dir))
+            log.info("Course convert {0}: Course extracted to XML".format(course_key))
+
+            # Randomizing problems
+            for (dirpath, _, filenames) in os.walk(root_dir / course_subdir_name / 'vertical'):
+                for filename in filenames:
+                    if make_vertical_randomized(dirpath / filename):
+                        has_converted_anything = True
+
+            if has_converted_anything:
+                # Importing course from temporary directory
+                course_items = import_from_xml(
+                    modulestore(),
+                    request.user.id,
+                    root_dir,
+                    [course_subdir_name],
+                    load_error_modules=False,
+                    static_content_store=contentstore(),
+                    target_course_id=course_key,
+                )
+
+                new_location = course_items[0].location
+                logging.debug('new course at {0}'.format(new_location))
+
+                log.info("Course convert {0}: Course import successful".format(course_key))
+
+        except SerializationError as exc:
+            log.exception(u'There was an error randomizing course %s', course_module.id)
+            unit = None
+            failed_item = None
+            parent = None
+            try:
+                failed_item = modulestore().get_item(exc.location)
+                parent_loc = modulestore().get_parent_location(failed_item.location)
+
+                if parent_loc is not None:
+                    parent = modulestore().get_item(parent_loc)
+                    if parent.location.category == 'vertical':
+                        unit = parent
+            except:  # pylint: disable=bare-except
+                # if we have a nested exception, then we'll show the more generic error message
+                pass
+
+            return render_to_response('convert_randomize.html', {
+                'context_course': course_module,
+                'in_err': True,
+                'raw_err_msg': str(exc),
+                'failed_module': failed_item,
+                'unit': unit,
+                'edit_unit_url': reverse_usage_url("container_handler", parent.location) if parent else "",
+                'course_home_url': reverse_course_url("course_handler", course_key),
+                'convert_randomize_url': convert_url,
+            })
+        except Exception as exc:
+            log.exception('There was an error randomizing course %s', course_module.id)
+            return render_to_response('convert_randomize.html', {
+                'context_course': course_module,
+                'in_err': True,
+                'unit': None,
+                'raw_err_msg': str(exc),
+                'course_home_url': reverse_course_url("course_handler", course_key),
+                'convert_randomize_url': convert_url,
+            })
+        finally:
+            try:
+                shutil.rmtree(root_dir)
+                log.info("Course convert {0}: Cleared temp data '{1}'".format(course_key, root_dir))
+            except:
+                pass
+
+        return render_to_response('convert_randomize.html', {
+            'context_course': course_module,
+            'convert_randomize_url': convert_url,
+            'is_success': True,
+            'has_converted_anything': has_converted_anything,
+        })
+    else:
+        return render_to_response('convert_randomize.html', {
+            'context_course': course_module,
+            'convert_randomize_url': convert_url,
+        })
+
+def make_vertical_randomized(vertical_xml_path):
+    """
+    :param vertical_xml_path: path to vertical XML file
+    :return: True if vertical successfully randomized; otherwise False
+    """
+    doc = etree.parse(vertical_xml_path)
+    root = doc.getroot()
+    for child in root.getchildren():
+        if child.tag == 'randomize':
+            return False
+    # 'randomize' tag not found, make one
+    randomize_element = etree.Element('randomize')
+    # move vertical children to randomize tag
+    for child in root.getchildren():
+        root.remove(child)
+        randomize_element.append(child)
+    # insert randomized tag as single child of vertical
+    root.append(randomize_element)
+    doc.write(vertical_xml_path)
+    return True
